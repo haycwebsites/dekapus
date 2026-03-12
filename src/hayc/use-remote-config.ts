@@ -1,15 +1,74 @@
-import { siteConfig } from '../config';
+import {
+  siteConfig,
+  preloaderConfig,
+  scrollToTopConfig,
+  navigationConfig,
+  commonConfig,
+  heroConfig,
+  aboutConfig,
+  servicesConfig,
+  counterConfig,
+  menuConfig,
+  bookTableConfig,
+  eventsConfig,
+  testimonialsConfig,
+  blogConfig,
+  newsletterConfig,
+  teamConfig,
+  galleryConfig,
+  contactConfig,
+  footerConfig,
+  notFoundConfig,
+} from '../config';
 
 export interface RemoteConfig {
   version: number;
   exportedAt: string;
   siteConfig: typeof siteConfig;
+  preloaderConfig: typeof preloaderConfig;
+  scrollToTopConfig: typeof scrollToTopConfig;
+  navigationConfig: typeof navigationConfig;
+  commonConfig: typeof commonConfig;
+  heroConfig: typeof heroConfig;
+  aboutConfig: typeof aboutConfig;
+  servicesConfig: typeof servicesConfig;
+  counterConfig: typeof counterConfig;
+  menuConfig: typeof menuConfig;
+  bookTableConfig: typeof bookTableConfig;
+  eventsConfig: typeof eventsConfig;
+  testimonialsConfig: typeof testimonialsConfig;
+  blogConfig: typeof blogConfig;
+  newsletterConfig: typeof newsletterConfig;
+  teamConfig: typeof teamConfig;
+  galleryConfig: typeof galleryConfig;
+  contactConfig: typeof contactConfig;
+  footerConfig: typeof footerConfig;
+  notFoundConfig: typeof notFoundConfig;
 }
 
 export const defaultConfig: RemoteConfig = {
   version: 1,
   exportedAt: '',
   siteConfig,
+  preloaderConfig,
+  scrollToTopConfig,
+  navigationConfig,
+  commonConfig,
+  heroConfig,
+  aboutConfig,
+  servicesConfig,
+  counterConfig,
+  menuConfig,
+  bookTableConfig,
+  eventsConfig,
+  testimonialsConfig,
+  blogConfig,
+  newsletterConfig,
+  teamConfig,
+  galleryConfig,
+  contactConfig,
+  footerConfig,
+  notFoundConfig,
 };
 
 export async function fetchRemoteConfig(): Promise<RemoteConfig> {

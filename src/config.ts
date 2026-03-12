@@ -28,17 +28,523 @@ export interface SiteConfig {
   apiUrl: string;
 }
 
+export interface PreloaderConfig {
+  brandName: LocaleString;
+  brandSubname: LocaleString;
+  yearText: LocaleString;
+}
+
+export interface ScrollToTopConfig {
+  ariaLabel: LocaleString;
+}
+
+export interface NavigationConfig {
+  home: LocaleString;
+  home1: LocaleString;
+  home2: LocaleString;
+  about: LocaleString;
+  events: LocaleString;
+  pages: LocaleString;
+  menu: LocaleString;
+  reservation: LocaleString;
+  gallery: LocaleString;
+  services: LocaleString;
+  team: LocaleString;
+  blog: LocaleString;
+  blogPost: LocaleString;
+  contact: LocaleString;
+  contact1: LocaleString;
+  contact2: LocaleString;
+  bookNow: LocaleString;
+  search: LocaleString;
+  logoHome: string;
+  logoInner: string;
+}
+
+export interface CommonConfig {
+  reservationPhone: LocaleString;
+  phoneNumber: LocaleString;
+  readMore: LocaleString;
+  submit: LocaleString;
+  signUp: LocaleString;
+  copyright: LocaleString;
+}
+
+export interface HeroConfig {
+  title: LocaleString;
+  subtitle: LocaleString;
+  viewMenuButton: LocaleString;
+  backgroundImage1: string;
+  backgroundImage2: string;
+  slideLogo: string;
+}
+
+export interface AboutConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  description1: LocaleString;
+  description2: LocaleString;
+  chefName: LocaleString;
+  chefThumb: string;
+  chefSign: string;
+  aboutImage1: string;
+  aboutImage2: string;
+}
+
+export interface ServiceItem {
+  image: string;
+  title: LocaleString;
+}
+
+export interface ServicesConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  orderNow: LocaleString;
+  items: ServiceItem[];
+}
+
+export interface CounterItem {
+  icon: string;
+  value: number;
+  label: LocaleString;
+}
+
+export interface CounterConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  backgroundImage: string;
+  items: CounterItem[];
+}
+
+export interface MenuItem {
+  name: LocaleString;
+  description: LocaleString;
+  price: number;
+  image: string;
+  category: string;
+}
+
+export interface MenuConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  breakfast: LocaleString;
+  breakfastTitle: LocaleString;
+  warmDishes: LocaleString;
+  warmDishesTitle: LocaleString;
+  dinner: LocaleString;
+  dinnerTitle: LocaleString;
+  decorImage1: string;
+  decorImage2: string;
+  items: MenuItem[];
+}
+
+export interface BookTableConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  namePlaceholder: LocaleString;
+  phonePlaceholder: LocaleString;
+  tablePlaceholder: LocaleString;
+  timePlaceholder: LocaleString;
+  datePlaceholder: LocaleString;
+  guestsPlaceholder: LocaleString;
+  messagePlaceholder: LocaleString;
+  backgroundImage: string;
+}
+
+export interface EventItem {
+  title: LocaleString;
+  description: LocaleString;
+  date: LocaleString;
+  image: string;
+}
+
+export interface EventsConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  items: EventItem[];
+}
+
+export interface TestimonialItem {
+  text: LocaleString;
+  author: LocaleString;
+}
+
+export interface TestimonialsConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  backgroundImage: string;
+  quoteImage: string;
+  items: TestimonialItem[];
+}
+
+export interface BlogPostItem {
+  id: number;
+  title: LocaleString;
+  excerpt: LocaleString;
+  date: LocaleString;
+  image: string;
+  slug: string;
+}
+
+export interface BlogConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  posted: LocaleString;
+  items: BlogPostItem[];
+}
+
+export interface NewsletterConfig {
+  title: LocaleString;
+  description: LocaleString;
+  placeholder: LocaleString;
+  backgroundImage: string;
+}
+
+export interface TeamMember {
+  name: LocaleString;
+  role: LocaleString;
+  image: string;
+}
+
+export interface TeamConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  members: TeamMember[];
+}
+
+export interface GalleryImage {
+  src: string;
+  category: string;
+}
+
+export interface GalleryConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  all: LocaleString;
+  coffee: LocaleString;
+  lunch: LocaleString;
+  nonveg: LocaleString;
+  images: GalleryImage[];
+}
+
+export interface ContactConfig {
+  sectionTitle: LocaleString;
+  title: LocaleString;
+  address: LocaleString;
+  addressValue: LocaleString;
+  phone: LocaleString;
+  email: LocaleString;
+  emailValue: LocaleString;
+  namePlaceholder: LocaleString;
+  emailPlaceholder: LocaleString;
+  subjectPlaceholder: LocaleString;
+  messagePlaceholder: LocaleString;
+  sendMessage: LocaleString;
+  workingHours: LocaleString;
+  workingHoursValue: LocaleString;
+}
+
+export interface FooterConfig {
+  aboutUs: LocaleString;
+  aboutDescription: LocaleString;
+  quickLinks: LocaleString;
+  workingTime: LocaleString;
+  mondayTuesday: LocaleString;
+  wednesday: LocaleString;
+  thursdayFriday: LocaleString;
+  saturday: LocaleString;
+  sunday: LocaleString;
+  publicHolidays: LocaleString;
+  closed: LocaleString;
+  menuCategories: LocaleString;
+  appetizers: LocaleString;
+  lunch: LocaleString;
+  meatFish: LocaleString;
+  soups: LocaleString;
+  instagram: LocaleString;
+  emailSubscribe: LocaleString;
+  instagramImages: string[];
+}
+
+export interface NotFoundConfig {
+  title: LocaleString;
+  subtitle: LocaleString;
+  description: LocaleString;
+  backHome: LocaleString;
+  image: string;
+}
+
 // =============================================================================
 // CONSTANTS
 // =============================================================================
 
 export const siteConfig: SiteConfig = {
-  title: { el: '', en: '' },
-  description: { el: '', en: '' },
-  language: '',
-  keywords: { el: '', en: '' },
-  ogImage: '',
+  title: { el: 'Max Restaurant', en: 'Max Restaurant' },
+  description: { el: 'Το καλύτερο εστιατόριο στην πόλη', en: 'The best restaurant in town' },
+  language: 'el',
+  keywords: { el: 'εστιατόριο, φαγητό, δείπνο', en: 'restaurant, food, dinner' },
+  ogImage: '/images/og-image.jpg',
   canonical: '',
   siteId: '',
   apiUrl: '',
+};
+
+export const preloaderConfig: PreloaderConfig = {
+  brandName: { el: 'Max Restaurant', en: 'Max Restaurant' },
+  brandSubname: { el: 'Εστιατόριο', en: 'Restaurant' },
+  yearText: { el: 'Από το 2016', en: 'Since 2016' },
+};
+
+export const scrollToTopConfig: ScrollToTopConfig = {
+  ariaLabel: { el: 'Μετάβαση στην κορυφή', en: 'Scroll to top' },
+};
+
+export const navigationConfig: NavigationConfig = {
+  home: { el: 'Αρχική', en: 'Home' },
+  home1: { el: 'Αρχική 1', en: 'Home 1' },
+  home2: { el: 'Αρχική 2', en: 'Home 2' },
+  about: { el: 'Σχετικά', en: 'About' },
+  events: { el: 'Εκδηλώσεις', en: 'Events' },
+  pages: { el: 'Σελίδες', en: 'Pages' },
+  menu: { el: 'Μενού', en: 'Menu' },
+  reservation: { el: 'Κράτηση', en: 'Reservation' },
+  gallery: { el: 'Γκαλερί', en: 'Gallery' },
+  services: { el: 'Υπηρεσίες', en: 'Our Services' },
+  team: { el: 'Ομάδα', en: 'Team' },
+  blog: { el: 'Ιστολόγιο', en: 'Blog' },
+  blogPost: { el: 'Άρθρο', en: 'Blog Post' },
+  contact: { el: 'Επικοινωνία', en: 'Contact' },
+  contact1: { el: 'Επικοινωνία 1', en: 'Contact 1' },
+  contact2: { el: 'Επικοινωνία 2', en: 'Contact 2' },
+  bookNow: { el: 'Κράτηση Τώρα', en: 'Book Now' },
+  search: { el: 'Αναζήτηση', en: 'Search' },
+  logoHome: '/images/logo.png',
+  logoInner: '/images/logo2.png',
+};
+
+export const commonConfig: CommonConfig = {
+  reservationPhone: { el: 'ΚΡΑΤΗΣΗ:', en: 'RESERVATION:' },
+  phoneNumber: { el: '(+30) 210 1234 567', en: '(+1) 123 4567 896' },
+  readMore: { el: 'Διαβάστε Περισσότερα', en: 'Read More' },
+  submit: { el: 'Υποβολή', en: 'Submit' },
+  signUp: { el: 'Εγγραφή', en: 'Sign Up' },
+  copyright: { el: '© 2024 - Με επιφύλαξη παντός δικαιώματος', en: '© 2024 - All Rights Reserved' },
+};
+
+export const heroConfig: HeroConfig = {
+  title: { el: 'Καλώς Ήρθατε στο Εστιατόριό μας', en: 'Welcome to Our Restaurant' },
+  subtitle: { el: 'Αυθεντική Γαστρονομική Εμπειρία', en: 'Authentic Culinary Experience' },
+  viewMenuButton: { el: 'Δείτε το Μενού', en: 'View Menu' },
+  backgroundImage1: '/images/slide1.jpg',
+  backgroundImage2: '/images/slide2.jpg',
+  slideLogo: '/images/slide-logo.png',
+};
+
+export const aboutConfig: AboutConfig = {
+  sectionTitle: { el: 'Σχετικά', en: 'About' },
+  title: { el: 'Είμαστε το καλύτερο ποιοτικό και παραδοσιακό εστιατόριο', en: 'We are the best quality and traditional restaurant' },
+  description1: { 
+    el: 'Αυτές οι μέρες είναι όλες χαρούμενες και ελεύθερες. Αυτές οι μέρες είναι για να τις μοιραζόμαστε μαζί. Μέχρι τη μέρα που η κυρία συνάντησε αυτόν τον κύριο και ήξεραν ότι ήταν κάτι πολύ περισσότερο από τύχη.',
+    en: 'These days are all Happy and Free. These days are all share them with me oh baby. Till the one day when the lady met this fellow and they knew it was much more than a hunch. Good bye gray sky hello blue.'
+  },
+  description2: {
+    el: 'Τώρα ο κόσμος δεν κινείται στον ρυθμό ενός μόνο τυμπάνου. Αυτό που μπορεί να είναι σωστό για εσάς μπορεί να μην είναι σωστό για κάποιους. Χωρίς τηλέφωνο, χωρίς φώτα, χωρίς αυτοκίνητο, ούτε μια πολυτέλεια.',
+    en: 'Now the world don\'t move to the beat of just one drum. What might be right for you may not be right for some. No phone no lights no motor car not a single luxury.'
+  },
+  chefName: { el: 'ΤΖΑΚΛΙΝ ΡΟΚΙ', en: 'JACKLIN ROCKY' },
+  chefThumb: '/images/about-thumb.jpg',
+  chefSign: '/images/chef-sign.png',
+  aboutImage1: '/images/about-img1.jpg',
+  aboutImage2: '/images/about-img2.jpg',
+};
+
+export const servicesConfig: ServicesConfig = {
+  sectionTitle: { el: 'Υπηρεσίες', en: 'Services' },
+  title: { el: 'ΟΙ ΕΙΔΙΚΟΤΗΤΕΣ ΜΑΣ', en: 'OUR SPECIALITIES' },
+  orderNow: { el: 'ΠΑΡΑΓΓΕΙΛΤΕ ΤΩΡΑ', en: 'ORDER NOW CALL' },
+  items: [
+    { image: '/images/srv1.png', title: { el: 'Σάντουιτς', en: 'Sandwiches' } },
+    { image: '/images/srv2.png', title: { el: 'Πίτσα', en: 'Pizza' } },
+    { image: '/images/srv3.png', title: { el: 'Φράουλα', en: 'Chers Strawberry' } },
+    { image: '/images/srv4.png', title: { el: 'Τάκο', en: 'Taco Recipe' } },
+  ],
+};
+
+export const counterConfig: CounterConfig = {
+  sectionTitle: { el: 'Αριθμοί', en: 'Counters' },
+  title: { el: 'Είμαστε Νόστιμο Εστιατόριο', en: 'We Are Delicious Restaurant' },
+  backgroundImage: '/images/counter-bg.jpg',
+  items: [
+    { icon: '/images/counter-ic1.png', value: 4372, label: { el: 'ΚΟΤΌΠΟΥΛΑ ΣΕΡΒΙΡΙΣΜΈΝΑ', en: 'CHICKEN SERVED' } },
+    { icon: '/images/counter-ic2.png', value: 3795, label: { el: 'ΨΆΡΙΑ ΤΗΓΑΝΗΤΆ', en: 'FISH FRIED' } },
+    { icon: '/images/counter-ic3.png', value: 394, label: { el: 'ΟΙ ΣΕΦΣ ΜΑΣ', en: 'OUR CHEFS' } },
+    { icon: '/images/counter-ic4.png', value: 1678, label: { el: 'ΣΟΎΠΕΣ ΣΕΡΒΙΡΙΣΜΈΝΕΣ', en: 'SOUP SERVED' } },
+  ],
+};
+
+export const menuConfig: MenuConfig = {
+  sectionTitle: { el: 'Ειδική Εβδομάδας', en: 'This Week Special' },
+  title: { el: 'Κατάλογος Μενού', en: 'Menu Card' },
+  breakfast: { el: 'Πρωινό', en: 'Breakfast' },
+  breakfastTitle: { el: 'Τέλειο Πρωινό', en: 'So Good Breakfast' },
+  warmDishes: { el: 'Ζεστά Πιάτα', en: 'Warm Dishes' },
+  warmDishesTitle: { el: 'Δοκιμάστε Κάτι Τώρα', en: 'Taste Something Now' },
+  dinner: { el: 'Δείπνο', en: 'Dinner' },
+  dinnerTitle: { el: 'Εξειδικευμένο Δείπνο', en: 'Specialized Dinner' },
+  decorImage1: '/images/menu-card1.png',
+  decorImage2: '/images/menu-card2.png',
+  items: [
+    { name: { el: 'ΧΟΙΡΙΝΟ ΓΑΡΙΔΕΣ ΠΟΛΥΣΠΟΡΟ', en: 'PORK SHRIMP MULTIGRAIN' }, description: { el: 'Λαχανικά, τυρί, μανιτάρια, ψητά', en: 'Vegetables, cheese, Mushroom, Grill Items' }, price: 55, image: '/images/menu1.jpg', category: 'breakfast' },
+    { name: { el: 'ΧΟΙΡΙΝΟ ΓΑΡΙΔΕΣ ΠΟΛΥΣΠΟΡΟ', en: 'PORK SHRIMP MULTIGRAIN' }, description: { el: 'Λαχανικά, τυρί, μανιτάρια, ψητά', en: 'Vegetables, cheese, Mushroom, Grill Items' }, price: 55, image: '/images/menu2.jpg', category: 'breakfast' },
+    { name: { el: 'ΛΑΧΑΝΙΚΑ ΝΤΟΜΑΤΑ ΜΙΞΕΡΦΡΟΥΤ', en: 'VEGETABLE TOMATO MIXERFRUIT' }, description: { el: 'Λαχανικά, τυρί, μανιτάρια, ψητά', en: 'Vegetables, cheese, Mushroom, Grill Items' }, price: 69, image: '/images/menu3.jpg', category: 'breakfast' },
+    { name: { el: 'ΛΑΧΑΝΙΚΑ ΝΤΟΜΑΤΑ ΜΙΞΕΡΦΡΟΥΤ', en: 'VEGETABLE TOMATO MIXERFRUIT' }, description: { el: 'Λαχανικά, τυρί, μανιτάρια, ψητά', en: 'Vegetables, cheese, Mushroom, Grill Items' }, price: 69, image: '/images/menu4.jpg', category: 'breakfast' },
+    { name: { el: 'ΤΑΚΟ ΣΥΝΤΑΓΗ ΜΕ ΣΛΑΙΖΕΡ', en: 'TACO RECIPE WITH SLIDER' }, description: { el: 'Λαχανικά, τυρί, μανιτάρια, ψητά', en: 'Vegetables, cheese, Mushroom, Grill Items' }, price: 43, image: '/images/menu5.jpg', category: 'breakfast' },
+    { name: { el: 'ΤΑΚΟ ΣΥΝΤΑΓΗ ΜΕ ΣΛΑΙΖΕΡ', en: 'TACO RECIPE WITH SLIDER' }, description: { el: 'Λαχανικά, τυρί, μανιτάρια, ψητά', en: 'Vegetables, cheese, Mushroom, Grill Items' }, price: 43, image: '/images/menu6.jpg', category: 'warm' },
+    { name: { el: 'ΦΡΑΟΥΛΑ ΜΙΚΤΑ ΦΡΟΥΤΑ', en: 'STRAWBERRY MIXED FRUIT' }, description: { el: 'Φράουλα, τυρί, μανιτάρια, φρούτα', en: 'Strawberry, cheese, Mushroom, Fruits' }, price: 39, image: '/images/menu7.jpg', category: 'warm' },
+    { name: { el: 'ΦΡΑΟΥΛΑ ΜΙΚΤΑ ΦΡΟΥΤΑ', en: 'STRAWBERRY MIXED FRUIT' }, description: { el: 'Φράουλα, τυρί, μανιτάρια, φρούτα', en: 'Strawberry, cheese, Mushroom, Fruits' }, price: 39, image: '/images/menu8.jpg', category: 'warm' },
+    { name: { el: 'ΑΥΓΟ ΛΑΧΑΝΙΚΑ ΦΡΟΥΤΑ ΣΑΛΑΤΑ', en: 'EGG VEGETABLE FRUIT SALAD' }, description: { el: 'Αυγό, τυρί, μανιτάρια, λαχανικά', en: 'Egg, cheese, Mushroom, Vegetables' }, price: 27, image: '/images/menu9.jpg', category: 'dinner' },
+    { name: { el: 'ΠΑΓΩΤΟ ΑΝΑΨΥΚΤΙΚΑ', en: 'ICE CREAM COOL DRINKS' }, description: { el: 'Αυγό, τυρί, μανιτάρια, λαχανικά', en: 'Egg, cheese, Mushroom, Vegetables' }, price: 27, image: '/images/menu10.jpg', category: 'dinner' },
+  ],
+};
+
+export const bookTableConfig: BookTableConfig = {
+  sectionTitle: { el: 'Κλείστε Τραπέζι', en: 'Book Your Table' },
+  title: { el: 'ΚΑΝΣΤΕ ΚΡΑΤΗΣΗ', en: 'MAKE A RESERVATION' },
+  namePlaceholder: { el: 'Όνομα *', en: 'Name *' },
+  phonePlaceholder: { el: 'Τηλέφωνο *', en: 'Phone Number *' },
+  tablePlaceholder: { el: 'Επιλέξτε Τραπέζι *', en: 'Choose Your Table *' },
+  timePlaceholder: { el: 'Επιλέξτε Ώρα *', en: 'Choose Your Time *' },
+  datePlaceholder: { el: 'Επιλέξτε Ημερομηνία *', en: 'Choose Date *' },
+  guestsPlaceholder: { el: 'Αριθμός Ατόμων *', en: 'Number of Guests *' },
+  messagePlaceholder: { el: 'Σχόλια', en: 'Comments' },
+  backgroundImage: '/images/book-table-bg.jpg',
+};
+
+export const eventsConfig: EventsConfig = {
+  sectionTitle: { el: 'Τελευταίες Εκδηλώσεις', en: 'Latest Events' },
+  title: { el: 'ΜΗΝ ΧΑΣΕΤΕ', en: 'DO NOT MISS' },
+  items: [
+    { title: { el: 'Καθημερινά Ειδικά Φαγητά για την Υγεία σας', en: 'Daily Special Foods For Your Health' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '20 Δεκ 2016, 10:23 πμ', en: 'Dec 20, 2016 10:23 am' }, image: '/images/event1.jpg' },
+    { title: { el: 'Το Ειδικό Τηγανητό Κοτόπουλο με Ρύζι', en: 'The Specialty Chicken Fry With Rice Food' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '21 Μαρ 2016, 12:00 μμ', en: 'Mar 21, 2016 12:00 pm' }, image: '/images/event2.jpg' },
+    { title: { el: 'Ποτά με Γαρνιτούρα Τηγανητής Ντομάτας', en: 'Drinks With Garnish Fried Tomato Chosey' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '12 Μαρ 2016, 02:30 μμ', en: 'Mar 12, 2016 02:30 pm' }, image: '/images/event3.jpg' },
+  ],
+};
+
+export const testimonialsConfig: TestimonialsConfig = {
+  sectionTitle: { el: 'Οι Πελάτες μας Λένε', en: 'Our Customer Says' },
+  title: { el: 'ΜΑΡΤΥΡΙΕΣ', en: 'TESTIMONIALS' },
+  backgroundImage: '/images/testimonial-bg.jpg',
+  quoteImage: '/images/quote.png',
+  items: [
+    { text: { el: 'Αυτές οι μέρες είναι όλες χαρούμενες και ελεύθερες. Αυτές οι μέρες είναι για να τις μοιραζόμαστε μαζί. Ελάτε και ακούστε μια ιστορία για έναν άνθρωπο - έναν φτωχό βουνίσιο που μόλις και μετά βίας έτρεφε την οικογένειά του.', en: 'These days are all Happy and Free. These days are all share them with me oh baby. Come and listen to a story about a man named Jed - a poor mountaineer barely kept his family fed.' }, author: { el: 'Γιώργος Παπαδόπουλος', en: 'John Doe' } },
+    { text: { el: 'Εδώ είναι η ιστορία μιας όμορφης κυρίας που μεγάλωνε τρία πολύ όμορφα κορίτσια. Όλα είχαν χρυσά μαλλιά σαν τη μητέρα τους, η μικρότερη με μπούκλες.', en: 'Here\'s the story of a lovely lady who was bringing up three very lovely girls. All of them had hair of gold like their mother the youngest one in curls.' }, author: { el: 'Μαρία Ιωάννου', en: 'Jane Smith' } },
+  ],
+};
+
+export const blogConfig: BlogConfig = {
+  sectionTitle: { el: 'Τα Τελευταία Νέα μας', en: 'Our Latest News' },
+  title: { el: 'ΙΣΤΟΛΟΓΙΟ', en: 'BLOG' },
+  posted: { el: 'Δημοσιεύθηκε', en: 'Posted' },
+  items: [
+    { id: 1, title: { el: 'Είμαστε το Καλύτερο Ποιοτικό Εστιατόριο', en: 'We Are Best Quality Serve Restaurant' }, excerpt: { el: 'Ο πρώτος σύντροφος και ο Καπετάνιος του θα κάνουν ό,τι καλύτερο μπορούν για να κάνουν τους άλλους άνετους στη τροπική τους νησιωτική φωλιά.', en: 'The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest.' }, date: { el: '01 Ιουνίου', en: '01 June' }, image: '/images/latest-post1.jpg', slug: 'best-quality-restaurant' },
+    { id: 2, title: { el: 'Ειδική Συνταγή Ψητού Εστιατορίου', en: 'Special Grill Recipe Restaurant Ready' }, excerpt: { el: 'Όλα είχαν χρυσά μαλλιά σαν τη μητέρα τους, η μικρότερη με μπούκλες. Ελάτε και παίξτε.', en: 'All of them had hair of gold like their mother the youngest one in curls. Come and play.' }, date: { el: '29 Αυγούστου', en: '29 August' }, image: '/images/latest-post2.jpg', slug: 'special-grill-recipe' },
+  ],
+};
+
+export const newsletterConfig: NewsletterConfig = {
+  title: { el: 'Ενημερωτικό Δελτίο', en: 'Newsletter' },
+  description: { el: 'Εγγραφείτε με το email σας για να λαμβάνετε ενημερώσεις για τις εκδηλώσεις μας', en: 'Sign up with your email to get updates fresh updates about our events' },
+  placeholder: { el: 'Εισάγετε το Email σας', en: 'Enter Your Email Address' },
+  backgroundImage: '/images/newsletter-bg.jpg',
+};
+
+export const teamConfig: TeamConfig = {
+  sectionTitle: { el: 'Γνωρίστε τους Σεφ μας', en: 'Meet Our Chefs' },
+  title: { el: 'Η ΟΜΑΔΑ ΜΑΣ', en: 'OUR TEAM' },
+  members: [
+    { name: { el: 'ΡΑΝΤΙ ΚΡΙΣΕΝ', en: 'RANDY CRISHEN' }, role: { el: 'Διευθύνων Σύμβουλος', en: 'Managing Director' }, image: '/images/team1.jpg' },
+    { name: { el: 'ΑΦΤΙΑΝ ΤΖΑΝΚΙΣΚΙ', en: 'AFTIAN JANKISCKY' }, role: { el: 'Βοηθός Διευθύνοντος', en: 'Assistant Managing Director' }, image: '/images/team2.jpg' },
+    { name: { el: 'ΚΙΝΓΚ ΚΡΟΚ', en: 'KING CROCK' }, role: { el: 'Ανώτερος Επιβλέπων Σεφ', en: 'Senior Chief Supervisor' }, image: '/images/team3.jpg' },
+    { name: { el: 'ΚΕΝΑΝΤΙΓΟΥΙΣ', en: 'KENADYWISH' }, role: { el: 'Επιβλέπων Σερβιτόρων', en: 'Server Supervisor' }, image: '/images/team4.jpg' },
+  ],
+};
+
+export const galleryConfig: GalleryConfig = {
+  sectionTitle: { el: 'Γκαλερί', en: 'Gallery' },
+  title: { el: 'Η ΓΚΑΛΕΡΙ ΜΑΣ', en: 'OUR GALLERY' },
+  all: { el: 'Όλα', en: 'All' },
+  coffee: { el: 'Καφές', en: 'Coffee' },
+  lunch: { el: 'Μεσημεριανό', en: 'Lunch' },
+  nonveg: { el: 'Κρεατικά', en: 'Non-Veg' },
+  images: [
+    { src: '/images/gallery1.jpg', category: 'breakfast' },
+    { src: '/images/gallery2.jpg', category: 'coffee' },
+    { src: '/images/gallery3.jpg', category: 'lunch' },
+    { src: '/images/gallery4.jpg', category: 'dinner' },
+    { src: '/images/gallery5.jpg', category: 'nonveg' },
+    { src: '/images/gallery6.jpg', category: 'breakfast' },
+    { src: '/images/gallery7.jpg', category: 'coffee' },
+    { src: '/images/gallery8.jpg', category: 'lunch' },
+    { src: '/images/gallery9.jpg', category: 'dinner' },
+    { src: '/images/gallery10.jpg', category: 'nonveg' },
+    { src: '/images/gallery11.jpg', category: 'breakfast' },
+    { src: '/images/gallery12.jpg', category: 'coffee' },
+  ],
+};
+
+export const contactConfig: ContactConfig = {
+  sectionTitle: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact Us' },
+  title: { el: 'ΣΤΕΙΛΤΕ ΜΑΣ ΜΗΝΥΜΑ', en: 'SEND US A MESSAGE' },
+  address: { el: 'Διεύθυνση', en: 'Address' },
+  addressValue: { el: '121η Οδός, Αθήνα 10000', en: '121th Street, Sidney VIC 3000' },
+  phone: { el: 'Τηλέφωνο', en: 'Phone' },
+  email: { el: 'Email', en: 'Email' },
+  emailValue: { el: 'info@restaurant.gr', en: 'info@restaurant.com' },
+  namePlaceholder: { el: 'Το Όνομά σας', en: 'Your Name' },
+  emailPlaceholder: { el: 'Το Email σας', en: 'Your Email' },
+  subjectPlaceholder: { el: 'Θέμα', en: 'Subject' },
+  messagePlaceholder: { el: 'Το Μήνυμά σας', en: 'Your Message' },
+  sendMessage: { el: 'Αποστολή Μηνύματος', en: 'Send Message' },
+  workingHours: { el: 'Ωρες Λειτουργίας', en: 'Working Hours' },
+  workingHoursValue: { el: 'Δευ - Παρ: 9ΠΜ - 10ΜΜ', en: 'Mon - Fri: 9AM - 10PM' },
+};
+
+export const footerConfig: FooterConfig = {
+  aboutUs: { el: 'ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ', en: 'ABOUT US' },
+  aboutDescription: { 
+    el: 'Το εστιατόριό μας σύντομα θα κάνει ακόμα ένα ταξίδι. Υποσχόμαστε κάτι για όλους. Ταχύτητα και ποιότητα στην καλύτερη τιμή.',
+    en: 'The Love Boat soon will be making another run. The Love Boat promises something for everyone. Speed Racer. Going Speed Racer to best.'
+  },
+  quickLinks: { el: 'Γρήγοροι Σύνδεσμοι', en: 'Quick Links' },
+  workingTime: { el: 'ΩΡΕΣ ΛΕΙΤΟΥΡΓΙΑΣ', en: 'WORKING TIME' },
+  mondayTuesday: { el: 'Δευτέρα - Τρίτη', en: 'Monday - Tuesday' },
+  wednesday: { el: 'Τετάρτη', en: 'Wednesday' },
+  thursdayFriday: { el: 'Πέμπτη - Παρασκευή', en: 'Thursday - Friday' },
+  saturday: { el: 'Σάββατο', en: 'Saturday' },
+  sunday: { el: 'Κυριακή', en: 'Sunday' },
+  publicHolidays: { el: 'Αργίες', en: 'Public Holidays' },
+  closed: { el: 'Κλειστά', en: 'Closed' },
+  menuCategories: { el: 'ΚΑΤΗΓΟΡΙΕΣ ΜΕΝΟΥ', en: 'MENU CATEGORIES' },
+  appetizers: { el: 'ΟΡΕΚΤΙΚΑ', en: 'APPETIZERS' },
+  lunch: { el: 'ΜΕΣΗΜΕΡΙΑΝΟ', en: 'LUNCH' },
+  meatFish: { el: 'ΚΡΕΑΣ & ΨΑΡΙ', en: 'MEAT & FISH' },
+  soups: { el: 'ΣΟΥΠΕΣ', en: 'SOUPS' },
+  instagram: { el: 'Ακολουθήστε μας στο Instagram', en: 'Join us on Instagram' },
+  emailSubscribe: { el: 'Το email σας', en: 'Your email' },
+  instagramImages: [
+    '/images/insta1.jpg',
+    '/images/insta2.jpg',
+    '/images/insta3.jpg',
+    '/images/insta4.jpg',
+    '/images/insta5.jpg',
+    '/images/insta6.jpg',
+  ],
+};
+
+export const notFoundConfig: NotFoundConfig = {
+  title: { el: 'Σελίδα Δεν Βρέθηκε', en: 'Page Not Found' },
+  subtitle: { el: '404', en: '404' },
+  description: { el: 'Η σελίδα που ψάχνετε δεν υπάρχει.', en: 'The page you are looking for does not exist.' },
+  backHome: { el: 'Επιστροφή στην Αρχική', en: 'Back to Home' },
+  image: '/images/404.jpg',
 };
