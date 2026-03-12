@@ -5,6 +5,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 
+// test 1223
+
 const labels = {
   nameLabel: { el: 'Όνομα', en: 'Name' },
   emailLabel: { el: 'Email', en: 'Email' },

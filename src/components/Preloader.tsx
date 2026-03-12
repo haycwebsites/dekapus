@@ -3,7 +3,7 @@ import { Wine } from 'lucide-react';
 import { useHayc } from '../hayc/config-context';
 
 export function Preloader({ onComplete }: { onComplete: () => void }) {
-  const { t, config, cp } = useHayc();
+  const { t, config } = useHayc();
   const preloaderConfig = config.preloaderConfig;
 
   // Null check: if config is empty, complete immediately
@@ -36,10 +36,10 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
 
       {/* Brand Name */}
       <div className="preloader-text text-center" style={{ animationDelay: '0.2s' }}>
-        <h1 {...cp('preloaderConfig.brandName')} className="font-serif text-3xl md:text-4xl text-white tracking-wide mb-2">
+        <h1 className="font-serif text-3xl md:text-4xl text-white tracking-wide mb-2">
           {t(preloaderConfig.brandName)}
         </h1>
-        <p {...cp('preloaderConfig.brandSubname')} className="font-script text-2xl text-gold-400">{t(preloaderConfig.brandSubname)}</p>
+        <p className="font-script text-2xl text-gold-400">{t(preloaderConfig.brandSubname)}</p>
       </div>
 
       {/* Loading Line */}
@@ -50,7 +50,6 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
       {/* Year */}
       {preloaderConfig.yearText && (
         <p
-          {...cp('preloaderConfig.yearText')}
           className="preloader-text mt-4 text-xs text-white/40 uppercase tracking-[0.3em]"
           style={{ animationDelay: '0.4s' }}
         >
