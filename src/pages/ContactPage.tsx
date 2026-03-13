@@ -9,6 +9,8 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 export function ContactPage() {
   const { t, config, cp } = useHayc();
+  const phoneHref = 'tel:+306932269946';
+  const emailHref = 'mailto:dpaxinos@dekapus.com.gr';
 
   return (
     <>
@@ -45,7 +47,9 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h4 {...cp('contactConfig.phone')} className="text-white font-semibold mb-1">{t(config.contactConfig.phone)}</h4>
-                      <p {...cp('commonConfig.phoneNumber')} className="text-white/60">{t(config.commonConfig.phoneNumber)}</p>
+                      <a href={phoneHref} {...cp('commonConfig.phoneNumber')} className="text-white/60 hover:underline">
+                        {t(config.commonConfig.phoneNumber)}
+                      </a>
                     </div>
                   </div>
 
@@ -55,7 +59,9 @@ export function ContactPage() {
                     </div>
                     <div>
                       <h4 {...cp('contactConfig.email')} className="text-white font-semibold mb-1">{t(config.contactConfig.email)}</h4>
-                      <p {...cp('contactConfig.emailValue')} className="text-white/60">{t(config.contactConfig.emailValue)}</p>
+                      <a href={emailHref} {...cp('contactConfig.emailValue')} className="text-white/60 hover:underline">
+                        {t(config.contactConfig.emailValue)}
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -63,7 +69,7 @@ export function ContactPage() {
                 {/* Map placeholder */}
                 <div className="mt-8 aspect-video bg-white/5 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531676!3d-37.81627997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sVictoria%2C%20Australia!5e0!3m2!1sen!2sus!4v1635959481000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps?q=Athens,+Greece&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

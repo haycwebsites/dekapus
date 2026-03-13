@@ -2,9 +2,7 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
 import { AboutSection } from '../components/sections/AboutSection';
-import { CounterSection } from '../components/sections/CounterSection';
-import { TeamSection } from '../components/sections/TeamSection';
-import { TestimonialsSection } from '../components/sections/TestimonialsSection';
+import { AboutStatementSection } from '../components/sections/AboutStatementSection';
 import { useHayc } from '../hayc/config-context';
 
 export function AboutPage() {
@@ -16,9 +14,7 @@ export function AboutPage() {
       <main>
         <PageBanner title={config.navigationConfig.about} titlePath="navigationConfig.about" />
         <AboutSection />
-        <CounterSection />
-        <TeamSection />
-        <TestimonialsSection />
+        <AboutStatementSection />
       </main>
       <Footer />
     </>

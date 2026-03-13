@@ -27,8 +27,11 @@ function App() {
         <div className={`min-h-screen bg-[#141414] ${isLoading ? 'overflow-hidden max-h-screen' : ''}`}>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/dekapus-method" element={<BlogSinglePage />} />
+            <Route path="/my-work" element={<BlogSinglePage />} />
             <Route path="/home-2" element={<HomePage2 />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/engagement" element={<BlogSinglePage />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/reservation" element={<ReservationPage />} />
             <Route path="/gallery" element={<GalleryPage />} />

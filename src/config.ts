@@ -300,20 +300,20 @@ export const scrollToTopConfig: ScrollToTopConfig = {
 };
 
 export const navigationConfig: NavigationConfig = {
-  home: { el: 'Αρχική', en: 'Home' },
+  home: { el: 'Home', en: 'Home' },
   home1: { el: 'Αρχική 1', en: 'Home 1' },
   home2: { el: 'Αρχική 2', en: 'Home 2' },
-  about: { el: 'Σχετικά', en: 'About' },
-  events: { el: 'Εκδηλώσεις', en: 'Events' },
+  about: { el: 'About', en: 'About' },
+  events: { el: 'Dekapus Method', en: 'Dekapus Method' },
   pages: { el: 'Σελίδες', en: 'Pages' },
   menu: { el: 'Μενού', en: 'Menu' },
   reservation: { el: 'Κράτηση', en: 'Reservation' },
   gallery: { el: 'Γκαλερί', en: 'Gallery' },
-  services: { el: 'Υπηρεσίες', en: 'Our Services' },
-  team: { el: 'Ομάδα', en: 'Team' },
+  services: { el: 'My Work', en: 'My Work' },
+  team: { el: 'Engagement', en: 'Engagement' },
   blog: { el: 'Ιστολόγιο', en: 'Blog' },
   blogPost: { el: 'Άρθρο', en: 'Blog Post' },
-  contact: { el: 'Επικοινωνία', en: 'Contact' },
+  contact: { el: 'Contact', en: 'Contact' },
   contact1: { el: 'Επικοινωνία 1', en: 'Contact 1' },
   contact2: { el: 'Επικοινωνία 2', en: 'Contact 2' },
   bookNow: { el: 'Κράτηση Τώρα', en: 'Book Now' },
@@ -324,7 +324,7 @@ export const navigationConfig: NavigationConfig = {
 
 export const commonConfig: CommonConfig = {
   reservationPhone: { el: 'ΚΡΑΤΗΣΗ:', en: 'RESERVATION:' },
-  phoneNumber: { el: '(+30) 210 1234 567', en: '(+1) 123 4567 896' },
+  phoneNumber: { el: '(+30) 693 226 9946', en: '(+30) 693 226 9946' },
   readMore: { el: 'Διαβάστε Περισσότερα', en: 'Read More' },
   submit: { el: 'Υποβολή', en: 'Submit' },
   signUp: { el: 'Εγγραφή', en: 'Sign Up' },
@@ -332,8 +332,8 @@ export const commonConfig: CommonConfig = {
 };
 
 export const heroConfig: HeroConfig = {
-  title: { el: 'Καλώς Ήρθατε στο Εστιατόριό μας', en: 'Welcome to Our Restaurant' },
-  subtitle: { el: 'Αυθεντική Γαστρονομική Εμπειρία', en: 'Authentic Culinary Experience' },
+  title: { el: 'Welcome', en: 'Welcome' },
+  subtitle: { el: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.', en: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.' },
   viewMenuButton: { el: 'Δείτε το Μενού', en: 'View Menu' },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
@@ -341,15 +341,15 @@ export const heroConfig: HeroConfig = {
 };
 
 export const aboutConfig: AboutConfig = {
-  sectionTitle: { el: 'Σχετικά', en: 'About' },
-  title: { el: 'Είμαστε το καλύτερο ποιοτικό και παραδοσιακό εστιατόριο', en: 'We are the best quality and traditional restaurant' },
+  sectionTitle: { el: 'About', en: 'About' },
+  title: { el: 'I did not come from the consulting world. I came from the environments where hospitality is tested daily.', en: 'I did not come from the consulting world. I came from the environments where hospitality is tested daily.' },
   description1: { 
-    el: 'Αυτές οι μέρες είναι όλες χαρούμενες και ελεύθερες. Αυτές οι μέρες είναι για να τις μοιραζόμαστε μαζί. Μέχρι τη μέρα που η κυρία συνάντησε αυτόν τον κύριο και ήξεραν ότι ήταν κάτι πολύ περισσότερο από τύχη.',
-    en: 'These days are all Happy and Free. These days are all share them with me oh baby. Till the one day when the lady met this fellow and they knew it was much more than a hunch. Good bye gray sky hello blue.'
+    el: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.',
+    en: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.'
   },
   description2: {
-    el: 'Τώρα ο κόσμος δεν κινείται στον ρυθμό ενός μόνο τυμπάνου. Αυτό που μπορεί να είναι σωστό για εσάς μπορεί να μην είναι σωστό για κάποιους. Χωρίς τηλέφωνο, χωρίς φώτα, χωρίς αυτοκίνητο, ούτε μια πολυτέλεια.',
-    en: 'Now the world don\'t move to the beat of just one drum. What might be right for you may not be right for some. No phone no lights no motor car not a single luxury.'
+    el: 'I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance.',
+    en: 'I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance.'
   },
   chefName: { el: 'ΤΖΑΚΛΙΝ ΡΟΚΙ', en: 'JACKLIN ROCKY' },
   chefThumb: '/images/about-thumb.jpg',
@@ -371,8 +371,8 @@ export const servicesConfig: ServicesConfig = {
 };
 
 export const counterConfig: CounterConfig = {
-  sectionTitle: { el: 'Αριθμοί', en: 'Counters' },
-  title: { el: 'Είμαστε Νόστιμο Εστιατόριο', en: 'We Are Delicious Restaurant' },
+  sectionTitle: { el: 'This is not consulting.', en: 'This is not consulting.' },
+  title: { el: 'It is perception, intervention, and precise tuning.', en: 'It is perception, intervention, and precise tuning.' },
   backgroundImage: '/images/counter-bg.jpg',
   items: [
     { icon: '/images/counter-ic1.png', value: 4372, label: { el: 'ΚΟΤΌΠΟΥΛΑ ΣΕΡΒΙΡΙΣΜΈΝΑ', en: 'CHICKEN SERVED' } },
@@ -499,7 +499,7 @@ export const contactConfig: ContactConfig = {
   addressValue: { el: '121η Οδός, Αθήνα 10000', en: '121th Street, Sidney VIC 3000' },
   phone: { el: 'Τηλέφωνο', en: 'Phone' },
   email: { el: 'Email', en: 'Email' },
-  emailValue: { el: 'info@restaurant.gr', en: 'info@restaurant.com' },
+  emailValue: { el: 'dpaxinos@dekapus.com.gr', en: 'dpaxinos@dekapus.com.gr' },
   namePlaceholder: { el: 'Το Όνομά σας', en: 'Your Name' },
   emailPlaceholder: { el: 'Το Email σας', en: 'Your Email' },
   subjectPlaceholder: { el: 'Θέμα', en: 'Subject' },

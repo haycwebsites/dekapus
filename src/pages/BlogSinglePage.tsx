@@ -1,34 +1,124 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
 import { useHayc } from '../hayc/config-context';
-import { Input } from '../components/ui/input';
-import { Button } from '../components/ui/button';
-import { Textarea } from '../components/ui/textarea';
-import { User, MessageCircle, Tag, Search, Calendar, Facebook, Twitter, Linkedin } from 'lucide-react';
 
 export function BlogSinglePage() {
   const { t, img, config, cp } = useHayc();
   const { slug } = useParams();
+  const location = useLocation();
   
   const post = config.blogConfig.items.find(p => p.slug === slug) || config.blogConfig.items[0];
   const postIndex = config.blogConfig.items.findIndex(p => p.slug === slug) || 0;
-  const recentPosts = config.blogConfig.items.filter(p => p.id !== post.id).slice(0, 3);
+  const sectionTitleMap = {
+    '/dekapus-method': { title: config.navigationConfig.events, path: 'navigationConfig.events' },
+    '/my-work': { title: config.navigationConfig.services, path: 'navigationConfig.services' },
+    '/engagement': { title: config.navigationConfig.team, path: 'navigationConfig.team' },
+  } as const;
+  const pageTitle = sectionTitleMap[location.pathname as keyof typeof sectionTitleMap] ?? {
+    title: config.navigationConfig.blogPost,
+    path: 'navigationConfig.blogPost',
+  };
 
-  const categories = [
-    { name: 'Restaurant', count: 12 },
-    { name: 'Food & Drinks', count: 8 },
-    { name: 'Events', count: 5 },
-    { name: 'Recipes', count: 15 },
-    { name: 'News', count: 7 },
+  const serviceLinks = [
+    { label: config.navigationConfig.events, path: '/dekapus-method' },
+    { label: config.navigationConfig.services, path: '/my-work' },
+    { label: config.navigationConfig.team, path: '/engagement' },
   ];
+  const dekapusMethodContent = {
+    title: 'THE DEKAPUS METHOD™ - PHILOSOPHY & FRAMEWORK',
+    intro:
+      'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
+    section1Title: 'Perception & Space Reading',
+    section1Body:
+      'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
+    section2Title: 'Atmosphere & Energy',
+    section2Body:
+      "Atmosphere is not decoration. It is the result of choices, timing, and human presence. When atmosphere is right, systems support. When it isn't, systems suffocate.",
+    section3Title: 'Human Flow & Behaviour',
+    section3Body:
+      'People do not move randomly. Their movement, reactions, and fatigue reveal the true health of a space. The DEKAPUS Method™ reads flow before correcting it.',
+    section4Title: 'Operational Systems',
+    section4Body:
+      'Processes exist to support experience - not suppress it. Systems are redesigned only after understanding what they must serve.',
+    section5Title: 'Timing & Intervention',
+    section5Body:
+      'Effective intervention is not about intensity. It is about timing. DEKAPUS works with precision, not urgency.',
+  };
+  const myWorkContent = {
+    title: 'Pre-opening & Concept Birth',
+    intro:
+      'When a concept needs identity, rhythm, and internal coherence before opening its doors.',
+    section1Title: 'When a Space Feels "Off"',
+    section1Body:
+      "When everything looks right, but something doesn't work - and no one can clearly define it.",
+    section2Title: 'Operational Chaos Behind a Beautiful Front',
+    section2Body:
+      'When image is strong, but daily reality exhausts people and systems.',
+    section3Title: 'Team Fatigue & Loss of Rhythm',
+    section3Body: 'When teams function, but no longer breathe.',
+    section4Title: 'Repositioning & Reset',
+    section4Body: 'When a space needs realignment without losing its soul.',
+    section5Title: '',
+    section5Body: '',
+  };
+  const engagementContent = {
+    title: 'When It Makes Sense to Work Together',
+    intro:
+      'Working with DEKAPUS does not start with packages or hours. It starts with alignment. I do not take on every project. I engage where intervention has real meaning.',
+    list1Title: 'Collaboration works best when:',
+    list1Items: [
+      'There is a clear need, not simple curiosity',
+      'The owner or decision-maker is involved',
+      'There is willingness to hear and address difficult truths',
+      'The space is treated as a living system, not a problem to fix',
+    ],
+    section2Title: 'How the Process Usually Unfolds',
+    section2Body:
+      'Every engagement is different in duration and form. However, most begin with:',
+    processItems: [
+      {
+        title: 'Observation & Space Reading',
+        body: 'No immediate action. Understanding comes first.',
+      },
+      {
+        title: 'Perceptual Alignment',
+        body: 'Clarifying what is truly happening - beyond assumptions and numbers.',
+      },
+      {
+        title: 'Targeted Intervention',
+        body: 'Fewer moves. Greater precision.',
+      },
+      {
+        title: 'Stabilization & Support',
+        body: 'Until the space functions autonomously, with natural rhythm.',
+      },
+    ],
+    section3Title: 'What This Is Not',
+    section3Body: 'DEKAPUS is not:',
+    list2Items: [
+      'Fast consulting',
+      'Pre-made templates',
+      'Surface-level intervention',
+      'Optimization without understanding',
+    ],
+    closing:
+      'Collaboration works when there is trust in time, process, and people.',
+  };
+  const standardCustomContent =
+    location.pathname === '/dekapus-method'
+      ? dekapusMethodContent
+      : location.pathname === '/my-work'
+        ? myWorkContent
+        : null;
+  const isEngagementPage = location.pathname === '/engagement';
 
   return (
     <>
       <Header variant="inner" />
       <main>
-        <PageBanner title={config.navigationConfig.blogPost} titlePath="navigationConfig.blogPost" />
+        <PageBanner title={pageTitle.title} titlePath={pageTitle.path} />
         
         <section className="py-20 bg-[#141414]">
           <div className="container mx-auto px-4">
@@ -36,32 +126,21 @@ export function BlogSinglePage() {
               {/* Main Content */}
               <article className="lg:col-span-2">
                 <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
-                  <img 
-                    src={img(post.image)} 
+                  <div className="p-8 pb-0">
+                    <h1
+                      {...cp(`blogConfig.items.${postIndex}.title`)}
+                      className="text-2xl md:text-3xl font-semibold text-white mb-6"
+                    >
+                      {isEngagementPage ? engagementContent.title : standardCustomContent ? standardCustomContent.title : t(post.title)}
+                    </h1>
+                  </div>
+                  <img
+                    src={img(post.image)}
                     alt={t(post.title)}
                     className="w-full h-96 object-cover"
                   />
                   <div className="p-8">
-                    <div className="flex items-center gap-4 text-white/50 text-sm mb-4">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {t(post.date)}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        Admin
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <MessageCircle className="w-4 h-4" />
-                        5 Comments
-                      </span>
-                    </div>
-                    
-                    <h1 {...cp(`blogConfig.items.${postIndex}.title`)} className="text-2xl md:text-3xl font-semibold text-white mb-6">
-                      {t(post.title)}
-                    </h1>
-                    
-                    <div className="prose prose-invert max-w-none">
+                    <div className={`prose prose-invert max-w-none ${standardCustomContent || isEngagementPage ? 'hidden' : ''}`}>
                       <p {...cp(`blogConfig.items.${postIndex}.excerpt`)} className="text-white/70 leading-relaxed mb-4">
                         {t(post.excerpt)}
                       </p>
@@ -79,132 +158,131 @@ export function BlogSinglePage() {
                       </p>
                     </div>
 
-                    {/* Tags & Share */}
-                    <div className="flex flex-wrap items-center justify-between gap-4 mt-8 pt-8 border-t border-white/10">
-                      <div className="flex items-center gap-2">
-                        <Tag className="w-4 h-4 text-[#c8a97e]" />
-                        <span className="text-white/50 text-sm">Tags:</span>
-                        <a href="#" className="text-white/70 hover:text-[#c8a97e] text-sm">Restaurant,</a>
-                        <a href="#" className="text-white/70 hover:text-[#c8a97e] text-sm">Food,</a>
-                        <a href="#" className="text-white/70 hover:text-[#c8a97e] text-sm">Events</a>
+                    {standardCustomContent && (
+                      <div className="space-y-6">
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                            {standardCustomContent.section1Title}
+                          </h2>
+                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section1Body}</p>
+                        </div>
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                            {standardCustomContent.section2Title}
+                          </h2>
+                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section2Body}</p>
+                        </div>
+                        <img
+                          src={img(post.image)}
+                          alt={t(post.title)}
+                          className="w-full h-96 object-cover"
+                        />
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                            {standardCustomContent.section3Title}
+                          </h2>
+                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section3Body}</p>
+                        </div>
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                            {standardCustomContent.section4Title}
+                          </h2>
+                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section4Body}</p>
+                        </div>
+                        {standardCustomContent.section5Title && standardCustomContent.section5Body && (
+                          <div>
+                            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                              {standardCustomContent.section5Title}
+                            </h2>
+                            <p className="text-white/70 leading-relaxed">{standardCustomContent.section5Body}</p>
+                          </div>
+                        )}
                       </div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-white/50 text-sm">Share:</span>
-                        <a href="#" className="text-white/50 hover:text-[#c8a97e]"><Facebook className="w-4 h-4" /></a>
-                        <a href="#" className="text-white/50 hover:text-[#c8a97e]"><Twitter className="w-4 h-4" /></a>
-                        <a href="#" className="text-white/50 hover:text-[#c8a97e]"><Linkedin className="w-4 h-4" /></a>
+                    )}
+
+                    {isEngagementPage && (
+                      <div className="space-y-8">
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-3">
+                            {engagementContent.list1Title}
+                          </h2>
+                          <ul className="space-y-3">
+                            {engagementContent.list1Items.map((item) => (
+                              <li key={item} className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed">
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                            {engagementContent.section2Title}
+                          </h2>
+                          <p className="text-white/70 leading-relaxed mb-4">
+                            {engagementContent.section2Body}
+                          </p>
+                          <ul className="space-y-3">
+                            {engagementContent.processItems.map((item) => (
+                              <li key={item.title} className="rounded-md border border-white/10 bg-white/5 px-4 py-3">
+                                <h3 className="text-white font-semibold mb-1">{item.title}</h3>
+                                <p className="text-white/70 leading-relaxed">{item.body}</p>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <img
+                          src={img(post.image)}
+                          alt={t(post.title)}
+                          className="w-full h-96 object-cover"
+                        />
+
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                            {engagementContent.section3Title}
+                          </h2>
+                          <p className="text-white/70 leading-relaxed mb-4">
+                            {engagementContent.section3Body}
+                          </p>
+                          <ul className="space-y-3">
+                            {engagementContent.list2Items.map((item) => (
+                              <li key={item} className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed">
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <p className="text-white/80 leading-relaxed">
+                          {engagementContent.closing}
+                        </p>
                       </div>
-                    </div>
+                    )}
+
                   </div>
                 </div>
 
-                {/* Author Box */}
-                <div className="bg-[#1a1a1a] rounded-lg p-6 mt-8 flex gap-6">
-                  <img 
-                    src="/images/about-author.jpg" 
-                    alt="Author"
-                    className="w-24 h-24 rounded-full object-cover"
-                  />
-                  <div>
-                    <h4 className="text-white font-semibold mb-2">About Author</h4>
-                    <p className="text-white/60 text-sm">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Comments Section */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-semibold text-white mb-6">Leave a Comment</h3>
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <Input 
-                        type="text"
-                        placeholder="Your Name"
-                        className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                      />
-                      <Input 
-                        type="email"
-                        placeholder="Your Email"
-                        className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                      />
-                    </div>
-                    <Textarea 
-                      placeholder="Your Comment"
-                      className="min-h-40 bg-white/10 border-white/20 text-white placeholder:text-white/50 resize-none"
-                    />
-                    <Button 
-                      type="submit"
-                      className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8"
-                    >
-                      Post Comment
-                    </Button>
-                  </form>
-                </div>
               </article>
 
               {/* Sidebar */}
-              <aside className="space-y-8">
-                {/* Search */}
+              <aside className="lg:sticky lg:top-36 self-start">
+                {/* Services */}
                 <div className="bg-[#1a1a1a] rounded-lg p-6">
-                  <h4 {...cp('navigationConfig.search')} className="text-white font-semibold mb-4">{t(config.navigationConfig.search)}</h4>
-                  <div className="flex gap-2">
-                    <Input 
-                      type="text"
-                      placeholder={t(config.navigationConfig.search)}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                    />
-                    <Button className="bg-[#c8a97e] hover:bg-[#b89a6f]">
-                      <Search className="w-4 h-4" />
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Categories */}
-                <div className="bg-[#1a1a1a] rounded-lg p-6">
-                  <h4 className="text-white font-semibold mb-4">Categories</h4>
+                  <h4 className="text-white font-semibold mb-4">Services</h4>
                   <ul className="space-y-3">
-                    {categories.map((cat, index) => (
-                      <li key={index}>
-                        <a 
-                          href="#"
-                          className="flex items-center justify-between text-white/70 hover:text-[#c8a97e] transition-colors"
+                    {serviceLinks.map((serviceLink) => (
+                      <li key={serviceLink.path}>
+                        <Link
+                          to={serviceLink.path}
+                          className={`text-white/70 hover:text-[#c8a97e] transition-colors ${
+                            location.pathname === serviceLink.path ? 'text-[#c8a97e]' : ''
+                          }`}
                         >
-                          <span>{cat.name}</span>
-                          <span className="text-white/40">({cat.count})</span>
-                        </a>
+                          {t(serviceLink.label)}
+                        </Link>
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Recent Posts */}
-                <div className="bg-[#1a1a1a] rounded-lg p-6">
-                  <h4 className="text-white font-semibold mb-4">Recent Posts</h4>
-                  <div className="space-y-4">
-                    {recentPosts.map((recentPost) => (
-                      <Link 
-                        key={recentPost.id}
-                        to={`/blog/${recentPost.slug}`}
-                        className="flex gap-3 group"
-                      >
-                        <img 
-                          src={img(recentPost.image)} 
-                          alt={t(recentPost.title)}
-                          className="w-16 h-16 rounded object-cover flex-shrink-0"
-                        />
-                        <div>
-                          <h5 className="text-white text-sm group-hover:text-[#c8a97e] transition-colors line-clamp-2">
-                            {t(recentPost.title)}
-                          </h5>
-                          <span className="text-white/50 text-xs flex items-center gap-1 mt-1">
-                            <Calendar className="w-3 h-3" />
-                            {t(recentPost.date)}
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
                 </div>
               </aside>
             </div>
