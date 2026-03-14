@@ -11,6 +11,7 @@ import {
 } from '../ui/navigation-menu';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
+import blackLogoTagline from '../../Images/blackLogoTagline.png';
 
 interface HeaderProps {
   variant?: 'home' | 'inner';
@@ -42,6 +43,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
 
   const isActive = (path: string) => location.pathname === path;
   const toggleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  const isLightTopHomeHeader = theme === 'light' && !isScrolled && variant === 'home';
 
   const navLinks = [
     { label: t(config.navigationConfig.home), path: '/' },
@@ -54,8 +56,10 @@ export function Header({ variant = 'inner' }: HeaderProps) {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled || variant === 'inner' 
-        ? 'bg-[#1a1a1a]/95 backdrop-blur-sm shadow-lg' 
+      isScrolled || variant === 'inner'
+        ? theme === 'light'
+          ? 'bg-white/95 backdrop-blur-sm shadow-lg'
+          : 'bg-[#1a1a1a]/95 backdrop-blur-sm shadow-lg'
         : 'bg-transparent'
     }`}>
       {/* Top Bar */}
@@ -95,7 +99,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img
-              src={whiteLogoTagline}
+              src={theme === 'light' && (isScrolled || variant === 'inner') ? blackLogoTagline : whiteLogoTagline}
               alt="Restaurant Logo"
               className="h-16"
             />
@@ -109,8 +113,14 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                   <NavigationMenuItem key={link.path + link.label}>
                     <Link
                       to={link.path}
-                      className={`px-4 py-2 text-sm font-medium text-white hover:text-[#c8a97e] transition-colors ${
-                        isActive(link.path) ? 'text-[#c8a97e]' : ''
+                      className={`px-4 py-2 text-sm font-medium transition-colors hover:text-[#c8a97e] ${
+                        isActive(link.path)
+                          ? 'text-[#c8a97e]'
+                          : isLightTopHomeHeader
+                            ? 'header-nav-link-light-top'
+                            : theme === 'light' && (isScrolled || variant === 'inner')
+                            ? 'text-[#141414]'
+                            : 'text-white'
                       }`}
                     >
                       {link.label}

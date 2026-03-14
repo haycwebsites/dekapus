@@ -114,6 +114,15 @@ export function BlogSinglePage() {
         : null;
   const isEngagementPage = location.pathname === '/engagement';
 
+  const sectionHeroImage =
+    location.pathname === '/dekapus-method'
+      ? '/images/method-section.jpg'
+      : location.pathname === '/my-work'
+        ? '/images/situations-work.jpg'
+        : location.pathname === '/engagement'
+          ? '/images/engagement-section.jpg'
+          : post.image;
+
   return (
     <>
       <Header variant="inner" />
@@ -135,7 +144,7 @@ export function BlogSinglePage() {
                     </h1>
                   </div>
                   <img
-                    src={img(post.image)}
+                    src={img(sectionHeroImage)}
                     alt={t(post.title)}
                     className="w-full h-96 object-cover"
                   />
@@ -173,7 +182,13 @@ export function BlogSinglePage() {
                           <p className="text-white/70 leading-relaxed">{standardCustomContent.section2Body}</p>
                         </div>
                         <img
-                          src={img(post.image)}
+                          src={img(
+                            location.pathname === '/dekapus-method'
+                              ? '/images/slide1.jpg'
+                              : location.pathname === '/my-work'
+                                ? '/images/newsletter-bg.jpg'
+                                : sectionHeroImage
+                          )}
                           alt={t(post.title)}
                           className="w-full h-96 object-cover"
                         />
@@ -232,7 +247,7 @@ export function BlogSinglePage() {
                           </ul>
                         </div>
                         <img
-                          src={img(post.image)}
+                          src={img('/images/slide2.jpg')}
                           alt={t(post.title)}
                           className="w-full h-96 object-cover"
                         />
@@ -266,9 +281,9 @@ export function BlogSinglePage() {
 
               {/* Sidebar */}
               <aside className="lg:sticky lg:top-36 self-start">
-                {/* Services */}
+                {/* All offerings */}
                 <div className="bg-[#1a1a1a] rounded-lg p-6">
-                  <h4 className="text-white font-semibold mb-4">Services</h4>
+                  <h4 className="text-white font-semibold mb-4">All offerings</h4>
                   <ul className="space-y-3">
                     {serviceLinks.map((serviceLink) => (
                       <li key={serviceLink.path}>

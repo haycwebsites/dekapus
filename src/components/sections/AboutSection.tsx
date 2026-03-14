@@ -1,12 +1,30 @@
-import { Facebook, Twitter } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import signature from '../../Images/signature.png';
+import signatureBlack from '../../Images/signatureBlack.png';
 
 export function AboutSection() {
   const { t, img, config, cp } = useHayc();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'light' ? 'light' : 'dark';
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const syncThemeFromDom = () => {
+      setTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    };
+
+    syncThemeFromDom();
+    const observer = new MutationObserver(syncThemeFromDom);
+    observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => observer.disconnect();
+  }, []);
 
   const homeIntro = {
     sectionTitle: 'Welcome',
@@ -40,50 +58,19 @@ export function AboutSection() {
             </p>
 
             {/* Detail Card */}
-            <div className="flex items-center justify-center gap-4 p-4 bg-white/5 rounded-lg">
-              {isHomePage ? (
-                <img
-                  src={signature}
-                  alt="Signature"
-                  className="h-12 object-contain"
-                />
-              ) : (
-                <>
-                  <img 
-                    src={img(config.aboutConfig.chefThumb)} 
-                    alt="Chef"
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
-                  <div>
-                    <img 
-                      src={img(config.aboutConfig.chefSign)} 
-                      alt="Signature"
-                      className="h-8 mb-2"
-                    />
-                    <h4 {...cp('aboutConfig.chefName')} className="text-white font-semibold">{t(config.aboutConfig.chefName)}</h4>
-                    <div className="flex gap-2 mt-2">
-                      <a href="#" className="text-white/50 hover:text-[#c8a97e]">
-                        <Facebook className="w-4 h-4" />
-                      </a>
-                      <a href="#" className="text-white/50 hover:text-[#c8a97e]">
-                        <Twitter className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                </>
-              )}
+            <div className="flex items-center justify-start gap-4 p-4 bg-white/5 rounded-lg">
+              <img
+                src={theme === 'light' ? signatureBlack : signature}
+                alt="Signature"
+                className="h-12 object-contain"
+              />
             </div>
           </div>
 
           {/* Images */}
           <div className="grid grid-cols-1 gap-4">
             <img 
-              src={img(config.aboutConfig.aboutImage1)} 
-              alt="About"
-              className="w-full rounded-lg"
-            />
-            <img 
-              src={img(config.aboutConfig.aboutImage2)} 
+              src={img('/images/counter-bg.jpg')} 
               alt="About"
               className="w-full rounded-lg"
             />

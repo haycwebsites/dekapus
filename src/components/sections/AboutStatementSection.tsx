@@ -1,12 +1,12 @@
 import { useHayc } from '../../hayc/config-context';
 
 export function AboutStatementSection() {
-  const { img, config } = useHayc();
+  const { img } = useHayc();
 
   return (
     <section
       className="on-dark-image-section py-20 bg-cover bg-center bg-fixed relative"
-      style={{ backgroundImage: `url(${img(config.counterConfig.backgroundImage)})` }}
+      style={{ backgroundImage: `url(${img('/images/engagement-section.jpg')})` }}
     >
       <div className="absolute inset-0 bg-black/70" />
       <div className="relative container mx-auto px-4">

@@ -1,8 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
 import type { LocaleString } from '../config';
 import { type RemoteConfig, defaultConfig, fetchRemoteConfig } from './use-remote-config';
-import img1 from '../Images/img1.jpg';
-
 export type Locale = 'el' | 'en';
 
 interface HaycContextValue {
@@ -69,11 +67,7 @@ export function HaycProvider({ children }: { children: ReactNode }) {
   }, [isEditMode]);
 
   const t = (val: LocaleString): string => val[locale] ?? val.en;
-  const img = (val: string): string => {
-    // Replace template placeholder image paths with the provided image.
-    if (val.startsWith('/images/')) return img1;
-    return val;
-  };
+  const img = (val: string): string => val;
 
   const cp = useCallback((path: string): object => {
     if (!isEditMode) return {};

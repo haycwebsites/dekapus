@@ -309,7 +309,7 @@ export const navigationConfig: NavigationConfig = {
   menu: { el: 'Μενού', en: 'Menu' },
   reservation: { el: 'Κράτηση', en: 'Reservation' },
   gallery: { el: 'Γκαλερί', en: 'Gallery' },
-  services: { el: 'My Work', en: 'My Work' },
+  services: { el: 'Situations I Work In', en: 'Situations I Work In' },
   team: { el: 'Engagement', en: 'Engagement' },
   blog: { el: 'Ιστολόγιο', en: 'Blog' },
   blogPost: { el: 'Άρθρο', en: 'Blog Post' },
@@ -332,9 +332,9 @@ export const commonConfig: CommonConfig = {
 };
 
 export const heroConfig: HeroConfig = {
-  title: { el: 'Welcome', en: 'Welcome' },
+  title: { el: 'Dekapus', en: 'Dekapus' },
   subtitle: { el: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.', en: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.' },
-  viewMenuButton: { el: 'Δείτε το Μενού', en: 'View Menu' },
+  viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
   slideLogo: '/images/slide-logo.png',
@@ -424,9 +424,9 @@ export const eventsConfig: EventsConfig = {
   sectionTitle: { el: 'Τελευταίες Εκδηλώσεις', en: 'Latest Events' },
   title: { el: 'ΜΗΝ ΧΑΣΕΤΕ', en: 'DO NOT MISS' },
   items: [
-    { title: { el: 'Καθημερινά Ειδικά Φαγητά για την Υγεία σας', en: 'Daily Special Foods For Your Health' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '20 Δεκ 2016, 10:23 πμ', en: 'Dec 20, 2016 10:23 am' }, image: '/images/event1.jpg' },
-    { title: { el: 'Το Ειδικό Τηγανητό Κοτόπουλο με Ρύζι', en: 'The Specialty Chicken Fry With Rice Food' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '21 Μαρ 2016, 12:00 μμ', en: 'Mar 21, 2016 12:00 pm' }, image: '/images/event2.jpg' },
-    { title: { el: 'Ποτά με Γαρνιτούρα Τηγανητής Ντομάτας', en: 'Drinks With Garnish Fried Tomato Chosey' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '12 Μαρ 2016, 02:30 μμ', en: 'Mar 12, 2016 02:30 pm' }, image: '/images/event3.jpg' },
+    { title: { el: 'Καθημερινά Ειδικά Φαγητά για την Υγεία σας', en: 'Daily Special Foods For Your Health' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '20 Δεκ 2016, 10:23 πμ', en: 'Dec 20, 2016 10:23 am' }, image: '/images/method-section.jpg' },
+    { title: { el: 'Το Ειδικό Τηγανητό Κοτόπουλο με Ρύζι', en: 'The Specialty Chicken Fry With Rice Food' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '21 Μαρ 2016, 12:00 μμ', en: 'Mar 21, 2016 12:00 pm' }, image: '/images/situations-work.jpg' },
+    { title: { el: 'Ποτά με Γαρνιτούρα Τηγανητής Ντομάτας', en: 'Drinks With Garnish Fried Tomato Chosey' }, description: { el: 'Ένας νέος μοναχικός σε μια σταυροφορία για να υπερασπιστεί την υπόθεση των αθώων.', en: 'Michael Knight a young loner on a crusade to champion the cause of the innocent.' }, date: { el: '12 Μαρ 2016, 02:30 μμ', en: 'Mar 12, 2016 02:30 pm' }, image: '/images/engagement-section.jpg' },
   ],
 };
 
@@ -446,8 +446,8 @@ export const blogConfig: BlogConfig = {
   title: { el: 'ΙΣΤΟΛΟΓΙΟ', en: 'BLOG' },
   posted: { el: 'Δημοσιεύθηκε', en: 'Posted' },
   items: [
-    { id: 1, title: { el: 'Είμαστε το Καλύτερο Ποιοτικό Εστιατόριο', en: 'We Are Best Quality Serve Restaurant' }, excerpt: { el: 'Ο πρώτος σύντροφος και ο Καπετάνιος του θα κάνουν ό,τι καλύτερο μπορούν για να κάνουν τους άλλους άνετους στη τροπική τους νησιωτική φωλιά.', en: 'The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest.' }, date: { el: '01 Ιουνίου', en: '01 June' }, image: '/images/latest-post1.jpg', slug: 'best-quality-restaurant' },
-    { id: 2, title: { el: 'Ειδική Συνταγή Ψητού Εστιατορίου', en: 'Special Grill Recipe Restaurant Ready' }, excerpt: { el: 'Όλα είχαν χρυσά μαλλιά σαν τη μητέρα τους, η μικρότερη με μπούκλες. Ελάτε και παίξτε.', en: 'All of them had hair of gold like their mother the youngest one in curls. Come and play.' }, date: { el: '29 Αυγούστου', en: '29 August' }, image: '/images/latest-post2.jpg', slug: 'special-grill-recipe' },
+    { id: 1, title: { el: 'Είμαστε το Καλύτερο Ποιοτικό Εστιατόριο', en: 'We Are Best Quality Serve Restaurant' }, excerpt: { el: 'Ο πρώτος σύντροφος και ο Καπετάνιος του θα κάνουν ό,τι καλύτερο μπορούν για να κάνουν τους άλλους άνετους στη τροπική τους νησιωτική φωλιά.', en: 'The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest.' }, date: { el: '01 Ιουνίου', en: '01 June' }, image: '/images/method-section.jpg', slug: 'best-quality-restaurant' },
+    { id: 2, title: { el: 'Ειδική Συνταγή Ψητού Εστιατορίου', en: 'Special Grill Recipe Restaurant Ready' }, excerpt: { el: 'Όλα είχαν χρυσά μαλλιά σαν τη μητέρα τους, η μικρότερη με μπούκλες. Ελάτε και παίξτε.', en: 'All of them had hair of gold like their mother the youngest one in curls. Come and play.' }, date: { el: '29 Αυγούστου', en: '29 August' }, image: '/images/engagement-section.jpg', slug: 'special-grill-recipe' },
   ],
 };
 
@@ -512,8 +512,8 @@ export const contactConfig: ContactConfig = {
 export const footerConfig: FooterConfig = {
   aboutUs: { el: 'ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ', en: 'ABOUT US' },
   aboutDescription: { 
-    el: 'Το εστιατόριό μας σύντομα θα κάνει ακόμα ένα ταξίδι. Υποσχόμαστε κάτι για όλους. Ταχύτητα και ποιότητα στην καλύτερη τιμή.',
-    en: 'The Love Boat soon will be making another run. The Love Boat promises something for everyone. Speed Racer. Going Speed Racer to best.'
+    el: 'Το DEKAPUS ευθυγραμμίζει χώρο, λειτουργία και ανθρώπινη συμπεριφορά για να αποκαθιστά ρυθμό, ενέργεια και συνοχή. Δεν προσφέρουμε πρόχειρες λύσεις — προσφέρουμε στοχευμένες παρεμβάσεις με ουσία και διάρκεια.',
+    en: 'DEKAPUS aligns space, operations, and human behaviour to restore rhythm, energy, and coherence. We do not offer quick fixes - we deliver focused interventions with depth and lasting impact.'
   },
   quickLinks: { el: 'Γρήγοροι Σύνδεσμοι', en: 'Quick Links' },
   workingTime: { el: 'ΩΡΕΣ ΛΕΙΤΟΥΡΓΙΑΣ', en: 'WORKING TIME' },
@@ -532,12 +532,12 @@ export const footerConfig: FooterConfig = {
   instagram: { el: 'Ακολουθήστε μας στο Instagram', en: 'Join us on Instagram' },
   emailSubscribe: { el: 'Το email σας', en: 'Your email' },
   instagramImages: [
-    '/images/insta1.jpg',
-    '/images/insta2.jpg',
-    '/images/insta3.jpg',
-    '/images/insta4.jpg',
-    '/images/insta5.jpg',
-    '/images/insta6.jpg',
+    '/images/slide1.jpg',
+    '/images/slide2.jpg',
+    '/images/about-img1.jpg',
+    '/images/counter-bg.jpg',
+    '/images/method-section.jpg',
+    '/images/engagement-section.jpg',
   ],
 };
 

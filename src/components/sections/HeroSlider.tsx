@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
-import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
+import signature from '../../Images/signature.png';
 
 export function HeroSlider() {
   const { t, img, config, cp } = useHayc();
@@ -53,8 +54,8 @@ export function HeroSlider() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <img 
-                    src={whiteLogoTagline} 
-                    alt="Logo" 
+                    src={signature} 
+                    alt="Signature" 
                     className="mx-auto mb-8 h-24"
                   />
                   <h2 {...cp('heroConfig.title')} className="font-['Great_Vibes'] text-4xl md:text-6xl text-[#c8a97e] mb-8">
@@ -64,10 +65,13 @@ export function HeroSlider() {
                     {t(config.heroConfig.subtitle)}
                   </p>
                   <Button 
+                    asChild
                     size="lg"
                     className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
                   >
-                    <span {...cp('heroConfig.viewMenuButton')}>{t(config.heroConfig.viewMenuButton)}</span>
+                    <Link to="/about">
+                      <span {...cp('heroConfig.viewMenuButton')}>{t(config.heroConfig.viewMenuButton)}</span>
+                    </Link>
                   </Button>
                 </div>
               </div>

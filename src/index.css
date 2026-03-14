@@ -179,6 +179,11 @@
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
+/* Keep header links white on top transparent home hero in light mode */
+:root[data-theme='light'] .header-nav-link-light-top {
+  color: #ffffff !important;
+}
+
 @layer components {
   /* Button styles */
   .btn-primary {

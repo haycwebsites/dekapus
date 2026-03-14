@@ -1,18 +1,31 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { useHayc } from '../../hayc/config-context';
+import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
+import blackLogoTagline from '../../Images/blackLogoTagline.png';
+import signature from '../../Images/signature.png';
+import signatureBlack from '../../Images/signatureBlack.png';
 
 export function Footer() {
   const { t, img, config, cp } = useHayc();
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'light' ? 'light' : 'dark';
+  });
 
-  const menuCategories = [
-    { label: config.footerConfig.appetizers, path: '/menu' },
-    { label: config.menuConfig.breakfast, path: '/menu' },
-    { label: config.footerConfig.lunch, path: '/menu' },
-    { label: config.menuConfig.dinner, path: '/menu' },
-    { label: config.footerConfig.meatFish, path: '/menu' },
-    { label: config.footerConfig.soups, path: '/menu' },
-  ];
+  useEffect(() => {
+    const root = document.documentElement;
+    const syncThemeFromDom = () => {
+      setTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+    };
+
+    syncThemeFromDom();
+    const observer = new MutationObserver(syncThemeFromDom);
+    observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => observer.disconnect();
+  }, []);
 
   const quickLinks = [
     { label: config.navigationConfig.home, path: '/' },
@@ -79,21 +92,22 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Menu Categories */}
+          {/* Brand */}
           <div>
-            <h3 {...cp('footerConfig.menuCategories')} className="text-lg font-semibold mb-6 text-[#c8a97e]">{t(config.footerConfig.menuCategories)}</h3>
-            <ul className="space-y-3">
-              {menuCategories.map((item, index) => (
-                <li key={index}>
-                  <Link 
-                    to={item.path}
-                    className="text-white/70 text-sm hover:text-[#c8a97e] transition-colors"
-                  >
-                    {t(item.label)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center gap-6">
+              <Link to="/" className="inline-block">
+                <img
+                  src={theme === 'light' ? blackLogoTagline : whiteLogoTagline}
+                  alt="Dekapus Logo"
+                  className="h-24 object-contain"
+                />
+              </Link>
+              <img
+                src={theme === 'light' ? signatureBlack : signature}
+                alt="Signature"
+                className="h-16 object-contain"
+              />
+            </div>
           </div>
         </div>
 
