@@ -1,5 +1,7 @@
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
+import { Button } from '../ui/button';
 
 export function CounterSection() {
   const { t, img, config, cp } = useHayc();
@@ -22,6 +24,15 @@ export function CounterSection() {
           <h2 {...cp('counterConfig.title')} className="text-2xl md:text-3xl font-serif text-white uppercase">
             {t(config.counterConfig.title)}
           </h2>
+          <Button
+            asChild
+            size="lg"
+            className="mt-8 bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
+          >
+            <Link to="/dekapus-method">
+              <span {...cp('counterConfig.learnMoreButton')}>{t(config.counterConfig.learnMoreButton)}</span>
+            </Link>
+          </Button>
         </div>
 
       </div>

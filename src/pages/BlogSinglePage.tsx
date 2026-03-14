@@ -3,6 +3,7 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
 import { useHayc } from '../hayc/config-context';
+import { Button } from '../components/ui/button';
 
 export function BlogSinglePage() {
   const { t, img, config, cp } = useHayc();
@@ -181,6 +182,15 @@ export function BlogSinglePage() {
                           </h2>
                           <p className="text-white/70 leading-relaxed">{standardCustomContent.section2Body}</p>
                         </div>
+                        <Button
+                          asChild
+                          size="lg"
+                          className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
+                        >
+                          <Link to="/about">
+                            <span {...cp('counterConfig.learnMoreButton')}>{t(config.counterConfig.learnMoreButton)}</span>
+                          </Link>
+                        </Button>
                         <img
                           src={img(
                             location.pathname === '/dekapus-method'
@@ -246,6 +256,15 @@ export function BlogSinglePage() {
                             ))}
                           </ul>
                         </div>
+                        <Button
+                          asChild
+                          size="lg"
+                          className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
+                        >
+                          <Link to="/about">
+                            <span {...cp('counterConfig.learnMoreButton')}>{t(config.counterConfig.learnMoreButton)}</span>
+                          </Link>
+                        </Button>
                         <img
                           src={img('/images/slide2.jpg')}
                           alt={t(post.title)}

@@ -112,6 +112,7 @@ export interface CounterItem {
 export interface CounterConfig {
   sectionTitle: LocaleString;
   title: LocaleString;
+  learnMoreButton: LocaleString;
   backgroundImage: string;
   items: CounterItem[];
 }
@@ -373,6 +374,7 @@ export const servicesConfig: ServicesConfig = {
 export const counterConfig: CounterConfig = {
   sectionTitle: { el: 'This is not consulting.', en: 'This is not consulting.' },
   title: { el: 'It is perception, intervention, and precise tuning.', en: 'It is perception, intervention, and precise tuning.' },
+  learnMoreButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage: '/images/counter-bg.jpg',
   items: [
     { icon: '/images/counter-ic1.png', value: 4372, label: { el: 'ΚΟΤΌΠΟΥΛΑ ΣΕΡΒΙΡΙΣΜΈΝΑ', en: 'CHICKEN SERVED' } },
