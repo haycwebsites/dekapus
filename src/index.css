@@ -93,6 +93,92 @@
   }
 }
 
+/* Global light mode compatibility layer for hardcoded dark styles */
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='light'] body {
+  background-color: #f5f5f5;
+  color: #141414;
+}
+
+:root[data-theme='light'] .bg-\[\#141414\] {
+  background-color: #f5f5f5 !important;
+}
+
+:root[data-theme='light'] .bg-\[\#1a1a1a\] {
+  background-color: #ffffff !important;
+}
+
+:root[data-theme='light'] .bg-\[\#111\] {
+  background-color: #ececec !important;
+}
+
+:root[data-theme='light'] .bg-\[\#1a1a1a\]\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+:root[data-theme='light'] .text-white {
+  color: #141414 !important;
+}
+
+:root[data-theme='light'] .text-white\/80 {
+  color: rgba(20, 20, 20, 0.8) !important;
+}
+
+:root[data-theme='light'] .text-white\/70 {
+  color: rgba(20, 20, 20, 0.7) !important;
+}
+
+:root[data-theme='light'] .text-white\/60 {
+  color: rgba(20, 20, 20, 0.6) !important;
+}
+
+:root[data-theme='light'] .text-white\/50 {
+  color: rgba(20, 20, 20, 0.5) !important;
+}
+
+:root[data-theme='light'] .text-white\/40 {
+  color: rgba(20, 20, 20, 0.4) !important;
+}
+
+:root[data-theme='light'] .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+:root[data-theme='light'] .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+:root[data-theme='light'] .border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+:root[data-theme='light'] .bg-\[\#c8a97e\],
+:root[data-theme='light'] .bg-\[\#c8a97e\] .text-white,
+:root[data-theme='light'] .bg-\[\#c8a97e\] a,
+:root[data-theme='light'] .bg-\[\#c8a97e\] .text-white\/40,
+:root[data-theme='light'] .bg-\[\#c8a97e\] .text-white\/50,
+:root[data-theme='light'] .bg-\[\#c8a97e\] .text-white\/60,
+:root[data-theme='light'] .bg-\[\#c8a97e\] .text-white\/70,
+:root[data-theme='light'] .bg-\[\#c8a97e\] .text-white\/80 {
+  color: #ffffff !important;
+}
+
+/* Keep text readable on intentionally dark image sections in light mode */
+:root[data-theme='light'] .on-dark-image-section .text-white {
+  color: #ffffff !important;
+}
+
+:root[data-theme='light'] .on-dark-image-section .text-white\/80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+:root[data-theme='light'] .on-dark-image-section .text-white\/70 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
 @layer components {
   /* Button styles */
   .btn-primary {

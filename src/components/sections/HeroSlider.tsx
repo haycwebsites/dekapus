@@ -3,6 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
+import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
 
 export function HeroSlider() {
   const { t, img, config, cp } = useHayc();
@@ -33,7 +34,7 @@ export function HeroSlider() {
   }, [emblaApi]);
 
   return (
-    <section className="relative h-screen">
+    <section className="on-dark-image-section relative h-screen">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {slides.map((slide, index) => (
@@ -52,11 +53,11 @@ export function HeroSlider() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <img 
-                    src={img(config.heroConfig.slideLogo)} 
+                    src={whiteLogoTagline} 
                     alt="Logo" 
                     className="mx-auto mb-8 h-24"
                   />
-                  <h2 {...cp('heroConfig.title')} className="font-['Great_Vibes'] text-4xl md:text-6xl text-[#c8a97e] mb-4">
+                  <h2 {...cp('heroConfig.title')} className="font-['Great_Vibes'] text-4xl md:text-6xl text-[#c8a97e] mb-8">
                     {t(config.heroConfig.title)}
                   </h2>
                   <p {...cp('heroConfig.subtitle')} className="text-lg md:text-xl uppercase tracking-widest mb-8">

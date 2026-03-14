@@ -10,7 +10,7 @@ interface PageBannerProps {
 }
 
 export function PageBanner({ title, titlePath, breadcrumbs }: PageBannerProps) {
-  const { t, config, cp } = useHayc();
+  const { t, img, config, cp } = useHayc();
 
   const defaultBreadcrumbs = [
     { label: config.navigationConfig.home, path: '/' },
@@ -21,8 +21,8 @@ export function PageBanner({ title, titlePath, breadcrumbs }: PageBannerProps) {
 
   return (
     <div 
-      className="relative bg-cover bg-center py-24 mt-[120px]"
-      style={{ backgroundImage: 'url(/images/page-banner.jpg)' }}
+      className="on-dark-image-section relative bg-cover bg-center py-24 mt-[120px]"
+      style={{ backgroundImage: `url(${img('/images/page-banner.jpg')})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60" />
