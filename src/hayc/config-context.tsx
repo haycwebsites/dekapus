@@ -67,7 +67,11 @@ export function HaycProvider({ children }: { children: ReactNode }) {
   }, [isEditMode]);
 
   const t = (val: LocaleString): string => val[locale] ?? val.en;
-  const img = (val: string): string => val;
+  const img = (val: string): string => {
+    // Replace template placeholder image paths with the provided image.
+    if (val.startsWith('/images/')) return img1;
+    return val;
+  };
 
   const cp = useCallback((path: string): object => {
     if (!isEditMode) return {};
