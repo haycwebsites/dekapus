@@ -12,7 +12,7 @@ const labels = {
   emailLabel: { el: 'Email', en: 'Email' },
   messageLabel: { el: 'Μήνυμα', en: 'Message' },
   submitButton: { el: 'Αποστολή', en: 'Send Message' },
-  submitting: { el: 'Αποστολή...', en: 'Sending...' },
+  submitting: { el: 'Αποστολή....', en: 'Sending...' },
   successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
   successText: {
     el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
