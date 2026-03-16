@@ -68,8 +68,7 @@ export function HaycProvider({ children }: { children: ReactNode }) {
 
   const t = (val: LocaleString): string => val[locale] ?? val.en;
   const img = (val: string): string => {
-    // Replace template placeholder image paths with the provided image.
-    if (val.startsWith('/images/')) return img1;
+    // For now, just return the configured image path as-is.
     return val;
   };
 
