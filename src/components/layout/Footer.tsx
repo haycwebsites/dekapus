@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { useHayc } from '../../hayc/config-context';
 import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
 import blackLogoTagline from '../../Images/blackLogoTagline.png';
@@ -8,7 +7,7 @@ import signature from '../../Images/signature.png';
 import signatureBlack from '../../Images/signatureBlack.png';
 
 export function Footer() {
-  const { t, img, config, cp } = useHayc();
+  const { t, config, cp } = useHayc();
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     const saved = localStorage.getItem('theme');
     return saved === 'light' ? 'light' : 'dark';
@@ -44,35 +43,9 @@ export function Footer() {
           {/* About Widget */}
           <div>
             <h3 {...cp('footerConfig.aboutUs')} className="text-lg font-semibold mb-6 text-[#c8a97e]">{t(config.footerConfig.aboutUs)}</h3>
-            <p {...cp('footerConfig.aboutDescription')} className="text-white/70 text-sm leading-relaxed mb-6">
+            <p {...cp('footerConfig.aboutDescription')} className="text-white/70 text-sm leading-relaxed">
               {t(config.footerConfig.aboutDescription)}
             </p>
-            <div className="flex items-center gap-3">
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#c8a97e] transition-colors"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#c8a97e] transition-colors"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#c8a97e] transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#c8a97e] transition-colors"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -111,24 +84,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Instagram Feed */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <h3 {...cp('footerConfig.instagram')} className="text-lg font-semibold mb-6 text-[#c8a97e] text-center">{t(config.footerConfig.instagram)}</h3>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
-            {config.footerConfig.instagramImages.map((imgSrc, index) => (
-              <div
-                key={index}
-                className="aspect-square overflow-hidden rounded-lg group"
-              >
-                <img 
-                  src={img(imgSrc)} 
-                  alt={`Instagram ${index + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Bottom Footer */}

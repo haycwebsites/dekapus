@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, Phone, Facebook, Twitter, Instagram, Youtube, Sun, Moon } from 'lucide-react';
+import { Menu, Phone, Sun, Moon } from 'lucide-react';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
@@ -9,7 +9,6 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from '../ui/navigation-menu';
-import { LanguageSwitcher } from '../LanguageSwitcher';
 import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
 import blackLogoTagline from '../../Images/blackLogoTagline.png';
 
@@ -18,7 +17,7 @@ interface HeaderProps {
 }
 
 export function Header({ variant = 'inner' }: HeaderProps) {
-  const { t, img, config, cp } = useHayc();
+  const { t, config, cp } = useHayc();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -73,12 +72,6 @@ export function Header({ variant = 'inner' }: HeaderProps) {
               </span>
             </div>
             <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-3">
-                <a href="#" className="hover:opacity-80 transition-opacity"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:opacity-80 transition-opacity"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:opacity-80 transition-opacity"><Instagram className="w-4 h-4" /></a>
-                <a href="#" className="hover:opacity-80 transition-opacity"><Youtube className="w-4 h-4" /></a>
-              </div>
               <button
                 onClick={toggleTheme}
                 className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
@@ -87,7 +80,6 @@ export function Header({ variant = 'inner' }: HeaderProps) {
               >
                 {theme === 'dark' ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
               </button>
-              <LanguageSwitcher />
             </div>
           </div>
         </div>
@@ -148,7 +140,6 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                 >
                   {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>
-                <LanguageSwitcher />
                 {navLinks.map((link) => (
                   <div key={link.path + link.label}>
                     <Link

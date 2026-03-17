@@ -291,8 +291,8 @@ export const siteConfig: SiteConfig = {
 };
 
 export const preloaderConfig: PreloaderConfig = {
-  brandName: { el: 'Max Restaurant', en: 'Max Restaurant' },
-  brandSubname: { el: 'Εστιατόριο', en: 'Restaurant' },
+  brandName: { el: 'DEKAPUS', en: 'DEKAPUS' },
+  brandSubname: { el: '', en: '' },
   yearText: { el: 'Από το 2016', en: 'Since 2016' },
 };
 

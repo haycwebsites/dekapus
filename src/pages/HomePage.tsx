@@ -3,7 +3,6 @@ import { Footer } from '../components/layout/Footer';
 import { HeroSlider } from '../components/sections/HeroSlider';
 import { AboutSection } from '../components/sections/AboutSection';
 import { CounterSection } from '../components/sections/CounterSection';
-import { EventsSection } from '../components/sections/EventsSection';
 import { Newsletter } from '../components/sections/Newsletter';
 
 export function HomePage() {
@@ -14,7 +13,6 @@ export function HomePage() {
         <HeroSlider />
         <AboutSection /> 
         <CounterSection />
-        <EventsSection /> 
         <Newsletter />
       </main>
       <Footer />

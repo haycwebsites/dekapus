@@ -114,6 +114,10 @@ export function BlogSinglePage() {
         ? myWorkContent
         : null;
   const isEngagementPage = location.pathname === '/engagement';
+  const isOfferingPage =
+    location.pathname === '/dekapus-method' ||
+    location.pathname === '/my-work' ||
+    location.pathname === '/engagement';
 
   const sectionHeroImage =
     location.pathname === '/dekapus-method'
@@ -144,11 +148,13 @@ export function BlogSinglePage() {
                       {isEngagementPage ? engagementContent.title : standardCustomContent ? standardCustomContent.title : t(post.title)}
                     </h1>
                   </div>
-                  <img
-                    src={img(sectionHeroImage)}
-                    alt={t(post.title)}
-                    className="w-full h-96 object-cover"
-                  />
+                  {!isOfferingPage && (
+                    <img
+                      src={img(sectionHeroImage)}
+                      alt={t(post.title)}
+                      className="w-full h-96 object-cover"
+                    />
+                  )}
                   <div className="p-8">
                     <div className={`prose prose-invert max-w-none ${standardCustomContent || isEngagementPage ? 'hidden' : ''}`}>
                       <p {...cp(`blogConfig.items.${postIndex}.excerpt`)} className="text-white/70 leading-relaxed mb-4">
@@ -302,7 +308,7 @@ export function BlogSinglePage() {
               <aside className="lg:sticky lg:top-36 self-start">
                 {/* All offerings */}
                 <div className="bg-[#1a1a1a] rounded-lg p-6">
-                  <h4 className="text-white font-semibold mb-4">All offerings</h4>
+                  <h4 className="text-2xl font-serif text-white uppercase mb-4">All offerings</h4>
                   <ul className="space-y-3">
                     {serviceLinks.map((serviceLink) => (
                       <li key={serviceLink.path}>
