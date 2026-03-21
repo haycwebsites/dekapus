@@ -91,6 +91,15 @@ export interface AboutConfig {
   aboutImage2: string;
 }
 
+/** Full-bleed statement block on the About page (below main about copy) */
+export interface AboutStatementConfig {
+  sectionTitle: LocaleString;
+  headline: LocaleString;
+  paragraph1: LocaleString;
+  paragraph2: LocaleString;
+  backgroundImage: string;
+}
+
 export interface ServiceItem {
   image: string;
   title: LocaleString;
@@ -363,6 +372,26 @@ export const aboutConfig: AboutConfig = {
   chefSign: '/images/chef-sign.png',
   aboutImage1: '/images/about-img1.jpg',
   aboutImage2: '/images/about-img2.jpg',
+};
+
+export const aboutStatementConfig: AboutStatementConfig = {
+  sectionTitle: {
+    el: 'This is not consulting.',
+    en: 'This is not consulting.',
+  },
+  headline: {
+    el: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.',
+    en: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.',
+  },
+  paragraph1: {
+    el: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.',
+    en: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.',
+  },
+  paragraph2: {
+    el: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.',
+    en: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.',
+  },
+  backgroundImage: '/images/engagement-section.jpg',
 };
 
 export const servicesConfig: ServicesConfig = {

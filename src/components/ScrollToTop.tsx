@@ -3,7 +3,7 @@ import { ArrowUp } from 'lucide-react';
 import { useHayc } from '../hayc/config-context';
 
 export function ScrollToTop() {
-  const { t, config } = useHayc();
+  const { t, config, cp } = useHayc();
   const scrollToTopConfig = config.scrollToTopConfig;
 
   // Null check: if config is empty, render nothing

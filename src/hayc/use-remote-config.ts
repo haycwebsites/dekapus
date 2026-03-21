@@ -6,6 +6,7 @@ import {
   commonConfig,
   heroConfig,
   aboutConfig,
+  aboutStatementConfig,
   servicesConfig,
   counterConfig,
   menuConfig,
@@ -31,6 +32,7 @@ export interface RemoteConfig {
   commonConfig: typeof commonConfig;
   heroConfig: typeof heroConfig;
   aboutConfig: typeof aboutConfig;
+  aboutStatementConfig: typeof aboutStatementConfig;
   servicesConfig: typeof servicesConfig;
   counterConfig: typeof counterConfig;
   menuConfig: typeof menuConfig;
@@ -56,6 +58,7 @@ export const defaultConfig: RemoteConfig = {
   commonConfig,
   heroConfig,
   aboutConfig,
+  aboutStatementConfig,
   servicesConfig,
   counterConfig,
   menuConfig,
