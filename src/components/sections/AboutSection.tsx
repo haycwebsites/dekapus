@@ -27,7 +27,7 @@ export function AboutSection() {
   }, []);
 
   const homeIntro = {
-    sectionTitle: 'Welcome',
+    sectionTitle: 'Intro',
     title: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.',
     description1:
       'Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment.',
@@ -45,9 +45,11 @@ export function AboutSection() {
               <h3 {...cp('aboutConfig.sectionTitle')} className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2">
                 {isHomePage ? homeIntro.sectionTitle : t(config.aboutConfig.sectionTitle)}
               </h3>
-              <h2 {...cp('aboutConfig.title')} className="text-2xl md:text-3xl font-serif text-white">
-                {isHomePage ? homeIntro.title : t(config.aboutConfig.title)}
-              </h2>
+              {!isHomePage && (
+                <h2 {...cp('aboutConfig.title')} className="text-2xl md:text-3xl font-serif text-white">
+                  {t(config.aboutConfig.title)}
+                </h2>
+              )}
             </div>
             
             <p {...cp('aboutConfig.description1')} className="text-white/70 mb-4 leading-relaxed">

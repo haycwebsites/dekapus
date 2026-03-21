@@ -28,9 +28,9 @@ export function BlogSinglePage() {
     { label: config.navigationConfig.team, path: '/engagement' },
   ];
   const dekapusMethodContent = {
-    title: 'THE DEKAPUS METHOD™ - PHILOSOPHY & FRAMEWORK',
+    title: 'Intro',
     intro:
-      'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
+      'The DEKAPUS Method™ was not created to impress. It was created to read spaces, people, and situations with precision — and intervene without noise. It reflects how I understand hospitality as a living system.',
     section1Title: 'Perception & Space Reading',
     section1Body:
       'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
@@ -66,6 +66,7 @@ export function BlogSinglePage() {
   };
   const engagementContent = {
     title: 'When It Makes Sense to Work Together',
+    introTitle: 'Intro',
     intro:
       'Working with DEKAPUS does not start with packages or hours. It starts with alignment. I do not take on every project. I engage where intervention has real meaning.',
     list1Title: 'Collaboration works best when:',
@@ -147,6 +148,11 @@ export function BlogSinglePage() {
                     >
                       {isEngagementPage ? engagementContent.title : standardCustomContent ? standardCustomContent.title : t(post.title)}
                     </h1>
+                    {standardCustomContent?.intro && (
+                      <p className="text-white/70 leading-relaxed mb-6">
+                        {standardCustomContent.intro}
+                      </p>
+                    )}
                   </div>
                   {!isOfferingPage && (
                     <img
@@ -233,6 +239,14 @@ export function BlogSinglePage() {
 
                     {isEngagementPage && (
                       <div className="space-y-8">
+                        <div>
+                          <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                            {engagementContent.introTitle}
+                          </h2>
+                          <p className="text-white/70 leading-relaxed">
+                            {engagementContent.intro}
+                          </p>
+                        </div>
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-3">
                             {engagementContent.list1Title}

@@ -30,6 +30,26 @@ export function ContactPage() {
                   {t(config.contactConfig.title)}
                 </h2>
 
+                <div className="mb-8 rounded-lg border border-white/10 bg-white/5 p-6">
+                  <p {...cp('contactConfig.introLine')} className="text-white/80 leading-relaxed mb-4">
+                    {t(config.contactConfig.introLine)}
+                  </p>
+                  <ul className="space-y-2 mb-4">
+                    <li {...cp('contactConfig.introItem1')} className="text-white/70 leading-relaxed">
+                      {t(config.contactConfig.introItem1)}
+                    </li>
+                    <li {...cp('contactConfig.introItem2')} className="text-white/70 leading-relaxed">
+                      {t(config.contactConfig.introItem2)}
+                    </li>
+                    <li {...cp('contactConfig.introItem3')} className="text-white/70 leading-relaxed">
+                      {t(config.contactConfig.introItem3)}
+                    </li>
+                  </ul>
+                  <p {...cp('contactConfig.closingWhisper')} className="text-white/80 italic leading-relaxed">
+                    {t(config.contactConfig.closingWhisper)}
+                  </p>
+                </div>
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 rounded-full bg-[#c8a97e] flex items-center justify-center flex-shrink-0">
@@ -65,19 +85,9 @@ export function ContactPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Map placeholder */}
-                <div className="mt-8 aspect-video bg-white/5 rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps?q=Athens,+Greece&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
+                <p {...cp('contactConfig.preBulletsLine')} className="mt-4 text-white/80 italic leading-relaxed">
+                  {t(config.contactConfig.preBulletsLine)}
+                </p>
               </div>
 
               {/* Contact Form */}

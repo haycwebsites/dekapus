@@ -231,6 +231,12 @@ export interface GalleryConfig {
 export interface ContactConfig {
   sectionTitle: LocaleString;
   title: LocaleString;
+  preBulletsLine: LocaleString;
+  introLine: LocaleString;
+  introItem1: LocaleString;
+  introItem2: LocaleString;
+  introItem3: LocaleString;
+  closingWhisper: LocaleString;
   address: LocaleString;
   addressValue: LocaleString;
   phone: LocaleString;
@@ -325,7 +331,7 @@ export const navigationConfig: NavigationConfig = {
 
 export const commonConfig: CommonConfig = {
   reservationPhone: { el: 'ΚΡΑΤΗΣΗ:', en: 'RESERVATION:' },
-  phoneNumber: { el: '(+30) 693 226 9946', en: '(+30) 693 226 9946' },
+  phoneNumber: { el: '0030 6932 2699 46', en: '0030 6932 2699 46' },
   readMore: { el: 'Διαβάστε Περισσότερα', en: 'Read More' },
   submit: { el: 'Υποβολή', en: 'Submit' },
   signUp: { el: 'Εγγραφή', en: 'Sign Up' },
@@ -497,8 +503,32 @@ export const galleryConfig: GalleryConfig = {
 export const contactConfig: ContactConfig = {
   sectionTitle: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact Us' },
   title: { el: 'ΣΤΕΙΛΤΕ ΜΑΣ ΜΗΝΥΜΑ', en: 'SEND US A MESSAGE' },
-  address: { el: 'Διεύθυνση', en: 'Address' },
-  addressValue: { el: '121η Οδός, Αθήνα 10000', en: '121th Street, Sidney VIC 3000' },
+  preBulletsLine: {
+    el: 'Alignment begins before intervention.',
+    en: 'Alignment begins before intervention.',
+  },
+  introLine: {
+    el: 'Contact usually begins when something does not align.',
+    en: 'Contact usually begins when something does not align.',
+  },
+  introItem1: {
+    el: 'When a space functions but does not breathe.',
+    en: 'When a space functions but does not breathe.',
+  },
+  introItem2: {
+    el: 'When everything looks right, yet something feels missing.',
+    en: 'When everything looks right, yet something feels missing.',
+  },
+  introItem3: {
+    el: 'When clarity is needed before action.',
+    en: 'When clarity is needed before action.',
+  },
+  closingWhisper: {
+    el: 'If you recognize this moment, a conversation is enough to begin.',
+    en: 'If you recognize this moment, a conversation is enough to begin.',
+  },
+  address: { el: 'Τοποθεσία', en: 'Location' },
+  addressValue: { el: 'Athens Greece', en: 'Athens Greece' },
   phone: { el: 'Τηλέφωνο', en: 'Phone' },
   email: { el: 'Email', en: 'Email' },
   emailValue: { el: 'dpaxinos@dekapus.com.gr', en: 'dpaxinos@dekapus.com.gr' },

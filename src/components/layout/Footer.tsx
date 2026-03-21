@@ -90,7 +90,7 @@ export function Footer() {
       <div className="bg-[#111] py-4">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/50 text-sm">
-            Copyright © 2025 All Right Reserved. Made by <a href="https://hayc.gr/" target="_blank" rel="noreferrer" className="text-[#c8a97e] hover:underline">hayc</a> with 💙
+            Copyright © 2026 All Right Reserved. Made by <a href="https://hayc.gr/" target="_blank" rel="noreferrer" className="text-[#c8a97e] hover:underline">hayc</a> with 💙
           </p>
         </div>
       </div>
