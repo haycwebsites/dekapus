@@ -39,7 +39,7 @@ const labels = {
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function ContactForm() {
-  const { t, config } = useHayc();
+  const { t, config, cp } = useHayc();
   const siteId = config.siteConfig.siteId;
   const apiUrl = config.siteConfig.apiUrl;
 

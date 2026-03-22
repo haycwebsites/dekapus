@@ -61,8 +61,8 @@ export function BlogSinglePage() {
     },
   };
   const myWorkContent = {
-    title: { el: 'Pre-opening & Γέννηση Concept', en: 'Pre-opening & Concept Birth' },
-    intro: {
+    section0Title: { el: 'Pre-opening & Γέννηση Concept', en: 'Pre-opening & Concept Birth' },
+    section0Body: {
       el: 'Όταν ένα concept χρειάζεται ταυτότητα, ρυθμό και εσωτερική συνοχή πριν ανοίξει τις πόρτες του.',
       en: 'When a concept needs identity, rhythm, and internal coherence before opening its doors.',
     },
@@ -146,6 +146,7 @@ export function BlogSinglePage() {
         ? myWorkContent
         : null;
   const isEngagementPage = location.pathname === '/engagement';
+  const isMyWorkPage = location.pathname === '/my-work';
   const isOfferingPage =
     location.pathname === '/dekapus-method' ||
     location.pathname === '/my-work' ||
@@ -177,9 +178,18 @@ export function BlogSinglePage() {
                       {...cp(`blogConfig.items.${postIndex}.title`)}
                       className="text-2xl md:text-3xl font-semibold text-white mb-6"
                     >
-                      {isEngagementPage ? t(engagementContent.title) : standardCustomContent ? t(standardCustomContent.title) : t(post.title)}
+                      {isEngagementPage
+                        ? t(engagementContent.title)
+                        : isMyWorkPage
+                          ? t(config.navigationConfig.services)
+                          : standardCustomContent && 'title' in standardCustomContent
+                            ? t(standardCustomContent.title)
+                            : t(post.title)}
                     </h1>
-                    {standardCustomContent?.intro && (
+                    {standardCustomContent &&
+                      'intro' in standardCustomContent &&
+                      standardCustomContent.intro &&
+                      !isMyWorkPage && (
                       <p className="text-white/70 leading-relaxed mb-6">
                         {t(standardCustomContent.intro)}
                       </p>
@@ -213,6 +223,19 @@ export function BlogSinglePage() {
 
                     {standardCustomContent && (
                       <div className="space-y-6">
+                        {isMyWorkPage &&
+                          'section0Title' in standardCustomContent &&
+                          standardCustomContent.section0Title &&
+                          standardCustomContent.section0Body && (
+                          <div>
+                            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                              {t(standardCustomContent.section0Title)}
+                            </h2>
+                            <p className="text-white/70 leading-relaxed">
+                              {t(standardCustomContent.section0Body)}
+                            </p>
+                          </div>
+                        )}
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
                             {t(standardCustomContent.section1Title)}
