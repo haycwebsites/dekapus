@@ -84,6 +84,7 @@ export interface AboutConfig {
   title: LocaleString;
   description1: LocaleString;
   description2: LocaleString;
+  closingLine: LocaleString;
   chefName: LocaleString;
   chefThumb: string;
   chefSign: string;
@@ -339,8 +340,8 @@ export const commonConfig: CommonConfig = {
 };
 
 export const heroConfig: HeroConfig = {
-  title: { el: 'Dekapus', en: 'Dekapus' },
-  subtitle: { el: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.', en: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.' },
+  title: { el: 'Crafting Atmospheres.', en: 'Crafting Atmospheres.' },
+  subtitle: { el: 'Aligning Systems, Space & Human Behaviour.', en: 'Aligning Systems, Space & Human Behaviour.' },
   viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
@@ -348,15 +349,22 @@ export const heroConfig: HeroConfig = {
 };
 
 export const aboutConfig: AboutConfig = {
-  sectionTitle: { el: 'About', en: 'About' },
-  title: { el: 'I did not come from the consulting world. I came from the environments where hospitality is tested daily.', en: 'I did not come from the consulting world. I came from the environments where hospitality is tested daily.' },
+  sectionTitle: { el: 'Εισαγωγή', en: 'About' },
+  title: {
+    el: 'Δεν προέρχομαι από τον χώρο του consulting. Προέρχομαι από τον χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά.',
+    en: 'I did not come from the consulting world. I came from the environments where hospitality is tested daily.',
+  },
   description1: { 
-    el: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.',
+    el: 'Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, bars, clubs και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε ένα concept χάνει τον ρυθμό του — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.',
     en: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.'
   },
   description2: {
-    el: 'I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance.',
+    el: 'Πιστεύω ότι η φιλοξενία είναι ζωντανός οργανισμός. Όταν πιεστεί λάθος, αντιδρά. Όταν ευθυγραμμιστεί σωστά, λειτουργεί αβίαστα. Η δουλειά μου δεν είναι να “βελτιώνω” χώρους. Είναι να τους επαναφέρω στη φυσική τους ισορροπία.',
     en: 'I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance.'
+  },
+  closingLine: {
+    el: 'Η DEKAPUS υπάρχει για να εργάζεται εκεί όπου η λεπτομέρεια, ο άνθρωπος και η ατμόσφαιρα δεν μπορούν να αντιμετωπιστούν ξεχωριστά.',
+    en: 'DEKAPUS exists to work where detail, people, and atmosphere cannot be treated separately.',
   },
   chefName: { el: 'ΤΖΑΚΛΙΝ ΡΟΚΙ', en: 'JACKLIN ROCKY' },
   chefThumb: '/images/about-thumb.jpg',
@@ -378,8 +386,8 @@ export const servicesConfig: ServicesConfig = {
 };
 
 export const counterConfig: CounterConfig = {
-  sectionTitle: { el: 'This is not consulting.', en: 'This is not consulting.' },
-  title: { el: 'It is perception, intervention, and precise tuning.', en: 'It is perception, intervention, and precise tuning.' },
+  sectionTitle: { el: 'Δεν πρόκειται για consulting.', en: 'This is not consulting.' },
+  title: { el: 'Προκειται για αντιληψη, παρεμβαση και ακριβες tuning.', en: 'It is perception, intervention, and precise tuning.' },
   learnMoreButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage: '/images/counter-bg.jpg',
   items: [
@@ -504,27 +512,27 @@ export const contactConfig: ContactConfig = {
   sectionTitle: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact Us' },
   title: { el: 'ΣΤΕΙΛΤΕ ΜΑΣ ΜΗΝΥΜΑ', en: 'SEND US A MESSAGE' },
   preBulletsLine: {
-    el: 'Alignment begins before intervention.',
+    el: 'Η ευθυγράμμιση ξεκινά πριν από την παρέμβαση.',
     en: 'Alignment begins before intervention.',
   },
   introLine: {
-    el: 'Contact usually begins when something does not align.',
+    el: 'Η επικοινωνία συνήθως ξεκινά όταν κάτι δεν ευθυγραμμίζεται.',
     en: 'Contact usually begins when something does not align.',
   },
   introItem1: {
-    el: 'When a space functions but does not breathe.',
+    el: 'Όταν ένας χώρος λειτουργεί αλλά δεν αναπνέει.',
     en: 'When a space functions but does not breathe.',
   },
   introItem2: {
-    el: 'When everything looks right, yet something feels missing.',
+    el: 'Όταν όλα μοιάζουν σωστά, αλλά κάτι λείπει.',
     en: 'When everything looks right, yet something feels missing.',
   },
   introItem3: {
-    el: 'When clarity is needed before action.',
+    el: 'Όταν χρειάζεται καθαρότητα πριν από τη δράση.',
     en: 'When clarity is needed before action.',
   },
   closingWhisper: {
-    el: 'If you recognize this moment, a conversation is enough to begin.',
+    el: 'Αν αναγνωρίζεις αυτή τη στιγμή, μια συζήτηση αρκεί για να ξεκινήσει.',
     en: 'If you recognize this moment, a conversation is enough to begin.',
   },
   address: { el: 'Τοποθεσία', en: 'Location' },

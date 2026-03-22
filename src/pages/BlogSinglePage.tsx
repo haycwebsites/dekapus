@@ -27,86 +27,117 @@ export function BlogSinglePage() {
     { label: config.navigationConfig.services, path: '/my-work' },
     { label: config.navigationConfig.team, path: '/engagement' },
   ];
+  const allOfferingsLabel = { el: 'ΟΛΕΣ ΟΙ ΠΡΟΣΦΟΡΕΣ', en: 'ALL OFFERINGS' };
   const dekapusMethodContent = {
-    title: 'Intro',
-    intro:
-      'The DEKAPUS Method™ was not created to impress. It was created to read spaces, people, and situations with precision — and intervene without noise. It reflects how I understand hospitality as a living system.',
-    section1Title: 'Perception & Space Reading',
-    section1Body:
-      'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
-    section2Title: 'Atmosphere & Energy',
-    section2Body:
-      "Atmosphere is not decoration. It is the result of choices, timing, and human presence. When atmosphere is right, systems support. When it isn't, systems suffocate.",
-    section3Title: 'Human Flow & Behaviour',
-    section3Body:
-      'People do not move randomly. Their movement, reactions, and fatigue reveal the true health of a space. The DEKAPUS Method™ reads flow before correcting it.',
-    section4Title: 'Operational Systems',
-    section4Body:
-      'Processes exist to support experience - not suppress it. Systems are redesigned only after understanding what they must serve.',
-    section5Title: 'Timing & Intervention',
-    section5Body:
-      'Effective intervention is not about intensity. It is about timing. DEKAPUS works with precision, not urgency.',
+    title: { el: 'Εισαγωγή', en: 'Intro' },
+    intro: {
+      el: 'Η DEKAPUS Method™ δεν δημιουργήθηκε για να εντυπωσιάσει. Δημιουργήθηκε για να διαβάζει χώρους, ανθρώπους και καταστάσεις με ακρίβεια — και να παρεμβαίνει χωρίς θόρυβο. Είναι ο τρόπος με τον οποίο αντιλαμβάνομαι τη φιλοξενία ως ζωντανό σύστημα.',
+      en: 'The DEKAPUS Method™ was not created to impress. It was created to read spaces, people, and situations with precision — and intervene without noise. It reflects how I understand hospitality as a living system.',
+    },
+    section1Title: { el: 'Αντίληψη & Ανάγνωση Χώρου', en: 'Perception & Space Reading' },
+    section1Body: {
+      el: 'Κάθε χώρος μιλάει πριν λειτουργήσει. Ο ρυθμός, η ένταση, οι σιωπές και οι κινήσεις αποκαλύπτουν τι πραγματικά συμβαίνει — πέρα από reports και KPIs. Η παρατήρηση προηγείται κάθε απόφασης.',
+      en: 'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
+    },
+    section2Title: { el: 'Ατμόσφαιρα & Ενέργεια', en: 'Atmosphere & Energy' },
+    section2Body: {
+      el: 'Η ατμόσφαιρα δεν είναι διακόσμηση. Είναι αποτέλεσμα επιλογών, timing και ανθρώπινης παρουσίας. Όταν η ατμόσφαιρα είναι σωστή, τα συστήματα υποστηρίζουν. Όταν όχι, τα συστήματα πιέζουν.',
+      en: "Atmosphere is not decoration. It is the result of choices, timing, and human presence. When atmosphere is right, systems support. When it isn't, systems suffocate.",
+    },
+    section3Title: { el: 'Ροή Ανθρώπων & Συμπεριφορά', en: 'Human Flow & Behaviour' },
+    section3Body: {
+      el: 'Οι άνθρωποι δεν κινούνται τυχαία. Ο τρόπος που κινούνται, αντιδρούν και κουράζονται είναι δομικός δείκτης υγείας ενός χώρου. Η DEKAPUS Method™ διαβάζει τη ροή πριν τη διορθώσει.',
+      en: 'People do not move randomly. Their movement, reactions, and fatigue reveal the true health of a space. The DEKAPUS Method™ reads flow before correcting it.',
+    },
+    section4Title: { el: 'Λειτουργικά Συστήματα', en: 'Operational Systems' },
+    section4Body: {
+      el: 'Οι διαδικασίες υπάρχουν για να στηρίζουν την εμπειρία — όχι για να την καταπνίγουν. Τα συστήματα επανασχεδιάζονται μόνο αφού γίνει κατανοητό τι πρέπει να υπηρετούν.',
+      en: 'Processes exist to support experience - not suppress it. Systems are redesigned only after understanding what they must serve.',
+    },
+    section5Title: { el: 'Χρονισμός & Παρέμβαση', en: 'Timing & Intervention' },
+    section5Body: {
+      el: 'Η σωστή παρέμβαση δεν είναι θέμα έντασης. Είναι θέμα στιγμής. Η DEKAPUS λειτουργεί με ακρίβεια, όχι βιασύνη.',
+      en: 'Effective intervention is not about intensity. It is about timing. DEKAPUS works with precision, not urgency.',
+    },
   };
   const myWorkContent = {
-    title: 'Pre-opening & Concept Birth',
-    intro:
-      'When a concept needs identity, rhythm, and internal coherence before opening its doors.',
-    section1Title: 'When a Space Feels "Off"',
-    section1Body:
-      "When everything looks right, but something doesn't work - and no one can clearly define it.",
-    section2Title: 'Operational Chaos Behind a Beautiful Front',
-    section2Body:
-      'When image is strong, but daily reality exhausts people and systems.',
-    section3Title: 'Team Fatigue & Loss of Rhythm',
-    section3Body: 'When teams function, but no longer breathe.',
-    section4Title: 'Repositioning & Reset',
-    section4Body: 'When a space needs realignment without losing its soul.',
-    section5Title: '',
-    section5Body: '',
+    title: { el: 'Pre-opening & Γέννηση Concept', en: 'Pre-opening & Concept Birth' },
+    intro: {
+      el: 'Όταν ένα concept χρειάζεται ταυτότητα, ρυθμό και εσωτερική συνοχή πριν ανοίξει τις πόρτες του.',
+      en: 'When a concept needs identity, rhythm, and internal coherence before opening its doors.',
+    },
+    section1Title: { el: 'Όταν ένας Χώρος Δείχνει "Off"', en: 'When a Space Feels "Off"' },
+    section1Body: {
+      el: 'Όταν όλα φαίνονται σωστά, αλλά κάτι δεν λειτουργεί — και κανείς δεν μπορεί να το ορίσει.',
+      en: "When everything looks right, but something doesn't work - and no one can clearly define it.",
+    },
+    section2Title: { el: 'Λειτουργικό Χάος Πίσω από μια Ωραία Βιτρίνα', en: 'Operational Chaos Behind a Beautiful Front' },
+    section2Body: {
+      el: 'Όταν η εικόνα είναι δυνατή, αλλά η καθημερινότητα εξαντλεί ανθρώπους και συστήματα.',
+      en: 'When image is strong, but daily reality exhausts people and systems.',
+    },
+    section3Title: { el: 'Κόπωση Ομάδας & Απώλεια Ρυθμού', en: 'Team Fatigue & Loss of Rhythm' },
+    section3Body: {
+      el: 'Όταν οι ομάδες λειτουργούν, αλλά δεν αναπνέουν πλέον.',
+      en: 'When teams function, but no longer breathe.',
+    },
+    section4Title: { el: 'Επανατοποθέτηση & Επανεκκίνηση', en: 'Repositioning & Reset' },
+    section4Body: {
+      el: 'Όταν ένας χώρος χρειάζεται επαναπροσδιορισμό χωρίς να χάσει την ψυχή του.',
+      en: 'When a space needs realignment without losing its soul.',
+    },
+    section5Title: { el: '', en: '' },
+    section5Body: { el: '', en: '' },
   };
   const engagementContent = {
-    title: 'When It Makes Sense to Work Together',
-    introTitle: 'Intro',
-    intro:
-      'Working with DEKAPUS does not start with packages or hours. It starts with alignment. I do not take on every project. I engage where intervention has real meaning.',
-    list1Title: 'Collaboration works best when:',
+    title: { el: 'Πότε Έχει Νόημα να Συνεργαστούμε', en: 'When It Makes Sense to Work Together' },
+    introTitle: { el: 'Εισαγωγή', en: 'Intro' },
+    intro: {
+      el: 'Η συνεργασία με τη DEKAPUS δεν ξεκινά από πακέτα ή ώρες. Ξεκινά από ευθυγράμμιση. Δεν αναλαμβάνω κάθε έργο. Αναλαμβάνω καταστάσεις όπου η παρέμβαση έχει πραγματικό νόημα.',
+      en: 'Working with DEKAPUS does not start with packages or hours. It starts with alignment. I do not take on every project. I engage where intervention has real meaning.',
+    },
+    list1Title: { el: 'Η συνεργασία μας λειτουργεί καλύτερα όταν:', en: 'Collaboration works best when:' },
     list1Items: [
-      'There is a clear need, not simple curiosity',
-      'The owner or decision-maker is involved',
-      'There is willingness to hear and address difficult truths',
-      'The space is treated as a living system, not a problem to fix',
+      { el: 'Υπάρχει σαφής ανάγκη, όχι απλώς περιέργεια', en: 'There is a clear need, not simple curiosity' },
+      { el: 'Ο ιδιοκτήτης ή decision-maker είναι παρών', en: 'The owner or decision-maker is involved' },
+      { el: 'Υπάρχει διάθεση να ειπωθούν και να ακουστούν δύσκολες αλήθειες', en: 'There is willingness to hear and address difficult truths' },
+      { el: 'Ο χώρος αντιμετωπίζεται ως ζωντανό σύστημα, όχι ως πρόβλημα προς διόρθωση', en: 'The space is treated as a living system, not a problem to fix' },
     ],
-    section2Title: 'How the Process Usually Unfolds',
-    section2Body:
-      'Every engagement is different in duration and form. However, most begin with:',
+    section2Title: { el: 'Πώς Ξεδιπλώνεται Συνήθως η Διαδικασία', en: 'How the Process Usually Unfolds' },
+    section2Body: {
+      el: 'Κάθε συνεργασία έχει διαφορετική διάρκεια και μορφή. Ωστόσο, συνήθως ξεκινά με:',
+      en: 'Every engagement is different in duration and form. However, most begin with:',
+    },
     processItems: [
       {
-        title: 'Observation & Space Reading',
-        body: 'No immediate action. Understanding comes first.',
+        title: { el: 'Παρατήρηση & Ανάγνωση Χώρου', en: 'Observation & Space Reading' },
+        body: { el: 'Χωρίς άμεσες παρεμβάσεις. Πρώτα κατανόηση.', en: 'No immediate action. Understanding comes first.' },
       },
       {
-        title: 'Perceptual Alignment',
-        body: 'Clarifying what is truly happening - beyond assumptions and numbers.',
+        title: { el: 'Ευθυγράμμιση Αντίληψης', en: 'Perceptual Alignment' },
+        body: { el: 'Τι πραγματικά συμβαίνει — πέρα από υποθέσεις και αριθμούς.', en: 'Clarifying what is truly happening - beyond assumptions and numbers.' },
       },
       {
-        title: 'Targeted Intervention',
-        body: 'Fewer moves. Greater precision.',
+        title: { el: 'Στοχευμένη Παρέμβαση', en: 'Targeted Intervention' },
+        body: { el: 'Λιγότερες κινήσεις, μεγαλύτερη ακρίβεια.', en: 'Fewer moves. Greater precision.' },
       },
       {
-        title: 'Stabilization & Support',
-        body: 'Until the space functions autonomously, with natural rhythm.',
+        title: { el: 'Σταθεροποίηση & Υποστήριξη', en: 'Stabilization & Support' },
+        body: { el: 'Μέχρι ο χώρος να λειτουργεί αυτόνομα, με φυσικό ρυθμό.', en: 'Until the space functions autonomously, with natural rhythm.' },
       },
     ],
-    section3Title: 'What This Is Not',
-    section3Body: 'DEKAPUS is not:',
+    section3Title: { el: 'Τι Δεν Είναι Αυτό', en: 'What This Is Not' },
+    section3Body: { el: 'Το DEKAPUS δεν είναι:', en: 'DEKAPUS is not:' },
     list2Items: [
-      'Fast consulting',
-      'Pre-made templates',
-      'Surface-level intervention',
-      'Optimization without understanding',
+      { el: 'Γρήγορο consulting', en: 'Fast consulting' },
+      { el: 'Έτοιμο template', en: 'Pre-made templates' },
+      { el: 'Παρέμβαση χωρίς βάθος', en: 'Surface-level intervention' },
+      { el: 'Υπηρεσία “βελτίωσης” χωρίς κατανόηση', en: 'Optimization without understanding' },
     ],
-    closing:
-      'Collaboration works when there is trust in time, process, and people.',
+    closing: {
+      el: 'Η συνεργασία λειτουργεί όταν υπάρχει εμπιστοσύνη στον χρόνο, στη διαδικασία και στους ανθρώπους.',
+      en: 'Collaboration works when there is trust in time, process, and people.',
+    },
   };
   const standardCustomContent =
     location.pathname === '/dekapus-method'
@@ -146,11 +177,11 @@ export function BlogSinglePage() {
                       {...cp(`blogConfig.items.${postIndex}.title`)}
                       className="text-2xl md:text-3xl font-semibold text-white mb-6"
                     >
-                      {isEngagementPage ? engagementContent.title : standardCustomContent ? standardCustomContent.title : t(post.title)}
+                      {isEngagementPage ? t(engagementContent.title) : standardCustomContent ? t(standardCustomContent.title) : t(post.title)}
                     </h1>
                     {standardCustomContent?.intro && (
                       <p className="text-white/70 leading-relaxed mb-6">
-                        {standardCustomContent.intro}
+                        {t(standardCustomContent.intro)}
                       </p>
                     )}
                   </div>
@@ -184,15 +215,15 @@ export function BlogSinglePage() {
                       <div className="space-y-6">
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {standardCustomContent.section1Title}
+                            {t(standardCustomContent.section1Title)}
                           </h2>
-                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section1Body}</p>
+                          <p className="text-white/70 leading-relaxed">{t(standardCustomContent.section1Body)}</p>
                         </div>
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {standardCustomContent.section2Title}
+                            {t(standardCustomContent.section2Title)}
                           </h2>
-                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section2Body}</p>
+                          <p className="text-white/70 leading-relaxed">{t(standardCustomContent.section2Body)}</p>
                         </div>
                         <Button
                           asChild
@@ -216,22 +247,22 @@ export function BlogSinglePage() {
                         />
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {standardCustomContent.section3Title}
+                            {t(standardCustomContent.section3Title)}
                           </h2>
-                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section3Body}</p>
+                          <p className="text-white/70 leading-relaxed">{t(standardCustomContent.section3Body)}</p>
                         </div>
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {standardCustomContent.section4Title}
+                            {t(standardCustomContent.section4Title)}
                           </h2>
-                          <p className="text-white/70 leading-relaxed">{standardCustomContent.section4Body}</p>
+                          <p className="text-white/70 leading-relaxed">{t(standardCustomContent.section4Body)}</p>
                         </div>
-                        {standardCustomContent.section5Title && standardCustomContent.section5Body && (
+                        {t(standardCustomContent.section5Title).trim() && t(standardCustomContent.section5Body).trim() && (
                           <div>
                             <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                              {standardCustomContent.section5Title}
+                              {t(standardCustomContent.section5Title)}
                             </h2>
-                            <p className="text-white/70 leading-relaxed">{standardCustomContent.section5Body}</p>
+                            <p className="text-white/70 leading-relaxed">{t(standardCustomContent.section5Body)}</p>
                           </div>
                         )}
                       </div>
@@ -241,20 +272,20 @@ export function BlogSinglePage() {
                       <div className="space-y-8">
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {engagementContent.introTitle}
+                            {t(engagementContent.introTitle)}
                           </h2>
                           <p className="text-white/70 leading-relaxed">
-                            {engagementContent.intro}
+                            {t(engagementContent.intro)}
                           </p>
                         </div>
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-3">
-                            {engagementContent.list1Title}
+                            {t(engagementContent.list1Title)}
                           </h2>
                           <ul className="space-y-3">
-                            {engagementContent.list1Items.map((item) => (
-                              <li key={item} className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed">
-                                {item}
+                            {engagementContent.list1Items.map((item, index) => (
+                              <li key={index} className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed">
+                                {t(item)}
                               </li>
                             ))}
                           </ul>
@@ -262,16 +293,16 @@ export function BlogSinglePage() {
 
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {engagementContent.section2Title}
+                            {t(engagementContent.section2Title)}
                           </h2>
                           <p className="text-white/70 leading-relaxed mb-4">
-                            {engagementContent.section2Body}
+                            {t(engagementContent.section2Body)}
                           </p>
                           <ul className="space-y-3">
-                            {engagementContent.processItems.map((item) => (
-                              <li key={item.title} className="rounded-md border border-white/10 bg-white/5 px-4 py-3">
-                                <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                                <p className="text-white/70 leading-relaxed">{item.body}</p>
+                            {engagementContent.processItems.map((item, index) => (
+                              <li key={index} className="rounded-md border border-white/10 bg-white/5 px-4 py-3">
+                                <h3 className="text-white font-semibold mb-1">{t(item.title)}</h3>
+                                <p className="text-white/70 leading-relaxed">{t(item.body)}</p>
                               </li>
                             ))}
                           </ul>
@@ -293,22 +324,22 @@ export function BlogSinglePage() {
 
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {engagementContent.section3Title}
+                            {t(engagementContent.section3Title)}
                           </h2>
                           <p className="text-white/70 leading-relaxed mb-4">
-                            {engagementContent.section3Body}
+                            {t(engagementContent.section3Body)}
                           </p>
                           <ul className="space-y-3">
-                            {engagementContent.list2Items.map((item) => (
-                              <li key={item} className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed">
-                                {item}
+                            {engagementContent.list2Items.map((item, index) => (
+                              <li key={index} className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed">
+                                {t(item)}
                               </li>
                             ))}
                           </ul>
                         </div>
 
                         <p className="text-white/80 leading-relaxed">
-                          {engagementContent.closing}
+                          {t(engagementContent.closing)}
                         </p>
                       </div>
                     )}
@@ -322,7 +353,7 @@ export function BlogSinglePage() {
               <aside className="lg:sticky lg:top-36 self-start">
                 {/* All offerings */}
                 <div className="bg-[#1a1a1a] rounded-lg p-6">
-                  <h4 className="text-2xl font-serif text-white uppercase mb-4">All offerings</h4>
+                  <h4 className="text-2xl font-serif text-white uppercase mb-4">{t(allOfferingsLabel)}</h4>
                   <ul className="space-y-3">
                     {serviceLinks.map((serviceLink) => (
                       <li key={serviceLink.path}>

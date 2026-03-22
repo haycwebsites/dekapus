@@ -9,6 +9,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from '../ui/navigation-menu';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
 import blackLogoTagline from '../../Images/blackLogoTagline.png';
 
@@ -72,6 +73,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
               </span>
             </div>
             <div className="hidden md:flex items-center gap-4">
+              <LanguageSwitcher />
               <button
                 onClick={toggleTheme}
                 className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
@@ -140,6 +142,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                 >
                   {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>
+                <LanguageSwitcher />
                 {navLinks.map((link) => (
                   <div key={link.path + link.label}>
                     <Link
