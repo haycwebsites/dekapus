@@ -12,7 +12,7 @@ const labels = {
   emailLabel: { el: 'Email', en: 'Email' },
   messageLabel: { el: 'Μήνυμα', en: 'Message' },
   submitButton: { el: 'Αποστολή', en: 'Send Message' },
-  submitting: { el: 'Αποστολή....', en: 'Sending...' },
+  submitting: { el: 'Αποστολή...', en: 'Sending...' },
   successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
   successText: {
     el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
@@ -39,7 +39,7 @@ const labels = {
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function ContactForm() {
-  const { t, config, cp } = useHayc();
+  const { t, config } = useHayc();
   const siteId = config.siteConfig.siteId;
   const apiUrl = config.siteConfig.apiUrl;
 

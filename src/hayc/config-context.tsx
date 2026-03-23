@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
 import type { LocaleString } from '../config';
 import { type RemoteConfig, defaultConfig, fetchRemoteConfig } from './use-remote-config';
+
 export type Locale = 'el' | 'en';
 
 interface HaycContextValue {
@@ -16,7 +17,7 @@ interface HaycContextValue {
 const HaycContext = createContext<HaycContextValue | null>(null);
 
 export function HaycProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>('en');
+  const [locale, setLocale] = useState<Locale>('el');
   const [config, setConfig] = useState<RemoteConfig>(defaultConfig);
   const [ready, setReady] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
@@ -67,10 +68,7 @@ export function HaycProvider({ children }: { children: ReactNode }) {
   }, [isEditMode]);
 
   const t = (val: LocaleString): string => val[locale] ?? val.en;
-  const img = (val: string): string => {
-    // For now, just return the configured image path as-is.
-    return val;
-  };
+  const img = (val: string): string => val;
 
   const cp = useCallback((path: string): object => {
     if (!isEditMode) return {};
