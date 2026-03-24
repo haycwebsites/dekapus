@@ -4,6 +4,7 @@ import { useHayc } from '../../hayc/config-context';
 import signature from '../../Images/signature.png';
 import signatureBlack from '../../Images/signatureBlack.png';
 import introImage from '../../Images/DEKAPUS vinyl site.jpg';
+import aboutPageImage from '../../Images/DEKAPUS_bar site2.jpg';
 
 export function AboutSection() {
   const { t, config, cp } = useHayc();
@@ -85,7 +86,7 @@ export function AboutSection() {
           {/* Images */}
           <div className="grid grid-cols-1 gap-4">
             <img 
-              src={introImage}
+              src={isHomePage ? introImage : aboutPageImage}
               alt="About"
               className="w-full rounded-lg"
             />

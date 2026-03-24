@@ -4,6 +4,9 @@ import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
 import { useHayc } from '../hayc/config-context';
 import { Button } from '../components/ui/button';
+import dekapusMethodIntroImage from '../Images/DEKAPUS gl smoke site.jpg';
+import myWorkSectionImage from '../Images/DEKAPUS fire site.jpg';
+import engagementSectionImage from '../Images/DEKAPUS ice cube site.jpg';
 
 export function BlogSinglePage() {
   const { t, img, config, cp } = useHayc();
@@ -260,9 +263,9 @@ export function BlogSinglePage() {
                         <img
                           src={img(
                             location.pathname === '/dekapus-method'
-                              ? '/images/slide1.jpg'
+                              ? dekapusMethodIntroImage
                               : location.pathname === '/my-work'
-                                ? '/images/newsletter-bg.jpg'
+                                ? myWorkSectionImage
                                 : sectionHeroImage
                           )}
                           alt={t(post.title)}
@@ -340,7 +343,7 @@ export function BlogSinglePage() {
                           </Link>
                         </Button>
                         <img
-                          src={img('/images/slide2.jpg')}
+                          src={img(engagementSectionImage)}
                           alt={t(post.title)}
                           className="w-full h-96 object-cover"
                         />
