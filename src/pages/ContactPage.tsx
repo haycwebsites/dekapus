@@ -26,9 +26,6 @@ export function ContactPage() {
                 <h3 {...cp('contactConfig.sectionTitle')} className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2">
                   {t(config.contactConfig.sectionTitle)}
                 </h3>
-                <h2 {...cp('contactConfig.title')} className="text-2xl md:text-3xl font-serif text-white uppercase mb-8">
-                  {t(config.contactConfig.title)}
-                </h2>
 
                 <div className="mb-8 rounded-lg border border-white/10 bg-white/5 p-6">
                   <p {...cp('contactConfig.introLine')} className="text-white/80 leading-relaxed mb-4">

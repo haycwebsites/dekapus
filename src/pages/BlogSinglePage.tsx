@@ -32,7 +32,7 @@ export function BlogSinglePage() {
   ];
   const allOfferingsLabel = { el: 'ΟΛΕΣ ΟΙ ΠΡΟΣΦΟΡΕΣ', en: 'ALL OFFERINGS' };
   const dekapusMethodContent = {
-    title: { el: 'Εισαγωγή', en: 'Intro' },
+    title: { el: '', en: '' },
     intro: {
       el: 'Η DEKAPUS Method™ δημιουργήθηκε για να διαβάζει χώρους, ανθρώπους και καταστάσεις με ακρίβεια — και να παρεμβαίνει χωρίς θόρυβο. Είναι ο τρόπος με τον οποίο αντιλαμβάνομαι τη φιλοξενία ως ζωντανό σύστημα.',
       en: 'The DEKAPUS Method™ was created to read spaces, people, and situations with precision — and intervene without noise. It reflects how I understand hospitality as a living system.',
