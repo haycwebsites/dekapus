@@ -3,9 +3,10 @@ import { useLocation } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import signature from '../../Images/signature.png';
 import signatureBlack from '../../Images/signatureBlack.png';
+import introImage from '../../Images/DEKAPUS vinyl site.jpg';
 
 export function AboutSection() {
-  const { t, img, config, cp } = useHayc();
+  const { t, config, cp } = useHayc();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -84,7 +85,7 @@ export function AboutSection() {
           {/* Images */}
           <div className="grid grid-cols-1 gap-4">
             <img 
-              src={img('/images/counter-bg.jpg')} 
+              src={introImage}
               alt="About"
               className="w-full rounded-lg"
             />

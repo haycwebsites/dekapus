@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
 import signature from '../../Images/signature.png';
+import heroSlide1 from '../../Images/DEKAPUS bar site.jpg';
+import heroSlide2 from '../../Images/DEKAPUS cutlerys site.jpg';
+import heroSlide3 from '../../Images/DEKAPUS fire stove site.jpg';
 
 export function HeroSlider() {
   const { t, img, config, cp } = useHayc();
@@ -12,9 +15,9 @@ export function HeroSlider() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const slides = [
-    { image: config.heroConfig.backgroundImage1 },
-    { image: config.heroConfig.backgroundImage2 },
-    { image: config.heroConfig.backgroundImage1 },
+    { image: heroSlide1 },
+    { image: heroSlide2 },
+    { image: heroSlide3 },
   ];
 
   const scrollPrev = () => emblaApi?.scrollPrev();

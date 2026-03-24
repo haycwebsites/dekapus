@@ -2,16 +2,17 @@ import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
+import parallaxImage from '../../Images/DEKAPUS cutlerys site2.jpg';
 
 export function CounterSection() {
-  const { t, img, config, cp } = useHayc();
+  const { t, config, cp } = useHayc();
   const { ref } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
     <section 
       ref={ref}
       className="on-dark-image-section py-20 bg-cover bg-center bg-fixed relative"
-      style={{ backgroundImage: `url(${img(config.counterConfig.backgroundImage)})` }}
+      style={{ backgroundImage: `url(${parallaxImage})` }}
     >
       <div className="absolute inset-0 bg-black/70" />
       
