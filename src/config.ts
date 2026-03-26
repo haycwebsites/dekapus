@@ -438,7 +438,7 @@ export const servicesConfig: ServicesConfig = {
 };
 
 export const counterConfig: CounterConfig = {
-  sectionTitle: { el: 'Δεν πρόκειται για consulting.', en: 'This is not consulting.' },
+  sectionTitle: { el: 'Δεν πρόκειται για consulting.', en: 'This is not just consulting.' },
   title: { el: 'Προκειται για αντιληψη, παρεμβαση και ακριβες tuning.', en: 'It is perception, intervention, and precise tuning.' },
   learnMoreButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage: '/images/counter-bg.jpg',
