@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HaycProvider } from './hayc/config-context';
 import { Preloader } from './components/Preloader';
 import { ScrollToTop } from './components/ScrollToTop';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 import { HomePage } from './pages/HomePage';
 import { HomePage2 } from './pages/HomePage2';
@@ -16,6 +16,16 @@ import { ContactPage } from './pages/ContactPage';
 import { ContactPage2 } from './pages/ContactPage2';
 import { NotFoundPage } from './pages/NotFoundPage';
 
+function RouteScrollRestoration() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const handlePreloaderComplete = useCallback(() => setIsLoading(false), []);
@@ -23,6 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <HaycProvider>
+        <RouteScrollRestoration />
         {isLoading && <Preloader onComplete={handlePreloaderComplete} />}
         <div className={`min-h-screen bg-[#141414] ${isLoading ? 'overflow-hidden max-h-screen' : ''}`}>
           <Routes>
