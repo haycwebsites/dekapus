@@ -383,8 +383,8 @@ export const heroConfig: HeroConfig = {
 export const aboutConfig: AboutConfig = {
   sectionTitle: { el: 'Εισαγωγή', en: 'About' },
   title: {
-    el: 'Δεν προέρχομαι από τον χώρο του consulting. Προέρχομαι από τον χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά.',
-    en: 'I did not come from the consulting world. I came from the environments where hospitality is tested daily.',
+    el: 'Δεν προέρχομαι από τον χώρο του consulting. Προέρχομαι από τον χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά, όχι από το χώρο του consulting.',
+    en: 'I did not come from the consulting world. I came from the environments where hospitality is tested daily, not from the consulting world',
   },
   description1: { 
     el: 'Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, bars, clubs και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε ένα concept χάνει τον ρυθμό του — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.',
@@ -407,8 +407,8 @@ export const aboutConfig: AboutConfig = {
 
 export const aboutStatementConfig: AboutStatementConfig = {
   sectionTitle: {
-    el: 'This is not consulting.',
-    en: 'This is not consulting.',
+    el: 'This is not just consulting.',
+    en: 'This is not just consulting.',
   },
   headline: {
     el: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.',
