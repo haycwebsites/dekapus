@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BUCKET_BASE = 'http://hayc-react-apps.s3-website.eu-north-1.amazonaws.com';
+const BUCKET_BASE = 'https://hayc-react-apps.s3.eu-north-1.amazonaws.com';
 
 function loadEnvVar(key: string): string {
   for (const envFile of ['.env.local', '.env']) {
@@ -26,8 +26,9 @@ if (!SITE_ID) {
   process.exit(1);
 }
 
-const CONFIG_URL = BUCKET_BASE + '/sites/' + SITE_ID + '/config/config.json';
+const CONFIG_URL = `${BUCKET_BASE}/sites/${SITE_ID}/config/config.json?t=${Date.now()}`;
 const configTsPath = path.resolve(__dirname, '../src/config.ts');
+const configBasePath = path.resolve(__dirname, '.config-base.json');
 const SKIP_KEYS = new Set(['version', 'exportedAt']);
 
 function escapeString(str: string): string {
@@ -73,6 +74,20 @@ function serializeValue(val: unknown, indent: number): string {
   return String(val);
 }
 
+function normalizeForCompare(value: unknown): string {
+  const serialized = JSON.stringify(value);
+  return serialized === undefined ? '__undefined__' : serialized;
+}
+
+function sanitizeConfigObject(obj: Record<string, unknown>): Record<string, unknown> {
+  const result: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (SKIP_KEYS.has(key)) continue;
+    result[key] = value;
+  }
+  return result;
+}
+
 async function main() {
   console.log('Fetching config.json from ' + CONFIG_URL + '...');
 
@@ -84,6 +99,19 @@ async function main() {
 
   const remoteConfig = await res.json() as Record<string, unknown>;
   console.log('Fetched config.json (exported at: ' + remoteConfig.exportedAt + ')');
+  const sanitizedRemoteConfig = sanitizeConfigObject(remoteConfig);
+
+  let baseConfig: Record<string, unknown> = {};
+  if (fs.existsSync(configBasePath)) {
+    const baseConfigRaw = fs.readFileSync(configBasePath, 'utf-8').trim();
+    if (baseConfigRaw) {
+      const parsedBase = JSON.parse(baseConfigRaw) as Record<string, unknown>;
+      if (parsedBase && typeof parsedBase === 'object') {
+        baseConfig = sanitizeConfigObject(parsedBase);
+      }
+    }
+  }
+  const hasBaseline = Object.keys(baseConfig).length > 0;
 
   const configTs = fs.readFileSync(configTsPath, 'utf-8');
 
@@ -157,7 +185,8 @@ async function main() {
         else if (ch === '{') depthBrace++;
         else if (ch === '}') depthBrace = Math.max(0, depthBrace - 1);
         else if (ch === ';' && depthParen === 0 && depthBracket === 0 && depthBrace === 0) {
-          constBlockMap.set(key, configTs.slice(blockStart, i + 1));
+          const block = configTs.slice(blockStart, i + 1);
+          constBlockMap.set(key, block);
           break;
         }
       }
@@ -167,24 +196,58 @@ async function main() {
   }
 
   const constLines: string[] = [];
-  const writtenKeys = new Set<string>();
-  for (const [key, value] of Object.entries(remoteConfig)) {
-    if (SKIP_KEYS.has(key)) continue;
-    const typeAnnotation = constTypeMap.has(key) ? ': ' + constTypeMap.get(key) : '';
-    constLines.push('export const ' + key + typeAnnotation + ' = ' + serializeValue(value, 0) + ';');
-    writtenKeys.add(key);
-  }
+  const mergedConfig: Record<string, unknown> = {};
+  const allKeys = new Set<string>([
+    ...Object.keys(sanitizedRemoteConfig),
+    ...Object.keys(baseConfig),
+    ...constBlockMap.keys(),
+  ]);
 
-  for (const key of constTypeMap.keys()) {
-    if (SKIP_KEYS.has(key) || writtenKeys.has(key)) continue;
-    const existingConstBlock = constBlockMap.get(key);
-    if (!existingConstBlock) continue;
-    console.warn("Warning: '" + key + "' not found in S3 config — preserving local default.");
-    constLines.push(existingConstBlock);
+  for (const key of allKeys) {
+    if (SKIP_KEYS.has(key)) continue;
+
+    const hasRemote = Object.prototype.hasOwnProperty.call(sanitizedRemoteConfig, key);
+    const localBlock = constBlockMap.get(key);
+    const hasLocal = Boolean(localBlock);
+
+    if (!hasRemote) {
+      if (hasLocal && localBlock) {
+        console.log("ℹ '" + key + "' not in S3 — preserving local default.");
+        constLines.push(localBlock);
+      }
+      continue;
+    }
+
+    const remoteChanged =
+      !hasBaseline ||
+      normalizeForCompare(sanitizedRemoteConfig[key]) !== normalizeForCompare(baseConfig[key]);
+
+    if (remoteChanged) {
+      const typeAnnotation = constTypeMap.has(key) ? ': ' + constTypeMap.get(key) : '';
+      constLines.push(
+        'export const ' + key + typeAnnotation + ' = ' + serializeValue(sanitizedRemoteConfig[key], 0) + ';',
+      );
+      console.log("↓ Pulled updated '" + key + "' from S3.");
+      mergedConfig[key] = sanitizedRemoteConfig[key];
+      continue;
+    }
+
+    if (hasLocal && localBlock) {
+      constLines.push(localBlock);
+      mergedConfig[key] = sanitizedRemoteConfig[key];
+      continue;
+    }
+
+    const typeAnnotation = constTypeMap.has(key) ? ': ' + constTypeMap.get(key) : '';
+    constLines.push(
+      'export const ' + key + typeAnnotation + ' = ' + serializeValue(sanitizedRemoteConfig[key], 0) + ';',
+    );
+    mergedConfig[key] = sanitizedRemoteConfig[key];
   }
 
   const newConfigTs = interfacesSection + '\n' + constLines.join('\n\n') + '\n';
   fs.writeFileSync(configTsPath, newConfigTs, 'utf-8');
+  fs.writeFileSync(configBasePath, JSON.stringify(mergedConfig, null, 2) + '\n', 'utf-8');
   console.log('src/config.ts updated with latest content from S3.');
   console.log('Review the changes and deploy when ready.');
 }
