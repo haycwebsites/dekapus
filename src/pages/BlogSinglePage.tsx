@@ -251,26 +251,6 @@ export function BlogSinglePage() {
                           </h2>
                           <p className="text-white/70 leading-relaxed">{t(standardCustomContent.section2Body)}</p>
                         </div>
-                        <Button
-                          asChild
-                          size="lg"
-                          className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
-                        >
-                          <Link to="/about">
-                            <span {...cp('counterConfig.learnMoreButton')}>{t(config.counterConfig.learnMoreButton)}</span>
-                          </Link>
-                        </Button>
-                        <img
-                          src={img(
-                            location.pathname === '/dekapus-method'
-                              ? dekapusMethodIntroImage
-                              : location.pathname === '/my-work'
-                                ? myWorkSectionImage
-                                : sectionHeroImage
-                          )}
-                          alt={t(post.title)}
-                          className="w-full h-96 object-cover"
-                        />
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
                             {t(standardCustomContent.section3Title)}
@@ -333,20 +313,7 @@ export function BlogSinglePage() {
                             ))}
                           </ul>
                         </div>
-                        <Button
-                          asChild
-                          size="lg"
-                          className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
-                        >
-                          <Link to="/about">
-                            <span {...cp('counterConfig.learnMoreButton')}>{t(config.counterConfig.learnMoreButton)}</span>
-                          </Link>
-                        </Button>
-                        <img
-                          src={img(engagementSectionImage)}
-                          alt={t(post.title)}
-                          className="w-full h-96 object-cover"
-                        />
+                        {/* Engagement image will be handled responsively below */}
 
                         <div>
                           <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">
@@ -377,28 +344,64 @@ export function BlogSinglePage() {
 
               {/* Sidebar */}
               <aside className="lg:sticky lg:top-36 self-start">
-                {/* All offerings */}
-                <div className="bg-[#1a1a1a] rounded-lg p-6">
-                  <h4 className="text-2xl font-serif text-white uppercase mb-4">{t(allOfferingsLabel)}</h4>
-                  <ul className="space-y-3">
-                    {serviceLinks.map((serviceLink) => (
-                      <li key={serviceLink.path}>
-                        <Link
-                          to={serviceLink.path}
-                          className={`text-white/70 hover:text-[#c8a97e] transition-colors ${
-                            location.pathname === serviceLink.path ? 'text-[#c8a97e]' : ''
-                          }`}
-                        >
-                          {t(serviceLink.label)}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {isOfferingPage ? (
+                  // Large-screen image beside the text
+                  <div className="bg-[#1a1a1a] rounded-lg overflow-hidden hidden lg:block">
+                    <img
+                      src={img(
+                        location.pathname === '/dekapus-method'
+                          ? dekapusMethodIntroImage
+                          : location.pathname === '/my-work'
+                            ? myWorkSectionImage
+                            : engagementSectionImage
+                      )}
+                      alt={t(pageTitle.title)}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  // Default sidebar with all offerings
+                  <div className="bg-[#1a1a1a] rounded-lg p-6">
+                    <h4 className="text-2xl font-serif text-white uppercase mb-4">{t(allOfferingsLabel)}</h4>
+                    <ul className="space-y-3">
+                      {serviceLinks.map((serviceLink) => (
+                        <li key={serviceLink.path}>
+                          <Link
+                            to={serviceLink.path}
+                            className={`text-white/70 hover:text-[#c8a97e] transition-colors ${
+                              location.pathname === serviceLink.path ? 'text-[#c8a97e]' : ''
+                            }`}
+                          >
+                            {t(serviceLink.label)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </aside>
             </div>
           </div>
         </section>
+
+        {/* Mobile / tablet image placement after text */}
+        {isOfferingPage && (
+          <section className="py-10 bg-[#141414] lg:hidden">
+            <div className="container mx-auto px-4">
+              <img
+                src={img(
+                  location.pathname === '/dekapus-method'
+                    ? dekapusMethodIntroImage
+                    : location.pathname === '/my-work'
+                      ? myWorkSectionImage
+                      : engagementSectionImage
+                )}
+                alt={t(pageTitle.title)}
+                className="w-full h-96 object-cover rounded-lg"
+              />
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
     </>
