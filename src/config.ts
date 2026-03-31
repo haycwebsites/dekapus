@@ -382,7 +382,7 @@ export const heroConfig: HeroConfig = {
 
 export const aboutConfig: AboutConfig = {
   sectionTitle: { el: 'Εισαγωγή', en: 'About' },
-  title: { el: 'Προέρχομαι από το χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά, όχι από το χώρο του consulting.', en: 'I come from the environments where hospitality is tested daily, not from the consulting world.' },
+  title: { el: 'Προέρχομαι από το χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά ,όχι από το χώρο του consulting.', en: 'I come from the environments where hospitality is tested daily, not from the consulting world.' },
   description1: { el: 'Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, bars, clubs και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε ένα concept χάνει τον ρυθμό του — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.', en: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.' },
   description2: { el: 'Πιστεύω ότι η φιλοξενία είναι ζωντανός οργανισμός. Όταν πιεστεί λάθος, αντιδρά. Όταν ευθυγραμμιστεί σωστά, λειτουργεί αβίαστα. Η δουλειά μου δεν είναι να “βελτιώνω” χώρους. Είναι να τους επαναφέρω στη φυσική τους ισορροπία.', en: 'I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance.' },
   closingLine: { el: 'Η DEKAPUS υπάρχει για να εργάζεται εκεί όπου η λεπτομέρεια, ο άνθρωπος και η ατμόσφαιρα δεν μπορούν να αντιμετωπιστούν ξεχωριστά.', en: 'DEKAPUS exists to work where detail, people, and atmosphere cannot be treated separately.' },
@@ -427,7 +427,7 @@ export const servicesConfig: ServicesConfig = {
 
 export const counterConfig: CounterConfig = {
   sectionTitle: { el: 'Δεν πρόκειται απλά για consulting.', en: 'This is not just consulting.' },
-  title: { el: 'Προκειται για αντιληψη, παρεμβαση και ακριβης συντονισμος.', en: 'It is perception, intervention, and precise tuning.' },
+  title: { el: 'Προκειται για αντιληψη, παρεμβαση και ακριβη συντονισμο.', en: 'It is perception, intervention, and precise tuning.' },
   learnMoreButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage: '/images/counter-bg.jpg',
   items: [
