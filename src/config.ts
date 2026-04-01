@@ -394,7 +394,7 @@ export const aboutConfig: AboutConfig = {
 };
 
 export const aboutStatementConfig: AboutStatementConfig = {
-  sectionTitle: { el: 'This is not consulting.', en: 'This is not consulting.' },
+  sectionTitle: { el: 'Δεν πρόκειται απλά για consulting.', en: 'This is not just consulting.' },
   headline: { el: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.', en: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.' },
   paragraph1: { el: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.', en: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.' },
   paragraph2: { el: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.', en: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.' },
