@@ -319,7 +319,7 @@ export interface DigitalProductsConfig {
 // =============================================================================
 
 export const siteConfig: SiteConfig = {
-  title: { el: 'Max Restaurant', en: 'Max Restaurant' },
+  title: { el: 'Εστιατόριο Max', en: 'Max Restaurant' },
   description: { el: 'Το καλύτερο εστιατόριο στην πόλη', en: 'The best restaurant in town' },
   language: 'el',
   keywords: { el: 'εστιατόριο, φαγητό, δείπνο', en: 'restaurant, food, dinner' },
@@ -340,20 +340,20 @@ export const scrollToTopConfig: ScrollToTopConfig = {
 };
 
 export const navigationConfig: NavigationConfig = {
-  home: { el: 'Home', en: 'Home' },
+  home: { el: 'Αρχική', en: 'Home' },
   home1: { el: 'Αρχική 1', en: 'Home 1' },
   home2: { el: 'Αρχική 2', en: 'Home 2' },
-  about: { el: 'About', en: 'About' },
-  events: { el: 'Dekapus Method', en: 'Dekapus Method' },
+  about: { el: 'Σχετικά', en: 'About' },
+  events: { el: 'Μέθοδος Dekapus', en: 'Dekapus Method' },
   pages: { el: 'Σελίδες', en: 'Pages' },
   menu: { el: 'Μενού', en: 'Menu' },
   reservation: { el: 'Κράτηση', en: 'Reservation' },
   gallery: { el: 'Γκαλερί', en: 'Gallery' },
-  services: { el: 'Situations I Work In', en: 'Situations I Work In' },
-  team: { el: 'Engagement', en: 'Engagement' },
+  services: { el: 'Καταστάσεις στις οποίες εργάζομαι', en: 'Situations I Work In' },
+  team: { el: 'Συμμετοχή', en: 'Engagement' },
   blog: { el: 'Ιστολόγιο', en: 'Blog' },
   blogPost: { el: 'Άρθρο', en: 'Blog Post' },
-  contact: { el: 'Contact', en: 'Contact' },
+  contact: { el: 'Επικοινωνία', en: 'Contact' },
   contact1: { el: 'Επικοινωνία 1', en: 'Contact 1' },
   contact2: { el: 'Επικοινωνία 2', en: 'Contact 2' },
   bookNow: { el: 'Κράτηση Τώρα', en: 'Book Now' },
@@ -372,8 +372,8 @@ export const commonConfig: CommonConfig = {
 };
 
 export const heroConfig: HeroConfig = {
-  title: { el: 'Crafting Atmospheres.', en: 'Crafting Atmospheres.' },
-  subtitle: { el: 'Aligning Systems, Space & Human Behaviour.', en: 'Aligning Systems, Space & Human Behaviour.' },
+  title: { el: 'Δημιουργώντας ατμόσφαιρες.', en: 'Crafting Atmospheres.' },
+  subtitle: { el: 'Ευθυγραμμίζοντας συστήματα, χώρο και ανθρώπινη συμπεριφορά.', en: 'Aligning Systems, Space & Human Behaviour.' },
   viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
@@ -382,8 +382,8 @@ export const heroConfig: HeroConfig = {
 
 export const aboutConfig: AboutConfig = {
   sectionTitle: { el: 'Εισαγωγή', en: 'About' },
-  title: { el: 'Προέρχομαι από το χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά ,όχι από το χώρο του consulting.', en: 'I come from the environments where hospitality is tested daily,not from the consulting world.' },
-  description1: { el: 'Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, bars, clubs και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε ένα concept χάνει τον ρυθμό του — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.', en: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.' },
+  title: { el: 'Προέρχομαι από το χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά, όχι από τον χώρο της συμβουλευτικής.', en: 'I come from the environments where hospitality is tested daily,not from the consulting world.' },
+  description1: { el: 'Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε μια ιδέα χάνει τον ρυθμό της — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.', en: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.' },
   description2: { el: 'Πιστεύω ότι η φιλοξενία είναι ζωντανός οργανισμός. Όταν πιεστεί λάθος, αντιδρά. Όταν ευθυγραμμιστεί σωστά, λειτουργεί αβίαστα. Η δουλειά μου δεν είναι να “βελτιώνω” χώρους. Είναι να τους επαναφέρω στη φυσική τους ισορροπία.', en: 'I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance.' },
   closingLine: { el: 'Η DEKAPUS υπάρχει για να εργάζεται εκεί όπου η λεπτομέρεια, ο άνθρωπος και η ατμόσφαιρα δεν μπορούν να αντιμετωπιστούν ξεχωριστά.', en: 'DEKAPUS exists to work where detail, people, and atmosphere cannot be treated separately.' },
   chefName: { el: 'ΤΖΑΚΛΙΝ ΡΟΚΙ', en: 'JACKLIN ROCKY' },
@@ -394,10 +394,10 @@ export const aboutConfig: AboutConfig = {
 };
 
 export const aboutStatementConfig: AboutStatementConfig = {
-  sectionTitle: { el: 'Δεν πρόκειται απλά για consulting.', en: 'This is not just consulting.' },
-  headline: { el: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.', en: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.' },
-  paragraph1: { el: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.', en: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.' },
-  paragraph2: { el: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.', en: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.' },
+  sectionTitle: { el: 'Δεν πρόκειται απλά για συμβουλευτική.', en: 'This is not just consulting.' },
+  headline: { el: 'Είναι η ικανότητα να διαβάζεις έναν χώρο, να αισθάνεσαι την πίεση πριν κλιμακωθεί και να αποκαθιστάς την ισορροπία πριν «σπάσουν» τα συστήματα.', en: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.' },
+  paragraph1: { el: 'Με καλούν όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί να ονομαστεί. Όταν οι ομάδες είναι ικανές αλλά επιβαρυμένες. Όταν οι ιδέες είναι σωστές αλλά πλέον δεν ζουν.', en: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.' },
+  paragraph2: { el: 'Η δουλειά μου γίνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας. Όχι με πλαίσια ή εκθέσεις, αλλά με παρουσία, προσαρμογή και ακριβή παρέμβαση.', en: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.' },
   backgroundImage: '/images/engagement-section.jpg',
 };
 
@@ -426,8 +426,8 @@ export const servicesConfig: ServicesConfig = {
 };
 
 export const counterConfig: CounterConfig = {
-  sectionTitle: { el: 'Δεν πρόκειται απλά για consulting.', en: 'This is not just consulting.' },
-  title: { el: 'Προκειται για αντιληψη, παρεμβαση και ΑΚΡΙΒΗ ΣΥΝΤΟΝΙΣΜΟ.', en: 'It is perception, intervention, and precise tuning.' },
+  sectionTitle: { el: 'Δεν πρόκειται απλά για συμβουλευτική.', en: 'This is not just consulting.' },
+  title: { el: 'Πρόκειται για αντίληψη, παρέμβαση και ΑΚΡΙΒΗ ΣΥΝΤΟΝΙΣΜΟ.', en: 'It is perception, intervention, and precise tuning.' },
   learnMoreButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage: '/images/counter-bg.jpg',
   items: [
@@ -444,7 +444,7 @@ export const counterConfig: CounterConfig = {
     {
       icon: '/images/counter-ic3.png',
       value: 394,
-      label: { el: 'ΟΙ ΣΕΦΣ ΜΑΣ', en: 'OUR CHEFS' },
+      label: { el: 'ΟΙ ΣΕΦ ΜΑΣ', en: 'OUR CHEFS' },
     },
     {
       icon: '/images/counter-ic4.png',
@@ -541,7 +541,7 @@ export const menuConfig: MenuConfig = {
 
 export const bookTableConfig: BookTableConfig = {
   sectionTitle: { el: 'Κλείστε Τραπέζι', en: 'Book Your Table' },
-  title: { el: 'ΚΑΝΣΤΕ ΚΡΑΤΗΣΗ', en: 'MAKE A RESERVATION' },
+  title: { el: 'ΚΑΝΤΕ ΚΡΑΤΗΣΗ', en: 'MAKE A RESERVATION' },
   namePlaceholder: { el: 'Όνομα *', en: 'Name *' },
   phonePlaceholder: { el: 'Τηλέφωνο *', en: 'Phone Number *' },
   tablePlaceholder: { el: 'Επιλέξτε Τραπέζι *', en: 'Choose Your Table *' },
@@ -620,8 +620,8 @@ export const blogConfig: BlogConfig = {
 
 export const newsletterConfig: NewsletterConfig = {
   title: { el: 'Ενημερωτικό Δελτίο', en: 'Newsletter' },
-  description: { el: 'Εγγραφείτε με το email σας για να λαμβάνετε ενημερώσεις για τις εκδηλώσεις μας', en: 'Sign up with your email to get updates fresh updates about our events' },
-  placeholder: { el: 'Εισάγετε το Email σας', en: 'Enter Your Email Address' },
+  description: { el: 'Εγγραφείτε με το e-mail σας για να λαμβάνετε ενημερώσεις για τις εκδηλώσεις μας', en: 'Sign up with your email to get updates fresh updates about our events' },
+  placeholder: { el: 'Εισάγετε το e-mail σας', en: 'Enter Your Email Address' },
   backgroundImage: '/images/newsletter-bg.jpg',
 };
 
@@ -721,12 +721,12 @@ export const contactConfig: ContactConfig = {
   introItem3: { el: 'Όταν χρειάζεται καθαρότητα πριν από τη δράση.', en: 'When clarity is needed before action.' },
   closingWhisper: { el: 'Αν αναγνωρίζεις αυτή τη στιγμή, μια συζήτηση αρκεί για να ξεκινήσει.', en: 'If you recognize this moment, a conversation is enough to begin.' },
   address: { el: 'Τοποθεσία', en: 'Location' },
-  addressValue: { el: 'Athens Greece', en: 'Athens Greece' },
+  addressValue: { el: 'Αθήνα, Ελλάδα', en: 'Athens Greece' },
   phone: { el: 'Τηλέφωνο', en: 'Phone' },
   email: { el: 'Email', en: 'Email' },
   emailValue: { el: 'dpaxinos@dekapus.com.gr', en: 'dpaxinos@dekapus.com.gr' },
   namePlaceholder: { el: 'Το Όνομά σας', en: 'Your Name' },
-  emailPlaceholder: { el: 'Το Email σας', en: 'Your Email' },
+  emailPlaceholder: { el: 'Το e-mail σας', en: 'Your Email' },
   subjectPlaceholder: { el: 'Θέμα', en: 'Subject' },
   messagePlaceholder: { el: 'Το Μήνυμά σας', en: 'Your Message' },
   sendMessage: { el: 'Αποστολή Μηνύματος', en: 'Send Message' },
@@ -752,7 +752,7 @@ export const footerConfig: FooterConfig = {
   meatFish: { el: 'ΚΡΕΑΣ & ΨΑΡΙ', en: 'MEAT & FISH' },
   soups: { el: 'ΣΟΥΠΕΣ', en: 'SOUPS' },
   instagram: { el: 'Ακολουθήστε μας στο Instagram', en: 'Join us on Instagram' },
-  emailSubscribe: { el: 'Το email σας', en: 'Your email' },
+  emailSubscribe: { el: 'Το e-mail σας', en: 'Your email' },
   instagramImages: [
     '/images/slide1.jpg',
     '/images/slide2.jpg',
