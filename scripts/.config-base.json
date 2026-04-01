@@ -189,8 +189,8 @@
   },
   "aboutStatementConfig": {
     "sectionTitle": {
-      "el": "This is not consulting.",
-      "en": "This is not consulting."
+      "el": "Δεν πρόκειται απλά για consulting.",
+      "en": "This is not just consulting."
     },
     "headline": {
       "el": "It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.",
