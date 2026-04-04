@@ -412,18 +412,6 @@ export const aboutConfig: AboutConfig = {
   aboutImage2: '/images/about-img2.jpg',
 };
 
-export const homeIntroConfig: HomeIntroConfig = {
-  sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
-  description1: {
-    el: 'Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.',
-    en: 'Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment.',
-  },
-  description2: {
-    el: 'Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.',
-    en: 'DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed.',
-  },
-};
-
 export const aboutStatementConfig: AboutStatementConfig = {
   sectionTitle: { el: 'Δεν πρόκειται απλά για συμβουλευτική.', en: 'This is not just consulting.' },
   headline: { el: 'Είναι η ικανότητα να διαβάζεις έναν χώρο, να αισθάνεσαι την πίεση πριν κλιμακωθεί και να αποκαθιστάς την ισορροπία πριν «σπάσουν» τα συστήματα.', en: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.' },
@@ -766,19 +754,6 @@ export const contactConfig: ContactConfig = {
   workingHoursValue: { el: 'Δευ - Παρ: 9ΠΜ - 10ΜΜ', en: 'Mon - Fri: 9AM - 10PM' },
 };
 
-export const contactFormConfig: ContactFormConfig = {
-  nameLabel: { el: 'Όνομα', en: 'Name' },
-  emailLabel: { el: 'Email', en: 'Email' },
-  messageLabel: { el: 'Μήνυμα', en: 'Message' },
-  submitButton: { el: 'Αποστολή', en: 'Send Message' },
-  submitting: { el: 'Αποστολή...', en: 'Sending...' },
-  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
-  successText: {
-    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
-    en: 'We will get back to you shortly.',
-  },
-};
-
 export const footerConfig: FooterConfig = {
   aboutUs: { el: 'ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ', en: 'ABOUT US' },
   aboutDescription: { el: 'Το DEKAPUS ευθυγραμμίζει χώρο, λειτουργία και ανθρώπινη συμπεριφορά για να αποκαθιστά ρυθμό, ενέργεια και συνοχή. Δεν προσφέρουμε πρόχειρες λύσεις — προσφέρουμε στοχευμένες παρεμβάσεις με ουσία και διάρκεια.', en: 'DEKAPUS aligns space, operations, and human behaviour to restore rhythm, energy, and coherence. We do not offer quick fixes - we deliver focused interventions with depth and lasting impact.' },
@@ -819,4 +794,29 @@ export const notFoundConfig: NotFoundConfig = {
 export const digitalProductsConfig: DigitalProductsConfig = {
   enabled: false,
   products: [],
+};
+
+export const homeIntroConfig: HomeIntroConfig = {
+  sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
+  description1: {
+    el: 'Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.',
+    en: 'Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment.',
+  },
+  description2: {
+    el: 'Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.',
+    en: 'DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed.',
+  },
+};
+
+export const contactFormConfig: ContactFormConfig = {
+  nameLabel: { el: 'Όνομα', en: 'Name' },
+  emailLabel: { el: 'Email', en: 'Email' },
+  messageLabel: { el: 'Μήνυμα', en: 'Message' },
+  submitButton: { el: 'Αποστολή', en: 'Send Message' },
+  submitting: { el: 'Αποστολή...', en: 'Sending...' },
+  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
+  successText: {
+    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
+    en: 'We will get back to you shortly.',
+  },
 };
