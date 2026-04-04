@@ -9,12 +9,12 @@ export function GalleryGrid() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const categories = [
-    { key: 'all', label: config.galleryConfig.all },
-    { key: 'breakfast', label: config.menuConfig.breakfast },
-    { key: 'coffee', label: config.galleryConfig.coffee },
-    { key: 'lunch', label: config.galleryConfig.lunch },
-    { key: 'dinner', label: config.menuConfig.dinner },
-    { key: 'nonveg', label: config.galleryConfig.nonveg },
+    { key: 'all', label: config.galleryConfig.all, configPath: 'galleryConfig.all' as const },
+    { key: 'breakfast', label: config.menuConfig.breakfast, configPath: 'menuConfig.breakfast' as const },
+    { key: 'coffee', label: config.galleryConfig.coffee, configPath: 'galleryConfig.coffee' as const },
+    { key: 'lunch', label: config.galleryConfig.lunch, configPath: 'galleryConfig.lunch' as const },
+    { key: 'dinner', label: config.menuConfig.dinner, configPath: 'menuConfig.dinner' as const },
+    { key: 'nonveg', label: config.galleryConfig.nonveg, configPath: 'galleryConfig.nonveg' as const },
   ];
 
   const filteredImages = activeFilter === 'all' 
@@ -40,6 +40,7 @@ export function GalleryGrid() {
             <button
               key={cat.key}
               onClick={() => setActiveFilter(cat.key)}
+              {...cp(cat.configPath)}
               className={`px-6 py-2 rounded-full text-sm font-medium uppercase tracking-wider transition-colors ${
                 activeFilter === cat.key
                   ? 'bg-[#c8a97e] text-white'

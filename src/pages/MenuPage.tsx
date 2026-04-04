@@ -9,9 +9,27 @@ export function MenuPage() {
   const { t, img, config, cp } = useHayc();
 
   const categories = [
-    { key: 'breakfast', label: config.menuConfig.breakfast, title: config.menuConfig.breakfastTitle },
-    { key: 'warm', label: config.menuConfig.warmDishes, title: config.menuConfig.warmDishesTitle },
-    { key: 'dinner', label: config.menuConfig.dinner, title: config.menuConfig.dinnerTitle },
+    {
+      key: 'breakfast',
+      label: config.menuConfig.breakfast,
+      title: config.menuConfig.breakfastTitle,
+      labelPath: 'menuConfig.breakfast' as const,
+      titlePath: 'menuConfig.breakfastTitle' as const,
+    },
+    {
+      key: 'warm',
+      label: config.menuConfig.warmDishes,
+      title: config.menuConfig.warmDishesTitle,
+      labelPath: 'menuConfig.warmDishes' as const,
+      titlePath: 'menuConfig.warmDishesTitle' as const,
+    },
+    {
+      key: 'dinner',
+      label: config.menuConfig.dinner,
+      title: config.menuConfig.dinnerTitle,
+      labelPath: 'menuConfig.dinner' as const,
+      titlePath: 'menuConfig.dinnerTitle' as const,
+    },
   ];
 
   return (
@@ -28,6 +46,7 @@ export function MenuPage() {
                   <TabsTrigger 
                     key={cat.key}
                     value={cat.key}
+                    {...cp(cat.labelPath)}
                     className="px-8 py-3 text-sm font-medium uppercase tracking-wider bg-white/10 text-white/70 data-[state=active]:bg-[#c8a97e] data-[state=active]:text-white rounded-full"
                   >
                     {t(cat.label)}
@@ -39,10 +58,10 @@ export function MenuPage() {
                 <TabsContent key={cat.key} value={cat.key}>
                   {/* Section Header */}
                   <div className="text-center mb-12">
-                    <h3 className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2">
+                    <h3 {...cp(cat.titlePath)} className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2">
                       {t(cat.title)}
                     </h3>
-                    <h2 className="text-2xl md:text-3xl font-serif text-white uppercase">
+                    <h2 {...cp(cat.labelPath)} className="text-2xl md:text-3xl font-serif text-white uppercase">
                       {t(cat.label)}
                     </h2>
                   </div>
@@ -50,10 +69,11 @@ export function MenuPage() {
                   {/* Menu Items Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {config.menuConfig.items
-                      .filter(item => item.category === cat.key)
-                      .map((item, index) => (
+                      .map((item, itemIndex) => ({ item, itemIndex }))
+                      .filter(({ item }) => item.category === cat.key)
+                      .map(({ item, itemIndex }) => (
                         <div 
-                          key={index} 
+                          key={itemIndex} 
                           className="flex items-center gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
                         >
                           <img 
@@ -64,15 +84,15 @@ export function MenuPage() {
                           <div className="flex-grow min-w-0">
                             <div className="flex items-start justify-between gap-2">
                               <div>
-                                <h4 {...cp(`menuConfig.items.${index}.name`)} className="text-white font-medium uppercase text-sm">
+                                <h4 {...cp(`menuConfig.items.${itemIndex}.name`)} className="text-white font-medium uppercase text-sm">
                                   {t(item.name)}
                                 </h4>
-                                <p {...cp(`menuConfig.items.${index}.description`)} className="text-white/50 text-xs mt-1">
+                                <p {...cp(`menuConfig.items.${itemIndex}.description`)} className="text-white/50 text-xs mt-1">
                                   {t(item.description)}
                                 </p>
                               </div>
-                              <span className="text-[#c8a97e] font-bold text-lg flex-shrink-0">
-                                <sup className="text-sm">$</sup>{item.price}
+                              <span {...cp('commonConfig.currencySymbol')} className="text-[#c8a97e] font-bold text-lg flex-shrink-0">
+                                <sup className="text-sm">{config.commonConfig.currencySymbol}</sup>{item.price}
                               </span>
                             </div>
                           </div>

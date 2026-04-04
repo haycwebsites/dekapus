@@ -6,6 +6,7 @@ import {
   commonConfig,
   heroConfig,
   aboutConfig,
+  homeIntroConfig,
   aboutStatementConfig,
   servicesConfig,
   counterConfig,
@@ -18,6 +19,7 @@ import {
   teamConfig,
   galleryConfig,
   contactConfig,
+  contactFormConfig,
   footerConfig,
   notFoundConfig,
   digitalProductsConfig,
@@ -34,6 +36,7 @@ export interface RemoteConfig {
   commonConfig: typeof commonConfig;
   heroConfig: typeof heroConfig;
   aboutConfig: typeof aboutConfig;
+  homeIntroConfig: typeof homeIntroConfig;
   aboutStatementConfig: typeof aboutStatementConfig;
   servicesConfig: typeof servicesConfig;
   counterConfig: typeof counterConfig;
@@ -46,6 +49,7 @@ export interface RemoteConfig {
   teamConfig: typeof teamConfig;
   galleryConfig: typeof galleryConfig;
   contactConfig: typeof contactConfig;
+  contactFormConfig: typeof contactFormConfig;
   footerConfig: typeof footerConfig;
   notFoundConfig: typeof notFoundConfig;
   digitalProductsConfig?: DigitalProductsConfig;
@@ -61,6 +65,7 @@ export const defaultConfig: RemoteConfig = {
   commonConfig,
   heroConfig,
   aboutConfig,
+  homeIntroConfig,
   aboutStatementConfig,
   servicesConfig,
   counterConfig,
@@ -73,6 +78,7 @@ export const defaultConfig: RemoteConfig = {
   teamConfig,
   galleryConfig,
   contactConfig,
+  contactFormConfig,
   footerConfig,
   notFoundConfig,
   digitalProductsConfig,

@@ -28,22 +28,6 @@ export function AboutSection() {
     return () => observer.disconnect();
   }, []);
 
-  const homeIntro = {
-    sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
-    title: {
-      el: 'Δημιουργώντας ατμόσφαιρες. Ευθυγραμμίζοντας συστήματα, χώρο και ανθρώπινη συμπεριφορά.',
-      en: 'Crafting Atmospheres. Aligning Systems, Space & Human Behaviour.',
-    },
-    description1: {
-      el: 'Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.',
-      en: 'Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment.',
-    },
-    description2: {
-      el: 'Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.',
-      en: 'DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed.',
-    },
-  };
-
   return (
     <section className="py-20 bg-[#141414]">
       <div className="container mx-auto px-4">
@@ -51,8 +35,11 @@ export function AboutSection() {
           {/* Content */}
           <div>
             <div className="mb-8">
-              <h3 {...cp('aboutConfig.sectionTitle')} className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2">
-                {isHomePage ? t(homeIntro.sectionTitle) : t(config.aboutConfig.sectionTitle)}
+              <h3
+                {...(isHomePage ? cp('homeIntroConfig.sectionTitle') : cp('aboutConfig.sectionTitle'))}
+                className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2"
+              >
+                {isHomePage ? t(config.homeIntroConfig.sectionTitle) : t(config.aboutConfig.sectionTitle)}
               </h3>
               {!isHomePage && (
                 <h2 {...cp('aboutConfig.title')} className="text-2xl md:text-3xl font-serif text-white">
@@ -61,11 +48,17 @@ export function AboutSection() {
               )}
             </div>
             
-            <p {...cp('aboutConfig.description1')} className="text-white/70 mb-4 leading-relaxed">
-              {isHomePage ? t(homeIntro.description1) : t(config.aboutConfig.description1)}
+            <p
+              {...(isHomePage ? cp('homeIntroConfig.description1') : cp('aboutConfig.description1'))}
+              className="text-white/70 mb-4 leading-relaxed"
+            >
+              {isHomePage ? t(config.homeIntroConfig.description1) : t(config.aboutConfig.description1)}
             </p>
-            <p {...cp('aboutConfig.description2')} className="text-white/70 mb-8 leading-relaxed">
-              {isHomePage ? t(homeIntro.description2) : t(config.aboutConfig.description2)}
+            <p
+              {...(isHomePage ? cp('homeIntroConfig.description2') : cp('aboutConfig.description2'))}
+              className="text-white/70 mb-8 leading-relaxed"
+            >
+              {isHomePage ? t(config.homeIntroConfig.description2) : t(config.aboutConfig.description2)}
             </p>
             {!isHomePage && (
               <p {...cp('aboutConfig.closingLine')} className="text-white/80 leading-relaxed mb-8 italic">

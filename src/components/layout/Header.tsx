@@ -46,12 +46,12 @@ export function Header({ variant = 'inner' }: HeaderProps) {
   const isLightTopHomeHeader = theme === 'light' && !isScrolled && variant === 'home';
 
   const navLinks = [
-    { label: t(config.navigationConfig.home), path: '/' },
-    { label: t(config.navigationConfig.events), path: '/dekapus-method' },
-    { label: t(config.navigationConfig.services), path: '/my-work' },
-    { label: t(config.navigationConfig.about), path: '/about' },
-    { label: t(config.navigationConfig.team), path: '/engagement' },
-    { label: t(config.navigationConfig.contact), path: '/contact' },
+    { label: t(config.navigationConfig.home), path: '/', cpPath: 'navigationConfig.home' as const },
+    { label: t(config.navigationConfig.events), path: '/dekapus-method', cpPath: 'navigationConfig.events' as const },
+    { label: t(config.navigationConfig.services), path: '/my-work', cpPath: 'navigationConfig.services' as const },
+    { label: t(config.navigationConfig.about), path: '/about', cpPath: 'navigationConfig.about' as const },
+    { label: t(config.navigationConfig.team), path: '/engagement', cpPath: 'navigationConfig.team' as const },
+    { label: t(config.navigationConfig.contact), path: '/contact', cpPath: 'navigationConfig.contact' as const },
   ];
 
   return (
@@ -107,6 +107,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                   <NavigationMenuItem key={link.path + link.label}>
                     <Link
                       to={link.path}
+                      {...cp(link.cpPath)}
                       className={`px-4 py-2 text-sm font-medium transition-colors hover:text-[#c8a97e] ${
                         isActive(link.path)
                           ? 'text-[#c8a97e]'
@@ -148,6 +149,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                     <Link
                       to={link.path}
                       onClick={() => setMobileMenuOpen(false)}
+                      {...cp(link.cpPath)}
                       className={`block px-2 py-2 text-white font-medium hover:text-[#c8a97e] ${
                         isActive(link.path) ? 'text-[#c8a97e]' : ''
                       }`}

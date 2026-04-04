@@ -28,7 +28,8 @@ export function ServicesSection() {
                 />
                 <div className="absolute inset-0 bg-[#c8a97e] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white text-sm font-medium">
-                    <span {...cp('servicesConfig.orderNow')}>{t(config.servicesConfig.orderNow)}</span> 1800 121 9420
+                    <span {...cp('servicesConfig.orderNow')}>{t(config.servicesConfig.orderNow)}</span>{' '}
+                    <span {...cp('commonConfig.phoneNumber')}>{t(config.commonConfig.phoneNumber)}</span>
                   </span>
                 </div>
               </div>

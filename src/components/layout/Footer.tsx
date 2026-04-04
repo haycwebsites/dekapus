@@ -27,12 +27,12 @@ export function Footer() {
   }, []);
 
   const quickLinks = [
-    { label: config.navigationConfig.home, path: '/' },
-    { label: config.navigationConfig.events, path: '/dekapus-method' },
-    { label: config.navigationConfig.services, path: '/my-work' },
-    { label: config.navigationConfig.about, path: '/about' },
-    { label: config.navigationConfig.team, path: '/engagement' },
-    { label: config.navigationConfig.contact, path: '/contact' },
+    { label: config.navigationConfig.home, path: '/', cpPath: 'navigationConfig.home' as const },
+    { label: config.navigationConfig.events, path: '/dekapus-method', cpPath: 'navigationConfig.events' as const },
+    { label: config.navigationConfig.services, path: '/my-work', cpPath: 'navigationConfig.services' as const },
+    { label: config.navigationConfig.about, path: '/about', cpPath: 'navigationConfig.about' as const },
+    { label: config.navigationConfig.team, path: '/engagement', cpPath: 'navigationConfig.team' as const },
+    { label: config.navigationConfig.contact, path: '/contact', cpPath: 'navigationConfig.contact' as const },
   ];
 
   return (
@@ -56,6 +56,7 @@ export function Footer() {
                 <li key={link.path + index}>
                   <Link 
                     to={link.path}
+                    {...cp(link.cpPath)}
                     className="text-white/70 text-sm hover:text-[#c8a97e] transition-colors"
                   >
                     {t(link.label)}
@@ -89,8 +90,8 @@ export function Footer() {
       {/* Bottom Footer */}
       <div className="bg-[#111] py-4">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-white/50 text-sm">
-            Copyright © 2026 All Right Reserved. Made by <a href="https://hayc.gr/" target="_blank" rel="noreferrer" className="text-[#c8a97e] hover:underline">hayc</a> with 💙
+          <p {...cp('commonConfig.copyright')} className="text-white/50 text-sm">
+            {t(config.commonConfig.copyright)}
           </p>
         </div>
       </div>

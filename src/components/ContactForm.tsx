@@ -2,16 +2,6 @@ import { useState, useCallback } from 'react';
 import { useHayc } from '../hayc/config-context';
 
 const labels = {
-  nameLabel: { el: 'Όνομα', en: 'Name' },
-  emailLabel: { el: 'Email', en: 'Email' },
-  messageLabel: { el: 'Μήνυμα', en: 'Message' },
-  submitButton: { el: 'Αποστολή', en: 'Send Message' },
-  submitting: { el: 'Αποστολή...', en: 'Sending...' },
-  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
-  successText: {
-    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
-    en: 'We will get back to you shortly.',
-  },
   errorText: {
     el: 'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.',
     en: 'Something went wrong. Please try again.',
@@ -33,7 +23,7 @@ const labels = {
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function ContactForm() {
-  const { t, config } = useHayc();
+  const { t, config, cp } = useHayc();
   const siteId = config.siteConfig.siteId;
   const apiUrl = config.siteConfig.apiUrl;
 
@@ -111,8 +101,8 @@ export function ContactForm() {
           }
         `}</style>
         <div className="contact-form-success">
-          <h3>{t(labels.successTitle)}</h3>
-          <p>{t(labels.successText)}</p>
+          <h3 {...cp('contactFormConfig.successTitle')}>{t(config.contactFormConfig.successTitle)}</h3>
+          <p {...cp('contactFormConfig.successText')}>{t(config.contactFormConfig.successText)}</p>
         </div>
       </>
     );
@@ -200,7 +190,7 @@ export function ContactForm() {
 
         <div className="contact-form-field">
           <label className="contact-form-label" htmlFor="contact-name">
-            {t(labels.nameLabel)}
+            {t(config.contactFormConfig.nameLabel)}
           </label>
           <input
             id="contact-name"
@@ -224,7 +214,7 @@ export function ContactForm() {
 
         <div className="contact-form-field">
           <label className="contact-form-label" htmlFor="contact-email">
-            {t(labels.emailLabel)}
+            {t(config.contactFormConfig.emailLabel)}
           </label>
           <input
             id="contact-email"
@@ -248,7 +238,7 @@ export function ContactForm() {
 
         <div className="contact-form-field">
           <label className="contact-form-label" htmlFor="contact-message">
-            {t(labels.messageLabel)}
+            {t(config.contactFormConfig.messageLabel)}
           </label>
           <textarea
             id="contact-message"
@@ -270,8 +260,13 @@ export function ContactForm() {
           )}
         </div>
 
-        <button type="submit" className="contact-form-button" disabled={loading}>
-          {loading ? t(labels.submitting) : t(labels.submitButton)}
+        <button
+          type="submit"
+          className="contact-form-button"
+          disabled={loading}
+          {...cp('contactFormConfig.submitButton')}
+        >
+          {loading ? t(config.contactFormConfig.submitting) : t(config.contactFormConfig.submitButton)}
         </button>
 
         {error && (

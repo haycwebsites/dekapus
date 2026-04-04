@@ -42,7 +42,8 @@ export function EventsSection() {
                 </p>
                 <div className="flex items-center gap-2 text-white/50 text-xs mb-4">
                   <Clock className="w-4 h-4" />
-                  <span {...cp(`eventsConfig.items.${index}.date`)}>Posted {t(event.date)}</span>
+                  <span {...cp('eventsConfig.postedLabel')}>{t(config.eventsConfig.postedLabel)}</span>
+                  <span {...cp(`eventsConfig.items.${index}.date`)}>{t(event.date)}</span>
                 </div>
                 <Link to="/reservation">
                   <Button 

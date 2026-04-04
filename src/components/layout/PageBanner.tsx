@@ -41,12 +41,13 @@ export function PageBanner({ title, titlePath, breadcrumbs }: PageBannerProps) {
               {crumb.path ? (
                 <Link 
                   to={crumb.path}
+                  {...(crumb.path === '/' ? cp('navigationConfig.home') : {})}
                   className="text-[#c8a97e] hover:text-white transition-colors"
                 >
                   {t(crumb.label)}
                 </Link>
               ) : (
-                <span className="text-white/70">{t(crumb.label)}</span>
+                <span {...(titlePath ? cp(titlePath) : {})} className="text-white/70">{t(crumb.label)}</span>
               )}
             </span>
           ))}

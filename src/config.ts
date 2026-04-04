@@ -68,6 +68,7 @@ export interface CommonConfig {
   submit: LocaleString;
   signUp: LocaleString;
   copyright: LocaleString;
+  currencySymbol: string;
 }
 
 export interface HeroConfig {
@@ -90,6 +91,12 @@ export interface AboutConfig {
   chefSign: string;
   aboutImage1: string;
   aboutImage2: string;
+}
+
+export interface HomeIntroConfig {
+  sectionTitle: LocaleString;
+  description1: LocaleString;
+  description2: LocaleString;
 }
 
 /** Full-bleed statement block on the About page (below main about copy) */
@@ -172,6 +179,7 @@ export interface EventItem {
 export interface EventsConfig {
   sectionTitle: LocaleString;
   title: LocaleString;
+  postedLabel: LocaleString;
   items: EventItem[];
 }
 
@@ -259,6 +267,16 @@ export interface ContactConfig {
   sendMessage: LocaleString;
   workingHours: LocaleString;
   workingHoursValue: LocaleString;
+}
+
+export interface ContactFormConfig {
+  nameLabel: LocaleString;
+  emailLabel: LocaleString;
+  messageLabel: LocaleString;
+  submitButton: LocaleString;
+  submitting: LocaleString;
+  successTitle: LocaleString;
+  successText: LocaleString;
 }
 
 export interface FooterConfig {
@@ -369,6 +387,7 @@ export const commonConfig: CommonConfig = {
   submit: { el: 'Υποβολή', en: 'Submit' },
   signUp: { el: 'Εγγραφή', en: 'Sign Up' },
   copyright: { el: '© 2024 - Με επιφύλαξη παντός δικαιώματος', en: '© 2024 - All Rights Reserved' },
+  currencySymbol: '$',
 };
 
 export const heroConfig: HeroConfig = {
@@ -391,6 +410,18 @@ export const aboutConfig: AboutConfig = {
   chefSign: '/images/chef-sign.png',
   aboutImage1: '/images/about-img1.jpg',
   aboutImage2: '/images/about-img2.jpg',
+};
+
+export const homeIntroConfig: HomeIntroConfig = {
+  sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
+  description1: {
+    el: 'Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.',
+    en: 'Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment.',
+  },
+  description2: {
+    el: 'Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.',
+    en: 'DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed.',
+  },
 };
 
 export const aboutStatementConfig: AboutStatementConfig = {
@@ -555,6 +586,7 @@ export const bookTableConfig: BookTableConfig = {
 export const eventsConfig: EventsConfig = {
   sectionTitle: { el: 'Τελευταίες Εκδηλώσεις', en: 'Latest Events' },
   title: { el: 'ΜΗΝ ΧΑΣΕΤΕ', en: 'DO NOT MISS' },
+  postedLabel: { el: 'Δημοσιεύθηκε ', en: 'Posted ' },
   items: [
     {
       title: { el: 'Καθημερινά Ειδικά Φαγητά για την Υγεία σας', en: 'Daily Special Foods For Your Health' },
@@ -732,6 +764,19 @@ export const contactConfig: ContactConfig = {
   sendMessage: { el: 'Αποστολή Μηνύματος', en: 'Send Message' },
   workingHours: { el: 'Ωρες Λειτουργίας', en: 'Working Hours' },
   workingHoursValue: { el: 'Δευ - Παρ: 9ΠΜ - 10ΜΜ', en: 'Mon - Fri: 9AM - 10PM' },
+};
+
+export const contactFormConfig: ContactFormConfig = {
+  nameLabel: { el: 'Όνομα', en: 'Name' },
+  emailLabel: { el: 'Email', en: 'Email' },
+  messageLabel: { el: 'Μήνυμα', en: 'Message' },
+  submitButton: { el: 'Αποστολή', en: 'Send Message' },
+  submitting: { el: 'Αποστολή...', en: 'Sending...' },
+  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
+  successText: {
+    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
+    en: 'We will get back to you shortly.',
+  },
 };
 
 export const footerConfig: FooterConfig = {

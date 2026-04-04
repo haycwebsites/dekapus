@@ -3,7 +3,9 @@ import { useHayc } from '../../hayc/config-context';
 export function MenuPreview() {
   const { t, img, config, cp } = useHayc();
 
-  const displayItems = config.menuConfig.items.slice(0, 10);
+  const displayItemsWithIndex = config.menuConfig.items
+    .map((item, itemIndex) => ({ item, itemIndex }))
+    .slice(0, 10);
 
   return (
     <section className="py-20 bg-[#141414] relative">
@@ -31,9 +33,9 @@ export function MenuPreview() {
 
         {/* Menu Items Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {displayItems.map((item, index) => (
+          {displayItemsWithIndex.map(({ item, itemIndex }) => (
             <div 
-              key={index} 
+              key={itemIndex} 
               className="flex items-center gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
             >
               <img 
@@ -44,15 +46,15 @@ export function MenuPreview() {
               <div className="flex-grow min-w-0">
                 <div className="flex items-start justify-between gap-2">
                   <div>
-                    <h4 {...cp(`menuConfig.items.${index}.name`)} className="text-white font-medium uppercase text-sm">
+                    <h4 {...cp(`menuConfig.items.${itemIndex}.name`)} className="text-white font-medium uppercase text-sm">
                       {t(item.name)}
                     </h4>
-                    <p {...cp(`menuConfig.items.${index}.description`)} className="text-white/50 text-xs mt-1">
+                    <p {...cp(`menuConfig.items.${itemIndex}.description`)} className="text-white/50 text-xs mt-1">
                       {t(item.description)}
                     </p>
                   </div>
-                  <span className="text-[#c8a97e] font-bold text-lg flex-shrink-0">
-                    <sup className="text-sm">$</sup>{item.price}
+                  <span {...cp('commonConfig.currencySymbol')} className="text-[#c8a97e] font-bold text-lg flex-shrink-0">
+                    <sup className="text-sm">{config.commonConfig.currencySymbol}</sup>{item.price}
                   </span>
                 </div>
               </div>

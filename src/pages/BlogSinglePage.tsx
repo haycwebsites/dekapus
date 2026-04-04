@@ -3,7 +3,6 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
 import { useHayc } from '../hayc/config-context';
-import { Button } from '../components/ui/button';
 import dekapusMethodIntroImage from '../Images/DEKAPUS gl smoke site.jpg';
 import myWorkSectionImage from '../Images/DEKAPUS fire site.jpg';
 import engagementSectionImage from '../Images/DEKAPUS ice cube site.jpg';
