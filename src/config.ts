@@ -387,6 +387,8 @@ export interface CustomPagesDefaultArticle {
 export interface DekapusMethodPageContent {
   mainTitle: LocaleString;
   intro: LocaleString;
+  intro2: LocaleString;
+  intro3: LocaleString;
   section1Title: LocaleString;
   section1Body: LocaleString;
   section2Title: LocaleString;
@@ -1137,8 +1139,16 @@ export const customPagesConfig: CustomPagesConfig = {
   dekapusMethod: {
     mainTitle: { el: 'Μέθοδος DEKAPUS', en: 'DEKAPUS Method' },
     intro: {
-      el: 'Η DEKAPUS Method™ δημιουργήθηκε για να διαβάζει χώρους, ανθρώπους και καταστάσεις με ακρίβεια — και να παρεμβαίνει χωρίς θόρυβο. Αντανακλά τον τρόπο με τον οποίο αντιλαμβάνομαι τη φιλοξενία ως ζωντανό σύστημα.',
-      en: 'The DEKAPUS Method™ was created to read spaces, people, and situations with precision — and intervene without noise. It reflects how I understand hospitality as a living system.',
+      el: 'Η DEKAPUS Method™ είναι μια πρακτική προσέγγιση για την κατανόηση και τη βελτίωση των χώρων φιλοξενίας από μέσα.',
+      en: 'The DEKAPUS Method™ is a practical approach to understanding and improving hospitality spaces from within.',
+    },
+    intro2: {
+      el: 'Με αυτή τη μέθοδο διαβάζουμε τον χώρο, κατανοούμε τη δυναμική της ομάδας και εντοπίζουμε τι χρειάζεται να αλλάξει — λαμβάνοντας ακριβείς αποφάσεις που βελτιώνουν τόσο τις λειτουργίες όσο και την εμπειρία του επισκέπτη.',
+      en: 'Through this method, we read the space, understand the dynamics of the team, and identify what needs to shift — making precise decisions that improve both operations and guest experience.',
+    },
+    intro3: {
+      el: 'Στον πυρήνα της βασίζεται σε μία αρχή: η φιλοξενία είναι ένα ζωντανό σύστημα, όπου χώρος, άνθρωποι και ρυθμός πρέπει να ευθυγραμμίζονται για να αποδίδει πραγματικά μια επιχείρηση.',
+      en: 'At its core, it is based on one principle: hospitality is a living system, where space, people, and rhythm must align for a business to truly perform.',
     },
     section1Title: { el: 'Αντίληψη & Ανάγνωση Χώρου', en: 'Perception & Space Reading' },
     section1Body: {

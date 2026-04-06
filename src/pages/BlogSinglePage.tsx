@@ -91,9 +91,17 @@ export function BlogSinglePage() {
                       {t(mainTitleLocale)}
                     </h1>
                     {standardCustomContent === 'dekapus' && (
-                      <p {...cp('customPagesConfig.dekapusMethod.intro')} className="text-white/70 leading-relaxed mb-6">
-                        {t(dm.intro)}
-                      </p>
+                      <>
+                        <p {...cp('customPagesConfig.dekapusMethod.intro')} className="text-white/70 leading-relaxed mb-4">
+                          {t(dm.intro)}
+                        </p>
+                        <p {...cp('customPagesConfig.dekapusMethod.intro2')} className="text-white/70 leading-relaxed mb-4">
+                          {t(dm.intro2)}
+                        </p>
+                        <p {...cp('customPagesConfig.dekapusMethod.intro3')} className="text-white/70 leading-relaxed mb-6">
+                          {t(dm.intro3)}
+                        </p>
+                      </>
                     )}
                   </div>
                   {!isOfferingPage && (
