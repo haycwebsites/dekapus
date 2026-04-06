@@ -649,7 +649,7 @@ export const counterConfig: CounterConfig = {
     el: 'Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.',
     en: "If this is what your space needs, let's begin the conversation.",
   },
-  learnMoreButton: { el: 'Κλείστε μια δωρεάν κλήση', en: 'Book a free call' },
+  learnMoreButton: { el: "Κλείστε μια δωρεάν κλήση 10 λεπτών", en: "Book a 10' free call" },
   backgroundImage: '/images/dekapus-cutlerys-site2.jpg',
   items: [
     {
