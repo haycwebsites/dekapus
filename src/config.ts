@@ -108,6 +108,15 @@ export interface HomeIntroConfig {
   heroImage: string;
 }
 
+/** Home page: “What we do” band — image left on large screens, text right */
+export interface HomeWhatWeDoConfig {
+  sectionTitle: LocaleString;
+  intro: LocaleString;
+  items: LocaleString[];
+  sectionImage: string;
+  imageAlt: LocaleString;
+}
+
 /** Full-bleed statement block on the About page (below main about copy) */
 export interface AboutStatementConfig {
   sectionTitle: LocaleString;
@@ -1180,6 +1189,38 @@ export const homeIntroConfig: HomeIntroConfig = {
     en: 'It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful.',
   },
   heroImage: '/images/dekapus-vinyl-site.jpg',
+};
+
+export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
+  sectionTitle: { el: 'Τι Κάνουμε', en: 'What We Do' },
+  intro: {
+    el: 'Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:',
+    en: 'As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:',
+  },
+  items: [
+    {
+      el: 'αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη',
+      en: 'develop new concepts from the ground up — defining identity, rhythm, and guest experience',
+    },
+    {
+      el: 'αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια',
+      en: 'uncover what is not working beneath the surface',
+    },
+    {
+      el: 'βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη',
+      en: 'improve service flow and overall guest experience',
+    },
+    {
+      el: 'ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία',
+      en: 'realign teams, atmosphere, and operations',
+    },
+    {
+      el: 'ενισχύσουμε τη συνέπεια, την απόδοση και τη σαφήνεια σε όλη την επιχείρηση',
+      en: 'strengthen consistency, performance, and clarity across the business',
+    },
+  ],
+  sectionImage: '/images/method-section.jpg',
+  imageAlt: { el: 'Χώρος φιλοξενίας', en: 'Hospitality space' },
 };
 
 export const contactFormConfig: ContactFormConfig = {

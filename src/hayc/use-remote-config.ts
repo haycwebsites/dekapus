@@ -7,6 +7,7 @@ import {
   heroConfig,
   aboutConfig,
   homeIntroConfig,
+  homeWhatWeDoConfig,
   aboutStatementConfig,
   servicesConfig,
   counterConfig,
@@ -42,6 +43,7 @@ export interface RemoteConfig {
   heroConfig: typeof heroConfig;
   aboutConfig: typeof aboutConfig;
   homeIntroConfig: typeof homeIntroConfig;
+  homeWhatWeDoConfig: typeof homeWhatWeDoConfig;
   aboutStatementConfig: typeof aboutStatementConfig;
   servicesConfig: typeof servicesConfig;
   counterConfig: typeof counterConfig;
@@ -76,6 +78,7 @@ export const defaultConfig: RemoteConfig = {
   heroConfig,
   aboutConfig,
   homeIntroConfig,
+  homeWhatWeDoConfig,
   aboutStatementConfig,
   servicesConfig,
   counterConfig,
