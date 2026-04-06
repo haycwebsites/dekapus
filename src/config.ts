@@ -1137,22 +1137,22 @@ export const customPagesConfig: CustomPagesConfig = {
   dekapusMethod: {
     mainTitle: { el: 'Μέθοδος DEKAPUS', en: 'DEKAPUS Method' },
     intro: {
-      el: 'Η DEKAPUS Method™ δημιουργήθηκε για να διαβάζει χώρους, ανθρώπους και καταστάσεις με ακρίβεια — και να παρεμβαίνει χωρίς θόρυβο. Είναι ο τρόπος με τον οποίο αντιλαμβάνομαι τη φιλοξενία ως ζωντανό σύστημα.',
+      el: 'Η DEKAPUS Method™ δημιουργήθηκε για να διαβάζει χώρους, ανθρώπους και καταστάσεις με ακρίβεια — και να παρεμβαίνει χωρίς θόρυβο. Αντανακλά τον τρόπο με τον οποίο αντιλαμβάνομαι τη φιλοξενία ως ζωντανό σύστημα.',
       en: 'The DEKAPUS Method™ was created to read spaces, people, and situations with precision — and intervene without noise. It reflects how I understand hospitality as a living system.',
     },
     section1Title: { el: 'Αντίληψη & Ανάγνωση Χώρου', en: 'Perception & Space Reading' },
     section1Body: {
-      el: 'Κάθε χώρος μιλάει πριν λειτουργήσει. Ο ρυθμός, η ένταση, οι σιωπές και οι κινήσεις αποκαλύπτουν τι πραγματικά συμβαίνει — πέρα από reports και KPIs. Η παρατήρηση προηγείται κάθε απόφασης.',
+      el: 'Κάθε χώρος μιλάει πριν λειτουργήσει. Ο ρυθμός, η ένταση, οι σιωπές και οι κινήσεις αποκαλύπτουν ό,τι τα reports και τα KPIs δεν μπορούν. Η παρατήρηση προηγείται της λήψης αποφάσεων.',
       en: 'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
     },
     section2Title: { el: 'Ατμόσφαιρα & Ενέργεια', en: 'Atmosphere & Energy' },
     section2Body: {
-      el: 'Η ατμόσφαιρα δεν είναι διακόσμηση. Είναι αποτέλεσμα επιλογών, timing και ανθρώπινης παρουσίας. Όταν η ατμόσφαιρα είναι σωστή, τα συστήματα υποστηρίζουν. Όταν όχι, τα συστήματα πιέζουν.',
+      el: 'Η ατμόσφαιρα δεν είναι διακόσμηση. Είναι αποτέλεσμα επιλογών, timing και ανθρώπινης παρουσίας. Όταν η ατμόσφαιρα είναι σωστή, τα συστήματα υποστηρίζουν. Όταν όχι, τα συστήματα ασφυκτιούν.',
       en: "Atmosphere is not decoration. It is the result of choices, timing, and human presence. When atmosphere is right, systems support. When it isn't, systems suffocate.",
     },
     section3Title: { el: 'Ροή Ανθρώπων & Συμπεριφορά', en: 'Human Flow & Behaviour' },
     section3Body: {
-      el: 'Οι άνθρωποι δεν κινούνται τυχαία. Ο τρόπος που κινούνται, αντιδρούν και κουράζονται είναι δομικός δείκτης υγείας ενός χώρου. Η DEKAPUS Method™ διαβάζει τη ροή πριν τη διορθώσει.',
+      el: 'Οι άνθρωποι δεν κινούνται τυχαία. Η κίνησή τους, οι αντιδράσεις και η κόπωσή τους αποκαλύπτουν την πραγματική υγεία ενός χώρου. Η DEKAPUS Method™ διαβάζει τη ροή πριν τη διορθώσει.',
       en: 'People do not move randomly. Their movement, reactions, and fatigue reveal the true health of a space. The DEKAPUS Method™ reads flow before correcting it.',
     },
     section4Title: { el: 'Λειτουργικά Συστήματα', en: 'Operational Systems' },
@@ -1162,7 +1162,7 @@ export const customPagesConfig: CustomPagesConfig = {
     },
     section5Title: { el: 'Χρονισμός & Παρέμβαση', en: 'Timing & Intervention' },
     section5Body: {
-      el: 'Η σωστή παρέμβαση δεν είναι θέμα έντασης. Είναι θέμα στιγμής. Η DEKAPUS λειτουργεί με ακρίβεια, όχι βιασύνη.',
+      el: 'Η αποτελεσματική παρέμβαση δεν είναι θέμα έντασης. Είναι θέμα στιγμής. Η DEKAPUS λειτουργεί με ακρίβεια, όχι βιασύνη.',
       en: 'Effective intervention is not about intensity. It is about timing. DEKAPUS works with precision, not urgency.',
     },
   },
