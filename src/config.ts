@@ -522,7 +522,7 @@ export const commonConfig: CommonConfig = {
 export const heroConfig: HeroConfig = {
   title: { el: 'Δημιουργώντας ατμόσφαιρες.', en: 'Crafting Atmospheres.' },
   subtitle: { el: 'Ευθυγραμμίζοντας συστήματα, χώρο και ανθρώπινη συμπεριφορά.', en: 'Aligning Systems, Space & Human Behaviour.' },
-  viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
+  viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More 78' },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
   slideLogo: '/images/slide-logo.png',
@@ -586,7 +586,7 @@ export const counterConfig: CounterConfig = {
   sectionTitle: { el: 'Δεν πρόκειται απλά για συμβουλευτική.', en: 'This is not just consulting.' },
   title: { el: 'Πρόκειται για αντίληψη, παρέμβαση και ΑΚΡΙΒΗ ΣΥΝΤΟΝΙΣΜΟ.', en: 'It is perception, intervention, and precise tuning.' },
   learnMoreButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
-  backgroundImage: '/images/dekapus-cutlerys-site2.jpg',
+  backgroundImage: '/images/counter-bg.jpg',
   items: [
     {
       icon: '/images/counter-ic1.png',
@@ -708,8 +708,19 @@ export const bookTableConfig: BookTableConfig = {
   messagePlaceholder: { el: 'Σχόλια', en: 'Comments' },
   backgroundImage: '/images/book-table-bg.jpg',
   reservationTimeSlots: [
-    '09:00', '10:00', '11:00', '12:00', '13:00', '14:00',
-    '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00',
+    '09:00',
+    '10:00',
+    '11:00',
+    '12:00',
+    '13:00',
+    '14:00',
+    '15:00',
+    '16:00',
+    '17:00',
+    '18:00',
+    '19:00',
+    '20:00',
+    '21:00',
   ],
   reservationTableOptions: [
     { el: 'Τραπέζι 1', en: 'Table 1' },
@@ -719,7 +730,17 @@ export const bookTableConfig: BookTableConfig = {
     { el: 'Τραπέζι 5', en: 'Table 5' },
     { el: 'VIP Booth', en: 'VIP Booth' },
   ],
-  reservationGuestOptions: ['1', '2', '3', '4', '5', '6', '7', '8', '10+'],
+  reservationGuestOptions: [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '10+',
+  ],
   guestSingular: { el: 'Άτομο', en: 'Guest' },
   guestsPlural: { el: 'Άτομα', en: 'Guests' },
 };
@@ -950,6 +971,11 @@ export const notFoundConfig: NotFoundConfig = {
   imageAlt: { el: 'Σφάλμα 404', en: '404 error' },
 };
 
+export const digitalProductsConfig: DigitalProductsConfig = {
+  enabled: false,
+  products: [],
+};
+
 export const brandConfig: BrandConfig = {
   logoTaglineLight: '/images/white-logo-tagline.png',
   logoTaglineDark: '/images/black-logo-tagline.png',
@@ -1131,11 +1157,6 @@ export const customPagesConfig: CustomPagesConfig = {
     myWork: '/images/dekapus-fire-site.jpg',
     engagement: '/images/dekapus-ice-cube-site.jpg',
   },
-};
-
-export const digitalProductsConfig: DigitalProductsConfig = {
-  enabled: false,
-  products: [],
 };
 
 export const homeIntroConfig: HomeIntroConfig = {

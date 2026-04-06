@@ -152,7 +152,7 @@
     },
     "viewMenuButton": {
       "el": "Μάθετε Περισσότερα",
-      "en": "Learn More"
+      "en": "Learn More 78"
     },
     "backgroundImage1": "/images/slide1.jpg",
     "backgroundImage2": "/images/slide2.jpg",
@@ -282,7 +282,7 @@
       "el": "Μάθετε Περισσότερα",
       "en": "Learn More"
     },
-    "backgroundImage": "/images/dekapus-cutlerys-site2.jpg",
+    "backgroundImage": "/images/counter-bg.jpg",
     "items": [
       {
         "icon": "/images/counter-ic1.png",
@@ -1081,6 +1081,10 @@
       "en": "404 error"
     }
   },
+  "digitalProductsConfig": {
+    "enabled": false,
+    "products": []
+  },
   "brandConfig": {
     "logoTaglineLight": "/images/white-logo-tagline.png",
     "logoTaglineDark": "/images/black-logo-tagline.png",
@@ -1456,10 +1460,6 @@
       "myWork": "/images/dekapus-fire-site.jpg",
       "engagement": "/images/dekapus-ice-cube-site.jpg"
     }
-  },
-  "digitalProductsConfig": {
-    "enabled": false,
-    "products": []
   },
   "homeIntroConfig": {
     "sectionTitle": {
