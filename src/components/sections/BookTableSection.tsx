@@ -32,6 +32,7 @@ export function BookTableSection() {
               <Input 
                 type="text"
                 placeholder={t(config.bookTableConfig.namePlaceholder)}
+                {...cp('bookTableConfig.namePlaceholder')}
                 className="pl-12 h-14 bg-white/10 border-white/20 text-white placeholder:text-white/50"
               />
             </div>
@@ -40,6 +41,7 @@ export function BookTableSection() {
               <Input 
                 type="tel"
                 placeholder={t(config.bookTableConfig.phonePlaceholder)}
+                {...cp('bookTableConfig.phonePlaceholder')}
                 className="pl-12 h-14 bg-white/10 border-white/20 text-white placeholder:text-white/50"
               />
             </div>
@@ -55,6 +57,7 @@ export function BookTableSection() {
               <Input 
                 type="text"
                 placeholder={t(config.bookTableConfig.tablePlaceholder)}
+                {...cp('bookTableConfig.tablePlaceholder')}
                 className="pl-12 h-14 bg-white/10 border-white/20 text-white placeholder:text-white/50"
               />
             </div>
@@ -63,6 +66,7 @@ export function BookTableSection() {
               <Input 
                 type="text"
                 placeholder={t(config.bookTableConfig.timePlaceholder)}
+                {...cp('bookTableConfig.timePlaceholder')}
                 className="pl-12 h-14 bg-white/10 border-white/20 text-white placeholder:text-white/50"
               />
             </div>

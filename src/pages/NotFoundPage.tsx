@@ -18,8 +18,9 @@ export function NotFoundPage() {
             {/* 404 Image or Illustration */}
             <div className="mb-8">
               <img 
+                {...cp('notFoundConfig.image')}
                 src={img(config.notFoundConfig.image)} 
-                alt="404"
+                alt={t(config.notFoundConfig.imageAlt)}
                 className="mx-auto max-w-sm rounded-lg opacity-80"
               />
             </div>
@@ -44,6 +45,7 @@ export function NotFoundPage() {
               <Input 
                 type="text"
                 placeholder={t(config.navigationConfig.search)}
+                {...cp('navigationConfig.search')}
                 className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
               />
               <Button 

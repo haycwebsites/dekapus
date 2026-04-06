@@ -10,13 +10,17 @@ export function MenuPreview() {
   return (
     <section className="py-20 bg-[#141414] relative">
       <img 
+        {...cp('menuConfig.decorImage1')}
         src={img(config.menuConfig.decorImage1)} 
-        alt="" 
+        alt=""
+        aria-hidden
         className="absolute top-0 right-0 h-32 opacity-50"
       />
       <img 
+        {...cp('menuConfig.decorImage2')}
         src={img(config.menuConfig.decorImage2)} 
-        alt="" 
+        alt=""
+        aria-hidden
         className="absolute bottom-0 left-0 h-32 opacity-50"
       />
       
@@ -39,6 +43,7 @@ export function MenuPreview() {
               className="flex items-center gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
             >
               <img 
+                {...cp(`menuConfig.items.${itemIndex}.image`)}
                 src={img(item.image)} 
                 alt={t(item.name)}
                 className="w-20 h-20 rounded-full object-cover flex-shrink-0"

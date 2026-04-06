@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
-import signature from '../../Images/signature.png';
-import signatureBlack from '../../Images/signatureBlack.png';
-import introImage from '../../Images/DEKAPUS vinyl site.jpg';
-import aboutPageImage from '../../Images/DEKAPUS_bar site2.jpg';
 
 export function AboutSection() {
-  const { t, config, cp } = useHayc();
+  const { t, img, config, cp } = useHayc();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -28,11 +24,12 @@ export function AboutSection() {
     return () => observer.disconnect();
   }, []);
 
+  const heroSrc = isHomePage ? config.homeIntroConfig.heroImage : config.aboutConfig.pageHeroImage;
+
   return (
     <section className="py-20 bg-[#141414]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
           <div>
             <div className="mb-8">
               <h3
@@ -47,7 +44,7 @@ export function AboutSection() {
                 </h2>
               )}
             </div>
-            
+
             <p
               {...(isHomePage ? cp('homeIntroConfig.description1') : cp('aboutConfig.description1'))}
               className="text-white/70 mb-4 leading-relaxed"
@@ -66,21 +63,21 @@ export function AboutSection() {
               </p>
             )}
 
-            {/* Detail Card */}
             <div className="flex items-center justify-start gap-4 p-4 bg-white/5 rounded-lg">
               <img
-                src={theme === 'light' ? signatureBlack : signature}
-                alt="Signature"
+                {...cp('brandConfig.signatureAlt')}
+                src={img(theme === 'light' ? config.brandConfig.signatureDark : config.brandConfig.signatureLight)}
+                alt={t(config.brandConfig.signatureAlt)}
                 className="h-12 object-contain"
               />
             </div>
           </div>
 
-          {/* Images */}
           <div className="grid grid-cols-1 gap-4">
-            <img 
-              src={isHomePage ? introImage : aboutPageImage}
-              alt="About"
+            <img
+              {...(isHomePage ? cp('homeIntroConfig.heroImage') : cp('aboutConfig.pageHeroImage'))}
+              src={img(heroSrc)}
+              alt={t(config.aboutConfig.sectionImageAlt)}
               className="w-full rounded-lg"
             />
           </div>

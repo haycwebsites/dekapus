@@ -52,8 +52,9 @@ export function TestimonialsSection() {
                     "{t(testimonial.text)}"
                   </p>
                   <img 
+                    {...cp('testimonialsConfig.quoteIconAlt')}
                     src={img(config.testimonialsConfig.quoteImage)} 
-                    alt="Quote"
+                    alt={t(config.testimonialsConfig.quoteIconAlt)}
                     className="mx-auto h-8 mb-4"
                   />
                   <h5 {...cp(`testimonialsConfig.items.${index}.author`)} className="text-[#c8a97e] font-medium">

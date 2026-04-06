@@ -24,6 +24,7 @@ export function Newsletter() {
           <Input 
             type="email"
             placeholder={t(config.newsletterConfig.placeholder)}
+            {...cp('newsletterConfig.placeholder')}
             className="flex-grow bg-white border-0 h-12 text-gray-800"
           />
           <Button 

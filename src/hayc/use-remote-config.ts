@@ -23,6 +23,11 @@ import {
   footerConfig,
   notFoundConfig,
   digitalProductsConfig,
+  brandConfig,
+  uiLabelsConfig,
+  languageSwitcherConfig,
+  blogListingConfig,
+  customPagesConfig,
   type DigitalProductsConfig,
 } from '../config';
 
@@ -53,6 +58,11 @@ export interface RemoteConfig {
   footerConfig: typeof footerConfig;
   notFoundConfig: typeof notFoundConfig;
   digitalProductsConfig?: DigitalProductsConfig;
+  brandConfig: typeof brandConfig;
+  uiLabelsConfig: typeof uiLabelsConfig;
+  languageSwitcherConfig: typeof languageSwitcherConfig;
+  blogListingConfig: typeof blogListingConfig;
+  customPagesConfig: typeof customPagesConfig;
 }
 
 export const defaultConfig: RemoteConfig = {
@@ -82,6 +92,11 @@ export const defaultConfig: RemoteConfig = {
   footerConfig,
   notFoundConfig,
   digitalProductsConfig,
+  brandConfig,
+  uiLabelsConfig,
+  languageSwitcherConfig,
+  blogListingConfig,
+  customPagesConfig,
 };
 
 export async function fetchRemoteConfig(): Promise<RemoteConfig> {

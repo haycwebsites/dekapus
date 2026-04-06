@@ -10,15 +10,13 @@ import {
   NavigationMenuList,
 } from '../ui/navigation-menu';
 import { LanguageSwitcher } from '../LanguageSwitcher';
-import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
-import blackLogoTagline from '../../Images/blackLogoTagline.png';
 
 interface HeaderProps {
   variant?: 'home' | 'inner';
 }
 
 export function Header({ variant = 'inner' }: HeaderProps) {
-  const { t, config, cp } = useHayc();
+  const { t, img, config, cp } = useHayc();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -77,8 +75,9 @@ export function Header({ variant = 'inner' }: HeaderProps) {
               <button
                 onClick={toggleTheme}
                 className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                aria-label="Toggle theme"
-                title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                {...cp(theme === 'dark' ? 'uiLabelsConfig.switchToLightModeTitle' : 'uiLabelsConfig.switchToDarkModeTitle')}
+                aria-label={t(config.uiLabelsConfig.themeToggleAriaLabel)}
+                title={theme === 'dark' ? t(config.uiLabelsConfig.switchToLightModeTitle) : t(config.uiLabelsConfig.switchToDarkModeTitle)}
               >
                 {theme === 'dark' ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
               </button>
@@ -93,8 +92,13 @@ export function Header({ variant = 'inner' }: HeaderProps) {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img
-              src={theme === 'light' && (isScrolled || variant === 'inner') ? blackLogoTagline : whiteLogoTagline}
-              alt="Restaurant Logo"
+              {...cp('brandConfig.logoAlt')}
+              src={img(
+                theme === 'light' && (isScrolled || variant === 'inner')
+                  ? config.brandConfig.logoTaglineDark
+                  : config.brandConfig.logoTaglineLight
+              )}
+              alt={t(config.brandConfig.logoAlt)}
               className="h-16"
             />
           </Link>
@@ -138,8 +142,9 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                 <button
                   onClick={toggleTheme}
                   className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                  aria-label="Toggle theme"
-                  title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                  {...cp(theme === 'dark' ? 'uiLabelsConfig.switchToLightModeTitle' : 'uiLabelsConfig.switchToDarkModeTitle')}
+                  aria-label={t(config.uiLabelsConfig.themeToggleAriaLabel)}
+                  title={theme === 'dark' ? t(config.uiLabelsConfig.switchToLightModeTitle) : t(config.uiLabelsConfig.switchToDarkModeTitle)}
                 >
                   {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>

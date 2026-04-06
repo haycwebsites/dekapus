@@ -9,6 +9,7 @@ import {
   commonConfig,
   heroConfig,
   aboutConfig,
+  homeIntroConfig,
   aboutStatementConfig,
   servicesConfig,
   counterConfig,
@@ -21,9 +22,15 @@ import {
   teamConfig,
   galleryConfig,
   contactConfig,
+  contactFormConfig,
   footerConfig,
   notFoundConfig,
   digitalProductsConfig,
+  brandConfig,
+  uiLabelsConfig,
+  languageSwitcherConfig,
+  blogListingConfig,
+  customPagesConfig,
 } from '../src/config.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -39,6 +46,7 @@ const config = {
   commonConfig,
   heroConfig,
   aboutConfig,
+  homeIntroConfig,
   aboutStatementConfig,
   servicesConfig,
   counterConfig,
@@ -51,9 +59,15 @@ const config = {
   teamConfig,
   galleryConfig,
   contactConfig,
+  contactFormConfig,
   footerConfig,
   notFoundConfig,
   digitalProductsConfig,
+  brandConfig,
+  uiLabelsConfig,
+  languageSwitcherConfig,
+  blogListingConfig,
+  customPagesConfig,
 };
 
 const projectRoot = path.resolve(__dirname, '../../');

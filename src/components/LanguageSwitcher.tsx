@@ -1,28 +1,26 @@
 import { useHayc, type Locale } from '../hayc/config-context';
 
-const LOCALES: { value: Locale; label: string }[] = [
-  { value: 'el', label: 'ΕΛ' },
-  { value: 'en', label: 'EN' },
-];
+const LOCALE_ORDER: Locale[] = ['el', 'en'];
 
 export function LanguageSwitcher() {
-  const { locale, setLocale } = useHayc();
+  const { locale, setLocale, t, config, cp } = useHayc();
 
   return (
     <div className="flex items-center gap-1">
-      {LOCALES.map(({ value, label }, i) => (
+      {LOCALE_ORDER.map((value, i) => (
         <span key={value} className="flex items-center gap-1">
           <button
             onClick={() => setLocale(value)}
+            {...cp(value === 'el' ? 'languageSwitcherConfig.elLabel' : 'languageSwitcherConfig.enLabel')}
             className={`text-xs font-medium tracking-wider transition-colors ${
               locale === value
                 ? 'text-white'
                 : 'text-white/40 hover:text-white/70'
             }`}
           >
-            {label}
+            {value === 'el' ? t(config.languageSwitcherConfig.elLabel) : t(config.languageSwitcherConfig.enLabel)}
           </button>
-          {i < LOCALES.length - 1 && (
+          {i < LOCALE_ORDER.length - 1 && (
             <span className="text-white/20 text-xs">|</span>
           )}
         </span>

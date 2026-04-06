@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
-import whiteLogoTagline from '../../Images/whiteLogoTagline.png';
-import blackLogoTagline from '../../Images/blackLogoTagline.png';
-import signature from '../../Images/signature.png';
-import signatureBlack from '../../Images/signatureBlack.png';
 
 export function Footer() {
-  const { t, config, cp } = useHayc();
+  const { t, img, config, cp } = useHayc();
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     const saved = localStorage.getItem('theme');
     return saved === 'light' ? 'light' : 'dark';
@@ -71,14 +67,16 @@ export function Footer() {
             <div className="flex items-center gap-6">
               <Link to="/" className="inline-block">
                 <img
-                  src={theme === 'light' ? blackLogoTagline : whiteLogoTagline}
-                  alt="Dekapus Logo"
+                  {...cp('brandConfig.logoAlt')}
+                  src={img(theme === 'light' ? config.brandConfig.logoTaglineDark : config.brandConfig.logoTaglineLight)}
+                  alt={t(config.brandConfig.logoAlt)}
                   className="h-24 object-contain"
                 />
               </Link>
               <img
-                src={theme === 'light' ? signatureBlack : signature}
-                alt="Signature"
+                {...cp('brandConfig.signatureAlt')}
+                src={img(theme === 'light' ? config.brandConfig.signatureDark : config.brandConfig.signatureLight)}
+                alt={t(config.brandConfig.signatureAlt)}
                 className="h-16 object-contain"
               />
             </div>

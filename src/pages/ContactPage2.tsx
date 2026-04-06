@@ -21,7 +21,7 @@ export function ContactPage2() {
         {/* Full Width Map */}
         <div className="h-96 bg-white/5">
           <iframe
-            src="https://www.google.com/maps?q=Athens,+Greece&output=embed"
+            src={config.contactConfig.mapEmbedUrl}
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -91,21 +91,25 @@ export function ContactPage2() {
                   <Input 
                     type="text"
                     placeholder={t(config.contactConfig.namePlaceholder)}
+                    {...cp('contactConfig.namePlaceholder')}
                     className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
                   />
                   <Input 
                     type="email"
                     placeholder={t(config.contactConfig.emailPlaceholder)}
+                    {...cp('contactConfig.emailPlaceholder')}
                     className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
                   />
                 </div>
                 <Input 
                   type="text"
                   placeholder={t(config.contactConfig.subjectPlaceholder)}
+                  {...cp('contactConfig.subjectPlaceholder')}
                   className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
                 />
                 <Textarea 
                   placeholder={t(config.contactConfig.messagePlaceholder)}
+                  {...cp('contactConfig.messagePlaceholder')}
                   className="min-h-40 bg-white/10 border-white/20 text-white placeholder:text-white/50 resize-none"
                 />
                 <div className="text-center">

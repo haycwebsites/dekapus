@@ -61,12 +61,15 @@ export function GalleryGrid() {
               className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group"
             >
               <img 
+                {...cp(`galleryConfig.images.${config.galleryConfig.images.indexOf(image)}.src`)}
                 src={img(image.src)} 
-                alt={`Gallery ${index + 1}`}
+                alt={`${t(config.galleryConfig.imageAltPrefix)} ${index + 1}`}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-[#c8a97e]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-2xl">+</span>
+                <span {...cp('galleryConfig.hoverExpandLabel')} className="text-white text-2xl">
+                  {t(config.galleryConfig.hoverExpandLabel)}
+                </span>
               </div>
             </div>
           ))}
@@ -84,7 +87,8 @@ export function GalleryGrid() {
             {selectedImage && (
               <img 
                 src={img(selectedImage)} 
-                alt="Gallery Preview"
+                {...cp('galleryConfig.lightboxImageAlt')}
+                alt={t(config.galleryConfig.lightboxImageAlt)}
                 className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
               />
             )}

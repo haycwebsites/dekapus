@@ -4,33 +4,25 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
-import signature from '../../Images/signature.png';
-import heroSlide1 from '../../Images/DEKAPUS bar site.jpg';
-import heroSlide2 from '../../Images/DEKAPUS cutlerys site.jpg';
-import heroSlide3 from '../../Images/DEKAPUS fire stove site.jpg';
 
 export function HeroSlider() {
   const { t, img, config, cp } = useHayc();
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const slides = [
-    { image: heroSlide1 },
-    { image: heroSlide2 },
-    { image: heroSlide3 },
-  ];
+  const slides = config.heroConfig.slideImages.map((image, index) => ({ image, index }));
 
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();
 
   useEffect(() => {
     if (!emblaApi) return;
-    
+
     const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
     emblaApi.on('select', onSelect);
-    
+
     const autoplay = setInterval(() => emblaApi.scrollNext(), 5000);
-    
+
     return () => {
       emblaApi.off('select', onSelect);
       clearInterval(autoplay);
@@ -41,24 +33,22 @@ export function HeroSlider() {
     <section className="on-dark-image-section relative h-screen">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className="flex-[0_0_100%] min-w-0 relative"
-            >
+          {slides.map((slide) => (
+            <div key={slide.index} className="flex-[0_0_100%] min-w-0 relative">
               <img
+                {...cp(`heroConfig.slideImages.${slide.index}`)}
                 src={img(slide.image)}
-                alt={`Slide ${index + 1}`}
+                alt={`${t(config.heroConfig.slideImageAltPrefix)} ${slide.index + 1}`}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/40" />
-              
-              {/* Content Overlay */}
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
-                  <img 
-                    src={signature} 
-                    alt="Signature" 
+                  <img
+                    {...cp('heroConfig.slideLogo')}
+                    src={img(config.heroConfig.slideLogo)}
+                    alt={t(config.heroConfig.slideLogoAlt)}
                     className="mx-auto mb-8 h-24"
                   />
                   <h2 {...cp('heroConfig.title')} className="font-['Great_Vibes'] text-4xl md:text-6xl text-[#c8a97e] mb-8">
@@ -67,7 +57,7 @@ export function HeroSlider() {
                   <p {...cp('heroConfig.subtitle')} className="text-lg md:text-xl uppercase tracking-widest mb-8">
                     {t(config.heroConfig.subtitle)}
                   </p>
-                  <Button 
+                  <Button
                     asChild
                     size="lg"
                     className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
@@ -83,7 +73,6 @@ export function HeroSlider() {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
       <button
         onClick={scrollPrev}
         className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-[#c8a97e] flex items-center justify-center text-white transition-colors"
@@ -97,14 +86,13 @@ export function HeroSlider() {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-        {slides.map((_, index) => (
+        {slides.map((s) => (
           <button
-            key={index}
-            onClick={() => emblaApi?.scrollTo(index)}
+            key={s.index}
+            onClick={() => emblaApi?.scrollTo(s.index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === selectedIndex ? 'bg-[#c8a97e]' : 'bg-white/50'
+              s.index === selectedIndex ? 'bg-[#c8a97e]' : 'bg-white/50'
             }`}
           />
         ))}
