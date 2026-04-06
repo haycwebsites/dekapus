@@ -88,6 +88,55 @@ function sanitizeConfigObject(obj: Record<string, unknown>): Record<string, unkn
   return result;
 }
 
+/** Same as sync-baseline: evaluate `export const x = ...` object literal for merging. */
+function parseConstValue(block: string): unknown {
+  const eqIndex = block.indexOf('=');
+  if (eqIndex === -1) return undefined;
+  const expression = block.slice(eqIndex + 1).trim().replace(/;$/, '').trim();
+  try {
+    return Function('"use strict"; return (' + expression + ');')();
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Deep-merge remote over local/baseline: remote wins on present keys, but keys only in
+ * local (new schema fields not yet on S3) are preserved. Arrays are replaced by remote when present.
+ */
+function deepMerge(base: unknown, override: unknown): unknown {
+  if (override === null || override === undefined) return base;
+  if (base === null || base === undefined) return override;
+  if (Array.isArray(base) && Array.isArray(override)) {
+    return override;
+  }
+  if (Array.isArray(base) || Array.isArray(override)) {
+    return override !== undefined && override !== null ? override : base;
+  }
+  if (typeof base === 'object' && typeof override === 'object') {
+    const b = base as Record<string, unknown>;
+    const o = override as Record<string, unknown>;
+    const out: Record<string, unknown> = { ...b };
+    for (const k of Object.keys(o)) {
+      if (
+        k in b &&
+        typeof b[k] === 'object' &&
+        b[k] !== null &&
+        !Array.isArray(b[k]) &&
+        typeof o[k] === 'object' &&
+        o[k] !== null &&
+        !Array.isArray(o[k])
+      ) {
+        out[k] = deepMerge(b[k], o[k]);
+      } else {
+        out[k] = o[k];
+      }
+    }
+    return out;
+  }
+  return override;
+}
+
 async function main() {
   console.log('Fetching config.json from ' + CONFIG_URL + '...');
 
@@ -228,11 +277,32 @@ async function main() {
 
     if (remoteChanged) {
       const typeAnnotation = constTypeMap.has(key) ? ': ' + constTypeMap.get(key) : '';
+      const remoteVal = sanitizedRemoteConfig[key];
+      let localParsed: unknown = undefined;
+      if (hasLocal && localBlock) {
+        localParsed = parseConstValue(localBlock);
+      }
+      const baselineVal = baseConfig[key];
+      const seed =
+        localParsed !== undefined && localParsed !== null
+          ? localParsed
+          : baselineVal !== undefined
+            ? baselineVal
+            : {};
+      const merged =
+        typeof seed === 'object' &&
+        seed !== null &&
+        !Array.isArray(seed) &&
+        typeof remoteVal === 'object' &&
+        remoteVal !== null &&
+        !Array.isArray(remoteVal)
+          ? deepMerge(seed, remoteVal)
+          : remoteVal;
       constLines.push(
-        'export const ' + key + typeAnnotation + ' = ' + serializeValue(sanitizedRemoteConfig[key], 0) + ';',
+        'export const ' + key + typeAnnotation + ' = ' + serializeValue(merged, 0) + ';',
       );
-      console.log("↓ Pulled updated '" + key + "' from S3.");
-      mergedConfig[key] = sanitizedRemoteConfig[key];
+      console.log("↓ Pulled updated '" + key + "' from S3 (merged with local schema).");
+      mergedConfig[key] = merged;
       continue;
     }
 
