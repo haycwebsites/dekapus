@@ -1219,8 +1219,8 @@ export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
       en: 'strengthen consistency, performance, and clarity across the business',
     },
   ],
-  sectionImage: '/images/method-section.jpg',
-  imageAlt: { el: 'Χώρος φιλοξενίας', en: 'Hospitality space' },
+  sectionImage: '/images/dekapus-ice-cube-site.jpg',
+  imageAlt: { el: 'Πάγος — λεπτομέρεια', en: 'Ice cube detail' },
 };
 
 export const contactFormConfig: ContactFormConfig = {
