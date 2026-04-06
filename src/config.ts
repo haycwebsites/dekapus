@@ -145,8 +145,8 @@ export interface CounterItem {
 }
 
 export interface CounterConfig {
-  sectionTitle: LocaleString;
-  title: LocaleString;
+  paragraph1: LocaleString;
+  paragraph2: LocaleString;
   learnMoreButton: LocaleString;
   backgroundImage: string;
   items: CounterItem[];
@@ -533,7 +533,7 @@ export const commonConfig: CommonConfig = {
 export const heroConfig: HeroConfig = {
   title: { el: 'Δημιουργώντας ατμόσφαιρες.', en: 'Crafting Atmospheres.' },
   subtitle: { el: 'Ευθυγραμμίζοντας συστήματα, χώρο και ανθρώπινη συμπεριφορά.', en: 'Aligning Systems, Space & Human Behaviour.' },
-  viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More 78' },
+  viewMenuButton: { el: "Κλείστε μια δωρεάν κλήση 10 λεπτών", en: "Book a 10' free call" },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
   slideLogo: '/images/slide-logo.png',
@@ -594,9 +594,15 @@ export const servicesConfig: ServicesConfig = {
 };
 
 export const counterConfig: CounterConfig = {
-  sectionTitle: { el: 'Δεν πρόκειται απλά για συμβουλευτική.', en: 'This is not just consulting.' },
-  title: { el: 'Πρόκειται για αντίληψη, παρέμβαση και ΑΚΡΙΒΗ ΣΥΝΤΟΝΙΣΜΟ.', en: 'It is perception, intervention, and precise tuning.' },
-  learnMoreButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
+  paragraph1: {
+    el: 'Αυτή η δουλειά ορίζεται από την Αντίληψη, την ακριβή Παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.',
+    en: 'This work is defined by Perception, precise Intervention, and the ability to Tune a space until it functions with clarity and flow.',
+  },
+  paragraph2: {
+    el: 'Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.',
+    en: "If this is what your space needs, let's begin the conversation.",
+  },
+  learnMoreButton: { el: "Κλείστε μια δωρεάν κλήση 10 λεπτών", en: "Book a 10' free call" },
   backgroundImage: '/images/counter-bg.jpg',
   items: [
     {
