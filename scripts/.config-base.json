@@ -212,12 +212,12 @@
       "en": "Intro"
     },
     "description1": {
-      "el": "Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.",
-      "en": "Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment."
+      "el": "Δημιουργούμε εστιατόρια, μπαρ και χώρους φιλοξενίας από την αρχή — διαμορφώνοντας την ταυτότητα, τον ρυθμό και την εμπειρία τους από την πρώτη στιγμή.",
+      "en": "Creating restaurants, bars, and hospitality spaces from the ground up — shaping their identity, rhythm, and experience from the very beginning."
     },
     "description2": {
-      "el": "Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.",
-      "en": "DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed."
+      "el": "Καλούμαστε όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί ακόμα να ονομαστεί — όταν οι ομάδες είναι ικανές αλλά λειτουργούν υπό πίεση, όταν μια ιδέα είναι σαφής αλλά δεν αισθάνεται πλέον ζωντανή, ή όταν δημιουργείται ένας νέος χώρος φιλοξενίας και χρειάζεται κατεύθυνση, ταυτότητα και ισχυρό αίσθημα ρυθμού από την αρχή.",
+      "en": "We are invited when something feels off but cannot yet be named — when teams are capable yet operating under pressure, when a concept is clear but no longer feels alive, or when a new hospitality space is being created and requires direction, identity, and a strong sense of rhythm from the very beginning."
     },
     "description3": {
       "el": "Η δουλειά μας ξεδιπλώνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και ακριβή παρέμβαση.",
@@ -228,6 +228,43 @@
       "en": "It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful."
     },
     "heroImage": "/images/dekapus-vinyl-site.jpg"
+  },
+  "homeWhatWeDoConfig": {
+    "sectionTitle": {
+      "el": "Τι Κάνουμε",
+      "en": "What We Do"
+    },
+    "intro": {
+      "el": "Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:",
+      "en": "As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:"
+    },
+    "items": [
+      {
+        "el": "αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη",
+        "en": "develop new concepts from the ground up — defining identity, rhythm, and guest experience"
+      },
+      {
+        "el": "αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια",
+        "en": "uncover what is not working beneath the surface"
+      },
+      {
+        "el": "βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη",
+        "en": "improve service flow and overall guest experience"
+      },
+      {
+        "el": "ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία",
+        "en": "realign teams, atmosphere, and operations"
+      },
+      {
+        "el": "ενισχύσουμε τη συνέπεια, την απόδοση και τη σαφήνεια σε όλη την επιχείρηση",
+        "en": "strengthen consistency, performance, and clarity across the business"
+      }
+    ],
+    "sectionImage": "/images/dekapus-ice-cube-site.jpg",
+    "imageAlt": {
+      "el": "Πάγος — λεπτομέρεια",
+      "en": "Ice cube detail"
+    }
   },
   "aboutStatementConfig": {
     "sectionTitle": {
@@ -302,10 +339,10 @@
       "en": "If this is what your space needs, let's begin the conversation."
     },
     "learnMoreButton": {
-      "el": "Κλείστε μια δωρεάν κλήση 10 λεπτών",
-      "en": "Book a 10' free call"
+      "el": "Κλείστε μια δωρεάν κλήση",
+      "en": "Book a free call"
     },
-    "backgroundImage": "/images/counter-bg.jpg",
+    "backgroundImage": "/images/dekapus-cutlerys-site2.jpg",
     "items": [
       {
         "icon": "/images/counter-ic1.png",
@@ -1528,43 +1565,6 @@
       "dekapusMethod": "/images/dekapus-gl-smoke-site.jpg",
       "myWork": "/images/dekapus-fire-site.jpg",
       "engagement": "/images/dekapus-ice-cube-site.jpg"
-    }
-  },
-  "homeWhatWeDoConfig": {
-    "sectionTitle": {
-      "el": "Τι Κάνουμε",
-      "en": "What We Do"
-    },
-    "intro": {
-      "el": "Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:",
-      "en": "As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:"
-    },
-    "items": [
-      {
-        "el": "αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη",
-        "en": "develop new concepts from the ground up — defining identity, rhythm, and guest experience"
-      },
-      {
-        "el": "αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια",
-        "en": "uncover what is not working beneath the surface"
-      },
-      {
-        "el": "βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη",
-        "en": "improve service flow and overall guest experience"
-      },
-      {
-        "el": "ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία",
-        "en": "realign teams, atmosphere, and operations"
-      },
-      {
-        "el": "ενισχύσουμε τη συνέπεια, την απόδοση και τη σαφήνεια σε όλη την επιχείρηση",
-        "en": "strengthen consistency, performance, and clarity across the business"
-      }
-    ],
-    "sectionImage": "/images/dekapus-ice-cube-site.jpg",
-    "imageAlt": {
-      "el": "Πάγος — λεπτομέρεια",
-      "en": "Ice cube detail"
     }
   }
 }

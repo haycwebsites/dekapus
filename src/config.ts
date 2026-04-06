@@ -576,6 +576,38 @@ export const homeIntroConfig: HomeIntroConfig = {
   heroImage: '/images/dekapus-vinyl-site.jpg',
 };
 
+export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
+  sectionTitle: { el: 'Τι Κάνουμε', en: 'What We Do' },
+  intro: {
+    el: 'Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:',
+    en: 'As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:',
+  },
+  items: [
+    {
+      el: 'αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη',
+      en: 'develop new concepts from the ground up — defining identity, rhythm, and guest experience',
+    },
+    {
+      el: 'αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια',
+      en: 'uncover what is not working beneath the surface',
+    },
+    {
+      el: 'βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη',
+      en: 'improve service flow and overall guest experience',
+    },
+    {
+      el: 'ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία',
+      en: 'realign teams, atmosphere, and operations',
+    },
+    {
+      el: 'ενισχύσουμε τη συνέπεια, την απόδοση και τη σαφήνεια σε όλη την επιχείρηση',
+      en: 'strengthen consistency, performance, and clarity across the business',
+    },
+  ],
+  sectionImage: '/images/dekapus-ice-cube-site.jpg',
+  imageAlt: { el: 'Πάγος — λεπτομέρεια', en: 'Ice cube detail' },
+};
+
 export const aboutStatementConfig: AboutStatementConfig = {
   sectionTitle: { el: 'Δεν πρόκειται απλά για συμβουλευτική.', en: 'This is not just consulting.' },
   headline: { el: 'Είναι η ικανότητα να διαβάζεις έναν χώρο, να αισθάνεσαι την πίεση πριν κλιμακωθεί και να αποκαθιστάς την ισορροπία πριν «σπάσουν» τα συστήματα.', en: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.' },
@@ -1218,36 +1250,4 @@ export const customPagesConfig: CustomPagesConfig = {
     myWork: '/images/dekapus-fire-site.jpg',
     engagement: '/images/dekapus-ice-cube-site.jpg',
   },
-};
-
-export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
-  sectionTitle: { el: 'Τι Κάνουμε', en: 'What We Do' },
-  intro: {
-    el: 'Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:',
-    en: 'As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:',
-  },
-  items: [
-    {
-      el: 'αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη',
-      en: 'develop new concepts from the ground up — defining identity, rhythm, and guest experience',
-    },
-    {
-      el: 'αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια',
-      en: 'uncover what is not working beneath the surface',
-    },
-    {
-      el: 'βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη',
-      en: 'improve service flow and overall guest experience',
-    },
-    {
-      el: 'ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία',
-      en: 'realign teams, atmosphere, and operations',
-    },
-    {
-      el: 'ενισχύσουμε τη συνέπεια, την απόδοση και τη σαφήνεια σε όλη την επιχείρηση',
-      en: 'strengthen consistency, performance, and clarity across the business',
-    },
-  ],
-  sectionImage: '/images/dekapus-ice-cube-site.jpg',
-  imageAlt: { el: 'Πάγος — λεπτομέρεια', en: 'Ice cube detail' },
 };
