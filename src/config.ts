@@ -533,7 +533,7 @@ export const commonConfig: CommonConfig = {
 export const heroConfig: HeroConfig = {
   title: { el: 'Δημιουργώντας ατμόσφαιρες.', en: 'Crafting Atmospheres.' },
   subtitle: { el: 'Ευθυγραμμίζοντας συστήματα, χώρο και ανθρώπινη συμπεριφορά.', en: 'Aligning Systems, Space & Human Behaviour.' },
-  viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
+  viewMenuButton: { el: "Κλείστε μια δωρεάν κλήση 10 λεπτών", en: "Book a 10' free call" },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
   slideLogo: '/images/slide-logo.png',
