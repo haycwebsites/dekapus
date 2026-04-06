@@ -53,10 +53,20 @@ export function AboutSection() {
             </p>
             <p
               {...(isHomePage ? cp('homeIntroConfig.description2') : cp('aboutConfig.description2'))}
-              className="text-white/70 mb-8 leading-relaxed"
+              className={`text-white/70 leading-relaxed ${isHomePage ? 'mb-4' : 'mb-8'}`}
             >
               {isHomePage ? t(config.homeIntroConfig.description2) : t(config.aboutConfig.description2)}
             </p>
+            {isHomePage && (
+              <>
+                <p {...cp('homeIntroConfig.description3')} className="text-white/70 mb-4 leading-relaxed">
+                  {t(config.homeIntroConfig.description3)}
+                </p>
+                <p {...cp('homeIntroConfig.description4')} className="text-white/70 mb-8 leading-relaxed">
+                  {t(config.homeIntroConfig.description4)}
+                </p>
+              </>
+            )}
             {!isHomePage && (
               <p {...cp('aboutConfig.closingLine')} className="text-white/80 leading-relaxed mb-8 italic">
                 {t(config.aboutConfig.closingLine)}

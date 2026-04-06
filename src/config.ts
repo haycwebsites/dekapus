@@ -103,6 +103,8 @@ export interface HomeIntroConfig {
   sectionTitle: LocaleString;
   description1: LocaleString;
   description2: LocaleString;
+  description3: LocaleString;
+  description4: LocaleString;
   heroImage: string;
 }
 
@@ -1162,12 +1164,20 @@ export const customPagesConfig: CustomPagesConfig = {
 export const homeIntroConfig: HomeIntroConfig = {
   sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
   description1: {
-    el: 'Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.',
-    en: 'Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment.',
+    el: 'Δημιουργούμε εστιατόρια, μπαρ και χώρους φιλοξενίας από την αρχή — διαμορφώνοντας την ταυτότητα, τον ρυθμό και την εμπειρία τους από την πρώτη στιγμή.',
+    en: 'Creating restaurants, bars, and hospitality spaces from the ground up — shaping their identity, rhythm, and experience from the very beginning.',
   },
   description2: {
-    el: 'Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.',
-    en: 'DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed.',
+    el: 'Καλούμαστε όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί ακόμα να ονομαστεί — όταν οι ομάδες είναι ικανές αλλά λειτουργούν υπό πίεση, όταν μια ιδέα είναι σαφής αλλά δεν αισθάνεται πλέον ζωντανή, ή όταν δημιουργείται ένας νέος χώρος φιλοξενίας και χρειάζεται κατεύθυνση, ταυτότητα και ισχυρό αίσθημα ρυθμού από την αρχή.',
+    en: 'We are invited when something feels off but cannot yet be named — when teams are capable yet operating under pressure, when a concept is clear but no longer feels alive, or when a new hospitality space is being created and requires direction, identity, and a strong sense of rhythm from the very beginning.',
+  },
+  description3: {
+    el: 'Η δουλειά μας ξεδιπλώνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και ακριβή παρέμβαση.',
+    en: 'Our work unfolds quietly, within the rhythm of the operation — through presence, observation, and precise intervention.',
+  },
+  description4: {
+    el: 'Υποστηρίζει την απόδοση, ενισχύει την εμπειρία του επισκέπτη και βοηθά στη δημιουργία χώρων που αισθάνονται ευθυγραμμισμένοι, ζωντανοί και με νόημα.',
+    en: 'It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful.',
   },
   heroImage: '/images/dekapus-vinyl-site.jpg',
 };
