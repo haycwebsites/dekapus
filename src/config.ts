@@ -533,7 +533,7 @@ export const commonConfig: CommonConfig = {
 export const heroConfig: HeroConfig = {
   title: { el: 'Δημιουργώντας ατμόσφαιρες.', en: 'Crafting Atmospheres.' },
   subtitle: { el: 'Ευθυγραμμίζοντας συστήματα, χώρο και ανθρώπινη συμπεριφορά.', en: 'Aligning Systems, Space & Human Behaviour.' },
-  viewMenuButton: { el: "Κλείστε μια δωρεάν κλήση 10 λεπτών", en: "Book a 10' free call" },
+  viewMenuButton: { el: 'Μάθετε Περισσότερα', en: 'Learn More' },
   backgroundImage1: '/images/slide1.jpg',
   backgroundImage2: '/images/slide2.jpg',
   slideLogo: '/images/slide-logo.png',
@@ -559,6 +559,15 @@ export const aboutConfig: AboutConfig = {
   aboutImage2: '/images/about-img2.jpg',
   pageHeroImage: '/images/dekapus-bar-site2.jpg',
   sectionImageAlt: { el: 'Σχετικά', en: 'About' },
+};
+
+export const homeIntroConfig: HomeIntroConfig = {
+  sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
+  description1: { el: 'Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.', en: 'Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment.' },
+  description2: { el: 'Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.', en: 'DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed.' },
+  description3: { el: 'Η δουλειά μας ξεδιπλώνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και ακριβή παρέμβαση.', en: 'Our work unfolds quietly, within the rhythm of the operation — through presence, observation, and precise intervention.' },
+  description4: { el: 'Υποστηρίζει την απόδοση, ενισχύει την εμπειρία του επισκέπτη και βοηθά στη δημιουργία χώρων που αισθάνονται ευθυγραμμισμένοι, ζωντανοί και με νόημα.', en: 'It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful.' },
+  heroImage: '/images/dekapus-vinyl-site.jpg',
 };
 
 export const aboutStatementConfig: AboutStatementConfig = {
@@ -950,6 +959,35 @@ export const contactConfig: ContactConfig = {
   mapEmbedUrl: 'https://www.google.com/maps?q=Athens,+Greece&output=embed',
 };
 
+export const contactFormConfig: ContactFormConfig = {
+  nameLabel: { el: 'Όνομα', en: 'Name' },
+  emailLabel: { el: 'Email', en: 'Email' },
+  messageLabel: { el: 'Μήνυμα', en: 'Message' },
+  submitButton: { el: 'Αποστολή', en: 'Send Message' },
+  submitting: { el: 'Αποστολή...', en: 'Sending...' },
+  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
+  successText: {
+    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
+    en: 'We will get back to you shortly.',
+  },
+  errorText: {
+    el: 'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.',
+    en: 'Something went wrong. Please try again.',
+  },
+  nameRequired: {
+    el: 'Το όνομα είναι υποχρεωτικό.',
+    en: 'Name is required.',
+  },
+  emailInvalid: {
+    el: 'Εισάγετε έγκυρο email.',
+    en: 'Please enter a valid email.',
+  },
+  messageRequired: {
+    el: 'Το μήνυμα είναι υποχρεωτικό.',
+    en: 'Message is required.',
+  },
+};
+
 export const footerConfig: FooterConfig = {
   aboutUs: { el: 'ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ', en: 'ABOUT US' },
   aboutDescription: { el: 'Το DEKAPUS ευθυγραμμίζει χώρο, λειτουργία και ανθρώπινη συμπεριφορά για να αποκαθιστά ρυθμό, ενέργεια και συνοχή. Δεν προσφέρουμε πρόχειρες λύσεις — προσφέρουμε στοχευμένες παρεμβάσεις με ουσία και διάρκεια.', en: 'DEKAPUS aligns space, operations, and human behaviour to restore rhythm, energy, and coherence. We do not offer quick fixes - we deliver focused interventions with depth and lasting impact.' },
@@ -1176,27 +1214,6 @@ export const customPagesConfig: CustomPagesConfig = {
   },
 };
 
-export const homeIntroConfig: HomeIntroConfig = {
-  sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
-  description1: {
-    el: 'Δημιουργούμε εστιατόρια, μπαρ και χώρους φιλοξενίας από την αρχή — διαμορφώνοντας την ταυτότητα, τον ρυθμό και την εμπειρία τους από την πρώτη στιγμή.',
-    en: 'Creating restaurants, bars, and hospitality spaces from the ground up — shaping their identity, rhythm, and experience from the very beginning.',
-  },
-  description2: {
-    el: 'Καλούμαστε όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί ακόμα να ονομαστεί — όταν οι ομάδες είναι ικανές αλλά λειτουργούν υπό πίεση, όταν μια ιδέα είναι σαφής αλλά δεν αισθάνεται πλέον ζωντανή, ή όταν δημιουργείται ένας νέος χώρος φιλοξενίας και χρειάζεται κατεύθυνση, ταυτότητα και ισχυρό αίσθημα ρυθμού από την αρχή.',
-    en: 'We are invited when something feels off but cannot yet be named — when teams are capable yet operating under pressure, when a concept is clear but no longer feels alive, or when a new hospitality space is being created and requires direction, identity, and a strong sense of rhythm from the very beginning.',
-  },
-  description3: {
-    el: 'Η δουλειά μας ξεδιπλώνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και ακριβή παρέμβαση.',
-    en: 'Our work unfolds quietly, within the rhythm of the operation — through presence, observation, and precise intervention.',
-  },
-  description4: {
-    el: 'Υποστηρίζει την απόδοση, ενισχύει την εμπειρία του επισκέπτη και βοηθά στη δημιουργία χώρων που αισθάνονται ευθυγραμμισμένοι, ζωντανοί και με νόημα.',
-    en: 'It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful.',
-  },
-  heroImage: '/images/dekapus-vinyl-site.jpg',
-};
-
 export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
   sectionTitle: { el: 'Τι Κάνουμε', en: 'What We Do' },
   intro: {
@@ -1227,33 +1244,4 @@ export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
   ],
   sectionImage: '/images/dekapus-ice-cube-site.jpg',
   imageAlt: { el: 'Πάγος — λεπτομέρεια', en: 'Ice cube detail' },
-};
-
-export const contactFormConfig: ContactFormConfig = {
-  nameLabel: { el: 'Όνομα', en: 'Name' },
-  emailLabel: { el: 'Email', en: 'Email' },
-  messageLabel: { el: 'Μήνυμα', en: 'Message' },
-  submitButton: { el: 'Αποστολή', en: 'Send Message' },
-  submitting: { el: 'Αποστολή...', en: 'Sending...' },
-  successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },
-  successText: {
-    el: 'Θα επικοινωνήσουμε μαζί σας σύντομα.',
-    en: 'We will get back to you shortly.',
-  },
-  errorText: {
-    el: 'Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.',
-    en: 'Something went wrong. Please try again.',
-  },
-  nameRequired: {
-    el: 'Το όνομα είναι υποχρεωτικό.',
-    en: 'Name is required.',
-  },
-  emailInvalid: {
-    el: 'Εισάγετε έγκυρο email.',
-    en: 'Please enter a valid email.',
-  },
-  messageRequired: {
-    el: 'Το μήνυμα είναι υποχρεωτικό.',
-    en: 'Message is required.',
-  },
 };

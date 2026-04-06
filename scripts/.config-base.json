@@ -152,7 +152,7 @@
     },
     "viewMenuButton": {
       "el": "Μάθετε Περισσότερα",
-      "en": "Learn More 78"
+      "en": "Learn More"
     },
     "backgroundImage1": "/images/slide1.jpg",
     "backgroundImage2": "/images/slide2.jpg",
@@ -205,6 +205,29 @@
       "el": "Σχετικά",
       "en": "About"
     }
+  },
+  "homeIntroConfig": {
+    "sectionTitle": {
+      "el": "Εισαγωγή",
+      "en": "Intro"
+    },
+    "description1": {
+      "el": "Η φιλοξενία δεν αποτυγχάνει συνήθως επειδή λείπουν οι διαδικασίες. Αποτυγχάνει όταν ο χώρος, οι άνθρωποι και ο ρυθμός τους δεν είναι σε ευθυγράμμιση.",
+      "en": "Hospitality rarely fails because of missing procedures. It fails when space, people, and rhythm fall out of alignment."
+    },
+    "description2": {
+      "el": "Η DEKAPUS λειτουργεί στο σημείο όπου η ατμόσφαιρα, η λειτουργία και η ανθρώπινη συμπεριφορά συναντιούνται — πριν τα προβλήματα γίνουν ορατά και αφού οι εύκολες λύσεις έχουν αποτύχει.",
+      "en": "DEKAPUS operates at the point where atmosphere, operations, and human behaviour intersect — before problems become visible and after easy solutions have failed."
+    },
+    "description3": {
+      "el": "Η δουλειά μας ξεδιπλώνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και ακριβή παρέμβαση.",
+      "en": "Our work unfolds quietly, within the rhythm of the operation — through presence, observation, and precise intervention."
+    },
+    "description4": {
+      "el": "Υποστηρίζει την απόδοση, ενισχύει την εμπειρία του επισκέπτη και βοηθά στη δημιουργία χώρων που αισθάνονται ευθυγραμμισμένοι, ζωντανοί και με νόημα.",
+      "en": "It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful."
+    },
+    "heroImage": "/images/dekapus-vinyl-site.jpg"
   },
   "aboutStatementConfig": {
     "sectionTitle": {
@@ -270,17 +293,17 @@
     ]
   },
   "counterConfig": {
-    "sectionTitle": {
-      "el": "Δεν πρόκειται απλά για συμβουλευτική.",
-      "en": "This is not just consulting."
+    "paragraph1": {
+      "el": "Αυτή η δουλειά ορίζεται από την Αντίληψη, την ακριβή Παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.",
+      "en": "This work is defined by Perception, precise Intervention, and the ability to Tune a space until it functions with clarity and flow."
     },
-    "title": {
-      "el": "Πρόκειται για αντίληψη, παρέμβαση και ΑΚΡΙΒΗ ΣΥΝΤΟΝΙΣΜΟ.",
-      "en": "It is perception, intervention, and precise tuning."
+    "paragraph2": {
+      "el": "Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.",
+      "en": "If this is what your space needs, let's begin the conversation."
     },
     "learnMoreButton": {
-      "el": "Μάθετε Περισσότερα",
-      "en": "Learn More"
+      "el": "Κλείστε μια δωρεάν κλήση 10 λεπτών",
+      "en": "Book a 10' free call"
     },
     "backgroundImage": "/images/counter-bg.jpg",
     "items": [
@@ -976,6 +999,52 @@
     },
     "mapEmbedUrl": "https://www.google.com/maps?q=Athens,+Greece&output=embed"
   },
+  "contactFormConfig": {
+    "nameLabel": {
+      "el": "Όνομα",
+      "en": "Name"
+    },
+    "emailLabel": {
+      "el": "Email",
+      "en": "Email"
+    },
+    "messageLabel": {
+      "el": "Μήνυμα",
+      "en": "Message"
+    },
+    "submitButton": {
+      "el": "Αποστολή",
+      "en": "Send Message"
+    },
+    "submitting": {
+      "el": "Αποστολή...",
+      "en": "Sending..."
+    },
+    "successTitle": {
+      "el": "Το μήνυμά σας στάλθηκε!",
+      "en": "Message sent!"
+    },
+    "successText": {
+      "el": "Θα επικοινωνήσουμε μαζί σας σύντομα.",
+      "en": "We will get back to you shortly."
+    },
+    "errorText": {
+      "el": "Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.",
+      "en": "Something went wrong. Please try again."
+    },
+    "nameRequired": {
+      "el": "Το όνομα είναι υποχρεωτικό.",
+      "en": "Name is required."
+    },
+    "emailInvalid": {
+      "el": "Εισάγετε έγκυρο email.",
+      "en": "Please enter a valid email."
+    },
+    "messageRequired": {
+      "el": "Το μήνυμα είναι υποχρεωτικό.",
+      "en": "Message is required."
+    }
+  },
   "footerConfig": {
     "aboutUs": {
       "el": "ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ",
@@ -1461,65 +1530,41 @@
       "engagement": "/images/dekapus-ice-cube-site.jpg"
     }
   },
-  "homeIntroConfig": {
+  "homeWhatWeDoConfig": {
     "sectionTitle": {
-      "el": "Εισαγωγή",
-      "en": "Intro"
+      "el": "Τι Κάνουμε",
+      "en": "What We Do"
     },
-    "description1": {
-      "el": "Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε μια ιδέα χάνει τον ρυθμό της — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.",
-      "en": "I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human."
+    "intro": {
+      "el": "Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:",
+      "en": "As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:"
     },
-    "description2": {
-      "el": "Πιστεύω ότι η φιλοξενία είναι ζωντανός οργανισμός. Όταν πιεστεί λάθος, αντιδρά. Όταν ευθυγραμμιστεί σωστά, λειτουργεί αβίαστα. Η δουλειά μου δεν είναι να “βελτιώνω” χώρους. Είναι να τους επαναφέρω στη φυσική τους ισορροπία.",
-      "en": "I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance."
-    },
-    "heroImage": "/images/dekapus-vinyl-site.jpg"
-  },
-  "contactFormConfig": {
-    "nameLabel": {
-      "el": "Όνομα",
-      "en": "Name"
-    },
-    "emailLabel": {
-      "el": "Email",
-      "en": "Email"
-    },
-    "messageLabel": {
-      "el": "Μήνυμα",
-      "en": "Message"
-    },
-    "submitButton": {
-      "el": "Αποστολή",
-      "en": "Send Message"
-    },
-    "submitting": {
-      "el": "Αποστολή...",
-      "en": "Sending..."
-    },
-    "successTitle": {
-      "el": "Το μήνυμά σας στάλθηκε!",
-      "en": "Message sent!"
-    },
-    "successText": {
-      "el": "Θα επικοινωνήσουμε μαζί σας σύντομα.",
-      "en": "We will get back to you shortly."
-    },
-    "errorText": {
-      "el": "Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.",
-      "en": "Something went wrong. Please try again."
-    },
-    "nameRequired": {
-      "el": "Το όνομα είναι υποχρεωτικό.",
-      "en": "Name is required."
-    },
-    "emailInvalid": {
-      "el": "Εισάγετε έγκυρο email.",
-      "en": "Please enter a valid email."
-    },
-    "messageRequired": {
-      "el": "Το μήνυμα είναι υποχρεωτικό.",
-      "en": "Message is required."
+    "items": [
+      {
+        "el": "αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη",
+        "en": "develop new concepts from the ground up — defining identity, rhythm, and guest experience"
+      },
+      {
+        "el": "αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια",
+        "en": "uncover what is not working beneath the surface"
+      },
+      {
+        "el": "βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη",
+        "en": "improve service flow and overall guest experience"
+      },
+      {
+        "el": "ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία",
+        "en": "realign teams, atmosphere, and operations"
+      },
+      {
+        "el": "ενισχύσουμε τη συνέπεια, την απόδοση και τη σαφήνεια σε όλη την επιχείρηση",
+        "en": "strengthen consistency, performance, and clarity across the business"
+      }
+    ],
+    "sectionImage": "/images/dekapus-ice-cube-site.jpg",
+    "imageAlt": {
+      "el": "Πάγος — λεπτομέρεια",
+      "en": "Ice cube detail"
     }
   }
 }
