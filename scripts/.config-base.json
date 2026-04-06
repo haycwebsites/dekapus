@@ -1467,59 +1467,14 @@
       "en": "Intro"
     },
     "description1": {
-      "el": "Δημιουργούμε εστιατόρια, μπαρ και χώρους φιλοξενίας από την αρχή — διαμορφώνοντας την ταυτότητα, τον ρυθμό και την εμπειρία τους από την πρώτη στιγμή.",
-      "en": "Creating restaurants, bars, and hospitality spaces from the ground up — shaping their identity, rhythm, and experience from the very beginning."
+      "el": "Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε μια ιδέα χάνει τον ρυθμό της — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.",
+      "en": "I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human."
     },
     "description2": {
-      "el": "Καλούμαστε όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί ακόμα να ονομαστεί — όταν οι ομάδες είναι ικανές αλλά λειτουργούν υπό πίεση, όταν μια ιδέα είναι σαφής αλλά δεν αισθάνεται πλέον ζωντανή, ή όταν δημιουργείται ένας νέος χώρος φιλοξενίας και χρειάζεται κατεύθυνση, ταυτότητα και ισχυρό αίσθημα ρυθμού από την αρχή.",
-      "en": "We are invited when something feels off but cannot yet be named — when teams are capable yet operating under pressure, when a concept is clear but no longer feels alive, or when a new hospitality space is being created and requires direction, identity, and a strong sense of rhythm from the very beginning."
-    },
-    "description3": {
-      "el": "Η δουλειά μας ξεδιπλώνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και ακριβή παρέμβαση.",
-      "en": "Our work unfolds quietly, within the rhythm of the operation — through presence, observation, and precise intervention."
-    },
-    "description4": {
-      "el": "Υποστηρίζει την απόδοση, ενισχύει την εμπειρία του επισκέπτη και βοηθά στη δημιουργία χώρων που αισθάνονται ευθυγραμμισμένοι, ζωντανοί και με νόημα.",
-      "en": "It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful."
+      "el": "Πιστεύω ότι η φιλοξενία είναι ζωντανός οργανισμός. Όταν πιεστεί λάθος, αντιδρά. Όταν ευθυγραμμιστεί σωστά, λειτουργεί αβίαστα. Η δουλειά μου δεν είναι να “βελτιώνω” χώρους. Είναι να τους επαναφέρω στη φυσική τους ισορροπία.",
+      "en": "I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance."
     },
     "heroImage": "/images/dekapus-vinyl-site.jpg"
-  },
-  "homeWhatWeDoConfig": {
-    "sectionTitle": {
-      "el": "Τι Κάνουμε",
-      "en": "What We Do"
-    },
-    "intro": {
-      "el": "Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:",
-      "en": "As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:"
-    },
-    "items": [
-      {
-        "el": "αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη",
-        "en": "develop new concepts from the ground up — defining identity, rhythm, and guest experience"
-      },
-      {
-        "el": "αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια",
-        "en": "uncover what is not working beneath the surface"
-      },
-      {
-        "el": "βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη",
-        "en": "improve service flow and overall guest experience"
-      },
-      {
-        "el": "ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία",
-        "en": "realign teams, atmosphere, and operations"
-      },
-      {
-        "el": "ενισχύσουμε τη συνέπεια, την απόδοση και τη σαφήνεια σε όλη την επιχείρηση",
-        "en": "strengthen consistency, performance, and clarity across the business"
-      }
-    ],
-    "sectionImage": "/images/method-section.jpg",
-    "imageAlt": {
-      "el": "Χώρος φιλοξενίας",
-      "en": "Hospitality space"
-    }
   },
   "contactFormConfig": {
     "nameLabel": {
