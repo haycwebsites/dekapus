@@ -208,7 +208,29 @@ export function BlogSinglePage() {
         <div className="border-t border-white/10 pt-10 mt-12">
           <div className="rounded-lg bg-[#252018] border border-white/[0.08] px-6 py-8 md:px-8 md:py-10">
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
-              <div className="shrink-0 w-10 h-10 border border-white/90 rounded-sm" aria-hidden />
+              <svg
+                className="shrink-0 w-11 h-11 text-[#D2C9B1]"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden
+              >
+                <path
+                  d="M13 11h16.5a2.5 2.5 0 0 1 2.5 2.5v10.5l-9 10.5H13a2.5 2.5 0 0 1-2.5-2.5V13.5A2.5 2.5 0 0 1 13 11z"
+                  stroke="currentColor"
+                  strokeWidth="2.25"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M27.5 30 32 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  opacity="0.78"
+                />
+              </svg>
               <div className="min-w-0 flex-1">
                 <p
                   {...cp('customPagesConfig.engagement.closingCtaBody')}
