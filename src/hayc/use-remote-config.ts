@@ -119,6 +119,10 @@ export async function fetchRemoteConfig(): Promise<RemoteConfig> {
           ...defaultConfig.customPagesConfig.dekapusMethod,
           ...data.customPagesConfig.dekapusMethod,
         },
+        engagement: {
+          ...defaultConfig.customPagesConfig.engagement,
+          ...data.customPagesConfig.engagement,
+        },
       };
     }
     return merged;

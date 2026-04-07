@@ -443,6 +443,8 @@ export interface EngagementPageContent {
   intro: LocaleString;
   list1Title: LocaleString;
   list1Items: EngagementProcessItem[];
+  howWeWorkTitle: LocaleString;
+  howWeWorkItems: EngagementProcessItem[];
   section2Title: LocaleString;
   section2Body: LocaleString;
   processItems: EngagementProcessItem[];
@@ -1327,6 +1329,37 @@ export const customPagesConfig: CustomPagesConfig = {
         body: {
           el: 'Όταν ένας χώρος φιλοξενίας χρειάζεται επαναπροσδιορισμό χωρίς να χάσει την ταυτότητα ή τον χαρακτήρα του.',
           en: 'When a hospitality space needs realignment without losing its identity or character.',
+        },
+      },
+    ],
+    howWeWorkTitle: { el: 'Πώς δουλεύουμε μαζί', en: 'How We Work Together' },
+    howWeWorkItems: [
+      {
+        title: { el: 'Πραγματική δέσμευση', en: 'Real Commitment' },
+        body: {
+          el: 'Υπάρχει πραγματική δέσμευση να προχωρήσουμε μπροστά και να βελτιώσουμε την επιχείρηση.',
+          en: 'There is a real commitment to move forward and improve the business',
+        },
+      },
+      {
+        title: { el: 'Άμεση εμπλοκή', en: 'Direct Involvement' },
+        body: {
+          el: 'Ο ιδιοκτήτης ή ο υπεύθυνος αποφάσεων συμμετέχει άμεσα στη διαδικασία.',
+          en: 'The owner or decision-maker is directly involved in the process',
+        },
+      },
+      {
+        title: { el: 'Ειλικρινής επικοινωνία', en: 'Honest Communication' },
+        body: {
+          el: 'Υπάρχει ανοιχτότητα σε ειλικρινή επικοινωνία και πρακτικές λύσεις.',
+          en: 'There is openness to honest communication and practical solutions',
+        },
+      },
+      {
+        title: { el: 'Σκέψη ως ζωντανό σύστημα', en: 'Living System Thinking' },
+        body: {
+          el: 'Η επιχείρηση αντιμετωπίζεται ως ζωντανό σύστημα — όχι απλώς ως πρόβλημα προς διόρθωση.',
+          en: 'The business is approached as a living system — not just a problem to fix.',
         },
       },
     ],
