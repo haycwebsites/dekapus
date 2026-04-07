@@ -41,10 +41,10 @@ export function GalleryGrid() {
               key={cat.key}
               onClick={() => setActiveFilter(cat.key)}
               {...cp(cat.configPath)}
-              className={`px-6 py-2 rounded-full text-sm font-medium uppercase tracking-wider transition-colors ${
+              className={`px-6 py-2 text-sm font-medium uppercase tracking-wider transition-colors border-l-2 ${
                 activeFilter === cat.key
-                  ? 'bg-[#c8a97e] text-white'
-                  : 'bg-white/10 text-white/70 hover:bg-white/20'
+                  ? 'border-[#c8a97e] text-[#c8a97e] pl-4'
+                  : 'border-white/25 text-white/70 hover:border-white/50 pl-4'
               }`}
             >
               {t(cat.label)}

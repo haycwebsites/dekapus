@@ -21,15 +21,15 @@ export function BlogSection() {
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {config.blogConfig.items.map((post, index) => (
-            <article key={post.id} className="bg-[#1a1a1a] rounded-lg overflow-hidden group">
-              <Link to={`/blog/${post.slug}`} className="block relative overflow-hidden">
+            <article key={post.id} className="group overflow-hidden">
+              <Link to={`/blog/${post.slug}`} className="block relative overflow-hidden rounded-sm">
                 <img 
                   src={img(post.image)} 
                   alt={t(post.title)}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </Link>
-              <div className="p-6">
+              <div className="pt-6 border-l border-white pl-6 md:pl-8">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="bg-[#c8a97e] text-white px-4 py-2 text-center">
                     <span {...cp(`blogConfig.items.${index}.date`)} className="block text-2xl font-bold leading-none">{t(post.date).split(' ')[0]}</span>

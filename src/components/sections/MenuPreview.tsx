@@ -40,7 +40,7 @@ export function MenuPreview() {
           {displayItemsWithIndex.map(({ item, itemIndex }) => (
             <div 
               key={itemIndex} 
-              className="flex items-center gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+              className="flex items-center gap-4 py-4 pl-4 border-l border-white/80 hover:border-white transition-colors"
             >
               <img 
                 {...cp(`menuConfig.items.${itemIndex}.image`)}

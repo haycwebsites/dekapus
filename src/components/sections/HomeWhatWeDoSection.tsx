@@ -17,7 +17,7 @@ export function HomeWhatWeDoSection() {
             />
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 border-l border-white pl-6 md:pl-8">
             <div className="mb-8">
               <h3
                 {...cp('homeWhatWeDoConfig.sectionTitle')}

@@ -25,15 +25,15 @@ export function BlogPage() {
               <div className="lg:col-span-2">
                 <div className="space-y-8">
                   {config.blogConfig.items.map((post, index) => (
-                    <article key={post.id} className="bg-[#1a1a1a] rounded-lg overflow-hidden group">
-                      <Link to={`/blog/${post.slug}`} className="block relative overflow-hidden">
+                    <article key={post.id} className="group pb-12 border-b border-white/10 last:border-b-0 last:pb-0">
+                      <Link to={`/blog/${post.slug}`} className="block relative overflow-hidden rounded-sm">
                         <img
                           src={img(post.image)}
                           alt={t(post.title)}
                           className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       </Link>
-                      <div className="p-6">
+                      <div className="pt-6 border-l border-white pl-6 md:pl-8">
                         <div className="flex items-center gap-2 mb-4">
                           <span className="bg-[#c8a97e] text-white px-4 py-2 text-center">
                             <span {...cp(`blogConfig.items.${index}.date`)} className="block text-2xl font-bold leading-none">{t(post.date).split(' ')[0]}</span>
@@ -72,7 +72,7 @@ export function BlogPage() {
               </div>
 
               <aside className="space-y-8">
-                <div className="bg-[#1a1a1a] rounded-lg p-6">
+                <div className="border-l border-white pl-6 md:pl-8 py-2 pb-10">
                   <h4 {...cp('navigationConfig.search')} className="text-white font-semibold mb-4">{t(config.navigationConfig.search)}</h4>
                   <div className="flex gap-2">
                     <Input
@@ -87,7 +87,7 @@ export function BlogPage() {
                   </div>
                 </div>
 
-                <div className="bg-[#1a1a1a] rounded-lg p-6">
+                <div className="border-l border-white pl-6 md:pl-8 py-2 pb-10">
                   <h4 {...cp('blogListingConfig.categoriesTitle')} className="text-white font-semibold mb-4">
                     {t(listing.categoriesTitle)}
                   </h4>
@@ -106,7 +106,7 @@ export function BlogPage() {
                   </ul>
                 </div>
 
-                <div className="bg-[#1a1a1a] rounded-lg p-6">
+                <div className="border-l border-white pl-6 md:pl-8 py-2 pb-10">
                   <h4 {...cp('blogListingConfig.recentPostsTitle')} className="text-white font-semibold mb-4">
                     {t(listing.recentPostsTitle)}
                   </h4>
@@ -139,7 +139,7 @@ export function BlogPage() {
                   </div>
                 </div>
 
-                <div className="bg-[#1a1a1a] rounded-lg p-6">
+                <div className="border-l border-white pl-6 md:pl-8 py-2">
                   <h4 {...cp('blogListingConfig.tagsTitle')} className="text-white font-semibold mb-4">
                     {t(listing.tagsTitle)}
                   </h4>
@@ -149,7 +149,7 @@ export function BlogPage() {
                         key={index}
                         href="#"
                         {...cp(`blogListingConfig.tags.${index}`)}
-                        className="px-3 py-1 bg-white/10 text-white/70 text-sm rounded hover:bg-[#c8a97e] hover:text-white transition-colors"
+                        className="px-3 py-1 border-l border-white/40 text-white/70 text-sm hover:border-[#c8a97e] hover:text-[#c8a97e] transition-colors pl-2"
                       >
                         {t(tag)}
                       </a>

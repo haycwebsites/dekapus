@@ -7,7 +7,7 @@ export function EventsSection() {
   const { t, img, config, cp } = useHayc();
 
   return (
-    <section className="py-20 bg-[#1a1a1a]">
+    <section className="py-20 bg-[#141414]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -24,16 +24,16 @@ export function EventsSection() {
           {config.eventsConfig.items.map((event, index) => (
             <div 
               key={index} 
-              className="group bg-[#141414] rounded-lg overflow-hidden"
+              className="group overflow-hidden"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden rounded-sm">
                 <img 
                   src={img(event.image)} 
                   alt={t(event.title)}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
+              <div className="pt-6 border-l border-white pl-6 md:pl-8">
                 <h4 {...cp(`eventsConfig.items.${index}.title`)} className="text-white font-semibold mb-3 line-clamp-2">
                   {t(event.title)}
                 </h4>

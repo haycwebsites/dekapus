@@ -19,7 +19,7 @@ export function ContactPage2() {
         <PageBanner title={config.navigationConfig.contact} titlePath="navigationConfig.contact" />
         
         {/* Full Width Map */}
-        <div className="h-96 bg-white/5">
+        <div className="h-96 bg-black border-b border-white/10">
           <iframe
             src={config.contactConfig.mapEmbedUrl}
             width="100%"
@@ -76,8 +76,8 @@ export function ContactPage2() {
             </div>
 
             {/* Contact Form */}
-            <div className="max-w-2xl mx-auto">
-              <div className="text-center mb-8">
+            <div className="max-w-2xl mx-auto border-l border-white pl-6 md:pl-10 py-2">
+              <div className="text-center mb-8 md:text-left">
                 <h3 {...cp('contactConfig.sectionTitle')} className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2">
                   {t(config.contactConfig.sectionTitle)}
                 </h3>

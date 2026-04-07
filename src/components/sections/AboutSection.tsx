@@ -93,7 +93,7 @@ export function AboutSection() {
               {t(config.homeIntroConfig.description4)}
             </p>
 
-            <div className="flex items-center justify-start gap-4 p-4 bg-white/5 rounded-lg">
+            <div className="flex items-center justify-start gap-4 border-l border-white pl-6 py-4">
               <img
                 {...cp('brandConfig.signatureAlt')}
                 src={img(theme === 'light' ? config.brandConfig.signatureDark : config.brandConfig.signatureLight)}

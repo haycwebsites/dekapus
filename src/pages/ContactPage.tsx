@@ -27,7 +27,7 @@ export function ContactPage() {
                   {t(config.contactConfig.sectionTitle)}
                 </h3>
 
-                <div className="mb-8 rounded-lg border border-white/10 bg-white/5 p-6">
+                <div className="mb-8 border-l border-white pl-6 md:pl-8 py-1">
                   <p {...cp('contactConfig.introLine')} className="text-white/80 leading-relaxed mb-4">
                     {t(config.contactConfig.introLine)}
                   </p>
@@ -88,7 +88,7 @@ export function ContactPage() {
               </div>
 
               {/* Contact Form */}
-              <div className="bg-[#1a1a1a] rounded-lg p-8">
+              <div className="border-l border-white pl-6 md:pl-8 py-2">
                 <h3 {...cp('contactConfig.title')} className="text-xl font-semibold text-white mb-6">{t(config.contactConfig.title)}</h3>
                 
                 <form className="space-y-6">

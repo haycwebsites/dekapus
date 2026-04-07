@@ -4,7 +4,7 @@ export function ServicesSection() {
   const { t, img, config, cp } = useHayc();
 
   return (
-    <section className="py-20 bg-[#1a1a1a]">
+    <section className="py-20 bg-[#141414]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -20,7 +20,7 @@ export function ServicesSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {config.servicesConfig.items.map((service, index) => (
             <div key={index} className="group">
-              <div className="relative overflow-hidden rounded-lg bg-[#c8a97e]/10 p-8 text-center">
+              <div className="relative overflow-hidden border-l border-white/50 pl-6 py-8 text-center">
                 <img 
                   src={img(service.image)} 
                   alt={t(service.title)}

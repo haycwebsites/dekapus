@@ -111,7 +111,7 @@ export function BlogSinglePage() {
   const offeringsAside = (
     <aside className="lg:sticky lg:top-36 self-start">
       {isOfferingPage ? (
-        <div className="bg-[#1a1a1a] rounded-lg overflow-hidden hidden lg:block">
+        <div className="hidden lg:block overflow-hidden border-l border-white pl-4">
           <img
             src={img(offeringImageSrc)}
             alt={t(pageTitle.title)}
@@ -119,7 +119,7 @@ export function BlogSinglePage() {
           />
         </div>
       ) : (
-        <div className="bg-[#1a1a1a] rounded-lg p-6">
+        <div className="border-l border-white pl-6 md:pl-8 py-2">
           <h4 {...cp('customPagesConfig.allOfferingsLabel')} className="text-2xl font-serif text-white uppercase mb-4">
             {t(config.customPagesConfig.allOfferingsLabel)}
           </h4>
@@ -145,7 +145,7 @@ export function BlogSinglePage() {
 
   const engagementHowWeWorkBand = (
     <div
-      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-y border-white/10 bg-[#161616] py-12 px-4 sm:px-8"
+      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-y border-white/10 bg-[#141414] py-12 px-4 sm:px-8"
       data-layout="content-fluid"
     >
       <h2
@@ -158,7 +158,7 @@ export function BlogSinglePage() {
         {eg.howWeWorkItems.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col text-center sm:text-left border border-white/10 rounded-lg bg-white/[0.04] px-4 py-5"
+            className="flex flex-col text-center sm:text-left border-l border-white pl-4 md:pl-5 py-4"
           >
             <h3
               {...cp(`customPagesConfig.engagement.howWeWorkItems.${index}.title`)}
@@ -180,12 +180,12 @@ export function BlogSinglePage() {
 
   const engagementWhatNotClosingBand = (
     <div
-      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-t border-white/10 bg-[#161616] py-14 px-4 sm:px-8 pb-16 md:pb-20"
+      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-t border-white/10 bg-[#141414] py-14 px-4 sm:px-8 pb-16 md:pb-20"
       data-layout="content-fluid"
     >
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-          <div>
+          <div className="border-l border-white pl-6 md:pl-8">
             <h2
               {...cp('customPagesConfig.engagement.section3Title')}
               className="font-serif text-2xl md:text-3xl font-semibold text-white mb-4 tracking-tight"
@@ -196,17 +196,19 @@ export function BlogSinglePage() {
               {t(eg.section3Body)}
             </p>
           </div>
-          <ul className="font-serif list-disc pl-5 space-y-4 text-white/75 leading-relaxed marker:text-white/50">
-            {eg.list2Items.map((item, index) => (
-              <li key={index} {...cp(`customPagesConfig.engagement.list2Items.${index}`)}>
-                {t(item)}
-              </li>
-            ))}
-          </ul>
+          <div className="border-l border-white pl-6 md:pl-8">
+            <ul className="font-serif list-disc pl-5 space-y-4 text-white/75 leading-relaxed marker:text-white/50">
+              {eg.list2Items.map((item, index) => (
+                <li key={index} {...cp(`customPagesConfig.engagement.list2Items.${index}`)}>
+                  {t(item)}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="border-t border-white/10 pt-10 mt-12">
-          <div className="rounded-lg bg-[#252018] border border-white/[0.08] px-6 py-8 md:px-8 md:py-10">
+          <div className="border-l border-white pl-6 md:pl-8 py-6 md:py-8">
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
               <svg
                 className="shrink-0 w-11 h-11 text-[#D2C9B1]"
@@ -264,55 +266,53 @@ export function BlogSinglePage() {
             {isEngagementPage ? (
               <>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                  <article className="lg:col-span-2">
-                    <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
-                      <div className="p-8 pb-0">
-                        <h1 {...cp(mainTitleCp)} className="text-2xl md:text-3xl font-semibold text-white mb-6">
-                          {t(mainTitleLocale)}
-                        </h1>
-                      </div>
-                      {!isOfferingPage && (
-                        <img
-                          src={img(sectionHeroImage)}
-                          alt={t(post.title)}
-                          className="w-full h-96 object-cover"
-                        />
-                      )}
-                      <div className="p-8">
-                        <div className="space-y-5">
-                          <h2 {...cp('customPagesConfig.engagement.introTitle')} className="text-xl md:text-2xl font-semibold text-white">
-                            {t(eg.introTitle)}
+                  <article className="lg:col-span-2 relative pl-6 md:pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white">
+                    <div className="pt-2 pb-0 pr-2">
+                      <h1 {...cp(mainTitleCp)} className="text-2xl md:text-3xl font-semibold text-white mb-6">
+                        {t(mainTitleLocale)}
+                      </h1>
+                    </div>
+                    {!isOfferingPage && (
+                      <img
+                        src={img(sectionHeroImage)}
+                        alt={t(post.title)}
+                        className="w-full h-96 object-cover mt-4 rounded-sm"
+                      />
+                    )}
+                    <div className="py-8 pr-2">
+                      <div className="space-y-5">
+                        <h2 {...cp('customPagesConfig.engagement.introTitle')} className="text-xl md:text-2xl font-semibold text-white">
+                          {t(eg.introTitle)}
+                        </h2>
+                        <p {...cp('customPagesConfig.engagement.intro')} className="text-white/70 leading-relaxed">
+                          {t(eg.intro)}
+                        </p>
+                        {t(eg.list1Title).trim() ? (
+                          <h2
+                            {...cp('customPagesConfig.engagement.list1Title')}
+                            className="text-xl md:text-2xl font-semibold text-white"
+                          >
+                            {t(eg.list1Title)}
                           </h2>
-                          <p {...cp('customPagesConfig.engagement.intro')} className="text-white/70 leading-relaxed">
-                            {t(eg.intro)}
-                          </p>
-                          {t(eg.list1Title).trim() ? (
-                            <h2
-                              {...cp('customPagesConfig.engagement.list1Title')}
-                              className="text-xl md:text-2xl font-semibold text-white"
-                            >
-                              {t(eg.list1Title)}
-                            </h2>
-                          ) : null}
-                          <ul className="space-y-3">
-                            {eg.list1Items.map((item, index) => (
-                              <li key={index} className="rounded-md border border-white/10 bg-white/5 px-4 py-3">
-                                <h3
-                                  {...cp(`customPagesConfig.engagement.list1Items.${index}.title`)}
-                                  className="text-white font-semibold mb-1"
-                                >
-                                  {t(item.title)}
-                                </h3>
-                                <p
-                                  {...cp(`customPagesConfig.engagement.list1Items.${index}.body`)}
-                                  className="text-white/70 leading-relaxed"
-                                >
-                                  {t(item.body)}
-                                </p>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                        ) : null}
+                        <ul className="space-y-3">
+                          {eg.list1Items.map((item, index) => (
+                            <li key={index} className="border-l border-white/70 pl-4 py-2">
+                              <h3
+                                {...cp(`customPagesConfig.engagement.list1Items.${index}.title`)}
+                                className="text-white font-semibold mb-1"
+                              >
+                                {t(item.title)}
+                              </h3>
+                              <p
+                                {...cp(`customPagesConfig.engagement.list1Items.${index}.body`)}
+                                className="text-white/70 leading-relaxed"
+                              >
+                                {t(item.body)}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </article>
@@ -321,32 +321,30 @@ export function BlogSinglePage() {
                 {engagementHowWeWorkBand}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-14 md:mt-16">
                   {offeringsAside}
-                  <article className="lg:col-span-2">
-                    <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
-                      <div className="p-8 space-y-8">
-                        <div>
-                          <h2 {...cp('customPagesConfig.engagement.section2Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {t(eg.section2Title)}
-                          </h2>
-                          <p {...cp('customPagesConfig.engagement.section2Body')} className="text-white/70 leading-relaxed mb-3">
-                            {t(eg.section2Body)}
-                          </p>
-                          <p {...cp('customPagesConfig.engagement.section2Body2')} className="text-white/70 leading-relaxed mb-4">
-                            {t(eg.section2Body2)}
-                          </p>
-                          <ul className="space-y-3">
-                            {eg.processItems.map((item, index) => (
-                              <li key={index} className="rounded-md border border-white/10 bg-white/5 px-4 py-3">
-                                <h3 {...cp(`customPagesConfig.engagement.processItems.${index}.title`)} className="text-white font-semibold mb-1">
-                                  {t(item.title)}
-                                </h3>
-                                <p {...cp(`customPagesConfig.engagement.processItems.${index}.body`)} className="text-white/70 leading-relaxed">
-                                  {t(item.body)}
-                                </p>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                  <article className="lg:col-span-2 relative pl-6 md:pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white">
+                    <div className="py-8 pr-2 space-y-8">
+                      <div>
+                        <h2 {...cp('customPagesConfig.engagement.section2Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
+                          {t(eg.section2Title)}
+                        </h2>
+                        <p {...cp('customPagesConfig.engagement.section2Body')} className="text-white/70 leading-relaxed mb-3">
+                          {t(eg.section2Body)}
+                        </p>
+                        <p {...cp('customPagesConfig.engagement.section2Body2')} className="text-white/70 leading-relaxed mb-4">
+                          {t(eg.section2Body2)}
+                        </p>
+                        <ul className="space-y-3">
+                          {eg.processItems.map((item, index) => (
+                            <li key={index} className="border-l border-white/70 pl-4 py-2">
+                              <h3 {...cp(`customPagesConfig.engagement.processItems.${index}.title`)} className="text-white font-semibold mb-1">
+                                {t(item.title)}
+                              </h3>
+                              <p {...cp(`customPagesConfig.engagement.processItems.${index}.body`)} className="text-white/70 leading-relaxed">
+                                {t(item.body)}
+                              </p>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </article>
@@ -355,12 +353,11 @@ export function BlogSinglePage() {
               </>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                <article className="lg:col-span-2">
-                  <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
-                    <div className="p-8 pb-0">
-                      <h1 {...cp(mainTitleCp)} className="text-2xl md:text-3xl font-semibold text-white mb-6">
-                        {t(mainTitleLocale)}
-                      </h1>
+                <article className="lg:col-span-2 relative pl-6 md:pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white">
+                  <div className="pt-2 pb-0 pr-2">
+                    <h1 {...cp(mainTitleCp)} className="text-2xl md:text-3xl font-semibold text-white mb-6">
+                      {t(mainTitleLocale)}
+                    </h1>
                     {standardCustomContent === 'dekapus' && (
                       <>
                         <p {...cp('customPagesConfig.dekapusMethod.intro')} className="text-white/70 leading-relaxed mb-4">
@@ -379,10 +376,10 @@ export function BlogSinglePage() {
                     <img
                       src={img(sectionHeroImage)}
                       alt={t(post.title)}
-                      className="w-full h-96 object-cover"
+                      className="w-full h-96 object-cover mt-4 rounded-sm"
                     />
                   )}
-                  <div className="p-8">
+                  <div className="py-8 pr-2">
                     <div className={`prose prose-invert max-w-none ${standardCustomContent || isEngagementPage ? 'hidden' : ''}`}>
                       <p {...cp(`blogConfig.items.${safePostIndex}.excerpt`)} className="text-white/70 leading-relaxed mb-4">
                         {t(post.excerpt)}
@@ -502,7 +499,6 @@ export function BlogSinglePage() {
                     )}
 
                   </div>
-                </div>
                 </article>
                 {offeringsAside}
               </div>
