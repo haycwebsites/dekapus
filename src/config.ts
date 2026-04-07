@@ -442,7 +442,7 @@ export interface EngagementPageContent {
   introTitle: LocaleString;
   intro: LocaleString;
   list1Title: LocaleString;
-  list1Items: LocaleString[];
+  list1Items: EngagementProcessItem[];
   section2Title: LocaleString;
   section2Body: LocaleString;
   processItems: EngagementProcessItem[];
@@ -1272,17 +1272,63 @@ export const customPagesConfig: CustomPagesConfig = {
   },
   engagement: {
     title: { el: 'Πότε Έχει Νόημα να Συνεργαστούμε', en: 'When It Makes Sense to Work Together' },
-    introTitle: { el: 'Εισαγωγή', en: 'Intro' },
+    introTitle: { el: 'Πού παρεμβαίνουμε', en: 'Where We Step In' },
     intro: {
-      el: 'Η συνεργασία με τη DEKAPUS δεν ξεκινά από πακέτα ή ώρες. Ξεκινά από ευθυγράμμιση. Δεν αναλαμβάνω κάθε έργο. Αναλαμβάνω καταστάσεις όπου η παρέμβαση έχει πραγματικό νόημα.',
-      en: 'Working with DEKAPUS does not start with packages or hours. It starts with alignment. I do not take on every project. I engage where intervention has real meaning.',
+      el: 'Η συνεργασία συνήθως ξεκινά όταν κάτι γίνεται αισθητό, χωρίς να έχει πλήρως κατανοηθεί μέσα σε μια επιχείρηση φιλοξενίας:',
+      en: 'Collaboration usually begins when something is felt, but not fully understood within a hospitality business:',
     },
-    list1Title: { el: 'Η συνεργασία μας λειτουργεί καλύτερα όταν:', en: 'Collaboration works best when:' },
+    list1Title: { el: '', en: '' },
     list1Items: [
-      { el: 'Υπάρχει σαφής ανάγκη, όχι απλώς περιέργεια', en: 'There is a clear need, not simple curiosity' },
-      { el: 'Ο ιδιοκτήτης ή decision-maker είναι παρών', en: 'The owner or decision-maker is involved' },
-      { el: 'Υπάρχει διάθεση να ειπωθούν και να ακουστούν δύσκολες αλήθειες', en: 'There is willingness to hear and address difficult truths' },
-      { el: 'Ο χώρος αντιμετωπίζεται ως ζωντανό σύστημα, όχι ως πρόβλημα προς διόρθωση', en: 'The space is treated as a living system, not a problem to fix' },
+      {
+        title: {
+          el: 'Προ-άνοιγμα & Ανάπτυξη Concept',
+          en: 'Pre-opening & Concept Development',
+        },
+        body: {
+          el: 'Όταν ένα concept εστιατορίου, μπαρ ή ξενοδοχείου χρειάζεται ταυτότητα, ρυθμό και λειτουργική σαφήνεια πριν το άνοιγμα.',
+          en: 'When a restaurant, bar, or hotel concept needs identity, rhythm, and operational clarity before opening.',
+        },
+      },
+      {
+        title: {
+          el: 'Όταν ένας Χώρος Δείχνει «Off»',
+          en: 'When a Space Feels "Off"',
+        },
+        body: {
+          el: 'Όταν όλα φαίνονται σωστά, ενώ η εμπειρία επισκέπτη ή η απόδοση δεν ευθυγραμμίζονται.',
+          en: 'When everything appears correct, yet the guest experience or performance does not align.',
+        },
+      },
+      {
+        title: {
+          el: 'Λειτουργική Πίεση Πίσω από Ισχυρή Εικόνα',
+          en: 'Operational Pressure Behind a Strong Image',
+        },
+        body: {
+          el: 'Όταν το concept φαίνεται σωστό, αλλά οι καθημερινές λειτουργίες εξαντλούν τις ομάδες και μειώνουν την αποδοτικότητα.',
+          en: 'When the concept looks right, but daily operations exhaust teams and reduce efficiency.',
+        },
+      },
+      {
+        title: {
+          el: 'Κόπωση Ομάδας & Απώλεια Ρυθμού',
+          en: 'Team Fatigue & Loss of Rhythm',
+        },
+        body: {
+          el: 'Όταν η απόδοση του προσωπικού μειώνεται και η ροή εξυπηρέτησης γίνεται ασταθής.',
+          en: 'When staff performance declines and service flow becomes inconsistent.',
+        },
+      },
+      {
+        title: {
+          el: 'Επανατοποθέτηση & Επανεκκίνηση',
+          en: 'Repositioning & Reset',
+        },
+        body: {
+          el: 'Όταν ένας χώρος φιλοξενίας χρειάζεται επαναπροσδιορισμό χωρίς να χάσει την ταυτότητα ή τον χαρακτήρα του.',
+          en: 'When a hospitality space needs realignment without losing its identity or character.',
+        },
+      },
     ],
     section2Title: { el: 'Πώς Ξεδιπλώνεται Συνήθως η Διαδικασία', en: 'How the Process Usually Unfolds' },
     section2Body: {

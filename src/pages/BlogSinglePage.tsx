@@ -265,26 +265,36 @@ export function BlogSinglePage() {
 
                     {isEngagementPage && (
                       <div className="space-y-8">
-                        <div>
-                          <h2 {...cp('customPagesConfig.engagement.introTitle')} className="text-xl md:text-2xl font-semibold text-white mb-2">
+                        <div className="space-y-5">
+                          <h2 {...cp('customPagesConfig.engagement.introTitle')} className="text-xl md:text-2xl font-semibold text-white">
                             {t(eg.introTitle)}
                           </h2>
                           <p {...cp('customPagesConfig.engagement.intro')} className="text-white/70 leading-relaxed">
                             {t(eg.intro)}
                           </p>
-                        </div>
-                        <div>
-                          <h2 {...cp('customPagesConfig.engagement.list1Title')} className="text-xl md:text-2xl font-semibold text-white mb-3">
-                            {t(eg.list1Title)}
-                          </h2>
+                          {t(eg.list1Title).trim() ? (
+                            <h2
+                              {...cp('customPagesConfig.engagement.list1Title')}
+                              className="text-xl md:text-2xl font-semibold text-white"
+                            >
+                              {t(eg.list1Title)}
+                            </h2>
+                          ) : null}
                           <ul className="space-y-3">
                             {eg.list1Items.map((item, index) => (
-                              <li
-                                key={index}
-                                {...cp(`customPagesConfig.engagement.list1Items.${index}`)}
-                                className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed"
-                              >
-                                {t(item)}
+                              <li key={index} className="rounded-md border border-white/10 bg-white/5 px-4 py-3">
+                                <h3
+                                  {...cp(`customPagesConfig.engagement.list1Items.${index}.title`)}
+                                  className="text-white font-semibold mb-1"
+                                >
+                                  {t(item.title)}
+                                </h3>
+                                <p
+                                  {...cp(`customPagesConfig.engagement.list1Items.${index}.body`)}
+                                  className="text-white/70 leading-relaxed"
+                                >
+                                  {t(item.body)}
+                                </p>
                               </li>
                             ))}
                           </ul>
