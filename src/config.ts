@@ -389,16 +389,32 @@ export interface DekapusMethodPageContent {
   intro: LocaleString;
   intro2: LocaleString;
   intro3: LocaleString;
+  whatThisMeansForYou: LocaleString;
   section1Title: LocaleString;
   section1Body: LocaleString;
+  section1Body2: LocaleString;
+  section1Body3: LocaleString;
+  section1MeansBody: LocaleString;
   section2Title: LocaleString;
   section2Body: LocaleString;
+  section2Body2: LocaleString;
+  section2Body3: LocaleString;
+  section2MeansBody: LocaleString;
   section3Title: LocaleString;
   section3Body: LocaleString;
+  section3Body2: LocaleString;
+  section3Body3: LocaleString;
+  section3MeansBody: LocaleString;
   section4Title: LocaleString;
   section4Body: LocaleString;
+  section4Body2: LocaleString;
+  section4Body3: LocaleString;
+  section4MeansBody: LocaleString;
   section5Title: LocaleString;
   section5Body: LocaleString;
+  section5Body2: LocaleString;
+  section5Body3: LocaleString;
+  section5MeansBody: LocaleString;
 }
 
 export interface MyWorkPageContent {
@@ -1150,30 +1166,79 @@ export const customPagesConfig: CustomPagesConfig = {
       el: 'Στον πυρήνα της βασίζεται σε μία αρχή: η φιλοξενία είναι ένα ζωντανό σύστημα, όπου χώρος, άνθρωποι και ρυθμός πρέπει να ευθυγραμμίζονται για να αποδίδει πραγματικά μια επιχείρηση.',
       en: 'At its core, it is based on one principle: hospitality is a living system, where space, people, and rhythm must align for a business to truly perform.',
     },
+    whatThisMeansForYou: { el: 'Τι σημαίνει αυτό για εσάς:', en: 'What this means for you:' },
     section1Title: { el: 'Αντίληψη & Ανάγνωση Χώρου', en: 'Perception & Space Reading' },
     section1Body: {
-      el: 'Κάθε χώρος μιλάει πριν λειτουργήσει. Ο ρυθμός, η ένταση, οι σιωπές και οι κινήσεις αποκαλύπτουν ό,τι τα reports και τα KPIs δεν μπορούν. Η παρατήρηση προηγείται της λήψης αποφάσεων.',
-      en: 'Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making.',
+      el: 'Πριν αρχίσει να λειτουργεί, ένας χώρος έχει ήδη φανερώσει πώς θα λειτουργήσει.',
+      en: 'Before a space begins to operate, it already reveals how it will function.',
     },
-    section2Title: { el: 'Ατμόσφαιρα & Ενέργεια', en: 'Atmosphere & Energy' },
+    section1Body2: {
+      el: 'Μέσω της παρατήρησης διαβάζουμε ρυθμό, ένταση, κίνηση και σιωπή — αντιλαμβανόμενοι τι συμβαίνει κάτω από την επιφάνεια, πέρα από reports και KPIs.',
+      en: 'Through observation, we read rhythm, tension, movement, and silence — sensing what is happening beneath the surface, beyond reports and KPIs.',
+    },
+    section1Body3: {
+      el: 'Μόνο μετά από αυτή την κατανόηση λαμβάνονται αποφάσεις.',
+      en: 'Only after this understanding are decisions made.',
+    },
+    section1MeansBody: {
+      el: 'Αποκτάτε σαφήνεια για το τι πραγματικά συμβαίνει στον χώρο σας — και τι χρειάζεται να αλλάξει — χωρίς εικασίες ή περιττές παρεμβάσεις.',
+      en: 'You gain clarity on what is truly happening in your space — and what needs to change — without guesswork or unnecessary intervention.',
+    },
+    section2Title: { el: 'Ατμόσφαιρα & Εμπειρία', en: 'Atmosphere & Experience' },
     section2Body: {
-      el: 'Η ατμόσφαιρα δεν είναι διακόσμηση. Είναι αποτέλεσμα επιλογών, timing και ανθρώπινης παρουσίας. Όταν η ατμόσφαιρα είναι σωστή, τα συστήματα υποστηρίζουν. Όταν όχι, τα συστήματα ασφυκτιούν.',
-      en: "Atmosphere is not decoration. It is the result of choices, timing, and human presence. When atmosphere is right, systems support. When it isn't, systems suffocate.",
+      el: 'Η ατμόσφαιρα διαμορφώνει το πώς νιώθουν οι επισκέπτες και πώς αποδίδουν οι ομάδες. Δημιουργείται μέσα από επιλογές, χρονισμό και ανθρώπινη παρουσία — και όταν είναι ευθυγραμμισμένη, όλη η εμπειρία ρέει φυσικά.',
+      en: 'Atmosphere shapes how guests feel and how teams perform. It is created through choices, timing, and human presence — and when it is aligned, the entire experience flows naturally.',
+    },
+    section2Body2: {
+      el: 'Όταν η ατμόσφαιρα είναι ευθυγραμμισμένη, τα συστήματα στηρίζουν την εμπειρία. Όταν όχι, ακόμα και ισχυρά συστήματα αρχίζουν να αποτυγχάνουν.',
+      en: 'When atmosphere is aligned, systems support the experience. When it is not, even strong systems begin to fail.',
+    },
+    section2Body3: { el: '', en: '' },
+    section2MeansBody: {
+      el: 'Δημιουργείτε ένα περιβάλλον που βελτιώνει την ικανοποίηση των επισκεπτών, την παραμονή και τη συνολική αντίληψη για τον χώρο σας.',
+      en: 'You create an environment that improves guest satisfaction, retention, and overall perception of your space.',
     },
     section3Title: { el: 'Ροή Ανθρώπων & Συμπεριφορά', en: 'Human Flow & Behaviour' },
     section3Body: {
-      el: 'Οι άνθρωποι δεν κινούνται τυχαία. Η κίνησή τους, οι αντιδράσεις και η κόπωσή τους αποκαλύπτουν την πραγματική υγεία ενός χώρου. Η DEKAPUS Method™ διαβάζει τη ροή πριν τη διορθώσει.',
-      en: 'People do not move randomly. Their movement, reactions, and fatigue reveal the true health of a space. The DEKAPUS Method™ reads flow before correcting it.',
+      el: 'Οι άνθρωποι δεν κινούνται τυχαία.',
+      en: 'People do not move randomly.',
+    },
+    section3Body2: {
+      el: 'Ο τρόπος που κινούνται, αντιδρούν και αλληλεπιδρούν επισκέπτες και προσωπικό αποκαλύπτει την πραγματική κατάσταση της λειτουργίας σας.',
+      en: 'The way guests and staff move, react, and interact reveals the true condition of your operation.',
+    },
+    section3Body3: { el: '', en: '' },
+    section3MeansBody: {
+      el: 'Κατανοείτε πού υπάρχει τριβή — στη ροή εξυπηρέτησης, στη δυναμική της ομάδας και στην εμπειρία του πελάτη — και πώς να τη διορθώσετε.',
+      en: 'You understand where friction exists — in service flow, team dynamics, and customer experience — and how to correct it.',
     },
     section4Title: { el: 'Λειτουργικά Συστήματα', en: 'Operational Systems' },
     section4Body: {
-      el: 'Οι διαδικασίες υπάρχουν για να στηρίζουν την εμπειρία — όχι για να την καταπνίγουν. Τα συστήματα επανασχεδιάζονται μόνο αφού γίνει κατανοητό τι πρέπει να υπηρετούν.',
-      en: 'Processes exist to support experience - not suppress it. Systems are redesigned only after understanding what they must serve.',
+      el: 'Τα συστήματα πρέπει να στηρίζουν την εμπειρία — όχι να την καταπνίγουν.',
+      en: 'Systems should support the experience — not suppress it.',
+    },
+    section4Body2: {
+      el: 'Οι διαδικασίες επανασχεδιάζονται μόνο αφού γίνει κατανοητό τι πρέπει να υπηρετούν.',
+      en: 'Processes are redesigned only after understanding what they need to serve.',
+    },
+    section4Body3: { el: '', en: '' },
+    section4MeansBody: {
+      el: 'Βελτιώνετε την αποδοτικότητα και τη συνέπεια χωρίς να περιπλέκετε υπερβολικά τις λειτουργίες σας.',
+      en: 'You improve efficiency and consistency without overcomplicating your operations.',
     },
     section5Title: { el: 'Χρονισμός & Παρέμβαση', en: 'Timing & Intervention' },
     section5Body: {
-      el: 'Η αποτελεσματική παρέμβαση δεν είναι θέμα έντασης. Είναι θέμα στιγμής. Η DEKAPUS λειτουργεί με ακρίβεια, όχι βιασύνη.',
-      en: 'Effective intervention is not about intensity. It is about timing. DEKAPUS works with precision, not urgency.',
+      el: 'Η αποτελεσματική αλλαγή δεν είναι θέμα του να κάνετε περισσότερα. Είναι θέμα του να ενεργείτε τη σωστή στιγμή.',
+      en: 'Effective change is not about doing more. It is about acting at the right moment.',
+    },
+    section5Body2: {
+      el: 'Η DEKAPUS Method™ εστιάζει στην ακριβή παρέμβαση — όχι στη βιασύνη.',
+      en: 'The DEKAPUS Method™ focuses on precise intervention — not urgency.',
+    },
+    section5Body3: { el: '', en: '' },
+    section5MeansBody: {
+      el: 'Παίρνετε καλύτερες αποφάσεις, αποφεύγετε περιττές αναταραχές και βελτιώνετε την απόδοση με σαφήνεια και έλεγχο.',
+      en: 'You make better decisions, avoid unnecessary disruption, and improve performance with clarity and control.',
     },
   },
   myWork: {

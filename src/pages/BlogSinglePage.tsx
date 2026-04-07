@@ -3,6 +3,39 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
 import { useHayc } from '../hayc/config-context';
+import type { DekapusMethodPageContent, LocaleString } from '../config';
+
+const DEKAPUS_METHOD_SECTION_KEYS: {
+  title: keyof DekapusMethodPageContent;
+  bodies: (keyof DekapusMethodPageContent)[];
+  means: keyof DekapusMethodPageContent;
+}[] = [
+  {
+    title: 'section1Title',
+    bodies: ['section1Body', 'section1Body2', 'section1Body3'],
+    means: 'section1MeansBody',
+  },
+  {
+    title: 'section2Title',
+    bodies: ['section2Body', 'section2Body2', 'section2Body3'],
+    means: 'section2MeansBody',
+  },
+  {
+    title: 'section3Title',
+    bodies: ['section3Body', 'section3Body2', 'section3Body3'],
+    means: 'section3MeansBody',
+  },
+  {
+    title: 'section4Title',
+    bodies: ['section4Body', 'section4Body2', 'section4Body3'],
+    means: 'section4MeansBody',
+  },
+  {
+    title: 'section5Title',
+    bodies: ['section5Body', 'section5Body2', 'section5Body3'],
+    means: 'section5MeansBody',
+  },
+];
 
 export function BlogSinglePage() {
   const { t, img, config, cp } = useHayc();
@@ -189,47 +222,42 @@ export function BlogSinglePage() {
                     )}
 
                     {standardCustomContent === 'dekapus' && (
-                      <div className="space-y-6">
-                        <div>
-                          <h2 {...cp('customPagesConfig.dekapusMethod.section1Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {t(dm.section1Title)}
-                          </h2>
-                          <p {...cp('customPagesConfig.dekapusMethod.section1Body')} className="text-white/70 leading-relaxed">
-                            {t(dm.section1Body)}
-                          </p>
-                        </div>
-                        <div>
-                          <h2 {...cp('customPagesConfig.dekapusMethod.section2Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {t(dm.section2Title)}
-                          </h2>
-                          <p {...cp('customPagesConfig.dekapusMethod.section2Body')} className="text-white/70 leading-relaxed">
-                            {t(dm.section2Body)}
-                          </p>
-                        </div>
-                        <div>
-                          <h2 {...cp('customPagesConfig.dekapusMethod.section3Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {t(dm.section3Title)}
-                          </h2>
-                          <p {...cp('customPagesConfig.dekapusMethod.section3Body')} className="text-white/70 leading-relaxed">
-                            {t(dm.section3Body)}
-                          </p>
-                        </div>
-                        <div>
-                          <h2 {...cp('customPagesConfig.dekapusMethod.section4Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {t(dm.section4Title)}
-                          </h2>
-                          <p {...cp('customPagesConfig.dekapusMethod.section4Body')} className="text-white/70 leading-relaxed">
-                            {t(dm.section4Body)}
-                          </p>
-                        </div>
-                        <div>
-                          <h2 {...cp('customPagesConfig.dekapusMethod.section5Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {t(dm.section5Title)}
-                          </h2>
-                          <p {...cp('customPagesConfig.dekapusMethod.section5Body')} className="text-white/70 leading-relaxed">
-                            {t(dm.section5Body)}
-                          </p>
-                        </div>
+                      <div className="space-y-8">
+                        {DEKAPUS_METHOD_SECTION_KEYS.map(({ title, bodies, means }) => (
+                          <div key={title}>
+                            <h2
+                              {...cp(`customPagesConfig.dekapusMethod.${title}`)}
+                              className="text-xl md:text-2xl font-semibold text-white mb-3"
+                            >
+                              {t(dm[title] as LocaleString)}
+                            </h2>
+                            {bodies.map((bodyKey) => {
+                              const body = dm[bodyKey] as LocaleString;
+                              if (!t(body).trim()) return null;
+                              return (
+                                <p
+                                  key={bodyKey}
+                                  {...cp(`customPagesConfig.dekapusMethod.${bodyKey}`)}
+                                  className="text-white/70 leading-relaxed mb-3"
+                                >
+                                  {t(body)}
+                                </p>
+                              );
+                            })}
+                            <p
+                              {...cp('customPagesConfig.dekapusMethod.whatThisMeansForYou')}
+                              className="text-white font-semibold mt-4 mb-2"
+                            >
+                              {t(dm.whatThisMeansForYou)}
+                            </p>
+                            <p
+                              {...cp(`customPagesConfig.dekapusMethod.${means}`)}
+                              className="text-white/70 leading-relaxed"
+                            >
+                              {t(dm[means] as LocaleString)}
+                            </p>
+                          </div>
+                        ))}
                       </div>
                     )}
 
