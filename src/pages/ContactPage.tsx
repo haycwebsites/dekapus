@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
@@ -7,10 +8,76 @@ import { Button } from '../components/ui/button';
 import { Textarea } from '../components/ui/textarea';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export function ContactPage() {
   const { t, config, cp } = useHayc();
   const phoneHref = 'tel:+306932269946';
   const emailHref = 'mailto:dpaxinos@dekapus.com.gr';
+  const siteId = config.siteConfig.siteId;
+  const apiUrl = config.siteConfig.apiUrl;
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [hp, setHp] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
+
+  const validate = useCallback((): boolean => {
+    const errors: { name?: string; email?: string; message?: string } = {};
+    if (!name.trim()) errors.name = t(config.contactFormConfig.nameRequired);
+    if (!EMAIL_PATTERN.test(email.trim())) errors.email = t(config.contactFormConfig.emailInvalid);
+    if (!message.trim()) errors.message = t(config.contactFormConfig.messageRequired);
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  }, [name, email, message, t, config.contactFormConfig]);
+
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      setError(null);
+      if (!validate()) return;
+
+      if (!apiUrl || !siteId) {
+        setError(t(config.contactFormConfig.errorText));
+        return;
+      }
+
+      setLoading(true);
+      try {
+        const mergedMessage = subject.trim()
+          ? `Subject: ${subject.trim()}\n\n${message.trim()}`
+          : message.trim();
+
+        const res = await fetch(`${apiUrl}/public/contact`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            siteId,
+            name: name.trim(),
+            email: email.trim(),
+            message: mergedMessage,
+            _hp: hp,
+          }),
+        });
+        if (!res.ok) throw new Error('Request failed');
+        setSubmitted(true);
+      } catch {
+        setError(t(config.contactFormConfig.errorText));
+      } finally {
+        setLoading(false);
+      }
+    },
+    [apiUrl, siteId, name, email, subject, message, hp, validate, t, config.contactFormConfig]
+  );
 
   return (
     <>
@@ -79,40 +146,115 @@ export function ContactPage() {
               {/* Contact Form */}
               <div className="border-white pl-6 md:pl-8 py-2">
                 <h3 {...cp('contactConfig.title')} className="text-xl font-semibold text-white mb-6">{t(config.contactConfig.title)}</h3>
-                
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Input 
-                      type="text"
-                      placeholder={t(config.contactConfig.namePlaceholder)}
-                      {...cp('contactConfig.namePlaceholder')}
-                      className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                    />
-                    <Input 
-                      type="email"
-                      placeholder={t(config.contactConfig.emailPlaceholder)}
-                      {...cp('contactConfig.emailPlaceholder')}
-                      className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                    />
+
+                {submitted ? (
+                  <div className="text-center border-l border-white pl-4">
+                    <h4 {...cp('contactFormConfig.successTitle')} className="text-white text-lg font-semibold mb-2">
+                      {t(config.contactFormConfig.successTitle)}
+                    </h4>
+                    <p {...cp('contactFormConfig.successText')} className="text-white/70">
+                      {t(config.contactFormConfig.successText)}
+                    </p>
                   </div>
-                  <Input 
-                    type="text"
-                    placeholder={t(config.contactConfig.subjectPlaceholder)}
-                    {...cp('contactConfig.subjectPlaceholder')}
-                    className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                  />
-                  <Textarea 
-                    placeholder={t(config.contactConfig.messagePlaceholder)}
-                    {...cp('contactConfig.messagePlaceholder')}
-                    className="min-h-40 bg-white/10 border-white/20 text-white placeholder:text-white/50 resize-none"
-                  />
-                  <Button 
-                    type="submit"
-                    className="w-full h-12 bg-[#c8a97e] hover:bg-[#b89a6f] text-white"
-                  >
-                    <span {...cp('contactConfig.sendMessage')}>{t(config.contactConfig.sendMessage)}</span>
-                  </Button>
-                </form>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                    <input
+                      type="text"
+                      name="_hp"
+                      value={hp}
+                      onChange={(e) => setHp(e.target.value)}
+                      autoComplete="off"
+                      tabIndex={-1}
+                      style={{ display: 'none' }}
+                      aria-hidden
+                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <Input
+                          type="text"
+                          placeholder={t(config.contactConfig.namePlaceholder)}
+                          {...cp('contactConfig.namePlaceholder')}
+                          className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                          value={name}
+                          onChange={(e) => {
+                            setName(e.target.value);
+                            if (fieldErrors.name) setFieldErrors((prev) => ({ ...prev, name: undefined }));
+                          }}
+                          disabled={loading}
+                          aria-invalid={!!fieldErrors.name}
+                        />
+                        {fieldErrors.name ? (
+                          <p className="text-red-400 text-sm mt-2" {...cp('contactFormConfig.nameRequired')}>
+                            {fieldErrors.name}
+                          </p>
+                        ) : null}
+                      </div>
+                      <div>
+                        <Input
+                          type="email"
+                          placeholder={t(config.contactConfig.emailPlaceholder)}
+                          {...cp('contactConfig.emailPlaceholder')}
+                          className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                          value={email}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                            if (fieldErrors.email) setFieldErrors((prev) => ({ ...prev, email: undefined }));
+                          }}
+                          disabled={loading}
+                          aria-invalid={!!fieldErrors.email}
+                        />
+                        {fieldErrors.email ? (
+                          <p className="text-red-400 text-sm mt-2" {...cp('contactFormConfig.emailInvalid')}>
+                            {fieldErrors.email}
+                          </p>
+                        ) : null}
+                      </div>
+                    </div>
+                    <Input
+                      type="text"
+                      placeholder={t(config.contactConfig.subjectPlaceholder)}
+                      {...cp('contactConfig.subjectPlaceholder')}
+                      className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                      disabled={loading}
+                    />
+                    <div>
+                      <Textarea
+                        placeholder={t(config.contactConfig.messagePlaceholder)}
+                        {...cp('contactConfig.messagePlaceholder')}
+                        className="min-h-40 bg-white/10 border-white/20 text-white placeholder:text-white/50 resize-none"
+                        value={message}
+                        onChange={(e) => {
+                          setMessage(e.target.value);
+                          if (fieldErrors.message) setFieldErrors((prev) => ({ ...prev, message: undefined }));
+                        }}
+                        disabled={loading}
+                        aria-invalid={!!fieldErrors.message}
+                      />
+                      {fieldErrors.message ? (
+                        <p className="text-red-400 text-sm mt-2" {...cp('contactFormConfig.messageRequired')}>
+                          {fieldErrors.message}
+                        </p>
+                      ) : null}
+                    </div>
+                    <Button
+                      type="submit"
+                      className="w-full h-12 bg-[#c8a97e] hover:bg-[#b89a6f] text-white"
+                      disabled={loading}
+                      {...(loading ? cp('contactFormConfig.submitting') : cp('contactConfig.sendMessage'))}
+                    >
+                      <span>
+                        {loading ? t(config.contactFormConfig.submitting) : t(config.contactConfig.sendMessage)}
+                      </span>
+                    </Button>
+                    {error ? (
+                      <p className="text-red-400 text-sm" role="alert" {...cp('contactFormConfig.errorText')}>
+                        {error}
+                      </p>
+                    ) : null}
+                  </form>
+                )}
               </div>
             </div>
           </div>
