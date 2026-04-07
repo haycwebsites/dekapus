@@ -245,6 +245,7 @@ export function BlogSinglePage() {
                 </div>
                 {engagementHowWeWorkBand}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-14 md:mt-16">
+                  {offeringsAside}
                   <article className="lg:col-span-2">
                     <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
                       <div className="p-8 space-y-8">
@@ -252,8 +253,11 @@ export function BlogSinglePage() {
                           <h2 {...cp('customPagesConfig.engagement.section2Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
                             {t(eg.section2Title)}
                           </h2>
-                          <p {...cp('customPagesConfig.engagement.section2Body')} className="text-white/70 leading-relaxed mb-4">
+                          <p {...cp('customPagesConfig.engagement.section2Body')} className="text-white/70 leading-relaxed mb-3">
                             {t(eg.section2Body)}
+                          </p>
+                          <p {...cp('customPagesConfig.engagement.section2Body2')} className="text-white/70 leading-relaxed mb-4">
+                            {t(eg.section2Body2)}
                           </p>
                           <ul className="space-y-3">
                             {eg.processItems.map((item, index) => (
@@ -293,7 +297,6 @@ export function BlogSinglePage() {
                       </div>
                     </div>
                   </article>
-                  {offeringsAside}
                 </div>
               </>
             ) : (

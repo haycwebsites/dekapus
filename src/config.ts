@@ -447,6 +447,7 @@ export interface EngagementPageContent {
   howWeWorkItems: EngagementProcessItem[];
   section2Title: LocaleString;
   section2Body: LocaleString;
+  section2Body2: LocaleString;
   processItems: EngagementProcessItem[];
   section3Title: LocaleString;
   section3Body: LocaleString;
@@ -1363,27 +1364,43 @@ export const customPagesConfig: CustomPagesConfig = {
         },
       },
     ],
-    section2Title: { el: 'Πώς Ξεδιπλώνεται Συνήθως η Διαδικασία', en: 'How the Process Usually Unfolds' },
+    section2Title: { el: 'Η Διαδικασία', en: 'The Process' },
     section2Body: {
-      el: 'Κάθε συνεργασία έχει διαφορετική διάρκεια και μορφή. Ωστόσο, συνήθως ξεκινά με:',
-      en: 'Every engagement is different in duration and form. However, most begin with:',
+      el: 'Κάθε συνεργασία είναι διαφορετική, ανάλογα με τις ανάγκες του εστιατορίου, του μπαρ ή του ξενοδοχείου.',
+      en: 'Every engagement is different, depending on the needs of the restaurant, bar, or hotel.',
+    },
+    section2Body2: {
+      el: 'Ωστόσο, τα περισσότερα έργα ακολουθούν αυτά τα βασικά στάδια:',
+      en: 'However, most projects follow these key stages:',
     },
     processItems: [
       {
         title: { el: 'Παρατήρηση & Ανάγνωση Χώρου', en: 'Observation & Space Reading' },
-        body: { el: 'Χωρίς άμεσες παρεμβάσεις. Πρώτα κατανόηση.', en: 'No immediate action. Understanding comes first.' },
+        body: {
+          el: 'Κατανόηση λειτουργιών, δυναμικής ομάδας και εμπειρίας επισκέπτη πριν από οποιαδήποτε ενέργεια.',
+          en: 'Understanding operations, team dynamics, and guest experience before taking action',
+        },
       },
       {
         title: { el: 'Ευθυγράμμιση Αντίληψης', en: 'Perceptual Alignment' },
-        body: { el: 'Τι πραγματικά συμβαίνει — πέρα από υποθέσεις και αριθμούς.', en: 'Clarifying what is truly happening - beyond assumptions and numbers.' },
+        body: {
+          el: 'Εντοπισμός του τι συμβαίνει πραγματικά μέσα στην επιχείρηση — πέρα από αναφορές και υποθέσεις.',
+          en: 'Identifying what is truly happening within the business — beyond reports and assumptions',
+        },
       },
       {
         title: { el: 'Στοχευμένη Παρέμβαση', en: 'Targeted Intervention' },
-        body: { el: 'Λιγότερες κινήσεις, μεγαλύτερη ακρίβεια.', en: 'Fewer moves. Greater precision.' },
+        body: {
+          el: 'Εφαρμογή ακριβών προσαρμογών για τη βελτίωση λειτουργιών, ροής και απόδοσης.',
+          en: 'Applying precise adjustments to improve operations, flow, and performance',
+        },
       },
       {
         title: { el: 'Σταθεροποίηση & Υποστήριξη', en: 'Stabilization & Support' },
-        body: { el: 'Μέχρι ο χώρος να λειτουργεί αυτόνομα, με φυσικό ρυθμό.', en: 'Until the space functions autonomously, with natural rhythm.' },
+        body: {
+          el: 'Υποστήριξη της επιχείρησης μέχρι τα συστήματα, οι ομάδες και η ατμόσφαιρα να λειτουργούν σε ευθυγράμμιση.',
+          en: 'Supporting the business until systems, teams, and atmosphere function in alignment',
+        },
       },
     ],
     section3Title: { el: 'Τι Δεν Είναι Αυτό', en: 'What This Is Not' },
