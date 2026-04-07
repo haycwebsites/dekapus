@@ -591,7 +591,7 @@ export const aboutConfig: AboutConfig = {
     el: 'Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι πρακτική, λειτουργική και ανθρώπινη.',
     en: 'My experience is not academic. It is practical, operational, and human.',
   },
-  portraitImage: '/images/about-thumb.jpg',
+  portraitImage: '/images/about-portrait.png',
   sectionImageAlt: { el: 'Διονύσης Παξινός', en: 'Dionysis Paxinos' },
 };
 
@@ -656,7 +656,7 @@ export const aboutStatementConfig: AboutStatementConfig = {
     el: 'Η δουλειά μου ως σύμβουλος φιλοξενίας δεν αφορά απλώς τη βελτίωση ενός εστιατορίου, μπαρ ή ξενοδοχείου. Αφορά την αποκατάσταση της ισορροπίας ανάμεσα σε ανθρώπους, κίνηση και ατμόσφαιρα — ώστε η λειτουργία να μπορεί να λειτουργεί φυσικά, να βελτιώνει την απόδοση και να ανυψώνει την εμπειρία του επισκέπτη.',
     en: 'My work as a hospitality consultant is not simply about improving a restaurant, bar, or hotel. It is about restoring balance between people, movement, and atmosphere — so the operation can function naturally, improve performance, and elevate guest experience.',
   },
-  backgroundImage: '/images/dekapus-vinyl-site.jpg',
+  backgroundImage: '/images/about-approach.png',
 };
 
 export const aboutClosingConfig: AboutClosingConfig = {
