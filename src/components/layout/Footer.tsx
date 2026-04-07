@@ -25,9 +25,8 @@ export function Footer() {
   const quickLinks = [
     { label: config.navigationConfig.home, path: '/', cpPath: 'navigationConfig.home' as const },
     { label: config.navigationConfig.events, path: '/dekapus-method', cpPath: 'navigationConfig.events' as const },
-    { label: config.navigationConfig.services, path: '/my-work', cpPath: 'navigationConfig.services' as const },
-    { label: config.navigationConfig.about, path: '/about', cpPath: 'navigationConfig.about' as const },
     { label: config.navigationConfig.team, path: '/engagement', cpPath: 'navigationConfig.team' as const },
+    { label: config.navigationConfig.about, path: '/about', cpPath: 'navigationConfig.about' as const },
     { label: config.navigationConfig.contact, path: '/contact', cpPath: 'navigationConfig.contact' as const },
   ];
 

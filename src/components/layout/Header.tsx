@@ -46,9 +46,8 @@ export function Header({ variant = 'inner' }: HeaderProps) {
   const navLinks = [
     { label: t(config.navigationConfig.home), path: '/', cpPath: 'navigationConfig.home' as const },
     { label: t(config.navigationConfig.events), path: '/dekapus-method', cpPath: 'navigationConfig.events' as const },
-    { label: t(config.navigationConfig.services), path: '/my-work', cpPath: 'navigationConfig.services' as const },
-    { label: t(config.navigationConfig.about), path: '/about', cpPath: 'navigationConfig.about' as const },
     { label: t(config.navigationConfig.team), path: '/engagement', cpPath: 'navigationConfig.team' as const },
+    { label: t(config.navigationConfig.about), path: '/about', cpPath: 'navigationConfig.about' as const },
     { label: t(config.navigationConfig.contact), path: '/contact', cpPath: 'navigationConfig.contact' as const },
   ];
 
