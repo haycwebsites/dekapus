@@ -111,7 +111,7 @@ export function BlogSinglePage() {
   const offeringsAside = (
     <aside className="lg:sticky lg:top-36 self-start">
       {isOfferingPage ? (
-        <div className="hidden lg:block overflow-hidden border-l border-white pl-4">
+        <div className="hidden lg:block overflow-hidden border-white pl-4">
           <img
             src={img(offeringImageSrc)}
             alt={t(pageTitle.title)}
@@ -145,7 +145,7 @@ export function BlogSinglePage() {
 
   const engagementHowWeWorkBand = (
     <div
-      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-y border-white/10 bg-[#141414] py-12 px-4 sm:px-8"
+      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-y border-white/10 bg-black py-12 px-4 sm:px-8"
       data-layout="content-fluid"
     >
       <h2
@@ -180,7 +180,7 @@ export function BlogSinglePage() {
 
   const engagementWhatNotClosingBand = (
     <div
-      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-t border-white/10 bg-[#141414] py-14 px-4 sm:px-8 pb-16 md:pb-20"
+      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-t border-white/10 bg-black py-14 px-4 sm:px-8 pb-16 md:pb-20"
       data-layout="content-fluid"
     >
       <div className="mx-auto max-w-7xl">
@@ -243,7 +243,7 @@ export function BlogSinglePage() {
                 <Link
                   to="/contact"
                   {...cp('customPagesConfig.engagement.closingCtaButtonLabel')}
-                  className="inline-block mt-6 bg-[#c8a97e] text-[#141414] font-serif font-medium px-8 py-3 rounded-sm hover:bg-[#d4b88c] transition-colors"
+                  className="inline-block mt-6 bg-[#c8a97e] text-black font-serif font-medium px-8 py-3 rounded-sm hover:bg-[#d4b88c] transition-colors"
                 >
                   {t(eg.closingCtaButtonLabel)}
                 </Link>
@@ -261,7 +261,7 @@ export function BlogSinglePage() {
       <main>
         <PageBanner title={pageTitle.title} titlePath={pageTitle.path} />
 
-        <section className={`py-20 bg-[#141414]${isEngagementPage ? ' overflow-x-clip' : ''}`}>
+        <section className={`py-20 bg-black${isEngagementPage ? ' overflow-x-clip' : ''}`}>
           <div className="container mx-auto px-4">
             {isEngagementPage ? (
               <>
@@ -507,7 +507,7 @@ export function BlogSinglePage() {
         </section>
 
         {isOfferingPage && (
-          <section className="py-10 bg-[#141414] lg:hidden">
+          <section className="py-10 bg-black lg:hidden">
             <div className="container mx-auto px-4">
               <img
                 src={img(offeringImageSrc)}

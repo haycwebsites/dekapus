@@ -19,7 +19,7 @@ export function BlogPage() {
       <main>
         <PageBanner title={config.navigationConfig.blog} titlePath="navigationConfig.blog" />
 
-        <section className="py-20 bg-[#141414]">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2">

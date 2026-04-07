@@ -5,7 +5,7 @@ export function TeamSection() {
   const { t, img, config, cp } = useHayc();
 
   return (
-    <section className="py-20 bg-[#141414]">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -31,19 +31,19 @@ export function TeamSection() {
                   <div className="flex gap-3">
                     <a 
                       href="#" 
-                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#c8a97e] hover:bg-[#1a1a1a] hover:text-white transition-colors"
+                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#c8a97e] hover:bg-black hover:text-white transition-colors"
                     >
                       <Facebook className="w-4 h-4" />
                     </a>
                     <a 
                       href="#" 
-                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#c8a97e] hover:bg-[#1a1a1a] hover:text-white transition-colors"
+                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#c8a97e] hover:bg-black hover:text-white transition-colors"
                     >
                       <Twitter className="w-4 h-4" />
                     </a>
                     <a 
                       href="#" 
-                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#c8a97e] hover:bg-[#1a1a1a] hover:text-white transition-colors"
+                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#c8a97e] hover:bg-black hover:text-white transition-colors"
                     >
                       <Instagram className="w-4 h-4" />
                     </a>

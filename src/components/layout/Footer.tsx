@@ -32,7 +32,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#1a1a1a] text-white">
+    <footer className="bg-black text-white">
       {/* Top Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -86,7 +86,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="bg-[#111] py-4">
+      <div className="border-t border-white/10 bg-black py-4">
         <div className="container mx-auto px-4 text-center">
           <p {...cp('commonConfig.copyright')} className="text-white/50 text-sm">
             {t(config.commonConfig.copyright)}

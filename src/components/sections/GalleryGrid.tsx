@@ -22,7 +22,7 @@ export function GalleryGrid() {
     : config.galleryConfig.images.filter(imgItem => imgItem.category === activeFilter);
 
   return (
-    <section className="py-20 bg-[#141414]">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">

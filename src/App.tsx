@@ -35,7 +35,7 @@ function App() {
       <HaycProvider>
         <RouteScrollRestoration />
         {isLoading && <Preloader onComplete={handlePreloaderComplete} />}
-        <div className={`min-h-screen bg-[#141414] ${isLoading ? 'overflow-hidden max-h-screen' : ''}`}>
+        <div className={`min-h-screen bg-black ${isLoading ? 'overflow-hidden max-h-screen' : ''}`}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/dekapus-method" element={<BlogSinglePage />} />

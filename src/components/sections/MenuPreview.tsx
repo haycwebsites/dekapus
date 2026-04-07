@@ -8,7 +8,7 @@ export function MenuPreview() {
     .slice(0, 10);
 
   return (
-    <section className="py-20 bg-[#141414] relative">
+    <section className="py-20 bg-black relative">
       <img 
         {...cp('menuConfig.decorImage1')}
         src={img(config.menuConfig.decorImage1)} 

@@ -57,7 +57,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
       isScrolled || variant === 'inner'
         ? theme === 'light'
           ? 'bg-white/95 backdrop-blur-sm shadow-lg'
-          : 'bg-[#1a1a1a]/95 backdrop-blur-sm shadow-lg'
+          : 'bg-black/95 backdrop-blur-sm shadow-lg'
         : 'bg-transparent'
     }`}>
       {/* Top Bar */}
@@ -118,7 +118,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                           : isLightTopHomeHeader
                             ? 'header-nav-link-light-top'
                             : theme === 'light' && (isScrolled || variant === 'inner')
-                            ? 'text-[#141414]'
+                            ? 'text-black'
                             : 'text-white'
                       }`}
                     >
@@ -137,7 +137,7 @@ export function Header({ variant = 'inner' }: HeaderProps) {
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#1a1a1a] border-l border-white/10 w-[300px]">
+            <SheetContent side="right" className="bg-black border-l border-white/10 w-[300px]">
               <div className="flex flex-col gap-4 mt-8">
                 <button
                   onClick={toggleTheme}

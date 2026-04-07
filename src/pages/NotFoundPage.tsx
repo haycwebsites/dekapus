@@ -12,7 +12,7 @@ export function NotFoundPage() {
   return (
     <>
       <Header variant="inner" />
-      <main className="min-h-[calc(100vh-200px)] flex items-center justify-center bg-[#141414] pt-32">
+      <main className="min-h-[calc(100vh-200px)] flex items-center justify-center bg-black pt-32">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             {/* 404 Image or Illustration */}

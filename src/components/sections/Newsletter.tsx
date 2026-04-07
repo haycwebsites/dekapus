@@ -29,7 +29,7 @@ export function Newsletter() {
           />
           <Button 
             type="submit"
-            className="bg-[#1a1a1a] hover:bg-black text-white h-12 px-8"
+            className="bg-black hover:opacity-90 text-white h-12 px-8"
           >
             <span {...cp('commonConfig.signUp')}>{t(config.commonConfig.signUp)}</span>
           </Button>

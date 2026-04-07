@@ -38,7 +38,7 @@ export function MenuPage() {
       <main>
         <PageBanner title={config.navigationConfig.menu} titlePath="navigationConfig.menu" />
         
-        <section className="py-20 bg-[#141414]">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <Tabs defaultValue="breakfast" className="w-full">
               <TabsList className="flex justify-center gap-4 mb-12 bg-transparent">

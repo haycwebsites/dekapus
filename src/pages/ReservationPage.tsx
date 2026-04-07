@@ -25,7 +25,7 @@ export function ReservationPage() {
       <main>
         <PageBanner title={config.navigationConfig.reservation} titlePath="navigationConfig.reservation" />
 
-        <section className="py-20 bg-[#141414]">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h3 {...cp('bookTableConfig.sectionTitle')} className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2">
@@ -69,13 +69,13 @@ export function ReservationPage() {
                         {date ? format(date, 'PPP') : <span className="text-white/50" {...cp('bookTableConfig.datePlaceholder')}>{t(btc.datePlaceholder)}</span>}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-[#1a1a1a] border-white/20">
+                    <PopoverContent className="w-auto p-0 bg-black border-white/20">
                       <Calendar
                         mode="single"
                         selected={date}
                         onSelect={setDate}
                         initialFocus
-                        className="bg-[#1a1a1a] text-white"
+                        className="bg-black text-white"
                       />
                     </PopoverContent>
                   </Popover>
@@ -87,7 +87,7 @@ export function ReservationPage() {
                     <SelectTrigger className="h-14 pl-12 bg-white/10 border-white/20 text-white" {...cp('bookTableConfig.timePlaceholder')}>
                       <SelectValue placeholder={t(btc.timePlaceholder)} />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1a1a1a] border-white/20">
+                    <SelectContent className="bg-black border-white/20">
                       {btc.reservationTimeSlots.map((time) => (
                         <SelectItem key={time} value={time} className="text-white hover:bg-white/10">
                           {time}
@@ -110,7 +110,7 @@ export function ReservationPage() {
                     <SelectTrigger className="h-14 pl-12 bg-white/10 border-white/20 text-white" {...cp('bookTableConfig.tablePlaceholder')}>
                       <SelectValue placeholder={t(btc.tablePlaceholder)} />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1a1a1a] border-white/20">
+                    <SelectContent className="bg-black border-white/20">
                       {btc.reservationTableOptions.map((table, ti) => (
                         <SelectItem key={ti} value={`table-${ti}`} className="text-white hover:bg-white/10">
                           {t(table)}
@@ -126,7 +126,7 @@ export function ReservationPage() {
                     <SelectTrigger className="h-14 pl-12 bg-white/10 border-white/20 text-white" {...cp('bookTableConfig.guestsPlaceholder')}>
                       <SelectValue placeholder={t(btc.guestsPlaceholder)} />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1a1a1a] border-white/20">
+                    <SelectContent className="bg-black border-white/20">
                       {btc.reservationGuestOptions.map((num) => (
                         <SelectItem key={num} value={num} className="text-white hover:bg-white/10">
                           {num} {num === '1' ? t(btc.guestSingular) : t(btc.guestsPlural)}

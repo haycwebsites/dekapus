@@ -4,7 +4,7 @@ export function ServicesSection() {
   const { t, img, config, cp } = useHayc();
 
   return (
-    <section className="py-20 bg-[#141414]">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
