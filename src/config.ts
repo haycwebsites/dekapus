@@ -1019,12 +1019,21 @@ export const galleryConfig: GalleryConfig = {
 export const contactConfig: ContactConfig = {
   sectionTitle: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact Us' },
   title: { el: 'ΣΤΕΙΛΤΕ ΜΑΣ ΜΗΝΥΜΑ', en: 'SEND US A MESSAGE' },
-  preBulletsLine: { el: 'Η ευθυγράμμιση ξεκινά πριν από την παρέμβαση.', en: 'Alignment begins before intervention.' },
-  introLine: { el: 'Η επικοινωνία συνήθως ξεκινά όταν κάτι δεν ευθυγραμμίζεται.', en: 'Contact usually begins when something does not align.' },
-  introItem1: { el: 'Όταν ένας χώρος λειτουργεί αλλά δεν αναπνέει.', en: 'When a space functions but does not breathe.' },
-  introItem2: { el: 'Όταν όλα μοιάζουν σωστά, αλλά κάτι λείπει.', en: 'When everything looks right, yet something feels missing.' },
-  introItem3: { el: 'Όταν χρειάζεται καθαρότητα πριν από τη δράση.', en: 'When clarity is needed before action.' },
-  closingWhisper: { el: 'Αν αναγνωρίζεις αυτή τη στιγμή, μια συζήτηση αρκεί για να ξεκινήσει.', en: 'If you recognize this moment, a conversation is enough to begin.' },
+  preBulletsLine: { el: '', en: '' },
+  introLine: {
+    el: 'Every space holds the potential to evolve.',
+    en: 'Every space holds the potential to evolve.',
+  },
+  introItem1: {
+    el: 'When the moment comes to create, refine, or realign,',
+    en: 'When the moment comes to create, refine, or realign,',
+  },
+  introItem2: {
+    el: 'a conversation is enough to begin.',
+    en: 'a conversation is enough to begin.',
+  },
+  introItem3: { el: '', en: '' },
+  closingWhisper: { el: '', en: '' },
   address: { el: 'Τοποθεσία', en: 'Location' },
   addressValue: { el: 'Αθήνα, Ελλάδα', en: 'Athens Greece' },
   phone: { el: 'Τηλέφωνο', en: 'Phone' },

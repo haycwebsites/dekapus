@@ -28,22 +28,14 @@ export function ContactPage() {
                 </h3>
 
                 <div className="mb-8 border-l border-white pl-6 md:pl-8 py-1">
-                  <p {...cp('contactConfig.introLine')} className="text-white/80 leading-relaxed mb-4">
+                  <p {...cp('contactConfig.introLine')} className="text-white/80 leading-relaxed mb-3">
                     {t(config.contactConfig.introLine)}
                   </p>
-                  <ul className="space-y-2 mb-4">
-                    <li {...cp('contactConfig.introItem1')} className="text-white/70 leading-relaxed">
-                      {t(config.contactConfig.introItem1)}
-                    </li>
-                    <li {...cp('contactConfig.introItem2')} className="text-white/70 leading-relaxed">
-                      {t(config.contactConfig.introItem2)}
-                    </li>
-                    <li {...cp('contactConfig.introItem3')} className="text-white/70 leading-relaxed">
-                      {t(config.contactConfig.introItem3)}
-                    </li>
-                  </ul>
-                  <p {...cp('contactConfig.closingWhisper')} className="text-white/80 italic leading-relaxed">
-                    {t(config.contactConfig.closingWhisper)}
+                  <p {...cp('contactConfig.introItem1')} className="text-white/70 leading-relaxed mb-3">
+                    {t(config.contactConfig.introItem1)}
+                  </p>
+                  <p {...cp('contactConfig.introItem2')} className="text-white/80 italic leading-relaxed">
+                    {t(config.contactConfig.introItem2)}
                   </p>
                 </div>
 
@@ -82,9 +74,6 @@ export function ContactPage() {
                     </div>
                   </div>
                 </div>
-                <p {...cp('contactConfig.preBulletsLine')} className="mt-4 text-white/80 italic leading-relaxed">
-                  {t(config.contactConfig.preBulletsLine)}
-                </p>
               </div>
 
               {/* Contact Form */}
