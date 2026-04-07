@@ -222,31 +222,33 @@ export function BlogSinglePage() {
                     )}
 
                     {standardCustomContent === 'dekapus' && (
-                      <div className="space-y-8">
+                      <div className="space-y-14 md:space-y-16">
                         {DEKAPUS_METHOD_SECTION_KEYS.map(({ title, bodies, means }) => (
-                          <div key={title}>
+                          <div key={title} className="space-y-5">
                             <h2
                               {...cp(`customPagesConfig.dekapusMethod.${title}`)}
-                              className="text-xl md:text-2xl font-semibold text-white mb-3"
+                              className="text-xl md:text-2xl font-semibold text-white"
                             >
                               {t(dm[title] as LocaleString)}
                             </h2>
-                            {bodies.map((bodyKey) => {
-                              const body = dm[bodyKey] as LocaleString;
-                              if (!t(body).trim()) return null;
-                              return (
-                                <p
-                                  key={bodyKey}
-                                  {...cp(`customPagesConfig.dekapusMethod.${bodyKey}`)}
-                                  className="text-white/70 leading-relaxed mb-3"
-                                >
-                                  {t(body)}
-                                </p>
-                              );
-                            })}
+                            <div className="space-y-4">
+                              {bodies.map((bodyKey) => {
+                                const body = dm[bodyKey] as LocaleString;
+                                if (!t(body).trim()) return null;
+                                return (
+                                  <p
+                                    key={bodyKey}
+                                    {...cp(`customPagesConfig.dekapusMethod.${bodyKey}`)}
+                                    className="text-white/70 leading-relaxed"
+                                  >
+                                    {t(body)}
+                                  </p>
+                                );
+                              })}
+                            </div>
                             <p
                               {...cp('customPagesConfig.dekapusMethod.whatThisMeansForYou')}
-                              className="text-white font-semibold mt-4 mb-2"
+                              className="text-white font-semibold"
                             >
                               {t(dm.whatThisMeansForYou)}
                             </p>
