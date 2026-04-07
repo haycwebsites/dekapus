@@ -452,7 +452,8 @@ export interface EngagementPageContent {
   section3Title: LocaleString;
   section3Body: LocaleString;
   list2Items: LocaleString[];
-  closing: LocaleString;
+  closingCtaBody: LocaleString;
+  closingCtaButtonLabel: LocaleString;
 }
 
 export interface CustomPagesOfferingImages {
@@ -1403,18 +1404,22 @@ export const customPagesConfig: CustomPagesConfig = {
         },
       },
     ],
-    section3Title: { el: 'Τι Δεν Είναι Αυτό', en: 'What This Is Not' },
-    section3Body: { el: 'Το DEKAPUS δεν είναι:', en: 'DEKAPUS is not:' },
+    section3Title: { el: 'Τι Δεν Είναι Αυτή η Δουλειά', en: 'What This Work Is Not' },
+    section3Body: { el: 'Η DEKAPUS δεν λειτουργεί μέσω:', en: 'DEKAPUS does not operate through:' },
     list2Items: [
-      { el: 'Γρήγορο consulting', en: 'Fast consulting' },
-      { el: 'Έτοιμο template', en: 'Pre-made templates' },
-      { el: 'Παρέμβαση χωρίς βάθος', en: 'Surface-level intervention' },
-      { el: 'Υπηρεσία “βελτίωσης” χωρίς κατανόηση', en: 'Optimization without understanding' },
+      { el: 'Γρήγορη, επιφανειακή συμβουλευτική', en: 'Fast, surface-level consulting' },
+      { el: 'Προκαθορισμένων προτύπων ή γενικών στρατηγικών', en: 'Pre-defined templates or generic strategies' },
+      { el: 'Τυποποιημένων λύσεων αποσυνδεδεμένων από τον χώρο', en: 'Standardized solutions disconnected from the space' },
+      {
+        el: 'Παρεμβάσεων χωρίς πλήρη κατανόηση των λειτουργιών και των ανθρώπων',
+        en: 'Interventions without full understanding of operations and people',
+      },
     ],
-    closing: {
-      el: 'Η συνεργασία λειτουργεί όταν υπάρχει εμπιστοσύνη στον χρόνο, στη διαδικασία και στους ανθρώπους.',
-      en: 'Collaboration works when there is trust in time, process, and people.',
+    closingCtaBody: {
+      el: 'Αυτή η δουλειά βασίζεται στην παρουσία, την παρατήρηση και το timing. Ξεδιπλώνεται μέσα από εμπιστοσύνη στη διαδικασία, στον ρυθμό και στους ανθρώπους που συμμετέχουν, δημιουργώντας διαρκή αποτελέσματα σε περιβάλλοντα φιλοξενίας.',
+      en: 'This work is grounded in presence, observation, and timing. It unfolds through trust in the process, the rhythm, and the people involved, creating lasting results in hospitality environments.',
     },
+    closingCtaButtonLabel: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact us' },
   },
   offeringImages: {
     dekapusMethod: '/images/dekapus-gl-smoke-site.jpg',

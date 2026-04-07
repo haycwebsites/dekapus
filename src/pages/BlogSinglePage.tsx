@@ -178,6 +178,59 @@ export function BlogSinglePage() {
     </div>
   );
 
+  const engagementWhatNotClosingBand = (
+    <div
+      className="relative left-1/2 -translate-x-1/2 w-screen max-w-[100vw] mt-14 md:mt-16 border-t border-white/10 bg-[#161616] py-14 px-4 sm:px-8 pb-16 md:pb-20"
+      data-layout="content-fluid"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <div>
+            <h2
+              {...cp('customPagesConfig.engagement.section3Title')}
+              className="font-serif text-2xl md:text-3xl font-semibold text-white mb-4 tracking-tight"
+            >
+              {t(eg.section3Title)}
+            </h2>
+            <p {...cp('customPagesConfig.engagement.section3Body')} className="font-serif text-white/70 leading-relaxed">
+              {t(eg.section3Body)}
+            </p>
+          </div>
+          <ul className="font-serif list-disc pl-5 space-y-4 text-white/75 leading-relaxed marker:text-white/50">
+            {eg.list2Items.map((item, index) => (
+              <li key={index} {...cp(`customPagesConfig.engagement.list2Items.${index}`)}>
+                {t(item)}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="border-t border-white/10 pt-10 mt-12">
+          <div className="rounded-lg bg-[#252018] border border-white/[0.08] px-6 py-8 md:px-8 md:py-10">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
+              <div className="shrink-0 w-10 h-10 border border-white/90 rounded-sm" aria-hidden />
+              <div className="min-w-0 flex-1">
+                <p
+                  {...cp('customPagesConfig.engagement.closingCtaBody')}
+                  className="font-serif text-white/90 leading-relaxed text-base md:text-lg"
+                >
+                  {t(eg.closingCtaBody)}
+                </p>
+                <Link
+                  to="/contact"
+                  {...cp('customPagesConfig.engagement.closingCtaButtonLabel')}
+                  className="inline-block mt-6 bg-[#c8a97e] text-[#141414] font-serif font-medium px-8 py-3 rounded-sm hover:bg-[#d4b88c] transition-colors"
+                >
+                  {t(eg.closingCtaButtonLabel)}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <>
       <Header variant="inner" />
@@ -272,32 +325,11 @@ export function BlogSinglePage() {
                             ))}
                           </ul>
                         </div>
-                        <div>
-                          <h2 {...cp('customPagesConfig.engagement.section3Title')} className="text-xl md:text-2xl font-semibold text-white mb-2">
-                            {t(eg.section3Title)}
-                          </h2>
-                          <p {...cp('customPagesConfig.engagement.section3Body')} className="text-white/70 leading-relaxed mb-4">
-                            {t(eg.section3Body)}
-                          </p>
-                          <ul className="space-y-3">
-                            {eg.list2Items.map((item, index) => (
-                              <li
-                                key={index}
-                                {...cp(`customPagesConfig.engagement.list2Items.${index}`)}
-                                className="rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white/80 leading-relaxed"
-                              >
-                                {t(item)}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <p {...cp('customPagesConfig.engagement.closing')} className="text-white/80 leading-relaxed">
-                          {t(eg.closing)}
-                        </p>
                       </div>
                     </div>
                   </article>
                 </div>
+                {engagementWhatNotClosingBand}
               </>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
