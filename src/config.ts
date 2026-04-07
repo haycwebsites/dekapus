@@ -659,17 +659,6 @@ export const aboutStatementConfig: AboutStatementConfig = {
   backgroundImage: '/images/about-approach.png',
 };
 
-export const aboutClosingConfig: AboutClosingConfig = {
-  leadBold: {
-    el: 'Αυτή η δουλειά ορίζεται από την αντίληψη, την ακριβή παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.',
-    en: 'This work is defined by perception, precise intervention, and the ability to tune a space until it functions with clarity and flow.',
-  },
-  body: {
-    el: 'Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.',
-    en: "If this is what your space needs, let's begin the conversation.",
-  },
-};
-
 export const servicesConfig: ServicesConfig = {
   sectionTitle: { el: 'Υπηρεσίες', en: 'Services' },
   title: { el: 'ΟΙ ΕΙΔΙΚΟΤΗΤΕΣ ΜΑΣ', en: 'OUR SPECIALITIES' },
@@ -1457,5 +1446,16 @@ export const customPagesConfig: CustomPagesConfig = {
     dekapusMethod: '/images/dekapus-gl-smoke-site.jpg',
     myWork: '/images/dekapus-fire-site.jpg',
     engagement: '/images/dekapus-ice-cube-site.jpg',
+  },
+};
+
+export const aboutClosingConfig: AboutClosingConfig = {
+  leadBold: {
+    el: 'Αυτή η δουλειά ορίζεται από την αντίληψη, την ακριβή παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.',
+    en: 'This work is defined by perception, precise intervention, and the ability to tune a space until it functions with clarity and flow.',
+  },
+  body: {
+    el: 'Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.',
+    en: "If this is what your space needs, let's begin the conversation.",
   },
 };

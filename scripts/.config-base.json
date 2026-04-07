@@ -151,8 +151,8 @@
       "en": "Aligning Systems, Space & Human Behaviour."
     },
     "viewMenuButton": {
-      "el": "Μάθετε Περισσότερα",
-      "en": "Learn More"
+      "el": "Κλείστε μια δωρεάν κλήση 10 λεπτών",
+      "en": "Book a 10' free call"
     },
     "backgroundImage1": "/images/slide1.jpg",
     "backgroundImage2": "/images/slide2.jpg",
@@ -173,37 +173,37 @@
   },
   "aboutConfig": {
     "sectionTitle": {
-      "el": "Εισαγωγή",
-      "en": "About"
-    },
-    "title": {
-      "el": "Προέρχομαι από το χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά, όχι από τον χώρο της συμβουλευτικής.",
-      "en": "I come from the environments where hospitality is tested daily,not from the consulting world."
-    },
-    "description1": {
-      "el": "Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε μια ιδέα χάνει τον ρυθμό της — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.",
-      "en": "I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human."
-    },
-    "description2": {
-      "el": "Πιστεύω ότι η φιλοξενία είναι ζωντανός οργανισμός. Όταν πιεστεί λάθος, αντιδρά. Όταν ευθυγραμμιστεί σωστά, λειτουργεί αβίαστα. Η δουλειά μου δεν είναι να “βελτιώνω” χώρους. Είναι να τους επαναφέρω στη φυσική τους ισορροπία.",
-      "en": "I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance."
-    },
-    "closingLine": {
-      "el": "Η DEKAPUS υπάρχει για να εργάζεται εκεί όπου η λεπτομέρεια, ο άνθρωπος και η ατμόσφαιρα δεν μπορούν να αντιμετωπιστούν ξεχωριστά.",
-      "en": "DEKAPUS exists to work where detail, people, and atmosphere cannot be treated separately."
-    },
-    "chefName": {
-      "el": "ΤΖΑΚΛΙΝ ΡΟΚΙ",
-      "en": "JACKLIN ROCKY"
-    },
-    "chefThumb": "/images/about-thumb.jpg",
-    "chefSign": "/images/chef-sign.png",
-    "aboutImage1": "/images/about-img1.jpg",
-    "aboutImage2": "/images/about-img2.jpg",
-    "pageHeroImage": "/images/dekapus-bar-site2.jpg",
-    "sectionImageAlt": {
       "el": "Σχετικά",
       "en": "About"
+    },
+    "founderName": {
+      "el": "Διονύσης Παξινός",
+      "en": "Dionysis Paxinos"
+    },
+    "founderRole": {
+      "el": "Ιδρυτής της DEKAPUS",
+      "en": "Founder of DEKAPUS"
+    },
+    "intro1": {
+      "el": "Προέρχομαι από περιβάλλοντα όπου η φιλοξενία δοκιμάζεται καθημερινά, διαμορφωμένη μέσα από άμεση, χειροπιαστή εμπειρία.",
+      "en": "I come from environments where hospitality is tested daily, shaped through direct, hands-on experience."
+    },
+    "intro2": {
+      "el": "Για περισσότερα από τριάντα χρόνια έχω εργαστεί μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία, λειτουργώντας υπό πραγματική πίεση, πραγματικό ρυθμό και πραγματική ανθρώπινη δυναμική.",
+      "en": "For more than thirty years, I have worked inside restaurants, bars, clubs, and hotels, operating under real pressure, real rhythm, and real human dynamics."
+    },
+    "intro3": {
+      "el": "Ως μέρος του συστήματος, ανέπτυξα την ικανότητα να διαβάζω χώρους πριν ανοίξουν, να αισθάνομαι τις ομάδες πριν φτάσουν στην εξάντληση και να αναγνωρίζω πότε ένα concept αρχίζει να χάνει τον ρυθμό του — ακόμα κι όταν όλα φαίνονται σωστά.",
+      "en": "As part of the system, I developed the ability to read spaces before they open, to sense teams before they reach exhaustion, and to recognize when a concept begins to lose its rhythm — even when everything appears correct."
+    },
+    "intro4": {
+      "el": "Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι πρακτική, λειτουργική και ανθρώπινη.",
+      "en": "My experience is not academic. It is practical, operational, and human."
+    },
+    "portraitImage": "/images/about-portrait.png",
+    "sectionImageAlt": {
+      "el": "Διονύσης Παξινός",
+      "en": "Dionysis Paxinos"
     }
   },
   "homeIntroConfig": {
@@ -267,23 +267,23 @@
     }
   },
   "aboutStatementConfig": {
-    "sectionTitle": {
-      "el": "Δεν πρόκειται απλά για συμβουλευτική.",
-      "en": "This is not just consulting."
-    },
-    "headline": {
-      "el": "Είναι η ικανότητα να διαβάζεις έναν χώρο, να αισθάνεσαι την πίεση πριν κλιμακωθεί και να αποκαθιστάς την ισορροπία πριν «σπάσουν» τα συστήματα.",
-      "en": "It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break."
+    "title": {
+      "el": "Προσέγγιση",
+      "en": "Approach"
     },
     "paragraph1": {
-      "el": "Με καλούν όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί να ονομαστεί. Όταν οι ομάδες είναι ικανές αλλά επιβαρυμένες. Όταν οι ιδέες είναι σωστές αλλά πλέον δεν ζουν.",
-      "en": "I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive."
+      "el": "Βλέπω τη φιλοξενία ως ζωντανό οργανισμό.",
+      "en": "I see hospitality as a living organism."
     },
     "paragraph2": {
-      "el": "Η δουλειά μου γίνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας. Όχι με πλαίσια ή εκθέσεις, αλλά με παρουσία, προσαρμογή και ακριβή παρέμβαση.",
-      "en": "My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention."
+      "el": "Όταν η πίεση εφαρμόζεται λάθος, αντιστέκεται. Όταν η ευθυγράμμιση είναι σωστή, ρέει.",
+      "en": "When pressure is misapplied, it resists. When alignment is right, it flows."
     },
-    "backgroundImage": "/images/engagement-section.jpg"
+    "paragraph3": {
+      "el": "Η δουλειά μου ως σύμβουλος φιλοξενίας δεν αφορά απλώς τη βελτίωση ενός εστιατορίου, μπαρ ή ξενοδοχείου. Αφορά την αποκατάσταση της ισορροπίας ανάμεσα σε ανθρώπους, κίνηση και ατμόσφαιρα — ώστε η λειτουργία να μπορεί να λειτουργεί φυσικά, να βελτιώνει την απόδοση και να ανυψώνει την εμπειρία του επισκέπτη.",
+      "en": "My work as a hospitality consultant is not simply about improving a restaurant, bar, or hotel. It is about restoring balance between people, movement, and atmosphere — so the operation can function naturally, improve performance, and elevate guest experience."
+    },
+    "backgroundImage": "/images/about-approach.png"
   },
   "servicesConfig": {
     "sectionTitle": {
@@ -1351,48 +1351,120 @@
         "en": "DEKAPUS Method"
       },
       "intro": {
-        "el": "Η DEKAPUS Method™ δημιουργήθηκε για να διαβάζει χώρους, ανθρώπους και καταστάσεις με ακρίβεια — και να παρεμβαίνει χωρίς θόρυβο. Είναι ο τρόπος με τον οποίο αντιλαμβάνομαι τη φιλοξενία ως ζωντανό σύστημα.",
-        "en": "The DEKAPUS Method™ was created to read spaces, people, and situations with precision — and intervene without noise. It reflects how I understand hospitality as a living system."
+        "el": "Η DEKAPUS Method™ είναι μια πρακτική προσέγγιση για την κατανόηση και τη βελτίωση των χώρων φιλοξενίας από μέσα.",
+        "en": "The DEKAPUS Method™ is a practical approach to understanding and improving hospitality spaces from within."
+      },
+      "intro2": {
+        "el": "Με αυτή τη μέθοδο διαβάζουμε τον χώρο, κατανοούμε τη δυναμική της ομάδας και εντοπίζουμε τι χρειάζεται να αλλάξει — λαμβάνοντας ακριβείς αποφάσεις που βελτιώνουν τόσο τις λειτουργίες όσο και την εμπειρία του επισκέπτη.",
+        "en": "Through this method, we read the space, understand the dynamics of the team, and identify what needs to shift — making precise decisions that improve both operations and guest experience."
+      },
+      "intro3": {
+        "el": "Στον πυρήνα της βασίζεται σε μία αρχή: η φιλοξενία είναι ένα ζωντανό σύστημα, όπου χώρος, άνθρωποι και ρυθμός πρέπει να ευθυγραμμίζονται για να αποδίδει πραγματικά μια επιχείρηση.",
+        "en": "At its core, it is based on one principle: hospitality is a living system, where space, people, and rhythm must align for a business to truly perform."
+      },
+      "whatThisMeansForYou": {
+        "el": "Τι σημαίνει αυτό για εσάς:",
+        "en": "What this means for you:"
       },
       "section1Title": {
         "el": "Αντίληψη & Ανάγνωση Χώρου",
         "en": "Perception & Space Reading"
       },
       "section1Body": {
-        "el": "Κάθε χώρος μιλάει πριν λειτουργήσει. Ο ρυθμός, η ένταση, οι σιωπές και οι κινήσεις αποκαλύπτουν τι πραγματικά συμβαίνει — πέρα από reports και KPIs. Η παρατήρηση προηγείται κάθε απόφασης.",
-        "en": "Every space speaks before it operates. Rhythm, tension, silence, and movement reveal what reports and KPIs cannot. Observation comes before decision-making."
+        "el": "Πριν αρχίσει να λειτουργεί, ένας χώρος έχει ήδη φανερώσει πώς θα λειτουργήσει.",
+        "en": "Before a space begins to operate, it already reveals how it will function."
+      },
+      "section1Body2": {
+        "el": "Μέσω της παρατήρησης διαβάζουμε ρυθμό, ένταση, κίνηση και σιωπή — αντιλαμβανόμενοι τι συμβαίνει κάτω από την επιφάνεια, πέρα από reports και KPIs.",
+        "en": "Through observation, we read rhythm, tension, movement, and silence — sensing what is happening beneath the surface, beyond reports and KPIs."
+      },
+      "section1Body3": {
+        "el": "Μόνο μετά από αυτή την κατανόηση λαμβάνονται αποφάσεις.",
+        "en": "Only after this understanding are decisions made."
+      },
+      "section1MeansBody": {
+        "el": "Αποκτάτε σαφήνεια για το τι πραγματικά συμβαίνει στον χώρο σας — και τι χρειάζεται να αλλάξει — χωρίς εικασίες ή περιττές παρεμβάσεις.",
+        "en": "You gain clarity on what is truly happening in your space — and what needs to change — without guesswork or unnecessary intervention."
       },
       "section2Title": {
-        "el": "Ατμόσφαιρα & Ενέργεια",
-        "en": "Atmosphere & Energy"
+        "el": "Ατμόσφαιρα & Εμπειρία",
+        "en": "Atmosphere & Experience"
       },
       "section2Body": {
-        "el": "Η ατμόσφαιρα δεν είναι διακόσμηση. Είναι αποτέλεσμα επιλογών, timing και ανθρώπινης παρουσίας. Όταν η ατμόσφαιρα είναι σωστή, τα συστήματα υποστηρίζουν. Όταν όχι, τα συστήματα πιέζουν.",
-        "en": "Atmosphere is not decoration. It is the result of choices, timing, and human presence. When atmosphere is right, systems support. When it isn't, systems suffocate."
+        "el": "Η ατμόσφαιρα διαμορφώνει το πώς νιώθουν οι επισκέπτες και πώς αποδίδουν οι ομάδες. Δημιουργείται μέσα από επιλογές, χρονισμό και ανθρώπινη παρουσία — και όταν είναι ευθυγραμμισμένη, όλη η εμπειρία ρέει φυσικά.",
+        "en": "Atmosphere shapes how guests feel and how teams perform. It is created through choices, timing, and human presence — and when it is aligned, the entire experience flows naturally."
+      },
+      "section2Body2": {
+        "el": "Όταν η ατμόσφαιρα είναι ευθυγραμμισμένη, τα συστήματα στηρίζουν την εμπειρία. Όταν όχι, ακόμα και ισχυρά συστήματα αρχίζουν να αποτυγχάνουν.",
+        "en": "When atmosphere is aligned, systems support the experience. When it is not, even strong systems begin to fail."
+      },
+      "section2Body3": {
+        "el": "",
+        "en": ""
+      },
+      "section2MeansBody": {
+        "el": "Δημιουργείτε ένα περιβάλλον που βελτιώνει την ικανοποίηση των επισκεπτών, την παραμονή και τη συνολική αντίληψη για τον χώρο σας.",
+        "en": "You create an environment that improves guest satisfaction, retention, and overall perception of your space."
       },
       "section3Title": {
         "el": "Ροή Ανθρώπων & Συμπεριφορά",
         "en": "Human Flow & Behaviour"
       },
       "section3Body": {
-        "el": "Οι άνθρωποι δεν κινούνται τυχαία. Ο τρόπος που κινούνται, αντιδρούν και κουράζονται είναι δομικός δείκτης υγείας ενός χώρου. Η DEKAPUS Method™ διαβάζει τη ροή πριν τη διορθώσει.",
-        "en": "People do not move randomly. Their movement, reactions, and fatigue reveal the true health of a space. The DEKAPUS Method™ reads flow before correcting it."
+        "el": "Οι άνθρωποι δεν κινούνται τυχαία.",
+        "en": "People do not move randomly."
+      },
+      "section3Body2": {
+        "el": "Ο τρόπος που κινούνται, αντιδρούν και αλληλεπιδρούν επισκέπτες και προσωπικό αποκαλύπτει την πραγματική κατάσταση της λειτουργίας σας.",
+        "en": "The way guests and staff move, react, and interact reveals the true condition of your operation."
+      },
+      "section3Body3": {
+        "el": "",
+        "en": ""
+      },
+      "section3MeansBody": {
+        "el": "Κατανοείτε πού υπάρχει τριβή — στη ροή εξυπηρέτησης, στη δυναμική της ομάδας και στην εμπειρία του πελάτη — και πώς να τη διορθώσετε.",
+        "en": "You understand where friction exists — in service flow, team dynamics, and customer experience — and how to correct it."
       },
       "section4Title": {
         "el": "Λειτουργικά Συστήματα",
         "en": "Operational Systems"
       },
       "section4Body": {
-        "el": "Οι διαδικασίες υπάρχουν για να στηρίζουν την εμπειρία — όχι για να την καταπνίγουν. Τα συστήματα επανασχεδιάζονται μόνο αφού γίνει κατανοητό τι πρέπει να υπηρετούν.",
-        "en": "Processes exist to support experience - not suppress it. Systems are redesigned only after understanding what they must serve."
+        "el": "Τα συστήματα πρέπει να στηρίζουν την εμπειρία — όχι να την καταπνίγουν.",
+        "en": "Systems should support the experience — not suppress it."
+      },
+      "section4Body2": {
+        "el": "Οι διαδικασίες επανασχεδιάζονται μόνο αφού γίνει κατανοητό τι πρέπει να υπηρετούν.",
+        "en": "Processes are redesigned only after understanding what they need to serve."
+      },
+      "section4Body3": {
+        "el": "",
+        "en": ""
+      },
+      "section4MeansBody": {
+        "el": "Βελτιώνετε την αποδοτικότητα και τη συνέπεια χωρίς να περιπλέκετε υπερβολικά τις λειτουργίες σας.",
+        "en": "You improve efficiency and consistency without overcomplicating your operations."
       },
       "section5Title": {
         "el": "Χρονισμός & Παρέμβαση",
         "en": "Timing & Intervention"
       },
       "section5Body": {
-        "el": "Η σωστή παρέμβαση δεν είναι θέμα έντασης. Είναι θέμα στιγμής. Η DEKAPUS λειτουργεί με ακρίβεια, όχι βιασύνη.",
-        "en": "Effective intervention is not about intensity. It is about timing. DEKAPUS works with precision, not urgency."
+        "el": "Η αποτελεσματική αλλαγή δεν είναι θέμα του να κάνετε περισσότερα. Είναι θέμα του να ενεργείτε τη σωστή στιγμή.",
+        "en": "Effective change is not about doing more. It is about acting at the right moment."
+      },
+      "section5Body2": {
+        "el": "Η DEKAPUS Method™ εστιάζει στην ακριβή παρέμβαση — όχι στη βιασύνη.",
+        "en": "The DEKAPUS Method™ focuses on precise intervention — not urgency."
+      },
+      "section5Body3": {
+        "el": "",
+        "en": ""
+      },
+      "section5MeansBody": {
+        "el": "Παίρνετε καλύτερες αποφάσεις, αποφεύγετε περιττές αναταραχές και βελτιώνετε την απόδοση με σαφήνεια και έλεγχο.",
+        "en": "You make better decisions, avoid unnecessary disruption, and improve performance with clarity and control."
       }
     },
     "myWork": {
@@ -1451,42 +1523,126 @@
         "en": "When It Makes Sense to Work Together"
       },
       "introTitle": {
-        "el": "Εισαγωγή",
-        "en": "Intro"
+        "el": "Πού παρεμβαίνουμε",
+        "en": "Where We Step In"
       },
       "intro": {
-        "el": "Η συνεργασία με τη DEKAPUS δεν ξεκινά από πακέτα ή ώρες. Ξεκινά από ευθυγράμμιση. Δεν αναλαμβάνω κάθε έργο. Αναλαμβάνω καταστάσεις όπου η παρέμβαση έχει πραγματικό νόημα.",
-        "en": "Working with DEKAPUS does not start with packages or hours. It starts with alignment. I do not take on every project. I engage where intervention has real meaning."
+        "el": "Η συνεργασία συνήθως ξεκινά όταν κάτι γίνεται αισθητό, χωρίς να έχει πλήρως κατανοηθεί μέσα σε μια επιχείρηση φιλοξενίας:",
+        "en": "Collaboration usually begins when something is felt, but not fully understood within a hospitality business:"
       },
       "list1Title": {
-        "el": "Η συνεργασία μας λειτουργεί καλύτερα όταν:",
-        "en": "Collaboration works best when:"
+        "el": "",
+        "en": ""
       },
       "list1Items": [
         {
-          "el": "Υπάρχει σαφής ανάγκη, όχι απλώς περιέργεια",
-          "en": "There is a clear need, not simple curiosity"
+          "title": {
+            "el": "Προ-άνοιγμα & Ανάπτυξη Concept",
+            "en": "Pre-opening & Concept Development"
+          },
+          "body": {
+            "el": "Όταν ένα concept εστιατορίου, μπαρ ή ξενοδοχείου χρειάζεται ταυτότητα, ρυθμό και λειτουργική σαφήνεια πριν το άνοιγμα.",
+            "en": "When a restaurant, bar, or hotel concept needs identity, rhythm, and operational clarity before opening."
+          }
         },
         {
-          "el": "Ο ιδιοκτήτης ή decision-maker είναι παρών",
-          "en": "The owner or decision-maker is involved"
+          "title": {
+            "el": "Όταν ένας Χώρος Δείχνει «Off»",
+            "en": "When a Space Feels \"Off\""
+          },
+          "body": {
+            "el": "Όταν όλα φαίνονται σωστά, ενώ η εμπειρία επισκέπτη ή η απόδοση δεν ευθυγραμμίζονται.",
+            "en": "When everything appears correct, yet the guest experience or performance does not align."
+          }
         },
         {
-          "el": "Υπάρχει διάθεση να ειπωθούν και να ακουστούν δύσκολες αλήθειες",
-          "en": "There is willingness to hear and address difficult truths"
+          "title": {
+            "el": "Λειτουργική Πίεση Πίσω από Ισχυρή Εικόνα",
+            "en": "Operational Pressure Behind a Strong Image"
+          },
+          "body": {
+            "el": "Όταν το concept φαίνεται σωστό, αλλά οι καθημερινές λειτουργίες εξαντλούν τις ομάδες και μειώνουν την αποδοτικότητα.",
+            "en": "When the concept looks right, but daily operations exhaust teams and reduce efficiency."
+          }
         },
         {
-          "el": "Ο χώρος αντιμετωπίζεται ως ζωντανό σύστημα, όχι ως πρόβλημα προς διόρθωση",
-          "en": "The space is treated as a living system, not a problem to fix"
+          "title": {
+            "el": "Κόπωση Ομάδας & Απώλεια Ρυθμού",
+            "en": "Team Fatigue & Loss of Rhythm"
+          },
+          "body": {
+            "el": "Όταν η απόδοση του προσωπικού μειώνεται και η ροή εξυπηρέτησης γίνεται ασταθής.",
+            "en": "When staff performance declines and service flow becomes inconsistent."
+          }
+        },
+        {
+          "title": {
+            "el": "Επανατοποθέτηση & Επανεκκίνηση",
+            "en": "Repositioning & Reset"
+          },
+          "body": {
+            "el": "Όταν ένας χώρος φιλοξενίας χρειάζεται επαναπροσδιορισμό χωρίς να χάσει την ταυτότητα ή τον χαρακτήρα του.",
+            "en": "When a hospitality space needs realignment without losing its identity or character."
+          }
+        }
+      ],
+      "howWeWorkTitle": {
+        "el": "Πώς δουλεύουμε μαζί",
+        "en": "How We Work Together"
+      },
+      "howWeWorkItems": [
+        {
+          "title": {
+            "el": "Πραγματική δέσμευση",
+            "en": "Real Commitment"
+          },
+          "body": {
+            "el": "Υπάρχει πραγματική δέσμευση να προχωρήσουμε μπροστά και να βελτιώσουμε την επιχείρηση.",
+            "en": "There is a real commitment to move forward and improve the business"
+          }
+        },
+        {
+          "title": {
+            "el": "Άμεση εμπλοκή",
+            "en": "Direct Involvement"
+          },
+          "body": {
+            "el": "Ο ιδιοκτήτης ή ο υπεύθυνος αποφάσεων συμμετέχει άμεσα στη διαδικασία.",
+            "en": "The owner or decision-maker is directly involved in the process"
+          }
+        },
+        {
+          "title": {
+            "el": "Ειλικρινής επικοινωνία",
+            "en": "Honest Communication"
+          },
+          "body": {
+            "el": "Υπάρχει ανοιχτότητα σε ειλικρινή επικοινωνία και πρακτικές λύσεις.",
+            "en": "There is openness to honest communication and practical solutions"
+          }
+        },
+        {
+          "title": {
+            "el": "Σκέψη ως ζωντανό σύστημα",
+            "en": "Living System Thinking"
+          },
+          "body": {
+            "el": "Η επιχείρηση αντιμετωπίζεται ως ζωντανό σύστημα — όχι απλώς ως πρόβλημα προς διόρθωση.",
+            "en": "The business is approached as a living system — not just a problem to fix."
+          }
         }
       ],
       "section2Title": {
-        "el": "Πώς Ξεδιπλώνεται Συνήθως η Διαδικασία",
-        "en": "How the Process Usually Unfolds"
+        "el": "Η Διαδικασία",
+        "en": "The Process"
       },
       "section2Body": {
-        "el": "Κάθε συνεργασία έχει διαφορετική διάρκεια και μορφή. Ωστόσο, συνήθως ξεκινά με:",
-        "en": "Every engagement is different in duration and form. However, most begin with:"
+        "el": "Κάθε συνεργασία είναι διαφορετική, ανάλογα με τις ανάγκες του εστιατορίου, του μπαρ ή του ξενοδοχείου.",
+        "en": "Every engagement is different, depending on the needs of the restaurant, bar, or hotel."
+      },
+      "section2Body2": {
+        "el": "Ωστόσο, τα περισσότερα έργα ακολουθούν αυτά τα βασικά στάδια:",
+        "en": "However, most projects follow these key stages:"
       },
       "processItems": [
         {
@@ -1495,8 +1651,8 @@
             "en": "Observation & Space Reading"
           },
           "body": {
-            "el": "Χωρίς άμεσες παρεμβάσεις. Πρώτα κατανόηση.",
-            "en": "No immediate action. Understanding comes first."
+            "el": "Κατανόηση λειτουργιών, δυναμικής ομάδας και εμπειρίας επισκέπτη πριν από οποιαδήποτε ενέργεια.",
+            "en": "Understanding operations, team dynamics, and guest experience before taking action"
           }
         },
         {
@@ -1505,8 +1661,8 @@
             "en": "Perceptual Alignment"
           },
           "body": {
-            "el": "Τι πραγματικά συμβαίνει — πέρα από υποθέσεις και αριθμούς.",
-            "en": "Clarifying what is truly happening - beyond assumptions and numbers."
+            "el": "Εντοπισμός του τι συμβαίνει πραγματικά μέσα στην επιχείρηση — πέρα από αναφορές και υποθέσεις.",
+            "en": "Identifying what is truly happening within the business — beyond reports and assumptions"
           }
         },
         {
@@ -1515,8 +1671,8 @@
             "en": "Targeted Intervention"
           },
           "body": {
-            "el": "Λιγότερες κινήσεις, μεγαλύτερη ακρίβεια.",
-            "en": "Fewer moves. Greater precision."
+            "el": "Εφαρμογή ακριβών προσαρμογών για τη βελτίωση λειτουργιών, ροής και απόδοσης.",
+            "en": "Applying precise adjustments to improve operations, flow, and performance"
           }
         },
         {
@@ -1525,46 +1681,60 @@
             "en": "Stabilization & Support"
           },
           "body": {
-            "el": "Μέχρι ο χώρος να λειτουργεί αυτόνομα, με φυσικό ρυθμό.",
-            "en": "Until the space functions autonomously, with natural rhythm."
+            "el": "Υποστήριξη της επιχείρησης μέχρι τα συστήματα, οι ομάδες και η ατμόσφαιρα να λειτουργούν σε ευθυγράμμιση.",
+            "en": "Supporting the business until systems, teams, and atmosphere function in alignment"
           }
         }
       ],
       "section3Title": {
-        "el": "Τι Δεν Είναι Αυτό",
-        "en": "What This Is Not"
+        "el": "Τι Δεν Είναι Αυτή η Δουλειά",
+        "en": "What This Work Is Not"
       },
       "section3Body": {
-        "el": "Το DEKAPUS δεν είναι:",
-        "en": "DEKAPUS is not:"
+        "el": "Η DEKAPUS δεν λειτουργεί μέσω:",
+        "en": "DEKAPUS does not operate through:"
       },
       "list2Items": [
         {
-          "el": "Γρήγορο consulting",
-          "en": "Fast consulting"
+          "el": "Γρήγορη, επιφανειακή συμβουλευτική",
+          "en": "Fast, surface-level consulting"
         },
         {
-          "el": "Έτοιμο template",
-          "en": "Pre-made templates"
+          "el": "Προκαθορισμένων προτύπων ή γενικών στρατηγικών",
+          "en": "Pre-defined templates or generic strategies"
         },
         {
-          "el": "Παρέμβαση χωρίς βάθος",
-          "en": "Surface-level intervention"
+          "el": "Τυποποιημένων λύσεων αποσυνδεδεμένων από τον χώρο",
+          "en": "Standardized solutions disconnected from the space"
         },
         {
-          "el": "Υπηρεσία “βελτίωσης” χωρίς κατανόηση",
-          "en": "Optimization without understanding"
+          "el": "Παρεμβάσεων χωρίς πλήρη κατανόηση των λειτουργιών και των ανθρώπων",
+          "en": "Interventions without full understanding of operations and people"
         }
       ],
-      "closing": {
-        "el": "Η συνεργασία λειτουργεί όταν υπάρχει εμπιστοσύνη στον χρόνο, στη διαδικασία και στους ανθρώπους.",
-        "en": "Collaboration works when there is trust in time, process, and people."
+      "closingCtaBody": {
+        "el": "Αυτή η δουλειά βασίζεται στην παρουσία, την παρατήρηση και το timing. Ξεδιπλώνεται μέσα από εμπιστοσύνη στη διαδικασία, στον ρυθμό και στους ανθρώπους που συμμετέχουν, δημιουργώντας διαρκή αποτελέσματα σε περιβάλλοντα φιλοξενίας.",
+        "en": "This work is grounded in presence, observation, and timing. It unfolds through trust in the process, the rhythm, and the people involved, creating lasting results in hospitality environments."
+      },
+      "closingCtaButtonLabel": {
+        "el": "Επικοινωνήστε μαζί μας",
+        "en": "Contact us"
       }
     },
     "offeringImages": {
       "dekapusMethod": "/images/dekapus-gl-smoke-site.jpg",
       "myWork": "/images/dekapus-fire-site.jpg",
       "engagement": "/images/dekapus-ice-cube-site.jpg"
+    }
+  },
+  "aboutClosingConfig": {
+    "leadBold": {
+      "el": "Αυτή η δουλειά ορίζεται από την αντίληψη, την ακριβή παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.",
+      "en": "This work is defined by perception, precise intervention, and the ability to tune a space until it functions with clarity and flow."
+    },
+    "body": {
+      "el": "Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.",
+      "en": "If this is what your space needs, let's begin the conversation."
     }
   }
 }
