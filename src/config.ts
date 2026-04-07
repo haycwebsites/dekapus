@@ -86,16 +86,13 @@ export interface HeroConfig {
 
 export interface AboutConfig {
   sectionTitle: LocaleString;
-  title: LocaleString;
-  description1: LocaleString;
-  description2: LocaleString;
-  closingLine: LocaleString;
-  chefName: LocaleString;
-  chefThumb: string;
-  chefSign: string;
-  aboutImage1: string;
-  aboutImage2: string;
-  pageHeroImage: string;
+  founderName: LocaleString;
+  founderRole: LocaleString;
+  intro1: LocaleString;
+  intro2: LocaleString;
+  intro3: LocaleString;
+  intro4: LocaleString;
+  portraitImage: string;
   sectionImageAlt: LocaleString;
 }
 
@@ -117,13 +114,19 @@ export interface HomeWhatWeDoConfig {
   imageAlt: LocaleString;
 }
 
-/** Full-bleed statement block on the About page (below main about copy) */
+/** Full-bleed “Approach” band on the About page */
 export interface AboutStatementConfig {
-  sectionTitle: LocaleString;
-  headline: LocaleString;
+  title: LocaleString;
   paragraph1: LocaleString;
   paragraph2: LocaleString;
+  paragraph3: LocaleString;
   backgroundImage: string;
+}
+
+/** Final CTA copy on the About page */
+export interface AboutClosingConfig {
+  leadBold: LocaleString;
+  body: LocaleString;
 }
 
 export interface ServiceItem {
@@ -569,18 +572,27 @@ export const heroConfig: HeroConfig = {
 };
 
 export const aboutConfig: AboutConfig = {
-  sectionTitle: { el: 'Εισαγωγή', en: 'About' },
-  title: { el: 'Προέρχομαι από το χώρο όπου η φιλοξενία δοκιμάζεται καθημερινά, όχι από τον χώρο της συμβουλευτικής.', en: 'I come from the environments where hospitality is tested daily,not from the consulting world.' },
-  description1: { el: 'Έχω εργαστεί μέσα σε χώρους που λειτουργούν υπό πίεση, σε ρυθμούς πραγματικούς, με ανθρώπους, όχι με θεωρίες. Για περισσότερα από τριάντα χρόνια βρίσκομαι μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία. Όχι ως παρατηρητής, αλλά ως μέρος του συστήματος. Έμαθα να διαβάζω χώρους πριν “ανοίξουν”. Να καταλαβαίνω ομάδες πριν κουραστούν. Να αντιλαμβάνομαι πότε μια ιδέα χάνει τον ρυθμό της — ακόμα κι αν όλα φαίνονται σωστά. Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι βιωματική, πρακτική και ανθρώπινη.', en: 'I have worked inside spaces under real pressure, real rhythm, and real human dynamics - not theoretical models. For more than thirty years, I have operated inside restaurants, bars, clubs, and hotels. Not as an observer, but as part of the system. I learned to read spaces before they open. To sense teams before they reach exhaustion. To recognize when a concept loses its rhythm - even when everything appears correct. My experience is not academic. It is lived, practical, and human.' },
-  description2: { el: 'Πιστεύω ότι η φιλοξενία είναι ζωντανός οργανισμός. Όταν πιεστεί λάθος, αντιδρά. Όταν ευθυγραμμιστεί σωστά, λειτουργεί αβίαστα. Η δουλειά μου δεν είναι να “βελτιώνω” χώρους. Είναι να τους επαναφέρω στη φυσική τους ισορροπία.', en: 'I see hospitality as a living organism. When pressure is misapplied, it resists. When alignment is right, it flows. My work is not about improving spaces. It is about restoring their natural balance.' },
-  closingLine: { el: 'Η DEKAPUS υπάρχει για να εργάζεται εκεί όπου η λεπτομέρεια, ο άνθρωπος και η ατμόσφαιρα δεν μπορούν να αντιμετωπιστούν ξεχωριστά.', en: 'DEKAPUS exists to work where detail, people, and atmosphere cannot be treated separately.' },
-  chefName: { el: 'ΤΖΑΚΛΙΝ ΡΟΚΙ', en: 'JACKLIN ROCKY' },
-  chefThumb: '/images/about-thumb.jpg',
-  chefSign: '/images/chef-sign.png',
-  aboutImage1: '/images/about-img1.jpg',
-  aboutImage2: '/images/about-img2.jpg',
-  pageHeroImage: '/images/dekapus-bar-site2.jpg',
-  sectionImageAlt: { el: 'Σχετικά', en: 'About' },
+  sectionTitle: { el: 'Σχετικά', en: 'About' },
+  founderName: { el: 'Διονύσης Παξινός', en: 'Dionysis Paxinos' },
+  founderRole: { el: 'Ιδρυτής της DEKAPUS', en: 'Founder of DEKAPUS' },
+  intro1: {
+    el: 'Προέρχομαι από περιβάλλοντα όπου η φιλοξενία δοκιμάζεται καθημερινά, διαμορφωμένη μέσα από άμεση, χειροπιαστή εμπειρία.',
+    en: 'I come from environments where hospitality is tested daily, shaped through direct, hands-on experience.',
+  },
+  intro2: {
+    el: 'Για περισσότερα από τριάντα χρόνια έχω εργαστεί μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία, λειτουργώντας υπό πραγματική πίεση, πραγματικό ρυθμό και πραγματική ανθρώπινη δυναμική.',
+    en: 'For more than thirty years, I have worked inside restaurants, bars, clubs, and hotels, operating under real pressure, real rhythm, and real human dynamics.',
+  },
+  intro3: {
+    el: 'Ως μέρος του συστήματος, ανέπτυξα την ικανότητα να διαβάζω χώρους πριν ανοίξουν, να αισθάνομαι τις ομάδες πριν φτάσουν στην εξάντληση και να αναγνωρίζω πότε ένα concept αρχίζει να χάνει τον ρυθμό του — ακόμα κι όταν όλα φαίνονται σωστά.',
+    en: 'As part of the system, I developed the ability to read spaces before they open, to sense teams before they reach exhaustion, and to recognize when a concept begins to lose its rhythm — even when everything appears correct.',
+  },
+  intro4: {
+    el: 'Η εμπειρία μου δεν είναι ακαδημαϊκή. Είναι πρακτική, λειτουργική και ανθρώπινη.',
+    en: 'My experience is not academic. It is practical, operational, and human.',
+  },
+  portraitImage: '/images/about-thumb.jpg',
+  sectionImageAlt: { el: 'Διονύσης Παξινός', en: 'Dionysis Paxinos' },
 };
 
 export const homeIntroConfig: HomeIntroConfig = {
@@ -631,11 +643,31 @@ export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
 };
 
 export const aboutStatementConfig: AboutStatementConfig = {
-  sectionTitle: { el: 'Δεν πρόκειται απλά για συμβουλευτική.', en: 'This is not just consulting.' },
-  headline: { el: 'Είναι η ικανότητα να διαβάζεις έναν χώρο, να αισθάνεσαι την πίεση πριν κλιμακωθεί και να αποκαθιστάς την ισορροπία πριν «σπάσουν» τα συστήματα.', en: 'It is the ability to read a space, sense pressure before it escalates, and restore balance before systems break.' },
-  paragraph1: { el: 'Με καλούν όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί να ονομαστεί. Όταν οι ομάδες είναι ικανές αλλά επιβαρυμένες. Όταν οι ιδέες είναι σωστές αλλά πλέον δεν ζουν.', en: 'I am invited when something feels off but cannot be named. When teams are competent yet strained. When concepts are correct yet no longer alive.' },
-  paragraph2: { el: 'Η δουλειά μου γίνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας. Όχι με πλαίσια ή εκθέσεις, αλλά με παρουσία, προσαρμογή και ακριβή παρέμβαση.', en: 'My work happens quietly, inside the rhythm of the operation. Not through frameworks or reports, but through presence, adjustment, and precise intervention.' },
-  backgroundImage: '/images/engagement-section.jpg',
+  title: { el: 'Προσέγγιση', en: 'Approach' },
+  paragraph1: {
+    el: 'Βλέπω τη φιλοξενία ως ζωντανό οργανισμό.',
+    en: 'I see hospitality as a living organism.',
+  },
+  paragraph2: {
+    el: 'Όταν η πίεση εφαρμόζεται λάθος, αντιστέκεται. Όταν η ευθυγράμμιση είναι σωστή, ρέει.',
+    en: 'When pressure is misapplied, it resists. When alignment is right, it flows.',
+  },
+  paragraph3: {
+    el: 'Η δουλειά μου ως σύμβουλος φιλοξενίας δεν αφορά απλώς τη βελτίωση ενός εστιατορίου, μπαρ ή ξενοδοχείου. Αφορά την αποκατάσταση της ισορροπίας ανάμεσα σε ανθρώπους, κίνηση και ατμόσφαιρα — ώστε η λειτουργία να μπορεί να λειτουργεί φυσικά, να βελτιώνει την απόδοση και να ανυψώνει την εμπειρία του επισκέπτη.',
+    en: 'My work as a hospitality consultant is not simply about improving a restaurant, bar, or hotel. It is about restoring balance between people, movement, and atmosphere — so the operation can function naturally, improve performance, and elevate guest experience.',
+  },
+  backgroundImage: '/images/dekapus-vinyl-site.jpg',
+};
+
+export const aboutClosingConfig: AboutClosingConfig = {
+  leadBold: {
+    el: 'Αυτή η δουλειά ορίζεται από την αντίληψη, την ακριβή παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.',
+    en: 'This work is defined by perception, precise intervention, and the ability to tune a space until it functions with clarity and flow.',
+  },
+  body: {
+    el: 'Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.',
+    en: "If this is what your space needs, let's begin the conversation.",
+  },
 };
 
 export const servicesConfig: ServicesConfig = {

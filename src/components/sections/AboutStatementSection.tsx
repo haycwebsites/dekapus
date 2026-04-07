@@ -8,37 +8,20 @@ export function AboutStatementSection() {
 
   return (
     <section
-      className="on-dark-image-section py-20 bg-cover bg-center bg-fixed relative"
+      className="on-dark-image-section py-24 lg:py-32 bg-cover bg-center relative"
       style={{ backgroundImage: `url(${img(c.backgroundImage)})` }}
     >
-      <div className="absolute inset-0 bg-black/70" />
-      <div className="relative container mx-auto px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <h3
-            {...cp('aboutStatementConfig.sectionTitle')}
-            className="font-['Great_Vibes'] text-4xl text-[#c8a97e] mb-2"
-          >
-            {t(c.sectionTitle)}
-          </h3>
-          <h2
-            {...cp('aboutStatementConfig.headline')}
-            className="text-2xl md:text-3xl font-serif text-white mb-8"
-          >
-            {t(c.headline)}
+      <div className="absolute inset-0 bg-black/75" />
+      <div className="relative container mx-auto px-4 lg:px-8">
+        <div className="max-w-3xl border-l border-white pl-6 md:pl-8">
+          <h2 {...cp('aboutStatementConfig.title')} className="font-serif text-3xl md:text-4xl font-semibold text-white mb-10">
+            {t(c.title)}
           </h2>
-
-          <p
-            {...cp('aboutStatementConfig.paragraph1')}
-            className="text-white/80 leading-relaxed mb-4"
-          >
-            {t(c.paragraph1)}
-          </p>
-          <p
-            {...cp('aboutStatementConfig.paragraph2')}
-            className="text-white/80 leading-relaxed"
-          >
-            {t(c.paragraph2)}
-          </p>
+          <div className="space-y-6 font-serif text-white/90 text-base md:text-lg leading-relaxed">
+            <p {...cp('aboutStatementConfig.paragraph1')}>{t(c.paragraph1)}</p>
+            <p {...cp('aboutStatementConfig.paragraph2')}>{t(c.paragraph2)}</p>
+            <p {...cp('aboutStatementConfig.paragraph3')}>{t(c.paragraph3)}</p>
+          </div>
         </div>
       </div>
     </section>

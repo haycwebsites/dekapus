@@ -9,6 +9,7 @@ import {
   homeIntroConfig,
   homeWhatWeDoConfig,
   aboutStatementConfig,
+  aboutClosingConfig,
   servicesConfig,
   counterConfig,
   menuConfig,
@@ -45,6 +46,7 @@ export interface RemoteConfig {
   homeIntroConfig: typeof homeIntroConfig;
   homeWhatWeDoConfig: typeof homeWhatWeDoConfig;
   aboutStatementConfig: typeof aboutStatementConfig;
+  aboutClosingConfig: typeof aboutClosingConfig;
   servicesConfig: typeof servicesConfig;
   counterConfig: typeof counterConfig;
   menuConfig: typeof menuConfig;
@@ -80,6 +82,7 @@ export const defaultConfig: RemoteConfig = {
   homeIntroConfig,
   homeWhatWeDoConfig,
   aboutStatementConfig,
+  aboutClosingConfig,
   servicesConfig,
   counterConfig,
   menuConfig,
@@ -111,6 +114,18 @@ export async function fetchRemoteConfig(): Promise<RemoteConfig> {
     if (!res.ok) throw new Error('Failed to fetch config: ' + res.status);
     const data = (await res.json()) as Partial<RemoteConfig>;
     const merged = { ...defaultConfig, ...data } as RemoteConfig;
+    if (data.aboutConfig) {
+      merged.aboutConfig = { ...defaultConfig.aboutConfig, ...data.aboutConfig };
+    }
+    if (data.aboutStatementConfig) {
+      merged.aboutStatementConfig = {
+        ...defaultConfig.aboutStatementConfig,
+        ...data.aboutStatementConfig,
+      };
+    }
+    if (data.aboutClosingConfig) {
+      merged.aboutClosingConfig = { ...defaultConfig.aboutClosingConfig, ...data.aboutClosingConfig };
+    }
     if (data.customPagesConfig) {
       merged.customPagesConfig = {
         ...defaultConfig.customPagesConfig,

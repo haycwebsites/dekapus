@@ -3,6 +3,7 @@ import { Footer } from '../components/layout/Footer';
 import { PageBanner } from '../components/layout/PageBanner';
 import { AboutSection } from '../components/sections/AboutSection';
 import { AboutStatementSection } from '../components/sections/AboutStatementSection';
+import { AboutClosingSection } from '../components/sections/AboutClosingSection';
 import { useHayc } from '../hayc/config-context';
 
 export function AboutPage() {
@@ -15,6 +16,7 @@ export function AboutPage() {
         <PageBanner title={config.navigationConfig.about} titlePath="navigationConfig.about" />
         <AboutSection />
         <AboutStatementSection />
+        <AboutClosingSection />
       </main>
       <Footer />
     </>
