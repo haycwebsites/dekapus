@@ -285,6 +285,16 @@
     },
     "backgroundImage": "/images/about-approach.png"
   },
+  "aboutClosingConfig": {
+    "leadBold": {
+      "el": "Αυτή η δουλειά ορίζεται από την αντίληψη, την ακριβή παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.",
+      "en": "This work is defined by perception, precise intervention, and the ability to tune a space until it functions with clarity and flow."
+    },
+    "body": {
+      "el": "Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.",
+      "en": "If this is what your space needs, let's begin the conversation."
+    }
+  },
   "servicesConfig": {
     "sectionTitle": {
       "el": "Υπηρεσίες",
@@ -963,28 +973,28 @@
       "en": "SEND US A MESSAGE"
     },
     "preBulletsLine": {
-      "el": "Η ευθυγράμμιση ξεκινά πριν από την παρέμβαση.",
-      "en": "Alignment begins before intervention."
+      "el": "",
+      "en": ""
     },
     "introLine": {
-      "el": "Η επικοινωνία συνήθως ξεκινά όταν κάτι δεν ευθυγραμμίζεται.",
-      "en": "Contact usually begins when something does not align."
+      "el": "Every space holds the potential to evolve.",
+      "en": "Every space holds the potential to evolve."
     },
     "introItem1": {
-      "el": "Όταν ένας χώρος λειτουργεί αλλά δεν αναπνέει.",
-      "en": "When a space functions but does not breathe."
+      "el": "When the moment comes to create, refine, or realign,",
+      "en": "When the moment comes to create, refine, or realign,"
     },
     "introItem2": {
-      "el": "Όταν όλα μοιάζουν σωστά, αλλά κάτι λείπει.",
-      "en": "When everything looks right, yet something feels missing."
+      "el": "a conversation is enough to begin.",
+      "en": "a conversation is enough to begin."
     },
     "introItem3": {
-      "el": "Όταν χρειάζεται καθαρότητα πριν από τη δράση.",
-      "en": "When clarity is needed before action."
+      "el": "",
+      "en": ""
     },
     "closingWhisper": {
-      "el": "Αν αναγνωρίζεις αυτή τη στιγμή, μια συζήτηση αρκεί για να ξεκινήσει.",
-      "en": "If you recognize this moment, a conversation is enough to begin."
+      "el": "",
+      "en": ""
     },
     "address": {
       "el": "Τοποθεσία",
@@ -1725,16 +1735,6 @@
       "dekapusMethod": "/images/dekapus-gl-smoke-site.jpg",
       "myWork": "/images/dekapus-fire-site.jpg",
       "engagement": "/images/dekapus-ice-cube-site.jpg"
-    }
-  },
-  "aboutClosingConfig": {
-    "leadBold": {
-      "el": "Αυτή η δουλειά ορίζεται από την αντίληψη, την ακριβή παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.",
-      "en": "This work is defined by perception, precise intervention, and the ability to tune a space until it functions with clarity and flow."
-    },
-    "body": {
-      "el": "Αν αυτό είναι αυτό που χρειάζεται ο χώρος σας, ας ξεκινήσουμε τη συζήτηση.",
-      "en": "If this is what your space needs, let's begin the conversation."
     }
   }
 }
