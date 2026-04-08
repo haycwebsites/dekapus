@@ -3,6 +3,7 @@ import { HaycProvider } from './hayc/config-context';
 import { Preloader } from './components/Preloader';
 import { ScrollToTop } from './components/ScrollToTop';
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { markNewsletterSourceFromCurrentUrl } from './lib/hayc-newsletter';
 
 import { HomePage } from './pages/HomePage';
 import { HomePage2 } from './pages/HomePage2';
@@ -78,6 +79,16 @@ function RouteAnalytics() {
   return null;
 }
 
+function RouteSourceCapture() {
+  const { search } = useLocation();
+
+  useEffect(() => {
+    markNewsletterSourceFromCurrentUrl();
+  }, [search]);
+
+  return null;
+}
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const handlePreloaderComplete = useCallback(() => setIsLoading(false), []);
@@ -87,6 +98,7 @@ function App() {
       <HaycProvider>
         <RouteScrollRestoration />
         <RouteAnalytics />
+        <RouteSourceCapture />
         {isLoading && <Preloader onComplete={handlePreloaderComplete} />}
         <div className={`min-h-screen bg-black ${isLoading ? 'overflow-hidden max-h-screen' : ''}`}>
           <Routes>

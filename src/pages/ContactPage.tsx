@@ -7,6 +7,7 @@ import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 import { Textarea } from '../components/ui/textarea';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { hasNewsletterSourceTag, subscribeContactToHaycList } from '../lib/hayc-newsletter';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -21,6 +22,7 @@ export function ContactPage() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [subscribeToNewsletter, setSubscribeToNewsletter] = useState(false);
   const [hp, setHp] = useState('');
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -69,6 +71,24 @@ export function ContactPage() {
           }),
         });
         if (!res.ok) throw new Error('Request failed');
+
+        const trimmedName = name.trim();
+        const nameParts = trimmedName.split(/\s+/).filter(Boolean);
+        const firstName = nameParts.shift() || '';
+        const lastName = nameParts.join(' ');
+        const tags = ['Contact Form'];
+        if (hasNewsletterSourceTag()) tags.push('From Newsletter');
+
+        // Keep parity with previous WP behavior: all contacts are synced,
+        // checkbox only controls subscription status.
+        await subscribeContactToHaycList({
+          email: email.trim(),
+          firstName,
+          lastName,
+          subscribed: subscribeToNewsletter,
+          tags,
+        });
+
         setSubmitted(true);
       } catch {
         setError(t(config.contactFormConfig.errorText));
@@ -76,7 +96,19 @@ export function ContactPage() {
         setLoading(false);
       }
     },
-    [apiUrl, siteId, name, email, subject, message, hp, validate, t, config.contactFormConfig]
+    [
+      apiUrl,
+      siteId,
+      name,
+      email,
+      subject,
+      message,
+      hp,
+      subscribeToNewsletter,
+      validate,
+      t,
+      config.contactFormConfig,
+    ]
   );
 
   return (
@@ -238,6 +270,16 @@ export function ContactPage() {
                         </p>
                       ) : null}
                     </div>
+                    <label className="flex items-start gap-3 text-sm text-white/80">
+                      <input
+                        type="checkbox"
+                        className="mt-1 h-4 w-4 rounded border-white/40 bg-transparent"
+                        checked={subscribeToNewsletter}
+                        onChange={(e) => setSubscribeToNewsletter(e.target.checked)}
+                        disabled={loading}
+                      />
+                      <span>Subscribe me to the newsletter for updates.</span>
+                    </label>
                     <Button
                       type="submit"
                       className="w-full h-12 bg-[#c8a97e] hover:bg-[#b89a6f] text-white"
