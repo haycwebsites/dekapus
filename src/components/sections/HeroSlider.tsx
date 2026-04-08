@@ -45,12 +45,6 @@ export function HeroSlider() {
 
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
-                  <img
-                    {...cp('heroConfig.slideLogo')}
-                    src={img(config.heroConfig.slideLogo)}
-                    alt={t(config.heroConfig.slideLogoAlt)}
-                    className="mx-auto mb-8 h-24"
-                  />
                   <h2 {...cp('heroConfig.title')} className="font-['Great_Vibes'] text-4xl md:text-6xl text-[#c8a97e] mb-8">
                     {t(config.heroConfig.title)}
                   </h2>
