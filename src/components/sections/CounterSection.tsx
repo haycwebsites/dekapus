@@ -1,11 +1,11 @@
 import { useInView } from 'react-intersection-observer';
-import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
 
 export function CounterSection() {
   const { t, img, config, cp } = useHayc();
   const { ref } = useInView({ threshold: 0.3, triggerOnce: true });
+  const freeCallUrl = 'https://calendly.com/dionpaxinos/30min?month=2026-04';
 
   return (
     <section
@@ -34,9 +34,9 @@ export function CounterSection() {
             size="lg"
             className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
           >
-            <Link to="/contact">
+            <a href={freeCallUrl} target="_blank" rel="noopener noreferrer">
               <span {...cp('counterConfig.learnMoreButton')}>{t(config.counterConfig.learnMoreButton)}</span>
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

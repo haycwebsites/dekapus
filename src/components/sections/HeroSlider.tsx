@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useHayc } from '../../hayc/config-context';
 import { Button } from '../ui/button';
 
 export function HeroSlider() {
   const { t, img, config, cp } = useHayc();
+  const freeCallUrl = 'https://calendly.com/dionpaxinos/30min?month=2026-04';
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -56,9 +56,9 @@ export function HeroSlider() {
                     size="lg"
                     className="bg-[#c8a97e] hover:bg-[#b89a6f] text-white px-8 py-6 text-lg"
                   >
-                    <Link to="/about">
+                    <a href={freeCallUrl} target="_blank" rel="noopener noreferrer">
                       <span {...cp('heroConfig.viewMenuButton')}>{t(config.heroConfig.viewMenuButton)}</span>
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </div>
