@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HaycProvider } from './hayc/config-context';
 import { Preloader } from './components/Preloader';
 import { ScrollToTop } from './components/ScrollToTop';
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 
 import { HomePage } from './pages/HomePage';
 import { HomePage2 } from './pages/HomePage2';
@@ -26,6 +26,58 @@ function RouteScrollRestoration() {
   return null;
 }
 
+function RouteAnalytics() {
+  const { pathname } = useLocation();
+  const previousPathRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    const apiKey = '8c5394ce-4eea-46d6-ac32-fd8eb41cc9f3';
+    const endpoint = 'https://hayc.gr/api/analytics/track';
+
+    const getSessionId = () => {
+      try {
+        let sessionId = sessionStorage.getItem('hayc_session_id');
+        if (!sessionId) {
+          sessionId = `sess_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
+          sessionStorage.setItem('hayc_session_id', sessionId);
+        }
+        return sessionId;
+      } catch {
+        return `sess_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`;
+      }
+    };
+
+    const detectDevice = () => {
+      const ua = navigator.userAgent;
+      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) return 'Tablet';
+      if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) return 'Mobile';
+      return 'Desktop';
+    };
+
+    const referrer = previousPathRef.current
+      ? `${window.location.origin}${previousPathRef.current}`
+      : document.referrer;
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        key: apiKey,
+        type: 'pageview',
+        page: pathname,
+        referrer,
+        timestamp: Date.now(),
+        sessionId: getSessionId(),
+        deviceType: detectDevice(),
+      }),
+    }).catch(() => {});
+
+    previousPathRef.current = pathname;
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const handlePreloaderComplete = useCallback(() => setIsLoading(false), []);
@@ -34,6 +86,7 @@ function App() {
     <BrowserRouter>
       <HaycProvider>
         <RouteScrollRestoration />
+        <RouteAnalytics />
         {isLoading && <Preloader onComplete={handlePreloaderComplete} />}
         <div className={`min-h-screen bg-black ${isLoading ? 'overflow-hidden max-h-screen' : ''}`}>
           <Routes>
