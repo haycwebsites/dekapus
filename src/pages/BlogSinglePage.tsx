@@ -108,12 +108,15 @@ export function BlogSinglePage() {
         ? offeringImgs.myWork
         : offeringImgs.engagement;
 
-  const offeringsAside = (
+  const engagementFirstAsideImage = isEngagementPage ? '/images/fire.jpg' : offeringImageSrc;
+  const engagementSecondAsideImage = isEngagementPage ? '/images/bar-3.jpg' : offeringImageSrc;
+
+  const offeringsAside = (imageSrc: string) => (
     <aside className="lg:sticky lg:top-36 self-start">
       {isOfferingPage ? (
         <div className="hidden lg:block overflow-hidden border-white pl-4">
           <img
-            src={img(offeringImageSrc)}
+            src={img(imageSrc)}
             alt={t(pageTitle.title)}
             className="w-full h-full object-cover"
           />
@@ -316,11 +319,11 @@ export function BlogSinglePage() {
                       </div>
                     </div>
                   </article>
-                  {offeringsAside}
+                  {offeringsAside(engagementFirstAsideImage)}
                 </div>
                 {engagementHowWeWorkBand}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-14 md:mt-16">
-                  {offeringsAside}
+                  {offeringsAside(engagementSecondAsideImage)}
                   <article className="lg:col-span-2 relative pl-6 md:pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white">
                     <div className="py-8 pr-2 space-y-8">
                       <div>
@@ -500,7 +503,7 @@ export function BlogSinglePage() {
 
                   </div>
                 </article>
-                {offeringsAside}
+                {offeringsAside(offeringImageSrc)}
               </div>
             )}
           </div>
