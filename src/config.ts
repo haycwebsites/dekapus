@@ -574,17 +574,17 @@ export const heroConfig: HeroConfig = {
 export const aboutConfig: AboutConfig = {
   sectionTitle: { el: 'Σχετικά', en: 'About' },
   founderName: { el: 'Διονύσης Παξινός', en: 'Dionysis Paxinos' },
-  founderRole: { el: 'Ιδρυτής της DEKAPUS', en: 'Founder of DEKAPUS' },
+  founderRole: { el: 'Founder of DEKAPUS', en: 'Founder of DEKAPUS' },
   intro1: {
-    el: 'Προέρχομαι από περιβάλλοντα όπου η φιλοξενία δοκιμάζεται καθημερινά, διαμορφωμένη μέσα από άμεση, χειροπιαστή εμπειρία.',
+    el: 'Προέρχομαι από περιβάλλοντα όπου η φιλοξενία δοκιμάζεται καθημερινά και διαμορφώνεται μέσα από άμεση, βιωματική εμπειρία.',
     en: 'I come from environments where hospitality is tested daily, shaped through direct, hands-on experience.',
   },
   intro2: {
-    el: 'Για περισσότερα από τριάντα χρόνια έχω εργαστεί μέσα σε εστιατόρια, μπαρ, κλαμπ και ξενοδοχεία, λειτουργώντας υπό πραγματική πίεση, πραγματικό ρυθμό και πραγματική ανθρώπινη δυναμική.',
+    el: 'Για περισσότερα από τριάντα χρόνια, έχω εργαστεί μέσα σε εστιατόρια, bars, clubs και ξενοδοχεία — σε συνθήκες πραγματικής πίεσης, πραγματικού ρυθμού και αληθινής ανθρώπινης δυναμικής.',
     en: 'For more than thirty years, I have worked inside restaurants, bars, clubs, and hotels, operating under real pressure, real rhythm, and real human dynamics.',
   },
   intro3: {
-    el: 'Ως μέρος του συστήματος, ανέπτυξα την ικανότητα να διαβάζω χώρους πριν ανοίξουν, να αισθάνομαι τις ομάδες πριν φτάσουν στην εξάντληση και να αναγνωρίζω πότε ένα concept αρχίζει να χάνει τον ρυθμό του — ακόμα κι όταν όλα φαίνονται σωστά.',
+    el: 'Μέσα από αυτή τη διαδρομή, ανέπτυξα την ικανότητα να διαβάζω έναν χώρο πριν ακόμη ανοίξει, να αντιλαμβάνομαι μια ομάδα πριν φτάσει στην εξάντληση και να αναγνωρίζω πότε ένα concept αρχίζει να χάνει τον ρυθμό του — ακόμη κι όταν όλα φαίνονται σωστά.',
     en: 'As part of the system, I developed the ability to read spaces before they open, to sense teams before they reach exhaustion, and to recognize when a concept begins to lose its rhythm — even when everything appears correct.',
   },
   intro4: {
@@ -598,39 +598,39 @@ export const aboutConfig: AboutConfig = {
 export const homeIntroConfig: HomeIntroConfig = {
   sectionTitle: { el: 'Εισαγωγή', en: 'Intro' },
   description1: {
-    el: 'Δημιουργούμε εστιατόρια, μπαρ και χώρους φιλοξενίας από την αρχή — διαμορφώνοντας την ταυτότητα, τον ρυθμό και την εμπειρία τους από την πρώτη στιγμή.',
+    el: 'Δημιουργούμε εστιατόρια, bars και χώρους φιλοξενίας από το μηδέν — διαμορφώνοντας την ταυτότητα, τον ρυθμό και την εμπειρία τους από την πρώτη στιγμή.',
     en: 'Creating restaurants, bars, and hospitality spaces from the ground up — shaping their identity, rhythm, and experience from the very beginning.',
   },
   description2: {
-    el: 'Καλούμαστε όταν κάτι δεν «κάθεται» σωστά αλλά δεν μπορεί ακόμα να ονομαστεί — όταν οι ομάδες είναι ικανές αλλά λειτουργούν υπό πίεση, όταν μια ιδέα είναι σαφής αλλά δεν αισθάνεται πλέον ζωντανή, ή όταν δημιουργείται ένας νέος χώρος φιλοξενίας και χρειάζεται κατεύθυνση, ταυτότητα και ισχυρό αίσθημα ρυθμού από την αρχή.',
+    el: 'Μας καλούν όταν κάτι δεν λειτουργεί όπως θα έπρεπε, αλλά δεν έχει ακόμη διατυπωθεί με σαφήνεια. Όταν οι ομάδες έχουν δυνατότητες, αλλά λειτουργούν υπό πίεση. Όταν ένα concept είναι ξεκάθαρο, αλλά δεν νιώθει πλέον ζωντανό, ή όταν ένας νέος χώρος φιλοξενίας γεννιέται και χρειάζεται κατεύθυνση, ταυτότητα και ουσιαστικό ρυθμό από την αρχή.',
     en: 'We are invited when something feels off but cannot yet be named — when teams are capable yet operating under pressure, when a concept is clear but no longer feels alive, or when a new hospitality space is being created and requires direction, identity, and a strong sense of rhythm from the very beginning.',
   },
-  description3: { el: 'Η δουλειά μας ξεδιπλώνεται ήσυχα, μέσα στον ρυθμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και ακριβή παρέμβαση.', en: 'Our work unfolds quietly, within the rhythm of the operation — through presence, observation, and precise intervention.' },
-  description4: { el: 'Υποστηρίζει την απόδοση, ενισχύει την εμπειρία του επισκέπτη και βοηθά στη δημιουργία χώρων που αισθάνονται ευθυγραμμισμένοι, ζωντανοί και με νόημα.', en: 'It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful.' },
+  description3: { el: 'Η δουλειά μας εξελίσσεται διακριτικά, μέσα στον ίδιο τον παλμό της λειτουργίας — μέσα από παρουσία, παρατήρηση και στοχευμένη παρέμβαση.', en: 'Our work unfolds quietly, within the rhythm of the operation — through presence, observation, and precise intervention.' },
+  description4: { el: 'Υποστηρίζει την απόδοση, ενισχύει την εμπειρία του επισκέπτη και συμβάλλει στη δημιουργία χώρων που λειτουργούν με συνοχή, ζωντάνια και νόημα.', en: 'It supports performance, strengthens guest experience, and helps create spaces that feel aligned, alive, and meaningful.' },
   heroImage: '/images/dekapus-vinyl-site.jpg',
 };
 
 export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
   sectionTitle: { el: 'Τι Κάνουμε', en: 'What We Do' },
   intro: {
-    el: 'Ως δημιουργοί και σύμβουλοι φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, μπαρ και ξενοδοχείων για να:',
+    el: 'Ως δημιουργοί και σύμβουλοι στον χώρο της φιλοξενίας, συνεργαζόμαστε με ιδιοκτήτες εστιατορίων, bars και ξενοδοχείων για να:',
     en: 'As hospitality creators and consultants, we work with restaurant, bar, and hotel owners to:',
   },
   items: [
     {
-      el: 'αναπτύσσουμε νέες ιδέες από την αρχή — ορίζοντας ταυτότητα, ρυθμό και εμπειρία επισκέπτη',
+      el: 'αναπτύξουμε νέα concepts από το μηδέν, ορίζοντας την ταυτότητα, τον ρυθμό και την εμπειρία του επισκέπτη',
       en: 'develop new concepts from the ground up — defining identity, rhythm, and guest experience',
     },
     {
-      el: 'αναδείξουμε τι δεν λειτουργεί κάτω από την επιφάνεια',
+      el: 'εντοπίσουμε ό,τι δεν λειτουργεί κάτω από την επιφάνεια',
       en: 'uncover what is not working beneath the surface',
     },
     {
-      el: 'βελτιώσουμε τη ροή εξυπηρέτησης και τη συνολική εμπειρία επισκέπτη',
+      el: 'βελτιώσουμε τη ροή του service και τη συνολική εμπειρία του επισκέπτη',
       en: 'improve service flow and overall guest experience',
     },
     {
-      el: 'ευθυγραμμίσουμε ξανά ομάδες, ατμόσφαιρα και λειτουργία',
+      el: 'επανασυντονίσουμε ομάδες, ατμόσφαιρα και λειτουργία',
       en: 'realign teams, atmosphere, and operations',
     },
     {
@@ -645,15 +645,15 @@ export const homeWhatWeDoConfig: HomeWhatWeDoConfig = {
 export const aboutStatementConfig: AboutStatementConfig = {
   title: { el: 'Προσέγγιση', en: 'Approach' },
   paragraph1: {
-    el: 'Βλέπω τη φιλοξενία ως ζωντανό οργανισμό.',
+    el: 'Βλέπω τη φιλοξενία ως έναν ζωντανό οργανισμό.',
     en: 'I see hospitality as a living organism.',
   },
   paragraph2: {
-    el: 'Όταν η πίεση εφαρμόζεται λάθος, αντιστέκεται. Όταν η ευθυγράμμιση είναι σωστή, ρέει.',
+    el: 'Όταν η πίεση εφαρμόζεται λανθασμένα, το σύστημα αντιστέκεται. Όταν υπάρχει ευθυγράμμιση, αρχίζει να ρέει.',
     en: 'When pressure is misapplied, it resists. When alignment is right, it flows.',
   },
   paragraph3: {
-    el: 'Η δουλειά μου ως σύμβουλος φιλοξενίας δεν αφορά απλώς τη βελτίωση ενός εστιατορίου, μπαρ ή ξενοδοχείου. Αφορά την αποκατάσταση της ισορροπίας ανάμεσα σε ανθρώπους, κίνηση και ατμόσφαιρα — ώστε η λειτουργία να μπορεί να λειτουργεί φυσικά, να βελτιώνει την απόδοση και να ανυψώνει την εμπειρία του επισκέπτη.',
+    el: 'Η δουλειά μου ως hospitality consultant δεν αφορά απλώς τη βελτίωση ενός εστιατορίου, ενός bar ή ενός ξενοδοχείου. Αφορά την αποκατάσταση της ισορροπίας ανάμεσα στους ανθρώπους, την κίνηση και την ατμόσφαιρα — ώστε η λειτουργία να εξελίσσεται φυσικά, να βελτιώνει την απόδοση και να αναβαθμίζει την εμπειρία του επισκέπτη.',
     en: 'My work as a hospitality consultant is not simply about improving a restaurant, bar, or hotel. It is about restoring balance between people, movement, and atmosphere — so the operation can function naturally, improve performance, and elevate guest experience.',
   },
   backgroundImage: '/images/about-approach.png',
@@ -661,7 +661,7 @@ export const aboutStatementConfig: AboutStatementConfig = {
 
 export const aboutClosingConfig: AboutClosingConfig = {
   leadBold: {
-    el: 'Αυτή η δουλειά ορίζεται από την αντίληψη, την ακριβή παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.',
+    el: 'Αυτή η δουλειά καθορίζεται από την Αντίληψη, τη στοχευμένη Παρέμβαση και την ικανότητα Συντονισμού ενός χώρου, μέχρι να λειτουργεί με καθαρότητα και ροή.',
     en: 'This work is defined by perception, precise intervention, and the ability to tune a space until it functions with clarity and flow.',
   },
   body: {
@@ -696,7 +696,7 @@ export const servicesConfig: ServicesConfig = {
 
 export const counterConfig: CounterConfig = {
   paragraph1: {
-    el: 'Αυτή η δουλειά ορίζεται από την Αντίληψη, την ακριβή Παρέμβαση και την ικανότητα να «κουρδίζεις» έναν χώρο μέχρι να λειτουργεί με σαφήνεια και ροή.',
+    el: 'Αυτή η δουλειά βασίζεται στην Αντίληψη, τη στοχευμένη Παρέμβαση και την ικανότητα Συντονισμού ενός χώρου, μέχρι να λειτουργεί με καθαρότητα, συνοχή και ροή.',
     en: 'This work is defined by Perception, precise Intervention, and the ability to Tune a space until it functions with clarity and flow.',
   },
   paragraph2: {
@@ -1028,19 +1028,19 @@ export const galleryConfig: GalleryConfig = {
 };
 
 export const contactConfig: ContactConfig = {
-  sectionTitle: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact Us' },
+  sectionTitle: { el: 'Επικοινωνία', en: 'Contact Us' },
   title: { el: 'ΣΤΕΙΛΤΕ ΜΑΣ ΜΗΝΥΜΑ', en: 'SEND US A MESSAGE' },
   preBulletsLine: { el: '', en: '' },
   introLine: {
-    el: 'Every space holds the potential to evolve.',
+    el: 'Κάθε χώρος έχει τη δυνατότητα να εξελιχθεί.',
     en: 'Every space holds the potential to evolve.',
   },
   introItem1: {
-    el: 'When the moment comes to create, refine, or realign,',
+    el: 'Όταν έρθει η σωστή στιγμή,',
     en: 'When the moment comes to create, refine, or realign,',
   },
   introItem2: {
-    el: 'a conversation is enough to begin.',
+    el: 'μία συζήτηση αρκεί.',
     en: 'a conversation is enough to begin.',
   },
   introItem3: { el: '', en: '' },
@@ -1200,21 +1200,21 @@ export const customPagesConfig: CustomPagesConfig = {
   dekapusMethod: {
     mainTitle: { el: 'Μέθοδος DEKAPUS', en: 'DEKAPUS Method' },
     intro: {
-      el: 'Η DEKAPUS Method™ είναι μια πρακτική προσέγγιση για την κατανόηση και τη βελτίωση των χώρων φιλοξενίας από μέσα.',
+      el: 'Η DEKAPUS Method™ είναι μια πρακτική προσέγγιση για την κατανόηση και τη βελτίωση των χώρων φιλοξενίας  εκ των έσω.',
       en: 'The DEKAPUS Method™ is a practical approach to understanding and improving hospitality spaces from within.',
     },
     intro2: {
-      el: 'Με αυτή τη μέθοδο διαβάζουμε τον χώρο, κατανοούμε τη δυναμική της ομάδας και εντοπίζουμε τι χρειάζεται να αλλάξει — λαμβάνοντας ακριβείς αποφάσεις που βελτιώνουν τόσο τις λειτουργίες όσο και την εμπειρία του επισκέπτη.',
+      el: 'Μέσα από αυτή τη μέθοδο, διαβάζουμε τον χώρο, κατανοούμε τη δυναμική της ομάδας και εντοπίζουμε τι χρειάζεται να μετατοπιστεί — λαμβάνοντας στοχευμένες αποφάσεις που βελτιώνουν τόσο τη λειτουργία όσο και την εμπειρία του επισκέπτη.',
       en: 'Through this method, we read the space, understand the dynamics of the team, and identify what needs to shift — making precise decisions that improve both operations and guest experience.',
     },
     intro3: {
-      el: 'Στον πυρήνα της βασίζεται σε μία αρχή: η φιλοξενία είναι ένα ζωντανό σύστημα, όπου χώρος, άνθρωποι και ρυθμός πρέπει να ευθυγραμμίζονται για να αποδίδει πραγματικά μια επιχείρηση.',
+      el: 'Στον πυρήνα της βασίζεται σε μία αρχή: η φιλοξενία είναι ένα ζωντανό σύστημα, όπου ο χώρος, οι άνθρωποι και ο ρυθμός πρέπει να βρίσκονται σε ευθυγράμμιση, ώστε μια επιχείρηση να αποδίδει πραγματικά.',
       en: 'At its core, it is based on one principle: hospitality is a living system, where space, people, and rhythm must align for a business to truly perform.',
     },
-    whatThisMeansForYou: { el: 'Τι σημαίνει αυτό για εσάς:', en: 'What this means for you:' },
+    whatThisMeansForYou: { el: 'Τι σημαίνει αυτό για εσάς', en: 'What this means for you:' },
     section1Title: { el: 'Αντίληψη & Ανάγνωση Χώρου', en: 'Perception & Space Reading' },
     section1Body: {
-      el: 'Πριν αρχίσει να λειτουργεί, ένας χώρος έχει ήδη φανερώσει πώς θα λειτουργήσει.',
+      el: 'Πριν ένας χώρος αρχίσει να λειτουργεί, έχει ήδη αποκαλύψει τον τρόπο με τον οποίο θα λειτουργήσει.',
       en: 'Before a space begins to operate, it already reveals how it will function.',
     },
     section1Body2: {
@@ -1226,21 +1226,21 @@ export const customPagesConfig: CustomPagesConfig = {
       en: 'Only after this understanding are decisions made.',
     },
     section1MeansBody: {
-      el: 'Αποκτάτε σαφήνεια για το τι πραγματικά συμβαίνει στον χώρο σας — και τι χρειάζεται να αλλάξει — χωρίς εικασίες ή περιττές παρεμβάσεις.',
+      el: 'Αποκτάτε καθαρή εικόνα για το τι συμβαίνει πραγματικά στον χώρο σας — και για το τι χρειάζεται να αλλάξει — χωρίς εικασίες ή περιττές παρεμβάσεις.',
       en: 'You gain clarity on what is truly happening in your space — and what needs to change — without guesswork or unnecessary intervention.',
     },
     section2Title: { el: 'Ατμόσφαιρα & Εμπειρία', en: 'Atmosphere & Experience' },
     section2Body: {
-      el: 'Η ατμόσφαιρα διαμορφώνει το πώς νιώθουν οι επισκέπτες και πώς αποδίδουν οι ομάδες. Δημιουργείται μέσα από επιλογές, χρονισμό και ανθρώπινη παρουσία — και όταν είναι ευθυγραμμισμένη, όλη η εμπειρία ρέει φυσικά.',
+      el: 'Η ατμόσφαιρα διαμορφώνει το πώς αισθάνονται οι επισκέπτες και το πώς αποδίδουν οι ομάδες. Δημιουργείται μέσα από επιλογές, timing και ανθρώπινη παρουσία — και όταν βρίσκεται σε ευθυγράμμιση, ολόκληρη η εμπειρία κυλά φυσικά.',
       en: 'Atmosphere shapes how guests feel and how teams perform. It is created through choices, timing, and human presence — and when it is aligned, the entire experience flows naturally.',
     },
     section2Body2: {
-      el: 'Όταν η ατμόσφαιρα είναι ευθυγραμμισμένη, τα συστήματα στηρίζουν την εμπειρία. Όταν όχι, ακόμα και ισχυρά συστήματα αρχίζουν να αποτυγχάνουν.',
+      el: 'Όταν η ατμόσφαιρα είναι σωστά ευθυγραμμισμένη, τα συστήματα υποστηρίζουν την εμπειρία. Όταν δεν είναι, ακόμη και τα πιο ισχυρά συστήματα αρχίζουν να αποτυγχάνουν.',
       en: 'When atmosphere is aligned, systems support the experience. When it is not, even strong systems begin to fail.',
     },
     section2Body3: { el: '', en: '' },
     section2MeansBody: {
-      el: 'Δημιουργείτε ένα περιβάλλον που βελτιώνει την ικανοποίηση των επισκεπτών, την παραμονή και τη συνολική αντίληψη για τον χώρο σας.',
+      el: 'Δημιουργείτε ένα περιβάλλον που ενισχύει την ικανοποίηση του επισκέπτη, την επαναληψιμότητα και τη συνολική αντίληψη για τον χώρο σας.',
       en: 'You create an environment that improves guest satisfaction, retention, and overall perception of your space.',
     },
     section3Title: { el: 'Ροή Ανθρώπων & Συμπεριφορά', en: 'Human Flow & Behaviour' },
@@ -1254,26 +1254,26 @@ export const customPagesConfig: CustomPagesConfig = {
     },
     section3Body3: { el: '', en: '' },
     section3MeansBody: {
-      el: 'Κατανοείτε πού υπάρχει τριβή — στη ροή εξυπηρέτησης, στη δυναμική της ομάδας και στην εμπειρία του πελάτη — και πώς να τη διορθώσετε.',
+      el: 'Κατανοείτε πού υπάρχει τριβή — στη ροή του service, στη δυναμική της ομάδας και στην εμπειρία του πελάτη — και πώς μπορεί να διορθωθεί.',
       en: 'You understand where friction exists — in service flow, team dynamics, and customer experience — and how to correct it.',
     },
     section4Title: { el: 'Λειτουργικά Συστήματα', en: 'Operational Systems' },
     section4Body: {
-      el: 'Τα συστήματα πρέπει να στηρίζουν την εμπειρία — όχι να την καταπνίγουν.',
+      el: 'Τα συστήματα οφείλουν να υποστηρίζουν την εμπειρία — όχι να την καταπιέζουν.',
       en: 'Systems should support the experience — not suppress it.',
     },
     section4Body2: {
-      el: 'Οι διαδικασίες επανασχεδιάζονται μόνο αφού γίνει κατανοητό τι πρέπει να υπηρετούν.',
+      el: 'Οι διαδικασίες επανασχεδιάζονται μόνο αφού κατανοήσουμε τι καλούνται πραγματικά να υπηρετήσουν.',
       en: 'Processes are redesigned only after understanding what they need to serve.',
     },
     section4Body3: { el: '', en: '' },
     section4MeansBody: {
-      el: 'Βελτιώνετε την αποδοτικότητα και τη συνέπεια χωρίς να περιπλέκετε υπερβολικά τις λειτουργίες σας.',
+      el: 'Βελτιώνετε την αποδοτικότητα και τη συνέπεια, χωρίς να περιπλέκετε άσκοπα τη λειτουργία σας.',
       en: 'You improve efficiency and consistency without overcomplicating your operations.',
     },
     section5Title: { el: 'Χρονισμός & Παρέμβαση', en: 'Timing & Intervention' },
     section5Body: {
-      el: 'Η αποτελεσματική αλλαγή δεν είναι θέμα του να κάνετε περισσότερα. Είναι θέμα του να ενεργείτε τη σωστή στιγμή.',
+      el: 'Η ουσιαστική αλλαγή δεν προκύπτει από το να κάνεις περισσότερα. Προκύπτει από το να ενεργείς τη σωστή στιγμή.',
       en: 'Effective change is not about doing more. It is about acting at the right moment.',
     },
     section5Body2: {
@@ -1282,7 +1282,7 @@ export const customPagesConfig: CustomPagesConfig = {
     },
     section5Body3: { el: '', en: '' },
     section5MeansBody: {
-      el: 'Παίρνετε καλύτερες αποφάσεις, αποφεύγετε περιττές αναταραχές και βελτιώνετε την απόδοση με σαφήνεια και έλεγχο.',
+      el: 'Λαμβάνετε καλύτερες αποφάσεις, αποφεύγετε τις περιττές αναταράξεις και βελτιώνετε την απόδοση με καθαρότητα και έλεγχο.',
       en: 'You make better decisions, avoid unnecessary disruption, and improve performance with clarity and control.',
     },
   },
@@ -1317,26 +1317,26 @@ export const customPagesConfig: CustomPagesConfig = {
   },
   engagement: {
     title: { el: 'Πότε Έχει Νόημα να Συνεργαστούμε', en: 'When It Makes Sense to Work Together' },
-    introTitle: { el: 'Πού παρεμβαίνουμε', en: 'Where We Step In' },
+    introTitle: { el: 'Πού Παρεμβαίνουμε', en: 'Where We Step In' },
     intro: {
-      el: 'Η συνεργασία συνήθως ξεκινά όταν κάτι γίνεται αισθητό, χωρίς να έχει πλήρως κατανοηθεί μέσα σε μια επιχείρηση φιλοξενίας:',
+      el: 'Η συνεργασία συνήθως ξεκινά όταν κάτι γίνεται αισθητό μέσα σε μια hospitality επιχείρηση, αλλά δεν έχει ακόμη κατανοηθεί πλήρως:',
       en: 'Collaboration usually begins when something is felt, but not fully understood within a hospitality business:',
     },
     list1Title: { el: '', en: '' },
     list1Items: [
       {
         title: {
-          el: 'Προ-άνοιγμα & Ανάπτυξη Concept',
+          el: 'Pre-opening & Ανάπτυξη Concept',
           en: 'Pre-opening & Concept Development',
         },
         body: {
-          el: 'Όταν ένα concept εστιατορίου, μπαρ ή ξενοδοχείου χρειάζεται ταυτότητα, ρυθμό και λειτουργική σαφήνεια πριν το άνοιγμα.',
+          el: 'Όταν ένα concept εστιατορίου, bar ή ξενοδοχείου χρειάζεται ταυτότητα, ρυθμό και λειτουργική σαφήνεια πριν από το άνοιγμά του.',
           en: 'When a restaurant, bar, or hotel concept needs identity, rhythm, and operational clarity before opening.',
         },
       },
       {
         title: {
-          el: 'Όταν ένας Χώρος Δείχνει «Off»',
+          el: 'Όταν Ένας Χώρος “Δεν Κάθεται”',
           en: 'When a Space Feels "Off"',
         },
         body: {
@@ -1346,7 +1346,7 @@ export const customPagesConfig: CustomPagesConfig = {
       },
       {
         title: {
-          el: 'Λειτουργική Πίεση Πίσω από Ισχυρή Εικόνα',
+          el: 'Λειτουργική Πίεση Πίσω από Μια Ισχυρή Εικόνα',
           en: 'Operational Pressure Behind a Strong Image',
         },
         body: {
@@ -1360,48 +1360,48 @@ export const customPagesConfig: CustomPagesConfig = {
           en: 'Team Fatigue & Loss of Rhythm',
         },
         body: {
-          el: 'Όταν η απόδοση του προσωπικού μειώνεται και η ροή εξυπηρέτησης γίνεται ασταθής.',
+          el: 'Όταν η απόδοση του προσωπικού μειώνεται και η ροή του service χάνει τη συνέπειά της.',
           en: 'When staff performance declines and service flow becomes inconsistent.',
         },
       },
       {
         title: {
-          el: 'Επανατοποθέτηση & Επανεκκίνηση',
+          el: 'Επανατοποθέτηση & Επανευθυγράμμιση',
           en: 'Repositioning & Reset',
         },
         body: {
-          el: 'Όταν ένας χώρος φιλοξενίας χρειάζεται επαναπροσδιορισμό χωρίς να χάσει την ταυτότητα ή τον χαρακτήρα του.',
+          el: 'Όταν ένας hospitality χώρος χρειάζεται επανασυντονισμό, χωρίς να χάσει την ταυτότητα ή τον χαρακτήρα του.',
           en: 'When a hospitality space needs realignment without losing its identity or character.',
         },
       },
     ],
-    howWeWorkTitle: { el: 'Πώς δουλεύουμε μαζί', en: 'How We Work Together' },
+    howWeWorkTitle: { el: 'Πώς Συνεργαζόμαστε', en: 'How We Work Together' },
     howWeWorkItems: [
       {
         title: { el: 'Πραγματική δέσμευση', en: 'Real Commitment' },
         body: {
-          el: 'Υπάρχει πραγματική δέσμευση να προχωρήσουμε μπροστά και να βελτιώσουμε την επιχείρηση.',
+          el: 'Υπάρχει ουσιαστική πρόθεση να προχωρήσει η επιχείρηση και να βελτιωθεί πραγματικά.',
           en: 'There is a real commitment to move forward and improve the business',
         },
       },
       {
         title: { el: 'Άμεση εμπλοκή', en: 'Direct Involvement' },
         body: {
-          el: 'Ο ιδιοκτήτης ή ο υπεύθυνος αποφάσεων συμμετέχει άμεσα στη διαδικασία.',
+          el: 'Ο ιδιοκτήτης ή ο βασικός decision-maker συμμετέχει άμεσα στη διαδικασία.',
           en: 'The owner or decision-maker is directly involved in the process',
         },
       },
       {
         title: { el: 'Ειλικρινής επικοινωνία', en: 'Honest Communication' },
         body: {
-          el: 'Υπάρχει ανοιχτότητα σε ειλικρινή επικοινωνία και πρακτικές λύσεις.',
+          el: 'Υπάρχει διάθεση για καθαρή επικοινωνία, ειλικρίνεια και πρακτικές λύσεις.',
           en: 'There is openness to honest communication and practical solutions',
         },
       },
       {
-        title: { el: 'Σκέψη ως ζωντανό σύστημα', en: 'Living System Thinking' },
+        title: { el: 'Αντίληψη Ζωντανού Συστήματος', en: 'Living System Thinking' },
         body: {
-          el: 'Η επιχείρηση αντιμετωπίζεται ως ζωντανό σύστημα — όχι απλώς ως πρόβλημα προς διόρθωση.',
+          el: 'Η επιχείρηση αντιμετωπίζεται ως ένα ζωντανό σύστημα — όχι απλώς ως ένα πρόβλημα προς επίλυση.',
           en: 'The business is approached as a living system — not just a problem to fix.',
         },
       },
@@ -1412,52 +1412,52 @@ export const customPagesConfig: CustomPagesConfig = {
       en: 'Every engagement is different, depending on the needs of the restaurant, bar, or hotel.',
     },
     section2Body2: {
-      el: 'Ωστόσο, τα περισσότερα έργα ακολουθούν αυτά τα βασικά στάδια:',
+      el: 'Ωστόσο, τα περισσότερα projects ακολουθούν ορισμένα βασικά στάδια:',
       en: 'However, most projects follow these key stages:',
     },
     processItems: [
       {
         title: { el: 'Παρατήρηση & Ανάγνωση Χώρου', en: 'Observation & Space Reading' },
         body: {
-          el: 'Κατανόηση λειτουργιών, δυναμικής ομάδας και εμπειρίας επισκέπτη πριν από οποιαδήποτε ενέργεια.',
+          el: 'Κατανόηση της λειτουργίας, της δυναμικής της ομάδας και της εμπειρίας του επισκέπτη πριν από οποιαδήποτε ενέργεια.',
           en: 'Understanding operations, team dynamics, and guest experience before taking action',
         },
       },
       {
-        title: { el: 'Ευθυγράμμιση Αντίληψης', en: 'Perceptual Alignment' },
+        title: { el: 'Αντιληπτική Ευθυγράμμιση', en: 'Perceptual Alignment' },
         body: {
-          el: 'Εντοπισμός του τι συμβαίνει πραγματικά μέσα στην επιχείρηση — πέρα από αναφορές και υποθέσεις.',
+          el: 'Εντοπισμός του τι συμβαίνει πραγματικά μέσα στην επιχείρηση — πέρα από reports, υποθέσεις και επιφανειακές ενδείξεις.',
           en: 'Identifying what is truly happening within the business — beyond reports and assumptions',
         },
       },
       {
         title: { el: 'Στοχευμένη Παρέμβαση', en: 'Targeted Intervention' },
         body: {
-          el: 'Εφαρμογή ακριβών προσαρμογών για τη βελτίωση λειτουργιών, ροής και απόδοσης.',
+          el: 'Εφαρμογή ακριβών και ουσιαστικών προσαρμογών για τη βελτίωση της λειτουργίας, της ροής και της συνολικής απόδοσης.',
           en: 'Applying precise adjustments to improve operations, flow, and performance',
         },
       },
       {
         title: { el: 'Σταθεροποίηση & Υποστήριξη', en: 'Stabilization & Support' },
         body: {
-          el: 'Υποστήριξη της επιχείρησης μέχρι τα συστήματα, οι ομάδες και η ατμόσφαιρα να λειτουργούν σε ευθυγράμμιση.',
+          el: 'Υποστήριξη της επιχείρησης μέχρι τα συστήματα, οι ομάδες και η ατμόσφαιρα να λειτουργούν σε πλήρη ευθυγράμμιση.',
           en: 'Supporting the business until systems, teams, and atmosphere function in alignment',
         },
       },
     ],
-    section3Title: { el: 'Τι Δεν Είναι Αυτή η Δουλειά', en: 'What This Work Is Not' },
-    section3Body: { el: 'Η DEKAPUS δεν λειτουργεί μέσω:', en: 'DEKAPUS does not operate through:' },
+    section3Title: { el: 'Πώς Δεν Λειτουργούμε', en: 'What This Work Is Not' },
+    section3Body: { el: 'Η DEKAPUS δεν λειτουργεί μέσα από:', en: 'DEKAPUS does not operate through:' },
     list2Items: [
-      { el: 'Γρήγορη, επιφανειακή συμβουλευτική', en: 'Fast, surface-level consulting' },
-      { el: 'Προκαθορισμένων προτύπων ή γενικών στρατηγικών', en: 'Pre-defined templates or generic strategies' },
-      { el: 'Τυποποιημένων λύσεων αποσυνδεδεμένων από τον χώρο', en: 'Standardized solutions disconnected from the space' },
+      { el: 'γρήγορες και επιφανειακές συμβουλές', en: 'Fast, surface-level consulting' },
+      { el: 'προκαθορισμένα templates ή γενικές στρατηγικές', en: 'Pre-defined templates or generic strategies' },
+      { el: 'τυποποιημένες λύσεις αποκομμένες από την πραγματικότητα του χώρου', en: 'Standardized solutions disconnected from the space' },
       {
-        el: 'Παρεμβάσεων χωρίς πλήρη κατανόηση των λειτουργιών και των ανθρώπων',
+        el: 'παρεμβάσεις χωρίς ουσιαστική κατανόηση της λειτουργίας και των ανθρώπων',
         en: 'Interventions without full understanding of operations and people',
       },
     ],
     closingCtaBody: {
-      el: 'Αυτή η δουλειά βασίζεται στην παρουσία, την παρατήρηση και το timing. Ξεδιπλώνεται μέσα από εμπιστοσύνη στη διαδικασία, στον ρυθμό και στους ανθρώπους που συμμετέχουν, δημιουργώντας διαρκή αποτελέσματα σε περιβάλλοντα φιλοξενίας.',
+      el: 'Αυτή η δουλειά βασίζεται στην παρουσία, την παρατήρηση και το σωστό timing. Ξεδιπλώνεται μέσα από εμπιστοσύνη στη διαδικασία, στον ρυθμό και στους ανθρώπους που τη διαμορφώνουν — δημιουργώντας αποτελέσματα με διάρκεια και ουσία.',
       en: 'This work is grounded in presence, observation, and timing. It unfolds through trust in the process, the rhythm, and the people involved, creating lasting results in hospitality environments.',
     },
     closingCtaButtonLabel: { el: 'Επικοινωνήστε μαζί μας', en: 'Contact us' },
