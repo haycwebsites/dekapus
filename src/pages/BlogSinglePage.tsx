@@ -114,7 +114,7 @@ export function BlogSinglePage() {
   const offeringsAside = (imageSrc: string) => (
     <aside className="lg:sticky lg:top-36 self-start">
       {isOfferingPage ? (
-        <div className="hidden lg:block overflow-hidden border-white pl-4">
+        <div className="overflow-hidden border-white pl-4">
           <img
             src={img(imageSrc)}
             alt={t(pageTitle.title)}
@@ -509,17 +509,6 @@ export function BlogSinglePage() {
           </div>
         </section>
 
-        {isOfferingPage && (
-          <section className="py-10 bg-black lg:hidden">
-            <div className="container mx-auto px-4">
-              <img
-                src={img(offeringImageSrc)}
-                alt={t(pageTitle.title)}
-                className="w-full h-96 object-cover rounded-lg"
-              />
-            </div>
-          </section>
-        )}
       </main>
       <Footer />
     </>
