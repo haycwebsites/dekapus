@@ -88,7 +88,16 @@ export function Footer() {
       <div className="border-t border-white/10 bg-black py-4">
         <div className="container mx-auto px-4 text-center">
           <p {...cp('commonConfig.copyright')} className="text-white/50 text-sm">
-            {t(config.commonConfig.copyright)}
+            {t(config.commonConfig.copyright)}. Created by{' '}
+            <a
+              href="https://hayc.gr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#c8a97e] underline underline-offset-2"
+            >
+              hayc
+            </a>{' '}
+            with love
           </p>
         </div>
       </div>

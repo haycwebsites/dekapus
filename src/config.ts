@@ -551,7 +551,7 @@ export const commonConfig: CommonConfig = {
   readMore: { el: 'Διαβάστε Περισσότερα', en: 'Read More' },
   submit: { el: 'Υποβολή', en: 'Submit' },
   signUp: { el: 'Εγγραφή', en: 'Sign Up' },
-  copyright: { el: '© 2024 - Με επιφύλαξη παντός δικαιώματος', en: '© 2024 - All Rights Reserved' },
+  copyright: { el: '© 2026 - Με επιφύλαξη παντός δικαιώματος', en: '© 2026 - All Rights Reserved' },
   currencySymbol: '$',
 };
 
