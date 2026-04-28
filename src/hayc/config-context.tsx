@@ -17,7 +17,7 @@ interface HaycContextValue {
 const HaycContext = createContext<HaycContextValue | null>(null);
 
 export function HaycProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>('en');
+  const [locale, setLocale] = useState<Locale>('el');
   const [config, setConfig] = useState<RemoteConfig>(defaultConfig);
   const [ready, setReady] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
